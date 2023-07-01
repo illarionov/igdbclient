@@ -1,0 +1,61 @@
+/*
+ * Copyright 2023 Alexey Illarionov
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package ru.pixnews.igdbclient.internal
+
+import okio.BufferedSource
+import ru.pixnews.igdbclient.IgdbResult
+import ru.pixnews.igdbclient.InternalIgdbClientApi
+import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
+import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
+
+@InternalIgdbClientApi
+public interface RequestExecutor {
+    public suspend operator fun <T : Any> invoke(
+        request: IgdbRequest,
+    ): IgdbResult<T, IgdbHttpErrorResponse>
+}
+
+@InternalIgdbClientApi
+public sealed class IgdbRequest {
+    @InternalIgdbClientApi
+    public class ApicalypsePostRequest<out T : Any>(
+        public val path: String,
+        public val query: ApicalypseQuery,
+        public val successResponseParser: (ApicalypseQuery, BufferedSource) -> T,
+    ) : IgdbRequest()
+
+    @InternalIgdbClientApi
+    public class FormUrlEncodedPostRequest<out T : Any>(
+        public val path: String,
+        public val queryParameters: Map<String, String> = mapOf(),
+        public val formUrlEncodedParameters: Map<String, String> = mapOf(),
+        public val successResponseParser: (BufferedSource) -> T,
+    ) : IgdbRequest()
+
+    @InternalIgdbClientApi
+    public class GetRequest<out T : Any>(
+        public val path: String,
+        public val queryParameters: Map<String, String> = mapOf(),
+        public val successResponseParser: (BufferedSource) -> T,
+    ) : IgdbRequest()
+
+    @InternalIgdbClientApi
+    public class DeleteRequest<out T : Any>(
+        public val path: String,
+        public val queryParameters: Map<String, String> = mapOf(),
+        public val successResponseParser: (BufferedSource) -> T,
+    ) : IgdbRequest()
+}
