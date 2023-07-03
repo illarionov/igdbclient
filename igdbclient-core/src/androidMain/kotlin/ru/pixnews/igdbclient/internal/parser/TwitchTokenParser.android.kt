@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.twitch
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import org.json.JSONObject
@@ -27,7 +27,7 @@ import ru.pixnews.igdbclient.auth.model.TwitchToken
  * Based on the [org.json.JSONTokener]
  */
 @InternalIgdbClientApi
-public actual fun twitchTokenParser(source: BufferedSource): TwitchToken {
+public actual fun IgdbParser.twitchTokenParser(source: BufferedSource): TwitchToken {
     val response = source.readUtf8()
     val jsonObject = JSONTokener(response).nextValue() as? JSONObject ?: error("Malformed JSON")
     return TwitchToken(

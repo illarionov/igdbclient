@@ -27,7 +27,8 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.IgdbRequest.DeleteRequest
 import ru.pixnews.igdbclient.internal.IgdbRequest.FormUrlEncodedPostRequest
 import ru.pixnews.igdbclient.internal.IgdbRequest.GetRequest
-import ru.pixnews.igdbclient.internal.webhook.igdbWebhookListJsonParser
+import ru.pixnews.igdbclient.internal.parser.IgdbParser
+import ru.pixnews.igdbclient.internal.parser.igdbWebhookListJsonParser
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
@@ -48,7 +49,7 @@ internal class IgdbWebhookApiImplementation(
                 "method" to method.igdbApiId,
                 "secret" to secret,
             ),
-            successResponseParser = ::igdbWebhookListJsonParser,
+            successResponseParser = IgdbParser::igdbWebhookListJsonParser,
         )
         return requestExecutor(request)
     }
@@ -57,7 +58,7 @@ internal class IgdbWebhookApiImplementation(
         val request = GetRequest(
             path = "webhooks",
             queryParameters = mapOf(),
-            successResponseParser = ::igdbWebhookListJsonParser,
+            successResponseParser = IgdbParser::igdbWebhookListJsonParser,
         )
         return requestExecutor(request)
     }
@@ -66,7 +67,7 @@ internal class IgdbWebhookApiImplementation(
         val request = GetRequest(
             path = "webhooks/${webhookId.value}",
             queryParameters = mapOf(),
-            successResponseParser = ::igdbWebhookListJsonParser,
+            successResponseParser = IgdbParser::igdbWebhookListJsonParser,
         )
         return requestExecutor(request)
     }
@@ -75,7 +76,7 @@ internal class IgdbWebhookApiImplementation(
         val request = DeleteRequest(
             path = "webhooks/${webhookId.value}",
             queryParameters = mapOf(),
-            successResponseParser = ::igdbWebhookListJsonParser,
+            successResponseParser = IgdbParser::igdbWebhookListJsonParser,
         )
         return requestExecutor(request)
     }

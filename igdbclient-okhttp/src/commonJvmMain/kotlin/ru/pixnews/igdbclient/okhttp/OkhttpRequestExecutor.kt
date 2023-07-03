@@ -33,8 +33,9 @@ import ru.pixnews.igdbclient.internal.IgdbRequest.DeleteRequest
 import ru.pixnews.igdbclient.internal.IgdbRequest.FormUrlEncodedPostRequest
 import ru.pixnews.igdbclient.internal.IgdbRequest.GetRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.igdbErrorResponseParser
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import ru.pixnews.igdbclient.internal.parser.IgdbParser
+import ru.pixnews.igdbclient.internal.parser.igdbErrorResponseParser
 import ru.pixnews.igdbclient.okhttp.OkhttpIgdbConstants.Header
 import ru.pixnews.igdbclient.okhttp.OkhttpIgdbConstants.MediaType
 
@@ -45,7 +46,7 @@ internal class OkhttpRequestExecutor(
     private val userAgent: String? = null,
     private val headers: Map<String, List<String>> = emptyMap(),
     private val backgroundDispatcher: CoroutineDispatcher = Dispatchers.Default,
-    private val httpErrorJsonParser: (BufferedSource) -> IgdbHttpErrorResponse = ::igdbErrorResponseParser,
+    private val httpErrorJsonParser: (BufferedSource) -> IgdbHttpErrorResponse = IgdbParser::igdbErrorResponseParser,
 ) : RequestExecutor {
     override suspend fun <T : Any> invoke(request: IgdbRequest): IgdbResult<T, IgdbHttpErrorResponse> {
         val okhttpRequest: Request

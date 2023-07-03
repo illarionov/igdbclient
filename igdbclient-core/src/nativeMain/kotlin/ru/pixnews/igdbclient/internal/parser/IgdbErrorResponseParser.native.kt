@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
@@ -29,4 +29,6 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
  * @return [IgdbHttpErrorResponse] or null if the stream cannot be parsed
  */
 @InternalIgdbClientApi
-public expect fun igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse
+public actual fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
+    TODO("Not yet implemented")
+}

@@ -13,17 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.twitch
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.model.IgdbWebhook
 
-/**
- * Parser for JSON responses received from the Twitch server during the Client Credentials
- * Grant Flow.
- */
 @InternalIgdbClientApi
-public actual fun twitchTokenParser(source: BufferedSource): TwitchToken {
+internal actual fun IgdbParser.igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
     TODO("Not yet implemented")
 }

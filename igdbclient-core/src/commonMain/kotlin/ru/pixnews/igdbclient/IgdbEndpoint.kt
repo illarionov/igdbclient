@@ -17,7 +17,7 @@ package ru.pixnews.igdbclient
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
-import ru.pixnews.igdbclient.internal.multiquery.MultiQueryArrayParser
+import ru.pixnews.igdbclient.internal.parser.MultiQueryArrayParser
 import ru.pixnews.igdbclient.model.AgeRating
 import ru.pixnews.igdbclient.model.AgeRatingContentDescription
 import ru.pixnews.igdbclient.model.AgeRatingContentDescriptionResult

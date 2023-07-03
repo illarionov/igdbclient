@@ -20,8 +20,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.library)
-    id("ru.pixnews.igdbclient.gradle.lint.android-lint")
     `maven-publish`
 }
 
@@ -34,7 +32,6 @@ kotlin {
     explicitApi = ExplicitApiMode.Warning
 
     jvm()
-    android()
 
     sourceSets {
         all {
@@ -59,19 +56,15 @@ kotlin {
             }
         }
         val jvmMain by getting
-        val androidMain by getting
         /* Main hierarchy */
         jvmMain.dependsOn(commonJvmMain)
-        androidMain.dependsOn(commonJvmMain)
 
         /* Test source sets */
         val commonJvmTest by creating
         val jvmTest by getting
-        val androidUnitTest by getting
 
         /* Test hierarchy */
         jvmTest.dependsOn(commonJvmTest)
-        androidUnitTest.dependsOn(commonJvmTest)
     }
 }
 
@@ -82,18 +75,5 @@ tasks.withType<KotlinJvmCompile>().configureEach {
             // https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/
             "-Xjvm-default=all",
         )
-    }
-}
-
-android {
-    namespace = "ru.pixnews.igdbclient.okhttp"
-    compileSdk = libs.versions.androidCompileSdk.get().toInt()
-    defaultConfig {
-        minSdk = libs.versions.androidMinSdk.get().toInt()
-    }
-    compileOptions {
-        targetCompatibility = JavaVersion.VERSION_11
-        sourceCompatibility = JavaVersion.VERSION_11
-        isCoreLibraryDesugaringEnabled = false
     }
 }

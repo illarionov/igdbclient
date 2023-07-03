@@ -13,13 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.twitch
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
+import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
 /**
  * Parser of the response received from Twitch server.
  */
 @InternalIgdbClientApi
-public expect fun twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse
+public actual fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse {
+    TODO("Not yet implemented")
+}

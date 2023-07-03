@@ -13,18 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.multiquery
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.Buffer
 import okio.BufferedSource
-import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.model.MultiQueryResult
 import ru.pixnews.igdbclient.model.MultiQueryResultArray
 import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
 
-@InternalIgdbClientApi
 internal class MultiQueryArrayParser(
     private val resultArrayParser: (BufferedSource) -> MultiQueryResultArray = MultiQueryResultArray.ADAPTER::decode,
 ) : (ApicalypseQuery, BufferedSource) -> List<UnpackedMultiQueryResult<*>> {

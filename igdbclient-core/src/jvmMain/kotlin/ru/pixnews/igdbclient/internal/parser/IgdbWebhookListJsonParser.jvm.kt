@@ -13,18 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.webhook
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import org.json.JSONArray
 import org.json.JSONObject
 import org.json.JSONTokener
-import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
-@InternalIgdbClientApi
-internal actual fun igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
+internal actual fun IgdbParser.igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
     val response = source.readUtf8()
     val jsonArray = JSONTokener(response).nextValue() as? JSONArray ?: error("Malformed JSON")
     return (0 until jsonArray.length())

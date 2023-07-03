@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import org.json.JSONArray
@@ -24,7 +24,7 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 /**
  * Implementation of the Igdb server response parser using the [org.json.JSONTokener]
  */
-public actual fun igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
+public actual fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
     val response = source.readUtf8()
     val tokener = JSONTokener(response).nextValue() as? JSONArray ?: error("Malformed JSON")
     return IgdbHttpErrorResponse(readMessageArray(tokener))

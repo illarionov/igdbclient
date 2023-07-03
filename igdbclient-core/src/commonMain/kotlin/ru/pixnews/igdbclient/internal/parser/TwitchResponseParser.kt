@@ -13,15 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.twitch
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
 /**
- * Parser for JSON responses received from the Twitch server during the Client Credentials
+ * Parser of the response received from Twitch server.
+ */
+@InternalIgdbClientApi
+public expect fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse
+
+/**
+ * Parser for JSON response with token received from the Twitch server during the Client Credentials
  * Grant Flow.
  */
 @InternalIgdbClientApi
-public expect fun twitchTokenParser(source: BufferedSource): TwitchToken
+public expect fun IgdbParser.twitchTokenParser(source: BufferedSource): TwitchToken

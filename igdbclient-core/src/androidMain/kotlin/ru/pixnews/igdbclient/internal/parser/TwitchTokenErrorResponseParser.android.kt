@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.twitch
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import org.json.JSONObject
 import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
+import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
 /**
  * Implementation of the error response parser received from Twitch server.
@@ -26,7 +27,7 @@ import ru.pixnews.igdbclient.InternalIgdbClientApi
  * Based on the [org.json.JSONTokener]
  */
 @InternalIgdbClientApi
-public actual fun twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse {
+public actual fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse {
     val response = source.readUtf8()
     val jsonObject = JSONTokener(response).nextValue() as? JSONObject ?: error("Malformed JSON")
     return TwitchErrorResponse(

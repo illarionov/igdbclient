@@ -26,11 +26,12 @@ import okio.BufferedSource
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.parser.IgdbParser
+import ru.pixnews.igdbclient.internal.parser.twitchTokenErrorResponseParser
+import ru.pixnews.igdbclient.internal.parser.twitchTokenParser
 import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
-import ru.pixnews.igdbclient.internal.twitch.twitchTokenErrorResponseParser
-import ru.pixnews.igdbclient.internal.twitch.twitchTokenParser
 
 /**
  * Twitch Client Credentials Grant Flow fetcher
@@ -40,8 +41,9 @@ internal class OkhttpTwitchTokenFetcher(
     private val baseUrl: HttpUrl = OkhttpIgdbConstants.TWITCH_AUTH_URL,
     private val userAgent: String? = null,
     private val backgroundDispatcher: CoroutineDispatcher = Dispatchers.Default,
-    private val twitchTokenParser: (BufferedSource) -> TwitchToken = ::twitchTokenParser,
-    private val twitchErrorResponseParser: (BufferedSource) -> TwitchErrorResponse = ::twitchTokenErrorResponseParser,
+    private val twitchTokenParser: (BufferedSource) -> TwitchToken = IgdbParser::twitchTokenParser,
+    private val twitchErrorResponseParser: (BufferedSource) -> TwitchErrorResponse =
+        IgdbParser::twitchTokenErrorResponseParser,
     private val tokenTimestampSource: () -> Long = System::currentTimeMillis,
 ) : TwitchTokenFetcher {
     override suspend fun invoke(credentials: TwitchCredentials): IgdbResult<TwitchToken, TwitchErrorResponse> {

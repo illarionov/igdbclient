@@ -13,13 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.webhook
+package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
+import org.json.JSONObject
+import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.model.IgdbWebhook
+import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
+/**
+ * Implementation of the error response parser received from Twitch server.
+ *
+ * Based on the [org.json.JSONTokener]
+ */
 @InternalIgdbClientApi
-internal actual fun igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
-    TODO("Not yet implemented")
+public actual fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse {
+    val response = source.readUtf8()
+    val jsonObject = JSONTokener(response).nextValue() as? JSONObject ?: error("Malformed JSON")
+    return TwitchErrorResponse(
+        status = jsonObject.optInt("status"),
+        message = jsonObject.optString("message"),
+    )
 }
