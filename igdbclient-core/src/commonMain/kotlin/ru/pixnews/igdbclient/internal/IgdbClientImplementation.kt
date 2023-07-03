@@ -19,12 +19,10 @@ import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbWebhookApi
-import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
 
-@InternalIgdbClientApi
 internal class IgdbClientImplementation(
     private val requestExecutor: RequestExecutor,
 ) : IgdbClient {

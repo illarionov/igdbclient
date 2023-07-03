@@ -20,6 +20,6 @@ import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.auth.model.TwitchToken
 
 @InternalIgdbClientApi
-public fun interface TwitchTokenFetcher {
+public interface TwitchTokenFetcher {
     public suspend operator fun invoke(credentials: TwitchCredentials): IgdbResult<TwitchToken, TwitchErrorResponse>
 }

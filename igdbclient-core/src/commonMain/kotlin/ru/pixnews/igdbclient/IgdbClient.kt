@@ -99,7 +99,6 @@ import ru.pixnews.igdbclient.model.WebsiteResult
  * }
  * ```
  */
-@OptIn(InternalIgdbClientApi::class)
 public fun <C : IgdbHttpEngineConfig> IgdbClient(
     engine: IgdbHttpEngine<C>,
     block: IgdbClientConfigBlock<C>.() -> Unit,

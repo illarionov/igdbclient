@@ -15,14 +15,12 @@
  */
 package ru.pixnews.igdbclient.internal
 
-import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
 import ru.pixnews.igdbclient.internal.model.IgdbClientConfig
 import ru.pixnews.igdbclient.internal.twitch.TwitchAuthenticationRequestDecorator
 import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 
-@InternalIgdbClientApi
 internal fun buildRequestExecutor(
     config: IgdbClientConfig<*>,
     internalHttpClient: IgdbHttpClient,

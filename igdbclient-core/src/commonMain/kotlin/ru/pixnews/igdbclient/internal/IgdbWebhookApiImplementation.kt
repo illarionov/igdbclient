@@ -22,7 +22,6 @@ import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod
 import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.CREATE
 import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.DELETE
 import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.UPDATE
-import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.IgdbRequest.DeleteRequest
 import ru.pixnews.igdbclient.internal.IgdbRequest.FormUrlEncodedPostRequest
@@ -32,7 +31,6 @@ import ru.pixnews.igdbclient.internal.parser.igdbWebhookListJsonParser
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
-@InternalIgdbClientApi
 internal class IgdbWebhookApiImplementation(
     val requestExecutor: RequestExecutor,
 ) : IgdbWebhookApi {
