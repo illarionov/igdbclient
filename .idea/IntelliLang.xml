@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LanguageInjectionConfiguration">
+    <injection language="regexp" injector-id="java">
+      <display-name>InclusiveRepositoryContentDescriptor (org.gradle.api.artifacts.repositories)</display-name>
+      <single-file value="true" />
+      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("includeGroupByRegex").withParameters("java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("includeModuleByRegex").withParameters("java.lang.String", "java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("includeVersionByRegex").withParameters("java.lang.String", "java.lang.String", "java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+      <place><![CDATA[psiParameter().ofMethod(1, psiMethod().withName("includeModuleByRegex").withParameters("java.lang.String", "java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+      <place><![CDATA[psiParameter().ofMethod(1, psiMethod().withName("includeVersionByRegex").withParameters("java.lang.String", "java.lang.String", "java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+      <place><![CDATA[psiParameter().ofMethod(2, psiMethod().withName("includeVersionByRegex").withParameters("java.lang.String", "java.lang.String", "java.lang.String").definedInClass("org.gradle.api.artifacts.repositories.InclusiveRepositoryContentDescriptor"))]]></place>
+    </injection>
+  </component>
+</project>
