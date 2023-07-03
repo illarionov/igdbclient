@@ -76,7 +76,6 @@ import ru.pixnews.igdbclient.model.LanguageSupport
 import ru.pixnews.igdbclient.model.LanguageSupportResult
 import ru.pixnews.igdbclient.model.LanguageSupportType
 import ru.pixnews.igdbclient.model.LanguageSupportTypeResult
-import ru.pixnews.igdbclient.model.MultiQueryResultArray
 import ru.pixnews.igdbclient.model.MultiplayerMode
 import ru.pixnews.igdbclient.model.MultiplayerModeResult
 import ru.pixnews.igdbclient.model.Platform
@@ -541,7 +540,7 @@ public open class IgdbEndpoint<out R : Any>(
         @OptIn(InternalIgdbClientApi::class)
         public val MULTIQUERY: IgdbEndpoint<List<UnpackedMultiQueryResult<*>>> = IgdbEndpoint(
             "multiquery",
-            MultiQueryArrayParser(MultiQueryResultArray.ADAPTER::decode),
+            MultiQueryArrayParser::parse,
             null,
         )
 

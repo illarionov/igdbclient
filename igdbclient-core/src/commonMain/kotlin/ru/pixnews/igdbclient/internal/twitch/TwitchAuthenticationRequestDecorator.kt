@@ -122,12 +122,12 @@ internal class TwitchAuthenticationRequestDecorator(
     private class CachedRequestExecutor(
         private val twitchCredentials: TwitchCredentials,
         private val requestExecutorFactory: (token: IgdbAuthToken?) -> RequestExecutor,
-    ) : (TwitchTokenPayload) -> RequestExecutor? {
+    ) {
         private val lock: ReentrantLock = reentrantLock()
         private var cachedTokenPayload: TwitchTokenPayload = TwitchTokenPayload.NO_TOKEN
         private var exeutor: RequestExecutor = dummyRequestExecutor
 
-        override fun invoke(tokenPayload: TwitchTokenPayload): RequestExecutor? = lock.withLock {
+        operator fun invoke(tokenPayload: TwitchTokenPayload): RequestExecutor? = lock.withLock {
             if (tokenPayload == cachedTokenPayload && exeutor != dummyRequestExecutor) {
                 return exeutor
             }

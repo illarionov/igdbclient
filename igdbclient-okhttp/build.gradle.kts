@@ -49,10 +49,10 @@ kotlin {
         /* Main source sets */
         val commonJvmMain by creating {
             dependencies {
-                implementation(project(":igdbclient-core"))
+                api(project(":igdbclient-core"))
+                implementation(libs.okhttp3)
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.okio)
-                implementation(libs.okhttp3)
             }
         }
         val jvmMain by getting

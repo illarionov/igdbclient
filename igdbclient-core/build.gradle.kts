@@ -16,6 +16,7 @@
 
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
@@ -36,7 +37,17 @@ kotlin {
 
     jvm()
     android()
+    js(IR) {
+        browser()
+        nodejs()
+    }
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
     linuxX64()
+    macosX64()
+    macosArm64()
+    mingwX64()
 
     sourceSets {
         all {
@@ -50,6 +61,7 @@ kotlin {
                 ).forEach(::optIn)
             }
         }
+
         /* Main source sets */
         val commonMain by getting {
             dependencies {
@@ -57,22 +69,49 @@ kotlin {
                 implementation(libs.okio)
             }
         }
-        val nativeMain by creating
+        val androidMain by getting
+        val iosArm64Main by getting
+        val iosMain by creating
+        val iosSimulatorArm64Main by getting
+        val iosX64Main by getting
+        val jsMain by getting
         val jvmMain by getting {
             dependencies {
                 implementation(libs.org.json)
             }
         }
-        val androidMain by getting
         val linuxMain by creating
         val linuxX64Main by getting
+        val macosArm64Main by getting
+        val macosMain by creating
+        val macosX64Main by getting
+        val mingwX64Main by getting
+        val nativeMain by creating
+        val windowsMain by creating
 
         /* Main hierarchy */
-        nativeMain.dependsOn(commonMain)
-        jvmMain.dependsOn(commonMain)
-        androidMain.dependsOn(commonMain)
-        linuxMain.dependsOn(nativeMain)
-        linuxX64Main.dependsOn(linuxMain)
+        commonMain.hasChildren(
+            androidMain,
+            jsMain,
+            jvmMain,
+            nativeMain.hasChildren(
+                iosMain.hasChildren(
+                    iosX64Main,
+                    iosArm64Main,
+                    iosSimulatorArm64Main,
+                ),
+                linuxMain.hasChildren(
+                    linuxX64Main,
+                ),
+                macosMain.hasChildren(
+                    macosX64Main,
+                    macosArm64Main,
+                ),
+                windowsMain.hasChildren(
+                    mingwX64Main,
+                ),
+            ),
+        )
 
         /* Test source sets */
         val commonTest by getting {
@@ -83,16 +122,50 @@ kotlin {
         val nativeTest by creating
         val jvmTest by getting
         val androidUnitTest by getting
+        val jsTest by getting
+        val iosTest by creating
         val linuxTest by creating
+        val macosTest by creating
+        val windowsTest by creating
+        val iosX64Test by getting
+        val iosArm64Test by getting
+        val iosSimulatorArm64Test by getting
         val linuxX64Test by getting
+        val macosX64Test by getting
+        val macosArm64Test by getting
+        val mingwX64Test by getting
 
         /* Test hierarchy */
-        nativeTest.dependsOn(commonTest)
-        jvmTest.dependsOn(commonTest)
-        androidUnitTest.dependsOn(commonTest)
-        linuxTest.dependsOn(nativeTest)
-        linuxX64Test.dependsOn(linuxTest)
+        commonTest.hasChildren(
+            nativeTest.hasChildren(
+                iosTest.hasChildren(
+                    iosX64Test,
+                    iosArm64Test,
+                    iosSimulatorArm64Test,
+                ),
+                linuxTest.hasChildren(
+                    linuxX64Test,
+                ),
+                macosTest.hasChildren(
+                    macosX64Test,
+                    macosArm64Test,
+                ),
+                windowsTest.hasChildren(
+                    mingwX64Test,
+                ),
+            ),
+            jvmTest,
+            androidUnitTest,
+            jsTest,
+        )
     }
+}
+
+fun KotlinSourceSet.hasChildren(vararg childSourceSets: KotlinSourceSet): KotlinSourceSet {
+    childSourceSets.forEach {
+        it.dependsOn(this)
+    }
+    return this
 }
 
 tasks.withType<KotlinJvmCompile>().configureEach {

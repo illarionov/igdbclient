@@ -23,23 +23,21 @@ import ru.pixnews.igdbclient.model.MultiQueryResult
 import ru.pixnews.igdbclient.model.MultiQueryResultArray
 import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
 
-internal class MultiQueryArrayParser(
-    private val resultArrayParser: (BufferedSource) -> MultiQueryResultArray = MultiQueryResultArray.ADAPTER::decode,
-) : (ApicalypseQuery, BufferedSource) -> List<UnpackedMultiQueryResult<*>> {
-    override fun invoke(query: ApicalypseQuery, inputStream: BufferedSource): List<UnpackedMultiQueryResult<*>> {
+internal object MultiQueryArrayParser {
+    fun parse(query: ApicalypseQuery, source: BufferedSource): List<UnpackedMultiQueryResult<*>> {
         val multiQuery = query as? ApicalypseMultiQuery ?: error("should be ApicalypseMultiQuery")
-        val multiQueryResultArray = resultArrayParser(inputStream)
-        return multiQueryResultArray.result.mapIndexed { subqueryIndex, subqueryResult: MultiQueryResult ->
-            val endpoint = multiQuery.subqueries[subqueryIndex].endpoint
+        val multiQueryResultArray = MultiQueryResultArray.ADAPTER.decode(source)
+        return multiQueryResultArray.result.mapIndexed { subQueryIndex, subQueryResult: MultiQueryResult ->
+            val endpoint = multiQuery.subqueries[subQueryIndex].endpoint
             UnpackedMultiQueryResult(
-                name = subqueryResult.name,
-                count = subqueryResult.count,
-                results = subqueryResult.results.let { results ->
+                name = subQueryResult.name,
+                count = subQueryResult.count,
+                results = subQueryResult.results.let { results ->
                     if (results.isNotEmpty()) {
                         val parser = checkNotNull(endpoint.singleItemParser) {
                             "No parser for `$endpoint`"
                         }
-                        subqueryResult.results.map { payload -> parser(Buffer().write(payload)) }
+                        subQueryResult.results.map { payload -> parser(Buffer().write(payload)) }
                     } else {
                         null
                     }
