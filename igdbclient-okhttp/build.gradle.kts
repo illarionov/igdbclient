@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
@@ -60,7 +61,17 @@ kotlin {
         jvmMain.dependsOn(commonJvmMain)
 
         /* Test source sets */
-        val commonJvmTest by creating
+        val commonJvmTest by creating {
+            dependencies {
+                implementation(project(":library:test"))
+                runtimeOnly(libs.junit.jupiter.engine)
+                implementation(libs.junit.jupiter.params)
+                implementation(libs.okhttp3.logging.interceptor)
+                implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.kotest.assertions.core)
+                implementation(libs.kotlinx.coroutines.test)
+            }
+        }
         val jvmTest by getting
 
         /* Test hierarchy */
@@ -74,6 +85,16 @@ tasks.withType<KotlinJvmCompile>().configureEach {
         freeCompilerArgs.addAll(
             // https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/
             "-Xjvm-default=all",
+        )
+    }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+    maxHeapSize = "2G"
+    testLogging {
+        events = mutableSetOf(
+            FAILED,
         )
     }
 }

@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Syntax Error",
+    "status": 400,
+    "cause": "Expecting a STRING as input, surround your input with quotes starting at \u0027Diablo\u0027"
+  }
+]

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
@@ -120,8 +121,23 @@ kotlin {
             }
         }
         val nativeTest by creating
-        val jvmTest by getting
-        val androidUnitTest by getting
+        val jvmTest by getting {
+            dependencies {
+                implementation(project(":library:test"))
+                runtimeOnly(libs.junit.jupiter.engine)
+                implementation(libs.junit.jupiter.params)
+                implementation(libs.kotest.assertions.core)
+                implementation(libs.kotlinx.coroutines.test)
+            }
+        }
+        val androidUnitTest by getting {
+            dependencies {
+                runtimeOnly(libs.junit.jupiter.engine)
+                implementation(libs.junit.jupiter.params)
+                implementation(libs.kotest.assertions.core)
+                implementation(libs.kotlinx.coroutines.test)
+            }
+        }
         val jsTest by getting
         val iosTest by creating
         val linuxTest by creating
@@ -157,6 +173,16 @@ kotlin {
             jvmTest,
             androidUnitTest,
             jsTest,
+        )
+    }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+    maxHeapSize = "2G"
+    testLogging {
+        events = mutableSetOf(
+            FAILED,
         )
     }
 }

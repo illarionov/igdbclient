@@ -13,15 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:Suppress("MatchingDeclarationName")
+package ru.pixnews.igdbclient.library.test
 
-package ru.pixnews.igdbclient
+import okio.Buffer
+import okio.source
 
-import org.junit.Test
-
-public class PlatformTest {
-    @Test
-    public fun testExample() {
-        // assertTrue("Check jvm is mentioned", Greeting().greeting().contains("jvm"))
+public fun Any.readResourceAsBuffer(path: String): Buffer {
+    return Buffer().apply {
+        val stream = this@readResourceAsBuffer.javaClass.getResourceAsStream(path) ?: error("No resource `$path`")
+        stream.source().use {
+            writeAll(it)
+        }
     }
 }

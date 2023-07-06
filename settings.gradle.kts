@@ -24,3 +24,4 @@ plugins {
 rootProject.name = "igdbclient"
 include(":igdbclient-core")
 include(":igdbclient-okhttp")
+include(":library:test")

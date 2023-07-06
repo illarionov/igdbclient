@@ -1,0 +1,8 @@
+{
+  "message": "Authorization Failure. Have you tried:",
+  "Tip 1":   "Ensure you are sending Authorization and Client-ID as headers.",
+  "Tip 2":   "Ensure Authorization value starts with 'Bearer ', including the space",
+  "Tip 3":   "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret.",
+  "Docs":    "https://api-docs.igdb.com/#authentication",
+  "Discord": "https://discord.gg/FrvfwQg"
+}

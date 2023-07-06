@@ -23,9 +23,9 @@ import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 
 internal fun buildRequestExecutor(
     config: IgdbClientConfig<*>,
-    internalHttpClient: IgdbHttpClient,
+    igdbHttpClient: IgdbHttpClient,
 ): RequestExecutor {
-    val originalExecutorFactory = internalHttpClient.requestExecutorFactory
+    val originalExecutorFactory = igdbHttpClient.requestExecutorFactory
     val requestExecutorFactory: (IgdbAuthToken?) -> RequestExecutor = if (config.retryPolicy.enabled) {
         with(config.retryPolicy) {
             { token ->
@@ -54,7 +54,7 @@ internal fun buildRequestExecutor(
         TwitchAuthenticationRequestDecorator(
             credentials = credentials,
             tokenStorage = tokenStorage,
-            twitchTokenFetcher = internalHttpClient.twitchTokenFetcherFactory(),
+            twitchTokenFetcher = igdbHttpClient.twitchTokenFetcherFactory(),
             maxRequestRetries = twitchAuthConfig.maxRequestRetries,
             requestExecutorFactory = requestExecutorFactory,
         )
