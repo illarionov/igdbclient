@@ -7,7 +7,9 @@ detekt = "1.23.0"
 kotlin = "1.8.22"
 spotless = "6.18.0"
 
+assertk = "0.26.1"
 atomicfu = '0.21.0'
+kermit = "1.2.2"
 kotest = "5.6.1"
 okhttp3 = "4.10.0"
 okio = "3.3.0"
@@ -19,12 +21,15 @@ kotlinx-coroutines = "1.7.2"
 wire = "4.7.2"
 
 [libraries]
+assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
 junit-bom = { group = "org.junit", name = "junit-bom", version.ref = "junit5" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit5" }
 junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit5" }
 junit-jupiter-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit5" }
 junit-jupiter-vintage-engine = { group = "org.junit.vintage", name = "junit-vintage-engine", version.ref = "junit5" }
 junit-jupiter-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit5" }
+kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
+kermit-jvm = { group = "co.touchlab", name = "kermit-jvm", version.ref = "kermit" }
 kotest-bom = { group = "io.kotest", name = "kotest-bom", version.ref = "kotest" }
 kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }

@@ -13,18 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package ru.pixnews.igdbclient.test
 
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
+import co.touchlab.kermit.LogWriter
+import co.touchlab.kermit.Logger
+import co.touchlab.kermit.LoggerConfig
+import co.touchlab.kermit.Severity
+import co.touchlab.kermit.Severity.Verbose
 
-plugins.withId("org.jetbrains.kotlin.multiplatform") {
-    apply(plugin = "kotlinx-atomicfu")
+internal expect val testLogWriter: LogWriter
 
-    the<KotlinMultiplatformExtension>().sourceSets {
-        getByName("commonMain") {
-            dependencies {
-                implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
-            }
-        }
-    }
+public object TestingLoggers {
+    public val consoleLogger: Logger = Logger(
+        config = object : LoggerConfig {
+            override val logWriterList: List<LogWriter> = listOf(testLogWriter)
+            override val minSeverity: Severity = Verbose
+        },
+    )
 }

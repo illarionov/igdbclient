@@ -13,18 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package ru.pixnews.igdbclient.test
 
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
+import co.touchlab.kermit.LogWriter
+import co.touchlab.kermit.SystemWriter
 
-plugins.withId("org.jetbrains.kotlin.multiplatform") {
-    apply(plugin = "kotlinx-atomicfu")
-
-    the<KotlinMultiplatformExtension>().sourceSets {
-        getByName("commonMain") {
-            dependencies {
-                implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
-            }
-        }
-    }
-}
+internal actual val testLogWriter: LogWriter = SystemWriter()

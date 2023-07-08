@@ -15,35 +15,29 @@
  */
 package ru.pixnews.igdbclient.internal
 
-import io.kotest.matchers.shouldBe
-import io.kotest.matchers.types.shouldBeInstanceOf
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.RegisterExtension
+import assertk.assertThat
+import assertk.assertions.isEqualTo
+import assertk.assertions.isInstanceOf
+import assertk.assertions.isTrue
+import assertk.assertions.prop
+import kotlinx.coroutines.test.runTest
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
-import ru.pixnews.igdbclient.IgdbResult.Success
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
 import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.dsl.IgdbClientConfigBlock
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
-import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
 import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
 import ru.pixnews.igdbclient.test.TracingRequestExecutor
-import java.util.concurrent.atomic.AtomicBoolean
+import kotlin.test.Test
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.minutes
 
 class RootExecutorFactoryTest {
-    @JvmField
-    @RegisterExtension
-    var coroutinesExt: MainCoroutineExtension = MainCoroutineExtension()
-
     @Test
-    fun `Executor should not make requests to the twitch server if auth not configured`() = coroutinesExt.runTest {
+    fun executor_should_not_make_requests_to_the_twitch_server_if_auth_not_configured() = runTest {
         val mockHttpClient = MockIgdbHttpClient()
         val config = IgdbClientConfigBlock<Nothing>().apply {}.build()
 
@@ -51,12 +45,14 @@ class RootExecutorFactoryTest {
 
         val response: IgdbResult<String, IgdbHttpErrorResponse> = executor.invoke(testApicalypseRequest)
 
-        (response as? Success<String>)?.value shouldBe success200Response.value
+        assertThat(response)
+            .isInstanceOf<IgdbResult.Success<String>>()
+            .prop(IgdbResult.Success<String>::value).isEqualTo(success200Response.value)
     }
 
     @Test
-    fun `Executor should make requests to the twitch server if twitch auth is configured`() = coroutinesExt.runTest {
-        val twitchAuthRequested = AtomicBoolean(false)
+    fun executor_should_make_requests_to_the_twitch_server_if_twitch_auth_is_configured() = runTest {
+        var twitchAuthRequested = false
         val executor = buildRequestExecutor(
             config = IgdbClientConfigBlock<Nothing>().apply {
                 twitchAuth {
@@ -66,20 +62,22 @@ class RootExecutorFactoryTest {
             }.build(),
             igdbHttpClient = MockIgdbHttpClient(
                 twitchTokenFetcher = { _ ->
-                    twitchAuthRequested.set(true)
-                    Success(TwitchToken("testAccessToken"))
+                    twitchAuthRequested = true
+                    IgdbResult.Success(TwitchToken("testAccessToken"))
                 },
             ),
         )
 
         val response: IgdbResult<String, IgdbHttpErrorResponse> = executor.invoke(testApicalypseRequest)
 
-        twitchAuthRequested.get() shouldBe true
-        (response as? Success<String>)?.value shouldBe success200Response.value
+        assertThat(twitchAuthRequested).isTrue()
+        assertThat(response)
+            .isInstanceOf<IgdbResult.Success<String>>()
+            .prop(IgdbResult.Success<String>::value).isEqualTo(success200Response.value)
     }
 
     @Test
-    fun `Executor should retry requests on 429 error by default`() = coroutinesExt.runTest {
+    fun executor_should_retry_requests_on_429_error_by_default() = runTest {
         val requestExecutor = TracingRequestExecutor { _, requestNo ->
             when (requestNo) {
                 1L, 2L -> error429Response
@@ -95,12 +93,13 @@ class RootExecutorFactoryTest {
 
         val response: IgdbResult<String, IgdbHttpErrorResponse> = executor.invoke(testApicalypseRequest)
 
-        response.shouldBeInstanceOf<Success<String>>()
-        response.value shouldBe success200Response.value
+        assertThat(response)
+            .isInstanceOf<IgdbResult.Success<String>>()
+            .prop(IgdbResult.Success<String>::value).isEqualTo(success200Response.value)
     }
 
     @Test
-    fun `Executor should not retry requests on 429 error when retries disabled`() = coroutinesExt.runTest {
+    fun executor_should_not_retry_requests_on_429_error_when_retries_disabled() = runTest {
         val childRequestExecutor = TracingRequestExecutor { _, requestNo ->
             when (requestNo) {
                 1L, 2L -> error429Response
@@ -120,12 +119,13 @@ class RootExecutorFactoryTest {
 
         val response: IgdbResult<String, IgdbHttpErrorResponse> = executor.invoke(testApicalypseRequest)
 
-        response.shouldBeInstanceOf<HttpFailure<IgdbHttpErrorResponse>>()
-        response.httpCode shouldBe 429
+        assertThat(response)
+            .isInstanceOf<IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse>>()
+            .prop(IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse>::httpCode).isEqualTo(429)
     }
 
     @Test
-    fun `Custom retry policy configuration test`() = coroutinesExt.runTest {
+    fun custom_retry_policy_configuration_test() = runTest {
         val childRequestExecutor = TracingRequestExecutor { _, requestNo ->
             when (requestNo) {
                 in 1L..10L -> error429Response
@@ -149,10 +149,12 @@ class RootExecutorFactoryTest {
 
         val response: IgdbResult<String, IgdbHttpErrorResponse> = executor.invoke(testApicalypseRequest)
 
-        response.shouldBeInstanceOf<HttpFailure<IgdbHttpErrorResponse>>()
-        response.httpCode shouldBe 429
-        childRequestExecutor.invokeCount shouldBe 10
-        testScheduler.currentTime shouldBe 900
+        assertThat(response)
+            .isInstanceOf<IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse>>()
+            .prop(IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse>::httpCode).isEqualTo(429)
+
+        assertThat(childRequestExecutor.invokeCount).isEqualTo(10)
+        assertThat(testScheduler.currentTime).isEqualTo(900)
     }
 
     class MockIgdbHttpClient(
@@ -175,13 +177,13 @@ class RootExecutorFactoryTest {
     }
 
     internal companion object {
-        val testApicalypseRequest: ApicalypsePostRequest<String> = ApicalypsePostRequest(
+        val testApicalypseRequest: IgdbRequest.ApicalypsePostRequest<String> = IgdbRequest.ApicalypsePostRequest(
             path = "endpoint",
             query = apicalypseQuery { },
             successResponseParser = { _, _ -> "" },
         )
-        val success200Response: Success<String> = Success("Mock Success Response")
-        val error429Response: HttpFailure<IgdbHttpErrorResponse> = HttpFailure(
+        val success200Response: IgdbResult.Success<String> = IgdbResult.Success("Mock Success Response")
+        val error429Response: IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse> = IgdbResult.Failure.HttpFailure(
             httpCode = 429,
             httpMessage = "429 Too Many Requests",
             rawResponseBody = null,

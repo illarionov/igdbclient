@@ -118,6 +118,9 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(libs.assertk)
+                implementation(libs.kotlinx.coroutines.test)
+                implementation(libs.kermit)
             }
         }
         val nativeTest by creating
@@ -127,7 +130,6 @@ kotlin {
                 runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
                 implementation(libs.kotest.assertions.core)
-                implementation(libs.kotlinx.coroutines.test)
             }
         }
         val androidUnitTest by getting {
@@ -135,7 +137,7 @@ kotlin {
                 runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
                 implementation(libs.kotest.assertions.core)
-                implementation(libs.kotlinx.coroutines.test)
+                implementation(libs.kermit.jvm)
             }
         }
         val jsTest by getting

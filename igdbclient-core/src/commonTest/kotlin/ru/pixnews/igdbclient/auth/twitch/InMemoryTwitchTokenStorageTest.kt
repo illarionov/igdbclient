@@ -15,52 +15,49 @@
  */
 package ru.pixnews.igdbclient.auth.twitch
 
-import io.kotest.matchers.shouldBe
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload.Companion.NO_TOKEN
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
+import assertk.assertThat
+import assertk.assertions.isEqualTo
+import assertk.assertions.isFalse
+import assertk.assertions.isTrue
+import kotlinx.coroutines.test.runTest
+import kotlin.test.Test
 
 class InMemoryTwitchTokenStorageTest {
-    @JvmField
-    @RegisterExtension
-    var coroutinesExt: MainCoroutineExtension = MainCoroutineExtension()
-
     @Test
-    fun `getToken initially should return dummy token value by default`() = coroutinesExt.runTest {
+    fun getToken_initially_should_return_dummy_token_value_by_default() = runTest {
         val storage = InMemoryTwitchTokenStorage()
         val token = storage.getToken()
-        token shouldBe NO_TOKEN
+        assertThat(token).isEqualTo(TwitchTokenPayload.NO_TOKEN)
     }
 
     @Test
-    fun `getToken should return token specified in the constructor`() = coroutinesExt.runTest {
+    fun getToken_should_return_token_specified_in_the_constructor() = runTest {
         val storage = InMemoryTwitchTokenStorage(TEST_TOKEN)
         val token = storage.getToken()
-        token shouldBe TEST_TOKEN
+        assertThat(token).isEqualTo(TEST_TOKEN)
     }
 
     @Test
-    fun `updateToken should correctly update token`() = coroutinesExt.runTest {
+    fun updateToken_should_correctly_update_token() = runTest {
         val storage = InMemoryTwitchTokenStorage()
 
-        val isUpdated = storage.updateToken(NO_TOKEN, TEST_TOKEN)
+        val isUpdated = storage.updateToken(TwitchTokenPayload.NO_TOKEN, TEST_TOKEN)
         val newToken = storage.getToken()
 
-        isUpdated shouldBe true
-        newToken shouldBe TEST_TOKEN
+        assertThat(isUpdated).isTrue()
+        assertThat(newToken).isEqualTo(TEST_TOKEN)
     }
 
     @Test
-    fun `updateToken should not update token if original token not match`() = coroutinesExt.runTest {
+    fun updateToken_should_not_update_token_if_original_token_not_match() = runTest {
         val initialToken = TwitchTokenPayload(byteArrayOf(4, 5, 6))
         val storage = InMemoryTwitchTokenStorage(initialToken)
 
-        val isUpdated = storage.updateToken(NO_TOKEN, TEST_TOKEN)
+        val isUpdated = storage.updateToken(TwitchTokenPayload.NO_TOKEN, TEST_TOKEN)
         val newToken = storage.getToken()
 
-        isUpdated shouldBe false
-        newToken shouldBe initialToken
+        assertThat(isUpdated).isFalse()
+        assertThat(newToken).isEqualTo(initialToken)
     }
 
     companion object {
