@@ -19,3 +19,14 @@ import co.touchlab.kermit.LogWriter
 import co.touchlab.kermit.platformLogWriter
 
 internal actual val testLogWriter: LogWriter = platformLogWriter()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreAndroid
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreJs
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreJvm
+
+actual typealias IgnoreNative = kotlin.test.Ignore

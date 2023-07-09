@@ -21,8 +21,6 @@ import co.touchlab.kermit.LoggerConfig
 import co.touchlab.kermit.Severity
 import co.touchlab.kermit.Severity.Verbose
 
-internal expect val testLogWriter: LogWriter
-
 public object TestingLoggers {
     public val consoleLogger: Logger = Logger(
         config = object : LoggerConfig {

@@ -26,6 +26,9 @@ complexity:
   LongParameterList:
     functionThreshold: 10
     ignoreDefaultParameters: true
+  LongMethod:
+    active: true
+    ignoreAnnotated: ['Test']
 
 coroutines:
   active: true

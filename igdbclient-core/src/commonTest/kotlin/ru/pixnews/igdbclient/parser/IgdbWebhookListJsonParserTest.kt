@@ -13,19 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.internal.parser
+package ru.pixnews.igdbclient.parser
 
-import io.kotest.matchers.collections.shouldContainInOrder
+import assertk.assertThat
+import assertk.assertions.containsExactly
 import okio.Buffer
-import org.junit.jupiter.api.Test
+import ru.pixnews.igdbclient.internal.parser.IgdbParser
+import ru.pixnews.igdbclient.internal.parser.igdbWebhookListJsonParser
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
+import ru.pixnews.igdbclient.test.IgnoreAndroid
+import ru.pixnews.igdbclient.test.IgnoreJs
+import ru.pixnews.igdbclient.test.IgnoreNative
+import kotlin.test.Test
 
+@IgnoreAndroid
+@IgnoreJs
+@IgnoreNative
 class IgdbWebhookListJsonParserTest {
     private val parser = IgdbParser::igdbWebhookListJsonParser
 
     @Test
-    fun `Parser should return correct result on correct data`() {
+    fun parser_should_return_correct_result_on_correct_data() {
         val responseText = """
             [
               {
@@ -55,31 +64,32 @@ class IgdbWebhookListJsonParserTest {
             ]
         """.trimIndent()
         val webhookList = parser(Buffer().write(responseText.encodeToByteArray()))
-        webhookList.shouldContainInOrder(
-            IgdbWebhook(
-                id = IgdbWebhookId("7133"),
-                url = "https://example.com/games/webhook",
-                category = "625691411",
-                subCategory = "0",
-                active = false,
-                numberOfRetries = 5,
-                apiKey = "api_key_1",
-                secret = "webhook_secret_1",
-                createdAt = 1_687_847_078,
-                updatedAt = 1_687_849_689,
-            ),
-            IgdbWebhook(
-                id = IgdbWebhookId("7135"),
-                url = "https://example.com/games/2/webhook",
-                category = "625691412",
-                subCategory = "2",
-                active = true,
-                numberOfRetries = 0,
-                apiKey = "api_key2",
-                secret = "webhook_secret_2",
-                createdAt = 1_688_013_039,
-                updatedAt = 1_688_013_039,
-            ),
-        )
+        assertThat(webhookList)
+            .containsExactly(
+                IgdbWebhook(
+                    id = IgdbWebhookId("7133"),
+                    url = "https://example.com/games/webhook",
+                    category = "625691411",
+                    subCategory = "0",
+                    active = false,
+                    numberOfRetries = 5,
+                    apiKey = "api_key_1",
+                    secret = "webhook_secret_1",
+                    createdAt = 1_687_847_078,
+                    updatedAt = 1_687_849_689,
+                ),
+                IgdbWebhook(
+                    id = IgdbWebhookId("7135"),
+                    url = "https://example.com/games/2/webhook",
+                    category = "625691412",
+                    subCategory = "2",
+                    active = true,
+                    numberOfRetries = 0,
+                    apiKey = "api_key2",
+                    secret = "webhook_secret_2",
+                    createdAt = 1_688_013_039,
+                    updatedAt = 1_688_013_039,
+                ),
+            )
     }
 }

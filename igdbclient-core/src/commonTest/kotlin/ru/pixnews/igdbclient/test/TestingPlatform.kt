@@ -13,15 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:Suppress("MatchingDeclarationName")
+@file:Suppress("EMPTY_PRIMARY_CONSTRUCTOR")
 
-package ru.pixnews.igdbclient
+package ru.pixnews.igdbclient.test
 
-import org.junit.jupiter.api.Test
+import co.touchlab.kermit.LogWriter
 
-public class PlatformTest {
-    @Test
-    public fun testExample() {
-        // assertTrue("Check android is mentioned", Greeting().greeting().contains("android"))
-    }
-}
+internal expect val testLogWriter: LogWriter
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+expect annotation class IgnoreAndroid()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+expect annotation class IgnoreJs()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+expect annotation class IgnoreJvm()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+expect annotation class IgnoreNative()

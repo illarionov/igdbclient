@@ -16,6 +16,17 @@
 package ru.pixnews.igdbclient.test
 
 import co.touchlab.kermit.LogWriter
-import co.touchlab.kermit.SystemWriter
+import co.touchlab.kermit.platformLogWriter
 
-internal actual val testLogWriter: LogWriter = SystemWriter()
+internal actual val testLogWriter: LogWriter = platformLogWriter()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreAndroid
+
+actual typealias IgnoreJs = kotlin.test.Ignore
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreJvm
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreNative

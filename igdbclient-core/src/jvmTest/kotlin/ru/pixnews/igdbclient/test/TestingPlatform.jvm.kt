@@ -19,3 +19,14 @@ import co.touchlab.kermit.LogWriter
 import co.touchlab.kermit.SystemWriter
 
 internal actual val testLogWriter: LogWriter = SystemWriter()
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreAndroid
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreJs
+
+actual typealias IgnoreJvm = org.junit.jupiter.api.Disabled
+
+@Target(AnnotationTarget.CLASS, AnnotationTarget.FUNCTION)
+actual annotation class IgnoreNative
