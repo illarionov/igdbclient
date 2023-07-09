@@ -23,13 +23,11 @@ import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.internal.parser.IgdbParser
 import ru.pixnews.igdbclient.internal.parser.twitchTokenParser
 import ru.pixnews.igdbclient.test.IgnoreAndroid
-import ru.pixnews.igdbclient.test.IgnoreJs
 import ru.pixnews.igdbclient.test.IgnoreNative
 import kotlin.test.Test
 import kotlin.test.assertFails
 
 @IgnoreAndroid
-@IgnoreJs
 @IgnoreNative
 class TwitchTokenParserTest {
     private val parser = IgdbParser::twitchTokenParser

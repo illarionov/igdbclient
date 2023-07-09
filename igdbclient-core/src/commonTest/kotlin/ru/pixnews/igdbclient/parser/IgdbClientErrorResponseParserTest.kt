@@ -23,13 +23,11 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse.Message
 import ru.pixnews.igdbclient.internal.parser.IgdbParser
 import ru.pixnews.igdbclient.internal.parser.igdbErrorResponseParser
 import ru.pixnews.igdbclient.test.IgnoreAndroid
-import ru.pixnews.igdbclient.test.IgnoreJs
 import ru.pixnews.igdbclient.test.IgnoreNative
 import kotlin.test.Test
 import kotlin.test.assertFails
 
 @IgnoreAndroid
-@IgnoreJs
 @IgnoreNative
 class IgdbClientErrorResponseParserTest {
     private val parser = IgdbParser::igdbErrorResponseParser

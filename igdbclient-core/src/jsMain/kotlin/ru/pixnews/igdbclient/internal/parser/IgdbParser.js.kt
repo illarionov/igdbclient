@@ -19,6 +19,8 @@ import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.model.IgdbWebhook
+import ru.pixnews.igdbclient.model.IgdbWebhookId
+import kotlin.js.Json
 
 /**
  * Igdb server response parser
@@ -31,9 +33,40 @@ import ru.pixnews.igdbclient.model.IgdbWebhook
  */
 @InternalIgdbClientApi
 public actual fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
-    TODO("Not yet implemented")
+    val response: Any = JSON.parse(source.readUtf8())
+    check(response is Array<*>) { "Not a list of messages" }
+
+    val messages = response.map { messageObject ->
+        (messageObject.unsafeCast<Json>()).let { jsonObject ->
+            IgdbHttpErrorResponse.Message(
+                status = jsonObject["status"].toString().toInt(),
+                cause = jsonObject.optStringOrNull("cause"),
+                title = jsonObject.optStringOrNull("title"),
+            )
+        }
+    }
+    return IgdbHttpErrorResponse(messages)
 }
 
 internal actual fun IgdbParser.igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
-    TODO("Not yet implemented")
+    val response: Any = JSON.parse(source.readUtf8())
+    check(response is Array<*>) { "Not a list of webhooks" }
+    return response.map { messageObject ->
+        (messageObject.unsafeCast<Json>()).let { jsonObject ->
+            IgdbWebhook(
+                id = IgdbWebhookId(
+                    value = jsonObject.optStringOrNull("id") ?: error("No ID field"),
+                ),
+                url = jsonObject.optString("url"),
+                category = jsonObject.optString("category"),
+                subCategory = jsonObject.optString("sub_category"),
+                active = jsonObject.optBoolean("active"),
+                numberOfRetries = jsonObject.optLong("number_of_retries"),
+                apiKey = jsonObject.optString("api_key"),
+                secret = jsonObject.optString("secret"),
+                createdAt = jsonObject.optLong("created_at"),
+                updatedAt = jsonObject.optLong("updated_at"),
+            )
+        }
+    }
 }
