@@ -15,20 +15,17 @@
  */
 package ru.pixnews.igdbclient.library.test.okhttp
 
+import co.touchlab.kermit.Logger
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
-import java.util.logging.Level
-import java.util.logging.Logger
 
 public class TestingLoggerInterceptor(
-    private val logger: Logger = Logger.getLogger("okhttp"),
+    private val logger: Logger = Logger.withTag("okhttp"),
     logLevel: HttpLoggingInterceptor.Level = HttpLoggingInterceptor.Level.BODY,
 ) : Interceptor {
     private val loggingInterceptor = HttpLoggingInterceptor(
-        logger = {
-            logger.log(Level.FINE, it)
-        },
+        logger = { logger.i(it) },
     ).apply {
         level = logLevel
     }

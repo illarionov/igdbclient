@@ -66,10 +66,11 @@ kotlin {
                 implementation(project(":library:test"))
                 runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
-                implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.kermit)
                 implementation(libs.kotest.assertions.core)
                 implementation(libs.kotlinx.coroutines.test)
+                implementation(libs.okhttp3.logging.interceptor)
+                implementation(libs.okhttp3.mockwebserver)
             }
         }
         val jvmTest by getting

@@ -15,6 +15,7 @@
  */
 package ru.pixnews.igdbclient.okhttp.integration
 
+import co.touchlab.kermit.Logger
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -68,10 +69,9 @@ import ru.pixnews.igdbclient.okhttp.OkhttpIgdbConstants.MediaType
 import ru.pixnews.igdbclient.website
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
-import java.util.logging.Logger
 
 class OkhttpIgdbClientImplementationTest {
-    private val logger = Logger.getLogger("okhttp")
+    private val logger = Logger.withTag("okhttp")
 
     @JvmField
     @RegisterExtension
@@ -215,12 +215,12 @@ class OkhttpIgdbClientImplementationTest {
                     object : EventListener() {
                         override fun responseHeadersEnd(call: Call, response: Response) {
                             receivedResponseHeadersLatch.complete()
-                            logger.info("Received response headers")
+                            logger.i { "Received response headers" }
                         }
 
                         override fun canceled(call: Call) {
                             okhttpRequestCancelled.set(true)
-                            logger.info("Okhttp request cancelled")
+                            logger.i { "Okhttp request cancelled" }
                         }
                     },
                 )

@@ -45,6 +45,7 @@ tasks.withType<KotlinJvmCompile>().configureEach {
 dependencies {
     api(libs.junit.jupiter.api)
     api(libs.kotlinx.coroutines.test)
+    api(libs.kermit)
     implementation(libs.okhttp3)
     implementation(libs.okhttp3.mockwebserver)
     implementation(libs.okhttp3.logging.interceptor)
