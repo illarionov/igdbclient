@@ -13,19 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.okhttp.integration
+package ru.pixnews.igdbclient.ktor.integration
 
+import io.ktor.client.HttpClient
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbWebhookApiImplementationTest
-import ru.pixnews.igdbclient.okhttp.IgdbOkhttpEngine
-import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
+import ru.pixnews.igdbclient.ktor.IgdbKtorEngine
 
-internal class OkhttpIgdbWebhookApiImplementationTest : BaseIgdbWebhookApiImplementationTest() {
-    override fun createIgdbClient(url: String): IgdbClient = IgdbClient(IgdbOkhttpEngine) {
-        baseUrl = url
-        userAgent = "Test user agent"
-        httpClient {
-            callFactory = setupTestOkHttpClientBuilder().build()
+abstract class KtorBaseIgdbWebhookApiImplementationTest : BaseIgdbWebhookApiImplementationTest() {
+    override fun createIgdbClient(url: String): IgdbClient {
+        return IgdbClient(IgdbKtorEngine) {
+            baseUrl = url
+            userAgent = "Test user agent"
+            httpClient {
+                httpClient = createKtorClient()
+            }
         }
     }
+
+    abstract fun createKtorClient(): HttpClient
 }

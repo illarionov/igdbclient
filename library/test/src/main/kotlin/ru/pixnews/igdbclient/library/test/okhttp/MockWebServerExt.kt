@@ -13,17 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-pluginManagement {
-    includeBuild("gradle/plugin/settings")
+package ru.pixnews.igdbclient.library.test.okhttp
+
+import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
+import okhttp3.mockwebserver.RecordedRequest
+
+public fun MockWebServer.start(
+    response: (RecordedRequest) -> MockResponse? = { null },
+) {
+    start(0, response)
 }
 
-plugins {
-    id("ru.pixnews.igdbclient.gradle.settings.root")
+public fun MockWebServer.start(
+    port: Int = 0,
+    response: (RecordedRequest) -> MockResponse? = { null },
+) {
+    val testServerDispatcher = ConcatMockDispatcher(response)
+    dispatcher = testServerDispatcher
+    start(port)
 }
-
-rootProject.name = "igdbclient"
-include(":igdbclient-core")
-include(":igdbclient-integration-tests")
-include(":igdbclient-ktor")
-include(":igdbclient-okhttp")
-include(":library:test")

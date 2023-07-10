@@ -13,19 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.okhttp.integration
+package ru.pixnews.igdbclient.ktor.integration
 
-import okhttp3.OkHttpClient
-import ru.pixnews.igdbclient.library.test.okhttp.TestingLoggerInterceptor
-import java.time.Duration
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.cio.CIO
 
-internal object MockWebServerExt {
-    fun setupTestOkHttpClientBuilder(
-        @Suppress("NewApi") timeout: Duration = Duration.ofMillis(500),
-    ): OkHttpClient.Builder = OkHttpClient.Builder()
-        .connectTimeout(timeout)
-        .callTimeout(timeout)
-        .readTimeout(timeout)
-        .writeTimeout(timeout)
-        .addNetworkInterceptor(TestingLoggerInterceptor())
+class KtorCioIgdbWebhookApiImplementationTest : KtorBaseIgdbWebhookApiImplementationTest() {
+    override fun createKtorClient(): HttpClient = HttpClient(CIO) {
+        applyTestDefaults()
+    }
 }

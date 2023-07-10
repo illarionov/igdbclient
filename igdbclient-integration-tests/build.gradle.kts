@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
-import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    `maven-publish`
 }
 
-/* required for maven publication */
 group = "ru.pixnews.igdbclient"
 version = "0.1"
 
 kotlin {
     jvmToolchain(17)
-    explicitApi = ExplicitApiMode.Warning
+    explicitApi = null
 
     jvm()
 
@@ -48,36 +44,30 @@ kotlin {
         }
 
         /* Main source sets */
-        val commonJvmMain by creating {
+        val commonMain by getting {
             dependencies {
                 api(project(":igdbclient-core"))
-                implementation(libs.okhttp3)
+                implementation(libs.kermit)
+                implementation(libs.kotest.assertions.core)
                 implementation(libs.kotlinx.coroutines.core)
+                implementation(libs.kotlinx.coroutines.test)
+                implementation(libs.ktor.client.core)
                 implementation(libs.okio)
             }
         }
-        val jvmMain by getting
-        /* Main hierarchy */
-        jvmMain.dependsOn(commonJvmMain)
-
-        /* Test source sets */
-        val commonJvmTest by creating {
+        val jvmMain by getting {
             dependencies {
                 implementation(project(":library:test"))
-                implementation(project(":igdbclient-integration-tests"))
-                runtimeOnly(libs.junit.jupiter.engine)
+                implementation(kotlin("test"))
                 implementation(libs.junit.jupiter.params)
-                implementation(libs.kermit)
-                implementation(libs.kotest.assertions.core)
-                implementation(libs.kotlinx.coroutines.test)
                 implementation(libs.okhttp3.logging.interceptor)
                 implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.slf4j.simple)
             }
         }
-        val jvmTest by getting
 
-        /* Test hierarchy */
-        jvmTest.dependsOn(commonJvmTest)
+        /* Main hierarchy */
+        jvmMain.dependsOn(commonMain)
     }
 }
 
@@ -87,16 +77,6 @@ tasks.withType<KotlinJvmCompile>().configureEach {
         freeCompilerArgs.addAll(
             // https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/
             "-Xjvm-default=all",
-        )
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-    maxHeapSize = "2G"
-    testLogging {
-        events = mutableSetOf(
-            FAILED,
         )
     }
 }
