@@ -87,7 +87,11 @@ kotlin {
         val macosMain by creating
         val macosX64Main by getting
         val mingwX64Main by getting
-        val nativeMain by creating
+        val nativeMain by creating {
+            dependencies {
+                implementation(libs.kotlinx.serialization.json)
+            }
+        }
         val windowsMain by creating
 
         /* Main hierarchy */

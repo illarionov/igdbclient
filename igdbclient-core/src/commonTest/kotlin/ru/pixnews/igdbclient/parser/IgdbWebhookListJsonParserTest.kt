@@ -23,11 +23,9 @@ import ru.pixnews.igdbclient.internal.parser.igdbWebhookListJsonParser
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 import ru.pixnews.igdbclient.test.IgnoreAndroid
-import ru.pixnews.igdbclient.test.IgnoreNative
 import kotlin.test.Test
 
 @IgnoreAndroid
-@IgnoreNative
 class IgdbWebhookListJsonParserTest {
     private val parser = IgdbParser::igdbWebhookListJsonParser
 
