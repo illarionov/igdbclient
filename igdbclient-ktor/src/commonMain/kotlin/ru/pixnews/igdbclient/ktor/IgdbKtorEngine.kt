@@ -13,17 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-pluginManagement {
-    includeBuild("gradle/plugin/settings")
-}
+package ru.pixnews.igdbclient.ktor
 
-plugins {
-    id("ru.pixnews.igdbclient.gradle.settings.root")
-}
+import ru.pixnews.igdbclient.IgdbHttpEngine
+import ru.pixnews.igdbclient.internal.IgdbHttpClient
+import ru.pixnews.igdbclient.internal.model.IgdbClientConfig
 
-rootProject.name = "igdbclient"
-include(":igdbclient-core")
-include(":igdbclient-integration-tests")
-include(":igdbclient-ktor")
-include(":igdbclient-okhttp")
-include(":library:test")
+/**
+ * [IgdbHttpEngine] that uses [io.ktor.client.HttpClient] to execute network requests
+ */
+public object IgdbKtorEngine : IgdbHttpEngine<IgdbKtorConfig> {
+    override fun create(config: IgdbClientConfig<IgdbKtorConfig>): IgdbHttpClient =
+        KtorIgdbHttpClientImplementation(config)
+}

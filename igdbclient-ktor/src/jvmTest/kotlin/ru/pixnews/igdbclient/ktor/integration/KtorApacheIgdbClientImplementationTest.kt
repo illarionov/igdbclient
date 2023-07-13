@@ -13,17 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-pluginManagement {
-    includeBuild("gradle/plugin/settings")
-}
+package ru.pixnews.igdbclient.ktor.integration
 
-plugins {
-    id("ru.pixnews.igdbclient.gradle.settings.root")
-}
+import io.ktor.client.HttpClient
+import io.ktor.client.engine.apache5.Apache5
 
-rootProject.name = "igdbclient"
-include(":igdbclient-core")
-include(":igdbclient-integration-tests")
-include(":igdbclient-ktor")
-include(":igdbclient-okhttp")
-include(":library:test")
+class KtorApacheIgdbClientImplementationTest : KtorBaseIgdbClientImplementationTest() {
+    override fun createKtorClient(): HttpClient = HttpClient(Apache5) {
+        applyTestDefaults()
+    }
+}

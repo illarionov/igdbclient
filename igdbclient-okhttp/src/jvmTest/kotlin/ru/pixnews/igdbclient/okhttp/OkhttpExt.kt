@@ -13,17 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-pluginManagement {
-    includeBuild("gradle/plugin/settings")
-}
+package ru.pixnews.igdbclient.okhttp
 
-plugins {
-    id("ru.pixnews.igdbclient.gradle.settings.root")
-}
+import okhttp3.OkHttpClient
+import ru.pixnews.igdbclient.library.test.okhttp.TestingLoggerInterceptor
+import java.time.Duration
 
-rootProject.name = "igdbclient"
-include(":igdbclient-core")
-include(":igdbclient-integration-tests")
-include(":igdbclient-ktor")
-include(":igdbclient-okhttp")
-include(":library:test")
+internal object OkhttpExt {
+    internal fun setupTestOkHttpClientBuilder(
+        @Suppress("NewApi") timeout: Duration = Duration.ofMillis(500),
+    ): OkHttpClient.Builder = OkHttpClient.Builder()
+        .connectTimeout(timeout)
+        .callTimeout(timeout)
+        .readTimeout(timeout)
+        .writeTimeout(timeout)
+        .addNetworkInterceptor(TestingLoggerInterceptor())
+}

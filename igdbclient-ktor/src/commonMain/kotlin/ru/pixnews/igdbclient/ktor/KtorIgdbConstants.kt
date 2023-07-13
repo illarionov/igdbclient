@@ -13,17 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-pluginManagement {
-    includeBuild("gradle/plugin/settings")
-}
+package ru.pixnews.igdbclient.ktor
 
-plugins {
-    id("ru.pixnews.igdbclient.gradle.settings.root")
-}
+import io.ktor.http.HttpHeaders
+import io.ktor.http.URLBuilder
 
-rootProject.name = "igdbclient"
-include(":igdbclient-core")
-include(":igdbclient-integration-tests")
-include(":igdbclient-ktor")
-include(":igdbclient-okhttp")
-include(":library:test")
+internal object KtorIgdbConstants {
+    const val DEFAULT_BUFFER_SIZE: Long = 64 * 1024L
+    val TWITCH_AUTH_URL = URLBuilder("https://id.twitch.tv/oauth2/token").build()
+    object Header {
+        const val CLIENT_ID = "Client-ID"
+        val AUTHORIZATION = HttpHeaders.Authorization
+    }
+}

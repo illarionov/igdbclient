@@ -15,27 +15,23 @@
  */
 package ru.pixnews.igdbclient.okhttp
 
-import kotlinx.coroutines.CoroutineDispatcher
-import ru.pixnews.igdbclient.integration.tests.BaseRequestExecutorTest
-import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import okhttp3.HttpUrl.Companion.toHttpUrl
+import ru.pixnews.igdbclient.integration.tests.BaseTwitchTokenFetcherTest
+import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
+import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 
-class OkhttpRequestExecutorTest : BaseRequestExecutorTest() {
-    override fun createRequestExecutor(
+class OkhttpTwitchTokenFetcherTest : BaseTwitchTokenFetcherTest() {
+    override fun createTwitchTokenFetcher(
         baseUrl: String,
-        authToken: IgdbAuthToken?,
         userAgent: String?,
-        headers: Map<String, List<String>>,
-        backgroundDispatcher: CoroutineDispatcher,
-    ): RequestExecutor {
-        val okhttpClient = OkhttpExt.setupTestOkHttpClientBuilder().build()
-        return OkhttpRequestExecutor(
+        tokenTimestampSource: () -> Long,
+    ): TwitchTokenFetcher {
+        val okhttpClient = setupTestOkHttpClientBuilder().build()
+        return OkhttpTwitchTokenFetcher(
             callFactory = okhttpClient,
-            baseUrl = server.url("/v4/"),
-            token = authToken,
+            baseUrl = baseUrl.toHttpUrl(),
             userAgent = userAgent,
-            headers = headers,
-            backgroundDispatcher = backgroundDispatcher,
+            tokenTimestampSource = tokenTimestampSource,
         )
     }
 }

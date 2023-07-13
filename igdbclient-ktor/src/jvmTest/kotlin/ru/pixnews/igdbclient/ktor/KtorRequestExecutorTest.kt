@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.okhttp
+package ru.pixnews.igdbclient.ktor
 
+import io.ktor.client.HttpClient
+import io.ktor.http.URLBuilder
 import kotlinx.coroutines.CoroutineDispatcher
 import ru.pixnews.igdbclient.integration.tests.BaseRequestExecutorTest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import ru.pixnews.igdbclient.ktor.integration.applyTestDefaults
 
-class OkhttpRequestExecutorTest : BaseRequestExecutorTest() {
+class KtorRequestExecutorTest : BaseRequestExecutorTest() {
     override fun createRequestExecutor(
         baseUrl: String,
         authToken: IgdbAuthToken?,
@@ -28,10 +31,12 @@ class OkhttpRequestExecutorTest : BaseRequestExecutorTest() {
         headers: Map<String, List<String>>,
         backgroundDispatcher: CoroutineDispatcher,
     ): RequestExecutor {
-        val okhttpClient = OkhttpExt.setupTestOkHttpClientBuilder().build()
-        return OkhttpRequestExecutor(
-            callFactory = okhttpClient,
-            baseUrl = server.url("/v4/"),
+        val ktorClient = HttpClient {
+            applyTestDefaults()
+        }
+        return KtorRequestExecutor(
+            httpClient = ktorClient,
+            baseUrl = URLBuilder(baseUrl),
             token = authToken,
             userAgent = userAgent,
             headers = headers,
