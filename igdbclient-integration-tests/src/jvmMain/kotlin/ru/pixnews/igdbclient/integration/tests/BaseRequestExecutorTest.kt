@@ -32,6 +32,7 @@ import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.AUTHORIZATI
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.CLIENT_ID
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 
 @Suppress("FunctionName")
 abstract class BaseRequestExecutorTest {
@@ -72,7 +73,7 @@ abstract class BaseRequestExecutorTest {
             ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
-        server.takeRequest().run {
+        server.takeRequestWithTimeout().run {
             headers.values("Client-Id") shouldBe listOf(Fixtures.TEST_CLIENT_ID)
             headers.values("Authorization") shouldBe listOf("Bearer ${Fixtures.TEST_TOKEN}")
         }
@@ -86,7 +87,7 @@ abstract class BaseRequestExecutorTest {
             ApicalypsePostRequest("games/count", apicalypseQuery { }, { _ -> "" }),
         )
 
-        server.takeRequest().run {
+        server.takeRequestWithTimeout().run {
             path shouldBe "/v4/games/count"
         }
     }

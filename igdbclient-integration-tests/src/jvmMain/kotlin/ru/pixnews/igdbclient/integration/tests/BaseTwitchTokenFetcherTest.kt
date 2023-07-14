@@ -33,6 +33,7 @@ import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import java.time.Instant
 
 abstract class BaseTwitchTokenFetcherTest {
@@ -75,7 +76,7 @@ abstract class BaseTwitchTokenFetcherTest {
 
         fetcher(TestCredentials())
 
-        server.takeRequest().run {
+        server.takeRequestWithTimeout().run {
             headers.values("Accept") shouldBe listOf("application/json")
             headers.values("User-Agent") shouldBe listOf("Test user agent")
             body.readByteString().utf8().split("&")

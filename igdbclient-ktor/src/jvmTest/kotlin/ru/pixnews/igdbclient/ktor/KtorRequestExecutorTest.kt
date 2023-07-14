@@ -16,6 +16,7 @@
 package ru.pixnews.igdbclient.ktor
 
 import io.ktor.client.HttpClient
+import io.ktor.client.engine.java.Java
 import io.ktor.http.URLBuilder
 import kotlinx.coroutines.CoroutineDispatcher
 import ru.pixnews.igdbclient.integration.tests.BaseRequestExecutorTest
@@ -31,7 +32,7 @@ class KtorRequestExecutorTest : BaseRequestExecutorTest() {
         headers: Map<String, List<String>>,
         backgroundDispatcher: CoroutineDispatcher,
     ): RequestExecutor {
-        val ktorClient = HttpClient {
+        val ktorClient = HttpClient(Java) {
             applyTestDefaults()
         }
         return KtorRequestExecutor(

@@ -47,6 +47,7 @@ import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.createSuccessMockResponse
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.model.Platform
 import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
@@ -88,7 +89,7 @@ abstract class BaseIgdbClientImplementationTest {
 
         api.game(createTestSuccessQuery())
 
-        server.takeRequest().run {
+        server.takeRequestWithTimeout().run {
             headers.values("Accept") shouldBe listOf("application/protobuf")
             headers.values("Client-Id") shouldBe listOf(Fixtures.TEST_CLIENT_ID)
             headers.values("Authorization") shouldBe listOf("Bearer ${Fixtures.TEST_TOKEN}")

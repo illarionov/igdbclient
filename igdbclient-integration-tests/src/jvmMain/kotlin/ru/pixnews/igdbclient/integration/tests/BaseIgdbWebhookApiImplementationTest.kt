@@ -36,6 +36,7 @@ import ru.pixnews.igdbclient.IgdbWebhookApi
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
@@ -124,7 +125,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
                 secret = "my_secret",
             )
 
-            server.takeRequest().run {
+            server.takeRequestWithTimeout().run {
                 method shouldBe "POST"
                 body.readByteString().utf8().split('&').shouldContainExactlyInAnyOrder(
                     "url=https%3A%2F%2Fexample.com%2Fgame%2F1%2F",
@@ -158,7 +159,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
         fun `getAllWebhooks() should send correct request`() = coroutinesExt.runTest {
             api.getAllWebhooks()
 
-            server.takeRequest().run {
+            server.takeRequestWithTimeout().run {
                 method shouldBe "GET"
                 headers.values("Accept") shouldBe listOf("application/json")
             }
@@ -184,7 +185,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
         fun `getWebhook() should send correct request`() = coroutinesExt.runTest {
             api.getWebhook(IgdbWebhookId("7136"))
 
-            server.takeRequest().run {
+            server.takeRequestWithTimeout().run {
                 method shouldBe "GET"
                 headers.values("Accept") shouldBe listOf("application/json")
             }
@@ -210,7 +211,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
         fun `deleteWebhook() should send correct request`() = coroutinesExt.runTest {
             api.deleteWebhook(IgdbWebhookId("7136"))
 
-            server.takeRequest().run {
+            server.takeRequestWithTimeout().run {
                 method shouldBe "DELETE"
                 headers.values("Accept") shouldBe listOf("application/json")
             }
@@ -249,7 +250,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
                 entityId = "12",
             ) as? IgdbResult.Success<String>
 
-            server.takeRequest().run {
+            server.takeRequestWithTimeout().run {
                 method shouldBe "POST"
                 body.size shouldBe 0
                 headers.values("Accept") shouldBe listOf("application/json")

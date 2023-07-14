@@ -18,6 +18,15 @@ package ru.pixnews.igdbclient.library.test.okhttp.mockwebserver
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import java.util.concurrent.TimeUnit
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
+
+public fun MockWebServer.takeRequestWithTimeout(
+    timeout: Duration = 3.seconds,
+): RecordedRequest = checkNotNull(takeRequest(timeout = timeout.inWholeMilliseconds, TimeUnit.MILLISECONDS)) {
+    "timeout during takeRequest()"
+}
 
 public fun MockWebServer.start(
     response: (RecordedRequest) -> MockResponse? = { null },
