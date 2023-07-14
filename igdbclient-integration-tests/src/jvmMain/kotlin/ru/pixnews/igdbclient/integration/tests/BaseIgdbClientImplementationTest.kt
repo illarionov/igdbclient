@@ -15,7 +15,6 @@
  */
 package ru.pixnews.igdbclient.integration.tests
 
-import co.touchlab.kermit.Logger
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -44,8 +43,10 @@ import ru.pixnews.igdbclient.executeOrThrow
 import ru.pixnews.igdbclient.game
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.start
+import ru.pixnews.igdbclient.library.test.TestingLoggers
+import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.createSuccessMockResponse
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.model.Platform
 import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
@@ -54,7 +55,7 @@ import ru.pixnews.igdbclient.website
 
 @Suppress("FunctionName", "TooManyFunctions", "MagicNumber")
 abstract class BaseIgdbClientImplementationTest {
-    open val logger = Logger.withTag("IgdbClientImplementationTest")
+    open val logger = TestingLoggers.consoleLogger.withTag("IgdbClientImplementationTest")
 
     @JvmField
     @RegisterExtension
@@ -71,7 +72,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should correctly parse success HTTP 200 response`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games.pb") Fixtures.MockIgdbResponseContent.createSuccessMockResponse() else null
+            if (request.path == "/v4/games.pb") createSuccessMockResponse() else null
         }
 
         val response = api.game(createTestSuccessQuery())
@@ -82,7 +83,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should send correct headers`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            Fixtures.MockIgdbResponseContent.createSuccessMockResponse()
+            createSuccessMockResponse()
         }
 
         api.game(createTestSuccessQuery())
@@ -110,7 +111,7 @@ abstract class BaseIgdbClientImplementationTest {
                     .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
                     .setBody(Fixtures.MockIgdbResponseContent.authFailure)
 
-                else -> Fixtures.MockIgdbResponseContent.createSuccessMockResponse()
+                else -> createSuccessMockResponse()
             }
         }
 
@@ -193,7 +194,7 @@ abstract class BaseIgdbClientImplementationTest {
         policy: SocketPolicy,
     ) = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            Fixtures.MockIgdbResponseContent.createSuccessMockResponse().setSocketPolicy(policy)
+            createSuccessMockResponse().setSocketPolicy(policy)
         }
 
         shouldThrowExactly<IgdbException> {
@@ -205,7 +206,7 @@ abstract class BaseIgdbClientImplementationTest {
     fun `Implementation should correctly parse multiquery responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
             if (request.path == "/v4/multiquery.pb") {
-                Fixtures.MockIgdbResponseContent.createSuccessMockResponse()
+                createSuccessMockResponse()
                     .setBody(Fixtures.MockIgdbResponseContent.multiQueryPlatformsCountPsGames)
             } else {
                 null
@@ -253,7 +254,7 @@ abstract class BaseIgdbClientImplementationTest {
     fun `Implementation should correctly parse count() responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
             if (request.path == "/v4/games/count.pb") {
-                Fixtures.MockIgdbResponseContent.createSuccessMockResponse()
+                createSuccessMockResponse()
                     .setBody(Fixtures.MockIgdbResponseContent.countGames)
             } else {
                 null

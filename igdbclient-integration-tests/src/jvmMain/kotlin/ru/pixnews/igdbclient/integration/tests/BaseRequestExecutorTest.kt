@@ -30,8 +30,8 @@ import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.AUTHORIZATION
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.CLIENT_ID
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.start
+import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 
 @Suppress("FunctionName")
 abstract class BaseRequestExecutorTest {

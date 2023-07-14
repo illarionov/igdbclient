@@ -34,8 +34,8 @@ import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbWebhookApi
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.start
+import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 

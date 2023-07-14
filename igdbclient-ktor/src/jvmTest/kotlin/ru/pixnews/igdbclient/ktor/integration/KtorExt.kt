@@ -20,6 +20,7 @@ import io.ktor.client.HttpClientConfig
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
+import ru.pixnews.igdbclient.library.test.TestingLoggers
 import java.time.Duration
 import io.ktor.client.plugins.logging.Logger as KtorLogger
 
@@ -39,7 +40,7 @@ internal fun HttpClientConfig<*>.applyTestDefaults(
 }
 
 internal class IgdbKtorLogger(
-    private val logger: Logger = Logger.withTag("ktor"),
+    private val logger: Logger = TestingLoggers.consoleLogger.withTag("ktor"),
 ) : KtorLogger {
     override fun log(message: String) {
         logger.i(message)

@@ -56,7 +56,7 @@ import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
 import ru.pixnews.igdbclient.internal.twitch.TwitchAuthenticationRequestDecorator.Companion.MAX_COMMIT_FRESH_TOKEN_ATTEMPTS
-import ru.pixnews.igdbclient.test.TestingLoggers
+import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.test.TracingRequestExecutor
 import kotlin.test.Test
 
@@ -405,7 +405,7 @@ class TwitchAuthenticationRequestDecoratorTest {
         val invokeCount: Long
             get() = lock.withLock { _invokeCount }
 
-        public val invokeArgs: List<IgdbAuthToken?>
+        val invokeArgs: List<IgdbAuthToken?>
             get() = lock.withLock {
                 _invokeArgs.toMutableList()
             }

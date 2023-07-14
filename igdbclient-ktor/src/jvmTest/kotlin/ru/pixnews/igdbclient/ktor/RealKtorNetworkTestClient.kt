@@ -15,7 +15,6 @@
  */
 package ru.pixnews.igdbclient.ktor
 
-import co.touchlab.kermit.Logger
 import io.kotest.matchers.collections.shouldHaveSize
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.java.Java
@@ -37,7 +36,8 @@ import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload.Companion.toTokenPay
 import ru.pixnews.igdbclient.executeOrThrow
 import ru.pixnews.igdbclient.game
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
+import ru.pixnews.igdbclient.library.test.TestingLoggers
+import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.multiquery
 import java.util.Properties
@@ -45,7 +45,7 @@ import kotlin.time.Duration.Companion.seconds
 
 @EnabledIfEnvironmentVariable(named = "MANUAL", matches = ".+", disabledReason = "Only for manual execution")
 class RealKtorNetworkTestClient {
-    val logger = Logger.withTag("RealNetworkTestClient")
+    val logger = TestingLoggers.consoleLogger.withTag("RealNetworkTestClient")
 
     @JvmField
     @RegisterExtension

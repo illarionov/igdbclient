@@ -121,6 +121,7 @@ kotlin {
         /* Test source sets */
         val commonTest by getting {
             dependencies {
+                implementation(project(":library:test"))
                 implementation(kotlin("test"))
                 implementation(libs.assertk)
                 implementation(libs.kotlinx.coroutines.test)
@@ -130,20 +131,12 @@ kotlin {
         val nativeTest by creating
         val jvmTest by getting {
             dependencies {
-                implementation(project(":library:test"))
                 runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
                 implementation(libs.kotest.assertions.core)
             }
         }
-        val androidUnitTest by getting {
-            dependencies {
-                runtimeOnly(libs.junit.jupiter.engine)
-                implementation(libs.junit.jupiter.params)
-                implementation(libs.kotest.assertions.core)
-                implementation(libs.kermit.jvm)
-            }
-        }
+        val androidUnitTest by getting
         val jsTest by getting
         val iosTest by creating
         val linuxTest by creating

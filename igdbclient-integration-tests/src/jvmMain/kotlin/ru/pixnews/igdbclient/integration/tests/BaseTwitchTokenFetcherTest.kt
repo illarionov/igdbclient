@@ -31,8 +31,8 @@ import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
-import ru.pixnews.igdbclient.library.test.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.start
+import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import java.time.Instant
 
 abstract class BaseTwitchTokenFetcherTest {

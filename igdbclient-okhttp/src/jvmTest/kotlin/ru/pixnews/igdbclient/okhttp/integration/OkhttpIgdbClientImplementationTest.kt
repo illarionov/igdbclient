@@ -31,7 +31,8 @@ import ru.pixnews.igdbclient.game
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.okhttp.start
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.createSuccessMockResponse
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.okhttp.IgdbOkhttpEngine
 import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 import java.util.concurrent.TimeUnit
@@ -65,7 +66,7 @@ class OkhttpIgdbClientImplementationTest : BaseIgdbClientImplementationTest() {
                 )
                 .build(),
         ) {
-            Fixtures.MockIgdbResponseContent.createSuccessMockResponse()
+            createSuccessMockResponse()
                 .setBodyDelay(50, TimeUnit.MILLISECONDS)
         }
 
