@@ -19,12 +19,12 @@ import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.launch
+import mockwebserver3.MockResponse
+import mockwebserver3.RecordedRequest
 import okhttp3.Call
 import okhttp3.EventListener
 import okhttp3.OkHttpClient
 import okhttp3.Response
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.RecordedRequest
 import org.junit.jupiter.api.Test
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.game

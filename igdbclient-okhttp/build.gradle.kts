@@ -71,7 +71,7 @@ kotlin {
                 implementation(libs.kotest.assertions.core)
                 implementation(libs.kotlinx.coroutines.test)
                 implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.okhttp5.mockwebserver.junit5)
             }
         }
         val jvmTest by getting

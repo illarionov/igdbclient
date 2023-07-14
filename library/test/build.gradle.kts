@@ -75,14 +75,14 @@ kotlin {
                 implementation(libs.kermit.jvm)
                 implementation(libs.okhttp3)
                 implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.okhttp5.mockwebserver.junit5)
             }
         }
         getByName("jvmMain") {
             dependencies {
                 api(libs.junit.jupiter.api)
                 implementation(libs.okhttp3)
-                implementation(libs.okhttp3.mockwebserver)
+                implementation(libs.okhttp5.mockwebserver.junit5)
                 implementation(libs.okhttp3.logging.interceptor)
             }
         }

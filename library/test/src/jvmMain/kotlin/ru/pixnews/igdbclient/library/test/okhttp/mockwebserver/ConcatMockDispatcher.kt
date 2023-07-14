@@ -15,9 +15,9 @@
  */
 package ru.pixnews.igdbclient.library.test.okhttp.mockwebserver
 
-import okhttp3.mockwebserver.Dispatcher
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.RecordedRequest
+import mockwebserver3.Dispatcher
+import mockwebserver3.MockResponse
+import mockwebserver3.RecordedRequest
 
 public open class ConcatMockDispatcher(
     private val producers: List<(RecordedRequest) -> MockResponse?>,

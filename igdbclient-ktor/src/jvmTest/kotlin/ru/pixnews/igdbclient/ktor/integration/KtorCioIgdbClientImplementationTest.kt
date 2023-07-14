@@ -17,7 +17,7 @@ package ru.pixnews.igdbclient.ktor.integration
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
-import okhttp3.mockwebserver.SocketPolicy
+import mockwebserver3.SocketPolicy
 import org.junit.jupiter.api.Disabled
 
 class KtorCioIgdbClientImplementationTest : KtorBaseIgdbClientImplementationTest() {

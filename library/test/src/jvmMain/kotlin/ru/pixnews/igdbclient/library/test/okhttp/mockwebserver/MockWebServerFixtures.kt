@@ -15,7 +15,7 @@
  */
 package ru.pixnews.igdbclient.library.test.okhttp.mockwebserver
 
-import okhttp3.mockwebserver.MockResponse
+import mockwebserver3.MockResponse
 import ru.pixnews.igdbclient.library.test.Fixtures.MockIgdbResponseContent
 
 public object MockWebServerFixtures {

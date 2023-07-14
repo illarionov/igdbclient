@@ -15,9 +15,9 @@
  */
 package ru.pixnews.igdbclient.library.test.okhttp.mockwebserver
 
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.MockWebServer
-import okhttp3.mockwebserver.RecordedRequest
+import mockwebserver3.MockResponse
+import mockwebserver3.MockWebServer
+import mockwebserver3.RecordedRequest
 
 public fun MockWebServer.start(
     response: (RecordedRequest) -> MockResponse? = { null },
