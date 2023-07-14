@@ -15,9 +15,6 @@
  */
 package ru.pixnews.igdbclient.internal.twitch
 
-import kotlinx.atomicfu.locks.ReentrantLock
-import kotlinx.atomicfu.locks.reentrantLock
-import kotlinx.atomicfu.locks.withLock
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import okio.IOException
@@ -123,11 +120,11 @@ internal class TwitchAuthenticationRequestDecorator(
         private val twitchCredentials: TwitchCredentials,
         private val requestExecutorFactory: (token: IgdbAuthToken?) -> RequestExecutor,
     ) {
-        private val lock: ReentrantLock = reentrantLock()
+        private val lock: Mutex = Mutex()
         private var cachedTokenPayload: TwitchTokenPayload = TwitchTokenPayload.NO_TOKEN
         private var exeutor: RequestExecutor = dummyRequestExecutor
 
-        operator fun invoke(tokenPayload: TwitchTokenPayload): RequestExecutor? = lock.withLock {
+        suspend operator fun invoke(tokenPayload: TwitchTokenPayload): RequestExecutor? = lock.withLock {
             if (tokenPayload == cachedTokenPayload && exeutor != dummyRequestExecutor) {
                 return exeutor
             }

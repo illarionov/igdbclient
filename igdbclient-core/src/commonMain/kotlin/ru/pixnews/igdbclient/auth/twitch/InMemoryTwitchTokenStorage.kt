@@ -15,8 +15,8 @@
  */
 package ru.pixnews.igdbclient.auth.twitch
 
-import kotlinx.atomicfu.locks.reentrantLock
-import kotlinx.atomicfu.locks.withLock
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 
 /**
  * Implementation of the [TwitchTokenStorage], which stores the received token only in memory.
@@ -24,7 +24,7 @@ import kotlinx.atomicfu.locks.withLock
 public class InMemoryTwitchTokenStorage(
     private var token: TwitchTokenPayload = TwitchTokenPayload.NO_TOKEN,
 ) : TwitchTokenStorage {
-    private val lock = reentrantLock()
+    private val lock = Mutex()
 
     override suspend fun getToken(): TwitchTokenPayload = lock.withLock { token }
 

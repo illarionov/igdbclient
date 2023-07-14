@@ -21,7 +21,7 @@ plugins.withId("org.jetbrains.kotlin.multiplatform") {
     apply(plugin = "kotlinx-atomicfu")
 
     the<KotlinMultiplatformExtension>().sourceSets {
-        getByName("commonMain") {
+        getByName("commonTest") {
             dependencies {
                 implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
             }
