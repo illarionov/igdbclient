@@ -69,7 +69,7 @@ abstract class BaseRequestExecutorTest {
         )
 
         executor.invoke<Any>(
-            ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _, _ -> "" }),
+            ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
         server.takeRequest().run {
@@ -83,7 +83,7 @@ abstract class BaseRequestExecutorTest {
         val executor = startMockServerCreateClient()
 
         executor.invoke<Any>(
-            ApicalypsePostRequest("games/count", apicalypseQuery { }, { _, _ -> "" }),
+            ApicalypsePostRequest("games/count", apicalypseQuery { }, { _ -> "" }),
         )
 
         server.takeRequest().run {

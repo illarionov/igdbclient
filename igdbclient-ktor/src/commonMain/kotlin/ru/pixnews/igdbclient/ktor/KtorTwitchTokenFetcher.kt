@@ -29,7 +29,6 @@ import io.ktor.util.date.getTimeMillis
 import kotlinx.coroutines.CoroutineDispatcher
 import okio.BufferedSource
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
 import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.internal.parser.IgdbParser
 import ru.pixnews.igdbclient.internal.parser.twitchTokenErrorResponseParser
@@ -65,8 +64,7 @@ internal class KtorTwitchTokenFetcher(
         val tokenReceivedTimestamp = tokenTimestampSource()
         return statement
             .executeAsyncWithResult(
-                query = apicalypseQuery { },
-                successResponseParser = { _, inputStream ->
+                successResponseParser = { inputStream ->
                     @Suppress("MagicNumber")
                     twitchTokenParser(inputStream).copy(
                         receive_timestamp = ofEpochSecond(
@@ -75,7 +73,7 @@ internal class KtorTwitchTokenFetcher(
                         ),
                     )
                 },
-                errorResponseParser = { _, stream -> twitchErrorResponseParser(stream) },
+                errorResponseParser = twitchErrorResponseParser,
                 backgroundDispatcher = backgroundDispatcher,
             )
     }

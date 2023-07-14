@@ -44,7 +44,6 @@ import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbResult.Failure
 import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
 import ru.pixnews.igdbclient.IgdbResult.Success
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
 import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
@@ -67,7 +66,7 @@ class TwitchAuthenticationRequestDecoratorTest {
     fun auth_decorator_with_valid_token_should_use_correct_executor() = runTest {
         val authDecorator = TwitchDecoratorTestEnvironment()
 
-        val result = authDecorator.invoke() as? Success<String>
+        val result = authDecorator() as? Success<String>
 
         assertThat(result?.value).isEqualTo("Test Response")
         assertThat(authDecorator.tokenFetcher.invokeCount).isEqualTo(0)
@@ -244,7 +243,7 @@ class TwitchAuthenticationRequestDecoratorTest {
             maxRequestRetries = 3,
         )
 
-        val result = authDecorator.invoke()
+        val result = authDecorator()
         val tokenInStorage = authDecorator.tokenStorage.getToken()
 
         assertThat(result)
@@ -271,7 +270,7 @@ class TwitchAuthenticationRequestDecoratorTest {
         )
 
         val request = backgroundScope.launch {
-            authDecorator.invoke()
+            authDecorator()
             error("This code should not be reachable since the request is canceled")
         }
         authTokenProviderLatch.join()
@@ -290,7 +289,7 @@ class TwitchAuthenticationRequestDecoratorTest {
         )
 
         val request = backgroundScope.launch {
-            authDecorator.invoke()
+            authDecorator()
             error("This code should not be reachable since the request is canceled")
         }
         igdbExecutorLatch.join()
@@ -376,10 +375,9 @@ class TwitchAuthenticationRequestDecoratorTest {
 
         suspend operator fun invoke(
             endpoint: String = "endpoint",
-            query: ApicalypseQuery = apicalypseQuery { },
-            successResponseParser: (ApicalypseQuery, BufferedSource) -> String = { _, _ -> "" },
+            successResponseParser: (BufferedSource) -> String = { _ -> "" },
         ): IgdbResult<String, IgdbHttpErrorResponse> = authDecorator(
-            ApicalypsePostRequest(endpoint, query, successResponseParser),
+            ApicalypsePostRequest(endpoint, apicalypseQuery { }, successResponseParser),
         )
     }
 

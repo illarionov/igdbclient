@@ -52,22 +52,18 @@ internal class KtorRequestExecutor(
     private val userAgent: String? = null,
     private val headers: Map<String, List<String>> = emptyMap(),
     private val backgroundDispatcher: CoroutineDispatcher = Dispatchers.Default,
-    httpErrorJsonParser: (BufferedSource) -> IgdbHttpErrorResponse = IgdbParser::igdbErrorResponseParser,
+    private val httpErrorJsonParser: (BufferedSource) -> IgdbHttpErrorResponse = IgdbParser::igdbErrorResponseParser,
 ) : RequestExecutor {
-    private val errorResponseParser: (ApicalypseQuery, BufferedSource) -> IgdbHttpErrorResponse = { _, source ->
-        httpErrorJsonParser(source)
-    }
-
     override suspend fun <T : Any> invoke(request: IgdbRequest): IgdbResult<T, IgdbHttpErrorResponse> {
         val apicalypseQuery: ApicalypseQuery
         val statement: HttpStatement
-        val successResponseParser: (ApicalypseQuery, BufferedSource) -> T
+        val successResponseParser: (BufferedSource) -> T
 
         when (request) {
             is IgdbRequest.ApicalypsePostRequest<*> -> {
                 apicalypseQuery = request.query
                 @Suppress("UNCHECKED_CAST")
-                successResponseParser = request.successResponseParser as (ApicalypseQuery, BufferedSource) -> T
+                successResponseParser = request.successResponseParser as (BufferedSource) -> T
                 val url = buildUrl(request.path, null)
                 statement = httpClient.prepareRequest(url) {
                     method = HttpMethod.Post
@@ -80,7 +76,7 @@ internal class KtorRequestExecutor(
             is IgdbRequest.DeleteRequest<*> -> {
                 apicalypseQuery = apicalypseQuery { }
                 @Suppress("UNCHECKED_CAST")
-                successResponseParser = { _, source -> request.successResponseParser(source) as T }
+                successResponseParser = request.successResponseParser as (BufferedSource) -> T
                 val url = buildUrl(request.path, request.queryParameters)
                 statement = httpClient.prepareRequest(url) {
                     method = HttpMethod.Delete
@@ -91,7 +87,7 @@ internal class KtorRequestExecutor(
             is IgdbRequest.FormUrlEncodedPostRequest<*> -> {
                 apicalypseQuery = apicalypseQuery { }
                 @Suppress("UNCHECKED_CAST")
-                successResponseParser = { _, source -> request.successResponseParser(source) as T }
+                successResponseParser = request.successResponseParser as (BufferedSource) -> T
                 val url = buildUrl(request.path, request.queryParameters)
                 val formParameters = parameters {
                     request.formUrlEncodedParameters.forEach { this.append(it.key, it.value) }
@@ -106,7 +102,7 @@ internal class KtorRequestExecutor(
             is IgdbRequest.GetRequest<*> -> {
                 apicalypseQuery = apicalypseQuery { }
                 @Suppress("UNCHECKED_CAST")
-                successResponseParser = { _, source -> request.successResponseParser(source) as T }
+                successResponseParser = request.successResponseParser as (BufferedSource) -> T
                 val url = buildUrl(request.path, request.queryParameters)
                 statement = httpClient.prepareRequest(url) {
                     method = HttpMethod.Get
@@ -116,10 +112,9 @@ internal class KtorRequestExecutor(
         }
 
         return statement.executeAsyncWithResult(
-            query = apicalypseQuery,
             backgroundDispatcher = backgroundDispatcher,
             successResponseParser = successResponseParser,
-            errorResponseParser = errorResponseParser,
+            errorResponseParser = httpErrorJsonParser,
         )
     }
 

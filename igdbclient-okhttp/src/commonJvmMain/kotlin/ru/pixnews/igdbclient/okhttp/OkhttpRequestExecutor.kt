@@ -54,8 +54,11 @@ internal class OkhttpRequestExecutor(
         when (request) {
             is ApicalypsePostRequest<*> ->
                 @Suppress("UNCHECKED_CAST")
-                return postApicalypseRequest(request.path, request.query, request.successResponseParser)
-                        as IgdbResult<T, IgdbHttpErrorResponse>
+                return postApicalypseRequest(
+                    request.path,
+                    request.query,
+                    request.successResponseParser,
+                ) as IgdbResult<T, IgdbHttpErrorResponse>
 
             is GetRequest<*> -> {
                 val url = baseUrl.newBuilder().apply {
@@ -107,7 +110,7 @@ internal class OkhttpRequestExecutor(
     private suspend fun <T : Any> postApicalypseRequest(
         path: String,
         query: ApicalypseQuery,
-        successResponseParser: (ApicalypseQuery, BufferedSource) -> T,
+        successResponseParser: (BufferedSource) -> T,
     ): IgdbResult<T, IgdbHttpErrorResponse> {
         val url = baseUrl.newBuilder().addPathSegments(path).build()
         val body = query.toString().toRequestBody(MediaType.TEXT_PLAIN)
@@ -120,9 +123,8 @@ internal class OkhttpRequestExecutor(
             .newCall(okhttpRequest)
             .executeAsyncWithResult()
             .toIgdbResult(
-                query = query,
                 successResponseParser = successResponseParser,
-                errorResponseParser = { _, stream -> httpErrorJsonParser(stream) },
+                errorResponseParser = httpErrorJsonParser,
                 backgroundDispatcher = backgroundDispatcher,
             )
     }

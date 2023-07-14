@@ -180,7 +180,7 @@ class RootExecutorFactoryTest {
         val testApicalypseRequest: IgdbRequest.ApicalypsePostRequest<String> = IgdbRequest.ApicalypsePostRequest(
             path = "endpoint",
             query = apicalypseQuery { },
-            successResponseParser = { _, _ -> "" },
+            successResponseParser = { _ -> "" },
         )
         val success200Response: IgdbResult.Success<String> = IgdbResult.Success("Mock Success Response")
         val error429Response: IgdbResult.Failure.HttpFailure<IgdbHttpErrorResponse> = IgdbResult.Failure.HttpFailure(

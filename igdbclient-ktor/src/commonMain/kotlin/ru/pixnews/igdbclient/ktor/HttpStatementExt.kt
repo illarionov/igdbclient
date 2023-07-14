@@ -30,21 +30,18 @@ import okio.Buffer
 import okio.BufferedSource
 import okio.use
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.ktor.KtorIgdbConstants.DEFAULT_BUFFER_SIZE
 
 internal suspend fun <T : Any, E : Any> HttpStatement.executeAsyncWithResult(
-    query: ApicalypseQuery,
     backgroundDispatcher: CoroutineDispatcher = Dispatchers.Default,
-    successResponseParser: (ApicalypseQuery, BufferedSource) -> T,
-    errorResponseParser: (ApicalypseQuery, BufferedSource) -> E,
+    successResponseParser: (BufferedSource) -> T,
+    errorResponseParser: (BufferedSource) -> E,
 ): IgdbResult<T, E> {
     try {
         return this.execute { httpResponse ->
             httpResponse.requestTime
             withContext(backgroundDispatcher) {
                 readHttpResponse(
-                    query = query,
                     response = httpResponse,
                     successResponseParser = successResponseParser,
                     errorResponseParser = errorResponseParser,
@@ -60,10 +57,9 @@ internal suspend fun <T : Any, E : Any> HttpStatement.executeAsyncWithResult(
 }
 
 private suspend fun <T : Any, E : Any> readHttpResponse(
-    query: ApicalypseQuery,
     response: HttpResponse,
-    successResponseParser: (ApicalypseQuery, BufferedSource) -> T,
-    errorResponseParser: (ApicalypseQuery, BufferedSource) -> E,
+    successResponseParser: (BufferedSource) -> T,
+    errorResponseParser: (BufferedSource) -> E,
 ): IgdbResult<T, E> {
     val channel: ByteReadChannel = response.body()
     val responseBody = Buffer()
@@ -78,8 +74,8 @@ private suspend fun <T : Any, E : Any> readHttpResponse(
 
     @Suppress("MagicNumber")
     return when (response.status.value) {
-        in 200..299 -> parseSuccessResponseBody(query, responseBody, successResponseParser)
-        in 400..599 -> parseErrorResponseBody(query, response, responseBody, errorResponseParser)
+        in 200..299 -> parseSuccessResponseBody(responseBody, successResponseParser)
+        in 400..599 -> parseErrorResponseBody(response, responseBody, errorResponseParser)
         else -> IgdbResult.Failure.UnknownHttpCodeFailure(
             httpCode = response.status.value,
             httpMessage = response.status.description,
@@ -89,25 +85,23 @@ private suspend fun <T : Any, E : Any> readHttpResponse(
 }
 
 private fun <T : Any> parseSuccessResponseBody(
-    query: ApicalypseQuery,
     responseBody: BufferedSource,
-    parser: (ApicalypseQuery, BufferedSource) -> T,
+    parser: (BufferedSource) -> T,
 ): IgdbResult<T, Nothing> = try {
-    val result = responseBody.use { parser(query, it) }
+    val result = responseBody.use { parser(it) }
     IgdbResult.Success(result)
 } catch (@Suppress("TooGenericExceptionCaught") exception: Throwable) {
     IgdbResult.Failure.ApiFailure(exception)
 }
 
 private fun <E : Any> parseErrorResponseBody(
-    query: ApicalypseQuery,
     response: HttpResponse,
     responseBody: Buffer,
-    httpErrorParser: (ApicalypseQuery, BufferedSource) -> E,
+    httpErrorParser: (BufferedSource) -> E,
 ): IgdbResult.Failure.HttpFailure<E> {
     val responseBodyCopy = responseBody.snapshot()
     val errorMessage = try {
-        httpErrorParser(query, responseBody)
+        httpErrorParser(responseBody)
     } catch (@Suppress("SwallowedException", "TooGenericExceptionCaught") exception: Exception) {
         null
     }

@@ -39,7 +39,7 @@ class RetryDecoratorTest {
         )
 
         val result: IgdbResult<String, *> = decorator.invoke(
-            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _, _ -> "" }),
+            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
         assertThat(result)
@@ -63,7 +63,7 @@ class RetryDecoratorTest {
         )
 
         val result: IgdbResult<String, *> = decorator.invoke(
-            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _, _ -> "" }),
+            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
         assertThat(result)
@@ -87,7 +87,7 @@ class RetryDecoratorTest {
         )
 
         val result: IgdbResult<String, *> = decorator.invoke(
-            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _, _ -> "" }),
+            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
         assertThat(result)
@@ -108,7 +108,7 @@ class RetryDecoratorTest {
         )
 
         val result: IgdbResult<Any, *> = decorator(
-            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _, _ -> "" }),
+            IgdbRequest.ApicalypsePostRequest("endpoint", apicalypseQuery { }, { _ -> "" }),
         )
 
         assertThat(result).isInstanceOf<IgdbResult.Failure.HttpFailure<*>>()
@@ -135,7 +135,7 @@ class RetryDecoratorTest {
             request = IgdbRequest.ApicalypsePostRequest(
                 path = "endpoint",
                 query = apicalypseQuery { },
-                successResponseParser = { _, _ -> "" },
+                successResponseParser = { _ -> "" },
             ),
         )
 

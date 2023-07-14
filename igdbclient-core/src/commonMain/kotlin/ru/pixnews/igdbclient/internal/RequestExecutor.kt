@@ -34,7 +34,7 @@ public sealed class IgdbRequest {
     public class ApicalypsePostRequest<out T : Any>(
         public val path: String,
         public val query: ApicalypseQuery,
-        public val successResponseParser: (ApicalypseQuery, BufferedSource) -> T,
+        public val successResponseParser: (BufferedSource) -> T,
     ) : IgdbRequest()
 
     @InternalIgdbClientApi

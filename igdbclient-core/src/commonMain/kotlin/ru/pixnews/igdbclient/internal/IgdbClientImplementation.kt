@@ -37,7 +37,7 @@ internal class IgdbClientImplementation(
         ApicalypsePostRequest(
             path = endpoint.protobufPath,
             query = query,
-            successResponseParser = endpoint.resultParser,
+            successResponseParser = { source -> endpoint.resultParser(query, source) },
         ),
     )
 }
