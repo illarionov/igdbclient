@@ -14,17 +14,18 @@
  * limitations under the License.
  */
 
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
+import org.gradle.kotlin.dsl.apply
+import org.gradle.kotlin.dsl.`maven-publish`
 
-plugins.withId("org.jetbrains.kotlin.multiplatform") {
-    apply(plugin = "kotlinx-atomicfu")
+/**
+ * Convention plugin with publishing defaults
+ */
+plugins {
+    id("org.jetbrains.kotlin.multiplatform") apply false
+    `maven-publish`
+}
 
-    the<KotlinMultiplatformExtension>().sourceSets {
-        getByName("commonTest") {
-            dependencies {
-                implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
-            }
-        }
-    }
+tasks.withType<AbstractArchiveTask>().configureEach {
+    isPreserveFileTimestamps = false
+    isReproducibleFileOrder = true
 }

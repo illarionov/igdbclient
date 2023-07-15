@@ -26,6 +26,8 @@ kotlin {
 
 dependencies {
     implementation(project(":base"))
+    implementation(project(":lint"))
+    implementation(libs.agp.plugin)
     implementation(libs.atomicfu.plugin)
     implementation(libs.kotlin.plugin)
 }

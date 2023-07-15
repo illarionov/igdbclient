@@ -13,12 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.gradle.base
 
-import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.api.artifacts.VersionCatalogsExtension
-import org.gradle.kotlin.dsl.getByType
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
+import ru.pixnews.igdbclient.gradle.base.versionCatalog
 
-val Project.versionCatalog: VersionCatalog
-    get() = extensions.getByType<VersionCatalogsExtension>().named("libs")
+/**
+ * Convention plugin that configures kotlinx-atomicfu in projects with the Kotlin Multiplatform plugin
+ */
+plugins.withId("org.jetbrains.kotlin.multiplatform") {
+    apply(plugin = "kotlinx-atomicfu")
+
+    the<KotlinMultiplatformExtension>().sourceSets {
+        getByName("commonTest") {
+            dependencies {
+                implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
+            }
+        }
+    }
+}

@@ -14,54 +14,33 @@
  * limitations under the License.
  */
 
-import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
-import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
-
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    `maven-publish`
+    id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
+    id("ru.pixnews.igdbclient.gradle.multiplatform.test")
+    id("ru.pixnews.igdbclient.gradle.multiplatform.publish")
 }
 
-/* required for maven publication */
 group = "ru.pixnews.igdbclient"
 version = "0.1"
 
 kotlin {
-    jvmToolchain(17)
-    explicitApi = ExplicitApiMode.Warning
+    @Suppress("OPT_IN_USAGE")
+    targetHierarchy.default()
 
     jvm()
 
     sourceSets {
-        all {
-            languageSettings {
-                languageVersion = "1.8"
-                apiVersion = "1.8"
-                listOf(
-                    "kotlin.RequiresOptIn",
-                    "kotlinx.coroutines.ExperimentalCoroutinesApi",
-                    "ru.pixnews.igdbclient.InternalIgdbClientApi",
-                ).forEach(::optIn)
-            }
-        }
-
-        /* Main source sets */
-        val commonJvmMain by creating {
+        getByName("jvmMain") {
             dependencies {
                 api(project(":igdbclient-core"))
-                implementation(libs.okhttp3)
+                api(libs.okhttp3)
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.okio)
             }
         }
-        val jvmMain by getting
-        /* Main hierarchy */
-        jvmMain.dependsOn(commonJvmMain)
 
-        /* Test source sets */
-        val commonJvmTest by creating {
+        getByName("jvmTest") {
             dependencies {
                 implementation(project(":library:test"))
                 implementation(project(":igdbclient-integration-tests"))
@@ -74,29 +53,5 @@ kotlin {
                 implementation(libs.okhttp5.mockwebserver.junit5)
             }
         }
-        val jvmTest by getting
-
-        /* Test hierarchy */
-        jvmTest.dependsOn(commonJvmTest)
-    }
-}
-
-tasks.withType<KotlinJvmCompile>().configureEach {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
-        freeCompilerArgs.addAll(
-            // https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/
-            "-Xjvm-default=all",
-        )
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-    maxHeapSize = "2G"
-    testLogging {
-        events = mutableSetOf(
-            FAILED,
-        )
     }
 }

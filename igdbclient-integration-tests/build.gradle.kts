@@ -14,35 +14,20 @@
  * limitations under the License.
  */
 
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
-
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
+    id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
 }
 
 group = "ru.pixnews.igdbclient"
 version = "0.1"
 
 kotlin {
-    jvmToolchain(17)
     explicitApi = null
 
     jvm()
 
     sourceSets {
-        all {
-            languageSettings {
-                languageVersion = "1.8"
-                apiVersion = "1.8"
-                listOf(
-                    "kotlin.RequiresOptIn",
-                    "kotlinx.coroutines.ExperimentalCoroutinesApi",
-                    "ru.pixnews.igdbclient.InternalIgdbClientApi",
-                ).forEach(::optIn)
-            }
-        }
-
         /* Main source sets */
         val commonMain by getting {
             dependencies {
@@ -68,15 +53,5 @@ kotlin {
 
         /* Main hierarchy */
         jvmMain.dependsOn(commonMain)
-    }
-}
-
-tasks.withType<KotlinJvmCompile>().configureEach {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
-        freeCompilerArgs.addAll(
-            // https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/
-            "-Xjvm-default=all",
-        )
     }
 }

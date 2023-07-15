@@ -13,12 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ru.pixnews.igdbclient.gradle.base
 
-import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalog
-import org.gradle.api.artifacts.VersionCatalogsExtension
-import org.gradle.kotlin.dsl.getByType
+import org.gradle.api.tasks.testing.Test
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.kotlin.dsl.withType
 
-val Project.versionCatalog: VersionCatalog
-    get() = extensions.getByType<VersionCatalogsExtension>().named("libs")
+/**
+ * Convention plugin that configures unit tests in projects with the Kotlin Multiplatform plugin
+ */
+tasks.withType<Test> {
+    useJUnitPlatform()
+    maxHeapSize = "2G"
+    testLogging {
+        events = mutableSetOf(
+            FAILED,
+        )
+    }
+}
