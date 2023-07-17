@@ -9,6 +9,10 @@ on:
       - '**/*.md'
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 env:
   CI: true
   TERM: dumb
@@ -71,7 +75,7 @@ jobs:
           -name .idea -o -path '*build/intermediates' -o -path '*build/.transforms' -o -path '*build/generated'
           \) -prune -o
           -type d -name 'reports' -print0
-          | xargs -0 tar -c -I 'zstd -19 -T0' -f test-reports.tar.zst
+          | xargs -0 tar -c --zstd --options zstd:compression-level=20 -f test-reports.tar.zst
 
       - name: Upload test reports
         uses: actions/upload-artifact@v3
