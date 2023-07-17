@@ -16,6 +16,7 @@
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
+    id("ru.pixnews.igdbclient.gradle.lint.binary.compatibility.validator")
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
     id("ru.pixnews.igdbclient.gradle.multiplatform.test")
     id("ru.pixnews.igdbclient.gradle.multiplatform.publish")

@@ -14,20 +14,13 @@
  * limitations under the License.
  */
 
+/**
+ * Convention plugin that configures Kotlinx Binary Compatibility Validator
+ */
 plugins {
-    `kotlin-dsl`
+    id("org.jetbrains.kotlinx.binary-compatibility-validator")
 }
 
-group = "ru.pixnews.igdbclient.gradle.lint"
-
-kotlin {
-    jvmToolchain(17)
-}
-
-dependencies {
-    implementation(project(":base"))
-    implementation(libs.agp.plugin)
-    implementation(libs.detekt.plugin)
-    implementation(libs.kotlinx.binary.compatibility.validator)
-    implementation(libs.spotless.plugin)
+apiValidation {
+    nonPublicMarkers.add("ru.pixnews.igdbclient.InternalIgdbClientApi")
 }

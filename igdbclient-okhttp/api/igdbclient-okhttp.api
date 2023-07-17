@@ -1,0 +1,13 @@
+public final class ru/pixnews/igdbclient/okhttp/IgdbOkhttpEngine : ru/pixnews/igdbclient/IgdbHttpEngine {
+	public static final field INSTANCE Lru/pixnews/igdbclient/okhttp/IgdbOkhttpEngine;
+	public fun create (Lru/pixnews/igdbclient/internal/model/IgdbClientConfig;)Lru/pixnews/igdbclient/internal/IgdbHttpClient;
+}
+
+public final class ru/pixnews/igdbclient/okhttp/dsl/IgdbOkhttpConfig : ru/pixnews/igdbclient/dsl/IgdbHttpEngineConfig {
+	public fun <init> ()V
+	public final fun getBackgroundDispatcher ()Lkotlinx/coroutines/CoroutineDispatcher;
+	public final fun getCallFactory ()Lokhttp3/Call$Factory;
+	public final fun setBackgroundDispatcher (Lkotlinx/coroutines/CoroutineDispatcher;)V
+	public final fun setCallFactory (Lokhttp3/Call$Factory;)V
+}
+

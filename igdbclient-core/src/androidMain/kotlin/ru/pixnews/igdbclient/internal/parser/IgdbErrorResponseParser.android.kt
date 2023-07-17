@@ -19,11 +19,13 @@ import okio.BufferedSource
 import org.json.JSONArray
 import org.json.JSONObject
 import org.json.JSONTokener
+import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 
 /**
  * Implementation of the Igdb server response parser using the [org.json.JSONTokener]
  */
+@InternalIgdbClientApi
 public actual fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
     val response = source.readUtf8()
     val tokener = JSONTokener(response).nextValue() as? JSONArray ?: error("Malformed JSON")
