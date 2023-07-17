@@ -15,7 +15,7 @@
  */
 package ru.pixnews.igdbclient.dsl
 
-@Suppress("FUNCTION_BOOLEAN_PREFIX", "TooManyFunctions")
+@Suppress("FUNCTION_BOOLEAN_PREFIX", "TooManyFunctions", "MISSING_KDOC_ON_FUNCTION")
 @IgdbClientDsl
 public class HeadersBuilder {
     private val values: MutableMap<String, MutableList<String>> = mutableMapOf()

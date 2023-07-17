@@ -18,7 +18,7 @@ import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 
-/**
+/*
  * Convention plugin that configures Kotlin in projects with the Kotlin Multiplatform plugin
  */
 plugins {

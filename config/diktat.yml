@@ -14,9 +14,6 @@
   enabled: true
   ignoreAnnotated: [ Nested, ParameterizedTest ]
 
-- name: COMMENTED_BY_KDOC
-  enabled: false
-
 - name: CLASS_SHOULD_NOT_BE_ABSTRACT
   enabled: false
 
@@ -151,9 +148,6 @@
   enabled: false
 
 - name: WRONG_NEWLINES
-  enabled: false
-
-- name: WRONG_NEWLINES_AROUND_KDOC
   enabled: false
 
 # Clashes with "ArgumentListWrapping" and "Wrapping" from the Detekt rule set

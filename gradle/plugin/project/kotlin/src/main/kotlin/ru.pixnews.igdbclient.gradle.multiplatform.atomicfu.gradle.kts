@@ -17,7 +17,7 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import ru.pixnews.igdbclient.gradle.base.versionCatalog
 
-/**
+/*
  * Convention plugin that configures kotlinx-atomicfu in projects with the Kotlin Multiplatform plugin
  */
 plugins.withId("org.jetbrains.kotlin.multiplatform") {

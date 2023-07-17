@@ -39,6 +39,9 @@ import ru.pixnews.igdbclient.internal.parser.igdbErrorResponseParser
 import ru.pixnews.igdbclient.okhttp.OkhttpIgdbConstants.Header
 import ru.pixnews.igdbclient.okhttp.OkhttpIgdbConstants.MediaType
 
+/**
+ * Implementation of th [RequestExecutor] based on [okhttp3.OkHttpClient].
+ */
 internal class OkhttpRequestExecutor(
     private val callFactory: Factory,
     private val baseUrl: HttpUrl,

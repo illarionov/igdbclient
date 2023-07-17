@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/**
+/*
  * Settings convention plugin that configures repositories used in the application
  */
 pluginManagement {

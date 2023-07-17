@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/**
+/*
  * Base settings convention plugin for the use in library modules
  */
 plugins {

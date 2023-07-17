@@ -13,6 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+@file:Suppress(
+    "FunctionName",
+    "KDOC_NO_EMPTY_TAGS",
+    "MISSING_KDOC_CLASS_ELEMENTS",
+    "MISSING_KDOC_ON_FUNCTION",
+    "MagicNumber",
+    "TooManyFunctions",
+)
+
 package ru.pixnews.igdbclient.integration.tests
 
 import io.kotest.assertions.throwables.shouldThrow
@@ -54,7 +63,9 @@ import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
 import ru.pixnews.igdbclient.multiquery
 import ru.pixnews.igdbclient.website
 
-@Suppress("FunctionName", "TooManyFunctions", "MagicNumber")
+/**
+ * Base class with common tests running on different implementations of the IgdbClient
+ */
 abstract class BaseIgdbClientImplementationTest {
     open val logger = TestingLoggers.consoleLogger.withTag("IgdbClientImplementationTest")
 

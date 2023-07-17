@@ -63,7 +63,24 @@ public interface IgdbWebhookApi {
         entityId: String,
     ): IgdbResult<String, IgdbHttpErrorResponse>
 
+    /**
+     * The type of data change event for which a subscription will be created and notifications will be sent to the
+     * webhook url
+     */
     public enum class WebhookMethod {
-        CREATE, DELETE, UPDATE
+        /**
+         * Events when new items are created
+         */
+        CREATE,
+
+        /**
+         * Events when items are removed
+         */
+        DELETE,
+
+        /**
+         * Events when items are updated
+         */
+        UPDATE,
     }
 }

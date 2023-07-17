@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+@file:Suppress("FunctionName", "MISSING_KDOC_CLASS_ELEMENTS", "KDOC_NO_EMPTY_TAGS", "MISSING_KDOC_ON_FUNCTION")
+
 package ru.pixnews.igdbclient.integration.tests
 
 import io.kotest.matchers.shouldBe
@@ -34,7 +36,9 @@ import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 
-@Suppress("FunctionName")
+/**
+ * Base class with integration tests running on different implementations of the RequestExecutor
+ */
 abstract class BaseRequestExecutorTest {
     @JvmField
     @RegisterExtension

@@ -13,7 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:Suppress("FunctionName", "MagicNumber")
+@file:Suppress(
+    "FunctionName",
+    "KDOC_NO_EMPTY_TAGS",
+    "MISSING_KDOC_CLASS_ELEMENTS",
+    "MISSING_KDOC_ON_FUNCTION",
+    "MagicNumber",
+)
 
 package ru.pixnews.igdbclient.integration.tests
 
@@ -40,6 +46,9 @@ import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTi
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
+/**
+ * Base class with common tests running on different implementations of the IgdbWebhookApi
+ */
 abstract class BaseIgdbWebhookApiImplementationTest {
     @JvmField
     @RegisterExtension

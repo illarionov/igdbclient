@@ -17,7 +17,7 @@
 import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.`maven-publish`
 
-/**
+/*
  * Convention plugin with publishing defaults
  */
 plugins {

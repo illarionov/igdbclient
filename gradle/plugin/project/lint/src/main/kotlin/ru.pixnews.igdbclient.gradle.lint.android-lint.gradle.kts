@@ -21,7 +21,7 @@ import com.android.build.gradle.LibraryPlugin
 import com.android.build.gradle.TestPlugin
 import ru.pixnews.igdbclient.gradle.lint.configureCommonAndroidLint
 
-/**
+/*
  * Convention plugin that configures Android Lint in projects with the Android Gradle plugin
  */
 project.plugins.withType(AppPlugin::class.java) {

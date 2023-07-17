@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/**
+/*
  * Settings convention plugin with the Gradle Enterprise configuration
  */
 plugins {

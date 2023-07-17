@@ -17,6 +17,9 @@ package ru.pixnews.igdbclient.gradle.lint
 
 import com.android.build.api.dsl.Lint
 
+/**
+ * Android Lint defaults
+ */
 internal fun Lint.configureCommonAndroidLint() {
     quiet = true
     ignoreWarnings = false

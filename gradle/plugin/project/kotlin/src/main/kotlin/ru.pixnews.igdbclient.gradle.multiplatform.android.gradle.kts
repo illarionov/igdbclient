@@ -19,7 +19,7 @@ import org.gradle.api.JavaVersion
 import org.gradle.kotlin.dsl.apply
 import ru.pixnews.igdbclient.gradle.base.versionCatalog
 
-/**
+/*
  * Convention plugin that configures Android target in projects with the Kotlin Multiplatform plugin
  */
 plugins {

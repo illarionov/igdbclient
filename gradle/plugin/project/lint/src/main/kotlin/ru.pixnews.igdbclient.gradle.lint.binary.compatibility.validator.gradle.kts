@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/**
+/*
  * Convention plugin that configures Kotlinx Binary Compatibility Validator
  */
 plugins {

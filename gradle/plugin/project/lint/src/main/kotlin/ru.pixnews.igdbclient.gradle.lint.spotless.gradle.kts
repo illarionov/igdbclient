@@ -19,7 +19,7 @@ import com.diffplug.spotless.LineEnding
 import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
 
-/**
+/*
  * Convention plugin that configures Spotless
  */
 plugins {

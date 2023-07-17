@@ -19,7 +19,7 @@ import ru.pixnews.igdbclient.gradle.base.versionCatalog
 import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
 
-/**
+/*
  * Convention plugin that creates and configures task designated to run Detekt static code analyzer
  */
 plugins {
