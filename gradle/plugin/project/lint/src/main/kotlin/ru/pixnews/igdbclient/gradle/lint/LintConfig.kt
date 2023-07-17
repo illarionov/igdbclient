@@ -32,6 +32,7 @@ internal val Project.lintedFileTree: FileTree
         exclude {
             it.isDirectory && it.relativePath.startsWith("config/copyright")
         }
+        exclude("**/api/**/*.api")
     }
 
 private val excludedDirectories = setOf(
