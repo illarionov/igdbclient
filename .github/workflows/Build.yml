@@ -62,7 +62,7 @@ jobs:
 
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action/composite@v2
-        if: ${{ always() }}
+        if: always() && github.actor != 'dependabot[bot]'
         with:
           comment_mode: off
           junit_files: '**/build/test-results/**/*.xml'
@@ -88,7 +88,9 @@ jobs:
     name: Style check
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
+    if: >-
+      !contains(github.event.head_commit.message, '[ci skip]')
+      && github.actor != 'dependabot[bot]'
 
     steps:
       - name: Checkout sources
