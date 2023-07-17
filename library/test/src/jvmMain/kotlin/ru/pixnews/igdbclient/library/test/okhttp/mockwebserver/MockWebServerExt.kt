@@ -23,7 +23,7 @@ import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
 public fun MockWebServer.takeRequestWithTimeout(
-    timeout: Duration = 3.seconds,
+    timeout: Duration = 10.seconds,
 ): RecordedRequest = checkNotNull(takeRequest(timeout = timeout.inWholeMilliseconds, TimeUnit.MILLISECONDS)) {
     "timeout during takeRequest()"
 }

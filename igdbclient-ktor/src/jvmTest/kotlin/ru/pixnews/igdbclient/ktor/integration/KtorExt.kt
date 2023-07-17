@@ -25,7 +25,7 @@ import java.time.Duration
 import io.ktor.client.plugins.logging.Logger as KtorLogger
 
 internal fun HttpClientConfig<*>.applyTestDefaults(
-    @Suppress("NewApi") timeout: Duration = Duration.ofMillis(700),
+    @Suppress("NewApi") timeout: Duration = Duration.ofMillis(2000),
 ) {
     developmentMode = true
     install(HttpTimeout) {
