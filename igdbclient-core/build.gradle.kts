@@ -77,9 +77,10 @@ kotlin {
         }
         getByName("jvmTest") {
             dependencies {
-                runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
                 implementation(libs.kotest.assertions.core)
+                runtimeOnly(libs.junit.jupiter.engine)
+                runtimeOnly(libs.junit.platform.launcher)
             }
         }
     }

@@ -45,13 +45,14 @@ kotlin {
             dependencies {
                 implementation(project(":library:test"))
                 implementation(project(":igdbclient-integration-tests"))
-                runtimeOnly(libs.junit.jupiter.engine)
                 implementation(libs.junit.jupiter.params)
                 implementation(libs.kermit)
                 implementation(libs.kotest.assertions.core)
                 implementation(libs.kotlinx.coroutines.test)
                 implementation(libs.okhttp3.logging.interceptor)
                 implementation(libs.okhttp5.mockwebserver.junit5)
+                runtimeOnly(libs.junit.jupiter.engine)
+                runtimeOnly(libs.junit.platform.launcher)
             }
         }
     }

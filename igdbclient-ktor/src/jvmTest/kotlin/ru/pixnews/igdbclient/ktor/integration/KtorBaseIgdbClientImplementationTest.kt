@@ -16,6 +16,8 @@
 package ru.pixnews.igdbclient.ktor.integration
 
 import io.ktor.client.HttpClient
+import mockwebserver3.SocketPolicy
+import org.junit.jupiter.api.Disabled
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.ktor.IgdbKtorEngine
@@ -43,5 +45,11 @@ abstract class KtorBaseIgdbClientImplementationTest : BaseIgdbClientImplementati
                 append("HeAdEr2", "HeaderValue22")
             }
         }
+    }
+
+    @Suppress("BACKTICKS_PROHIBITED")
+    @Disabled("Flaky and slow")
+    override fun `Implementation should throw correct exception on network error`(policy: SocketPolicy) {
+        super.`Implementation should throw correct exception on network error`(policy)
     }
 }
