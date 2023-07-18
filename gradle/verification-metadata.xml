@@ -54,6 +54,7 @@
          <trusted-key id="b879179229681ad9e8d23a0812dc99973c2318fd" group="org.cqfn.diktat"/>
          <trusted-key id="bdb5fa4fe719d787fb3d3197f6d4a1d411e9d1ae" group="com.google.guava"/>
          <trusted-key id="c7be5bcc9fec15518cfda882b0f3710fa64900e7" group="^com[.]google($|([.].*))" regex="true"/>
+         <trusted-key id="ce8075a251547bee249bc151a2115ae15f6b8b72" group="org.apache.commons" name="commons-compress" />
          <trusted-key id="dbd744ace7ade6aa50dd591f66b50994442d2d40" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="e01ed293981ae484403b65d7da70bcba6d76ad03" group="com.charleskorn.kaml" name="kaml-jvm"/>
          <trusted-key id="e77417ac194160a3fabd04969a259c7ee636c5ed" group="com.google.errorprone" name="error_prone_annotations"/>
@@ -269,16 +270,6 @@
       <component group="org.antlr" name="antlr-runtime" version="3.5.2">
          <artifact name="antlr-runtime-3.5.2.jar">
             <pgp value="842afb86375d805422835bfd82b5574242c20d6f"/>
-         </artifact>
-      </component>
-      <component group="org.apache.commons" name="commons-compress" version="1.20">
-         <artifact name="commons-compress-1.20.jar">
-            <pgp value="ce8075a251547bee249bc151a2115ae15f6b8b72"/>
-         </artifact>
-      </component>
-      <component group="org.apache.commons" name="commons-compress" version="1.21">
-         <artifact name="commons-compress-1.21.jar">
-            <pgp value="ce8075a251547bee249bc151a2115ae15f6b8b72"/>
          </artifact>
       </component>
       <component group="org.bitbucket.b_c" name="jose4j" version="0.7.0">
