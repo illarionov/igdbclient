@@ -24,6 +24,6 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":base"))
+    implementation(project(":utils"))
     implementation(libs.wire.plugin)
 }

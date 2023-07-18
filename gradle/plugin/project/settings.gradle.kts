@@ -29,8 +29,8 @@ dependencyResolutionManagement {
     }
 }
 
-include("base")
-include("kotlin")
+include("utils")
+include("multiplatform")
 include("lint")
 include("protobuf")
 

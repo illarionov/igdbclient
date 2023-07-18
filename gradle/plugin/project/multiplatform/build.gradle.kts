@@ -18,16 +18,17 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "ru.pixnews.igdbclient.gradle.kotlin"
+group = "ru.pixnews.igdbclient.gradle"
 
 kotlin {
     jvmToolchain(17)
 }
 
 dependencies {
-    implementation(project(":base"))
     implementation(project(":lint"))
-    implementation(libs.agp.plugin)
+    implementation(project(":utils"))
+    implementation(libs.agp.plugin.api)
     implementation(libs.atomicfu.plugin)
     implementation(libs.kotlin.plugin)
+    runtimeOnly(libs.agp.plugin)
 }

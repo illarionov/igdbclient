@@ -17,17 +17,9 @@ package ru.pixnews.igdbclient.ktor.integration
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
-import mockwebserver3.SocketPolicy
-import org.junit.jupiter.api.Disabled
 
 class KtorCioIgdbClientImplementationTest : KtorBaseIgdbClientImplementationTest() {
     override fun createKtorClient(): HttpClient = HttpClient(CIO) {
         applyTestDefaults()
-    }
-
-    @Suppress("BACKTICKS_PROHIBITED")
-    @Disabled("Unexpected exception on DISCONNECT_DURING_RESPONSE_BODY")
-    override fun `Implementation should throw correct exception on network error`(policy: SocketPolicy) {
-        super.`Implementation should throw correct exception on network error`(policy)
     }
 }

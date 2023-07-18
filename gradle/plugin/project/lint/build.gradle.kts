@@ -25,8 +25,8 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":base"))
-    implementation(libs.agp.plugin)
+    implementation(project(":utils"))
+    implementation(libs.agp.plugin.api)
     implementation(libs.detekt.plugin)
     implementation(libs.kotlinx.binary.compatibility.validator)
     implementation(libs.spotless.plugin)
