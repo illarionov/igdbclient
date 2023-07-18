@@ -30,6 +30,10 @@
          <trusted-key id="0d35d3f60078655126908e8af3d1600878e85a3d" group="io.netty"/>
          <trusted-key id="120d6f34e627ed3a772ebbfe55c7e5e701832382" group="org.snakeyaml" name="snakeyaml-engine"/>
          <trusted-key id="2db4f1ef0fa761ecc4ea935c86fdc7e2a11262cb" group="commons-codec"/>
+         <trusted-key id="314fe82e5a4c5377bca2edec5208812e1e4a6db0">
+            <trusting group="com.gradle" name="gradle-enterprise-gradle-plugin" />
+            <trusting group="org.gradle" name="github-dependency-graph-gradle-plugin" />
+         </trusted-key>
          <trusted-key id="475f3b8e59e6e63aa78067482c7b12f2a511e325" group="org.slf4j"/>
          <trusted-key id="4797b4f5dcc46cea61059071a1ae06236ca2ba62" group="com.diffplug.spotless"/>
          <trusted-key id="47eb6836245d2d40e89dfb4136d4e9618f3adab5" group="io.github.microutils" name="kotlin-logging-jvm"/>
@@ -155,11 +159,6 @@
       <component group="com.googlecode.juniversalchardet" name="juniversalchardet" version="1.0.3">
          <artifact name="juniversalchardet-1.0.3.jar">
             <pgp value="31bae2e51d95e0f8ad9b7bcc40a3c4432bd7308c"/>
-         </artifact>
-      </component>
-      <component group="com.gradle" name="gradle-enterprise-gradle-plugin" version="3.13.4">
-         <artifact name="gradle-enterprise-gradle-plugin-3.13.4.jar">
-            <pgp value="314fe82e5a4c5377bca2edec5208812e1e4a6db0"/>
          </artifact>
       </component>
       <component group="com.squareup" name="javapoet" version="1.13.0">
