@@ -77,6 +77,7 @@ kotlin {
                 implementation(libs.ktor.client.logging)
                 implementation(libs.okhttp3.logging.interceptor)
                 implementation(libs.okhttp5.mockwebserver.junit5)
+                runtimeOnly(libs.junit.jupiter.engine)
                 runtimeOnly(libs.junit.platform.launcher)
             }
         }
