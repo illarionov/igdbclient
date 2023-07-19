@@ -31,8 +31,8 @@
          <trusted-key id="120d6f34e627ed3a772ebbfe55c7e5e701832382" group="org.snakeyaml" name="snakeyaml-engine"/>
          <trusted-key id="2db4f1ef0fa761ecc4ea935c86fdc7e2a11262cb" group="commons-codec"/>
          <trusted-key id="314fe82e5a4c5377bca2edec5208812e1e4a6db0">
-            <trusting group="com.gradle" name="gradle-enterprise-gradle-plugin" />
-            <trusting group="org.gradle" name="github-dependency-graph-gradle-plugin" />
+            <trusting group="com.gradle" name="gradle-enterprise-gradle-plugin"/>
+            <trusting group="org.gradle" name="github-dependency-graph-gradle-plugin"/>
          </trusted-key>
          <trusted-key id="475f3b8e59e6e63aa78067482c7b12f2a511e325" group="org.slf4j"/>
          <trusted-key id="4797b4f5dcc46cea61059071a1ae06236ca2ba62" group="com.diffplug.spotless"/>
@@ -42,10 +42,17 @@
          <trusted-key id="60200ac4ae761f1614d6c46766d68daa073be985" group="org.slf4j"/>
          <trusted-key id="694621a7227d8d5289699830abe9f3126bb741c1" group="^com[.]google($|([.].*))" regex="true"/>
          <trusted-key id="6f538074ccebf35f28af9b066a0975f8b1127b83" group="org.jetbrains.kotlin"/>
+         <trusted-key id="7b72c18d9c362314bf8e981b0caebc0883c5bb65" group="com.vanniktech"/>
          <trusted-key id="7e22d50a7ebd9d2cd269b2d4056aca74d46000bf" group="io.netty"/>
          <trusted-key id="837b2cbb1d966c80643a2d6527f164f945828c4c" group="^com[.]willowtreeapps($|([.].*))" regex="true"/>
          <trusted-key id="8756c4f765c9ac3cb6b85d62379ce192d401ab61" group="com.diffplug.durian"/>
-         <trusted-key id="8e3a02905a1ae67e7b0f9acd3967d4eda591b991" group="io.ktor"/>
+         <trusted-key id="8a10792983023d5d14c93b488d7f1bec1e2ecae7" group="^com[.]fasterxml($|([.].*))" regex="true"/>
+         <trusted-key id="8e3a02905a1ae67e7b0f9acd3967d4eda591b991">
+            <trusting group="io.ktor"/>
+            <trusting group="org.jetbrains.kotlinx" name="kotlinx-html-jvm"/>
+         </trusted-key>
+         <trusted-key id="90ee19787a7bcf6fd37a1e9180c08b1c29100955" group="^com[.]squareup($|([.].*))" regex="true"/>
+         <trusted-key id="98465301a4939c0279f2e847d89d05374952262b" group="org.jetbrains.dokka"/>
          <trusted-key id="a5bd02b93e7a40482eb1d66a5f69ad087600b22c" group="org.ow2.asm"/>
          <trusted-key id="a6d6c97108b8585f91b158748671a8df71296252" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="adbc987d1a7b91db6b0aaa81995efbf4a3d20beb" group="com.pinterest.ktlint"/>
@@ -54,7 +61,7 @@
          <trusted-key id="b879179229681ad9e8d23a0812dc99973c2318fd" group="org.cqfn.diktat"/>
          <trusted-key id="bdb5fa4fe719d787fb3d3197f6d4a1d411e9d1ae" group="com.google.guava"/>
          <trusted-key id="c7be5bcc9fec15518cfda882b0f3710fa64900e7" group="^com[.]google($|([.].*))" regex="true"/>
-         <trusted-key id="ce8075a251547bee249bc151a2115ae15f6b8b72" group="org.apache.commons" name="commons-compress" />
+         <trusted-key id="ce8075a251547bee249bc151a2115ae15f6b8b72" group="org.apache.commons" name="commons-compress"/>
          <trusted-key id="dbd744ace7ade6aa50dd591f66b50994442d2d40" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="e01ed293981ae484403b65d7da70bcba6d76ad03" group="com.charleskorn.kaml" name="kaml-jvm"/>
          <trusted-key id="e77417ac194160a3fabd04969a259c7ee636c5ed" group="com.google.errorprone" name="error_prone_annotations"/>
@@ -100,6 +107,11 @@
       <component group="com.diffplug.durian" name="durian-swt.os" version="4.2.0">
          <artifact name="durian-swt.os-4.2.0.jar">
             <pgp value="4797b4f5dcc46cea61059071a1ae06236ca2ba62"/>
+         </artifact>
+      </component>
+      <component group="com.fasterxml.jackson.core" name="jackson-databind" version="2.12.7.1">
+         <artifact name="jackson-databind-2.12.7.1.jar">
+            <pgp value="28118c070cb22a0175a2e8d43d12ca2ac19f3181"/>
          </artifact>
       </component>
       <component group="com.google.android" name="annotations" version="4.1.1.4">
@@ -160,6 +172,11 @@
       <component group="com.googlecode.juniversalchardet" name="juniversalchardet" version="1.0.3">
          <artifact name="juniversalchardet-1.0.3.jar">
             <pgp value="31bae2e51d95e0f8ad9b7bcc40a3c4432bd7308c"/>
+         </artifact>
+      </component>
+      <component group="com.soywiz.korlibs.korte" name="korte-jvm" version="2.7.0">
+         <artifact name="korte-jvm-2.7.0.jar">
+            <pgp value="1be2dd4b1fcf252fe4f0a1d103281aa0289ff53a"/>
          </artifact>
       </component>
       <component group="com.squareup" name="javapoet" version="1.13.0">
@@ -292,6 +309,11 @@
             <pgp value="f254b35617dc255d9344bcfa873a8e86b4372146"/>
          </artifact>
       </component>
+      <component group="org.codehaus.woodstox" name="stax2-api" version="4.2.1">
+         <artifact name="stax2-api-4.2.1.jar">
+            <pgp value="6214760097dc5cfad0175ac2c9fbaa83a8753994"/>
+         </artifact>
+      </component>
       <component group="org.ec4j.core" name="ec4j-core" version="0.3.0">
          <artifact name="ec4j-core-0.3.0.jar">
             <pgp value="2e92113263fc31c74ccbaab20e91c2de43b72bb1"/>
@@ -310,6 +332,11 @@
       <component group="org.eclipse.platform" name="org.eclipse.osgi" version="3.18.300">
          <artifact name="org.eclipse.osgi-3.18.300.jar">
             <pgp value="9e3044071b758ebcb7e45673700e4f39bc05364b"/>
+         </artifact>
+      </component>
+      <component group="org.freemarker" name="freemarker" version="2.3.31">
+         <artifact name="freemarker-2.3.31.jar">
+            <pgp value="13ac2213964abe1d1c147c0e1939a2520bab1d90"/>
          </artifact>
       </component>
       <component group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins" version="4.0.14">
@@ -337,6 +364,11 @@
             <pgp value="33fd4bfd33554634053d73c0c2148900bcd3c2af"/>
          </artifact>
       </component>
+      <component group="org.jetbrains" name="markdown-jvm" version="0.3.1">
+         <artifact name="markdown-jvm-0.3.1.jar">
+            <pgp value="e62231331bca7e1f292c9b88c1b12a5d99c0729d"/>
+         </artifact>
+      </component>
       <component group="org.jetbrains.intellij.deps" name="trove4j" version="1.0.20200330">
          <artifact name="trove4j-1.0.20200330.jar">
             <pgp value="8756c4f765c9ac3cb6b85d62379ce192d401ab61"/>
@@ -355,6 +387,11 @@
       <component group="org.json" name="json" version="20230618">
          <artifact name="json-20230618.jar">
             <pgp value="fb35c8d02b4724dada23de0afd116c1969fccff3"/>
+         </artifact>
+      </component>
+      <component group="org.jsoup" name="jsoup" version="1.15.3">
+         <artifact name="jsoup-1.15.3.jar">
+            <pgp value="f3184bcd55f4d016e30d4c9bf42e87f9665015c9"/>
          </artifact>
       </component>
       <component group="org.jvnet.staxex" name="stax-ex" version="1.8.1">

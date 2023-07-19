@@ -30,5 +30,7 @@ dependencies {
     implementation(libs.agp.plugin.api)
     implementation(libs.atomicfu.plugin)
     implementation(libs.kotlin.plugin)
+    implementation(libs.gradle.maven.publish.plugin)
+    implementation(libs.dokka.plugin)
     runtimeOnly(libs.agp.plugin)
 }
