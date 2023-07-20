@@ -18,6 +18,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.dokka)
     id("ru.pixnews.igdbclient.gradle.lint.binary.compatibility.validator")
+    id("ru.pixnews.igdbclient.gradle.multiplatform.android")
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
     id("ru.pixnews.igdbclient.gradle.multiplatform.test")
     id("ru.pixnews.igdbclient.gradle.multiplatform.publish")
@@ -33,10 +34,11 @@ kotlin {
     @Suppress("OPT_IN_USAGE")
     targetHierarchy.default()
 
+    android()
     jvm()
 
     sourceSets {
-        getByName("jvmMain") {
+        val commonMain by getting {
             dependencies {
                 api(project(":igdbclient-core"))
                 api(libs.okhttp3)
@@ -44,6 +46,12 @@ kotlin {
                 implementation(libs.okio)
             }
         }
+
+        val commonJvmMain by creating
+        commonJvmMain.dependsOn(commonMain)
+
+        getByName("androidMain").dependsOn(commonJvmMain)
+        getByName("jvmMain").dependsOn(commonJvmMain)
 
         getByName("jvmTest") {
             dependencies {
@@ -60,4 +68,8 @@ kotlin {
             }
         }
     }
+}
+
+android {
+    namespace = "ru.pixnews.igdbclient.okhttp"
 }
