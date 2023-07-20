@@ -34,7 +34,7 @@ import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload.Companion.toTokenPayload
 import ru.pixnews.igdbclient.executeOrThrow
-import ru.pixnews.igdbclient.game
+import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
@@ -86,7 +86,7 @@ class RealKtorNetworkTestClient {
 
     @Test
     fun executeRequest() = runBlocking {
-        val response = client.game {
+        val response = client.getGames {
             search("Diablo")
             fields("id")
             limit(2)
@@ -95,7 +95,7 @@ class RealKtorNetworkTestClient {
 
         response.games shouldHaveSize 2
 
-        val response2 = client.game {
+        val response2 = client.getGames {
             search("War cRaft")
             fields("id")
             limit(1)
@@ -110,7 +110,7 @@ class RealKtorNetworkTestClient {
     fun executeManySimultaneousRequests() = runBlocking {
         val responses = (1..40).map {
             async {
-                client.game {
+                client.getGames {
                     search("Diablo $it")
                     fields("id")
                     limit(1)

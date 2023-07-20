@@ -41,7 +41,6 @@ import org.junit.jupiter.params.provider.EnumSource
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
-import ru.pixnews.igdbclient.ageRating
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQueryBuilder
 import ru.pixnews.igdbclient.error.IgdbApiFailureException
@@ -49,7 +48,9 @@ import ru.pixnews.igdbclient.error.IgdbException
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.error.IgdbHttpException
 import ru.pixnews.igdbclient.executeOrThrow
-import ru.pixnews.igdbclient.game
+import ru.pixnews.igdbclient.getAgeRatings
+import ru.pixnews.igdbclient.getGames
+import ru.pixnews.igdbclient.getWebsites
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
 import ru.pixnews.igdbclient.library.test.TestingLoggers
@@ -61,7 +62,6 @@ import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.model.Platform
 import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
 import ru.pixnews.igdbclient.multiquery
-import ru.pixnews.igdbclient.website
 
 /**
  * Base class with common tests running on different implementations of the IgdbClient
@@ -87,7 +87,7 @@ abstract class BaseIgdbClientImplementationTest {
             if (request.path == "/v4/games.pb") createSuccessMockResponse() else null
         }
 
-        val response = api.game(createTestSuccessQuery())
+        val response = api.getGames(createTestSuccessQuery())
 
         response.games shouldHaveSize 5
     }
@@ -98,7 +98,7 @@ abstract class BaseIgdbClientImplementationTest {
             createSuccessMockResponse()
         }
 
-        api.game(createTestSuccessQuery())
+        api.getGames(createTestSuccessQuery())
 
         server.takeRequestWithTimeout().run {
             headers.values("Accept") shouldBe listOf("application/protobuf")
@@ -128,7 +128,7 @@ abstract class BaseIgdbClientImplementationTest {
         }
 
         val exception: IgdbHttpException = shouldThrow {
-            api.game(createTestSuccessQuery())
+            api.getGames(createTestSuccessQuery())
         }
 
         exception.code shouldBe 401
@@ -171,7 +171,7 @@ abstract class BaseIgdbClientImplementationTest {
         val api = startMockServerCreateClient()
 
         val exception: IgdbHttpException = shouldThrow {
-            api.website(createTestSuccessQuery())
+            api.getWebsites(createTestSuccessQuery())
         }
 
         exception.code shouldBe 404
@@ -189,7 +189,7 @@ abstract class BaseIgdbClientImplementationTest {
         }
 
         shouldThrow<IgdbApiFailureException> {
-            api.ageRating(createTestSuccessQuery())
+            api.getAgeRatings(createTestSuccessQuery())
         }
     }
 
@@ -210,7 +210,7 @@ abstract class BaseIgdbClientImplementationTest {
         }
 
         shouldThrowExactly<IgdbException> {
-            api.game(createTestSuccessQuery())
+            api.getGames(createTestSuccessQuery())
         }
     }
 

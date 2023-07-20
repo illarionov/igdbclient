@@ -27,7 +27,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Response
 import org.junit.jupiter.api.Test
 import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.game
+import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
@@ -71,7 +71,7 @@ class OkhttpIgdbClientImplementationTest : BaseIgdbClientImplementationTest() {
         }
 
         val request = backgroundScope.launch {
-            api.game(createTestSuccessQuery())
+            api.getGames(createTestSuccessQuery())
         }
         receivedResponseHeadersLatch.join()
 
