@@ -1,4 +1,4 @@
-name: publish snapshot
+name: publish
 
 on:
   workflow_dispatch:
