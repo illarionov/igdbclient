@@ -16,6 +16,7 @@
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.dokka)
     id("ru.pixnews.igdbclient.gradle.lint.binary.compatibility.validator")
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
     id("ru.pixnews.igdbclient.gradle.multiplatform.test")
@@ -23,7 +24,10 @@ plugins {
 }
 
 group = "ru.pixnews.igdbclient"
-version = "0.1"
+version = igdbVersions.getSubmoduleVersionProvider(
+    propertiesFileKey = "igdbclient_okhttp_version",
+    envVariableName = "IGDBCLIENT_OKHTTP_VERSION",
+).get()
 
 kotlin {
     @Suppress("OPT_IN_USAGE")
