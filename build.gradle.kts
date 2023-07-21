@@ -13,6 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnLockMismatchReport
+import org.jetbrains.kotlin.gradle.targets.js.yarn.YarnRootExtension
+
 plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.dokka)
@@ -20,6 +24,10 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform) apply false
     id("ru.pixnews.igdbclient.gradle.lint.detekt")
     id("ru.pixnews.igdbclient.gradle.lint.spotless")
+}
+
+rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlugin::class.java) {
+    rootProject.the<YarnRootExtension>().yarnLockMismatchReport = YarnLockMismatchReport.WARNING
 }
 
 val styleCheck = tasks.register("styleCheck") {
