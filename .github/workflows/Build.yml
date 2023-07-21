@@ -64,21 +64,21 @@ jobs:
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
-        if: ${{ failure() }}
+        if: failure()
         with:
           name: build-outputs
           path: '**/build/outputs'
 
       - name: Publish test results
         uses: EnricoMi/publish-unit-test-result-action/composite@v2
-        if: always() && github.actor != 'dependabot[bot]'
+        if: ${{ !cancelled() && (github.actor != 'dependabot[bot]') }}
         with:
           comment_mode: off
           junit_files: '**/build/test-results/**/*.xml'
           check_name: "Test results"
 
       - name: Bundle the test reports
-        if: ${{ failure() }}
+        if: failure()
         run: >
           find . \(
           -name .idea -o -path '*build/intermediates' -o -path '*build/.transforms' -o -path '*build/generated'
@@ -88,7 +88,7 @@ jobs:
 
       - name: Upload test reports
         uses: actions/upload-artifact@v3
-        if: ${{ failure() }}
+        if: failure()
         with:
           name: test-reports
           path: test-reports.tar.zst
@@ -148,12 +148,12 @@ jobs:
           category: detekt
 
       - name: Bundle the build report
-        if: ${{ always() }}
+        if: ${{ !cancelled() }}
         run: >
           tar -c -I 'zstd -19 -T0' -f lint-outputs.tar.zst build/reports
 
       - name: Upload lint outputs
-        if: always()
+        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v3
         with:
           name: lint-outputs
