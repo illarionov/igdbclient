@@ -30,7 +30,7 @@ plugins {
 }
 
 kotlin {
-    android {
+    androidTarget {
         publishLibraryVariants = listOf("release")
     }
 

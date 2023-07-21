@@ -43,7 +43,7 @@ mavenPublishing {
         repositories {
             maven {
                 name = "test"
-                setUrl("file://${project.rootProject.buildDir}/localMaven")
+                setUrl(project.rootProject.layout.buildDirectory.dir("localMaven"))
             }
         }
     }
@@ -51,7 +51,7 @@ mavenPublishing {
     signAllPublications()
 
     configure(
-        KotlinMultiplatform(javadocJar = JavadocJar.Dokka("dokkaHtml")),
+        KotlinMultiplatform(javadocJar = JavadocJar.Empty()),
     )
 
     pom {
@@ -84,20 +84,5 @@ mavenPublishing {
 tasks.named<DokkaTask>("dokkaHtml") {
     dokkaSourceSets.configureEach {
         skipDeprecated.set(true)
-    }
-}
-
-// Workaround for https://github.com/Kotlin/dokka/issues/2977.
-// We disable the C Interop IDE metadata task when generating documentation using Dokka.
-gradle.taskGraph.whenReady {
-    val hasDokkaTasks = gradle.taskGraph.allTasks.any {
-        it is org.jetbrains.dokka.gradle.AbstractDokkaTask
-    }
-    if (hasDokkaTasks) {
-        tasks.matching {
-            "CInteropMetadataDependencyTransformationTask" in (it::class.qualifiedName ?: "")
-        }.configureEach {
-            enabled = false
-        }
     }
 }
