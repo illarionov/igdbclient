@@ -36,7 +36,7 @@ kotlin {
     @Suppress("OPT_IN_USAGE")
     targetHierarchy.default()
 
-    android()
+    androidTarget()
     jvm()
     js(IR) {
         browser()
