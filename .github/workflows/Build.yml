@@ -50,8 +50,8 @@ jobs:
         with:
           dependency-graph: generate
 
-      - name: Setup Kotlin Native Cache
-        uses: actions/cache@v3
+      - name: Restore Kotlin Native Cache
+        uses: actions/cache/restore@v3
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
@@ -93,6 +93,14 @@ jobs:
           name: test-reports
           path: test-reports.tar.zst
 
+      - name: Save Kotlin Native Cache
+        uses: actions/cache/save@v3
+        if: github.ref_name == 'main'
+        with:
+          path: ~/.konan
+          key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
+          restore-keys: ${{ runner.os }}-konan-
+
   static-analysis:
     name: Style check
     runs-on: ubuntu-latest
@@ -121,8 +129,8 @@ jobs:
         with:
           dependency-graph: generate
 
-      - name: Setup Kotlin Native Cache
-        uses: actions/cache@v3
+      - name: Restore Kotlin Native Cache
+        uses: actions/cache/restore@v3
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
@@ -150,3 +158,11 @@ jobs:
         with:
           name: lint-outputs
           path: lint-outputs.tar.zst
+
+      - name: Save Kotlin Native Cache
+        uses: actions/cache/save@v3
+        if: github.ref_name == 'main'
+        with:
+          path: ~/.konan
+          key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
+          restore-keys: ${{ runner.os }}-konan-
