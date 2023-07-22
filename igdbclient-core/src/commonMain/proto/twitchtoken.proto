@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-package ru.pixnews.igdbclient.auth.model;
+package ru.pixnews.igdbclient.internal.model;
 
 import "google/protobuf/timestamp.proto";
 
 option optimize_for = LITE_RUNTIME;
 
-message TwitchToken {
+message InternalTwitchTokenProto {
     string access_token = 1;
     uint64 expires_in = 2;
     string token_type = 3;

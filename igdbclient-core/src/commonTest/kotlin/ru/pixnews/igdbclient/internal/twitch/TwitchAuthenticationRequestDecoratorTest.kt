@@ -45,7 +45,6 @@ import ru.pixnews.igdbclient.IgdbResult.Failure
 import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
 import ru.pixnews.igdbclient.IgdbResult.Success
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
-import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenStorage
@@ -54,6 +53,8 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse.Message
 import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken.Companion.encode
 import ru.pixnews.igdbclient.internal.twitch.TwitchAuthenticationRequestDecorator.Companion.MAX_COMMIT_FRESH_TOKEN_ATTEMPTS
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.test.TracingRequestExecutor
@@ -419,17 +420,17 @@ class TwitchAuthenticationRequestDecoratorTest {
 
     companion object {
         private val validToken1: TwitchToken = TwitchToken(
-            access_token = "testValidToken1",
-            expires_in = 5035365,
-            token_type = "bearer",
-            receive_timestamp = ofEpochSecond(1_686_895_955, 123_000_000),
+            accessToken = "testValidToken1",
+            expiresIn = 5035365,
+            tokenType = "bearer",
+            receiveTimestamp = ofEpochSecond(1_686_895_955, 123_000_000),
         )
         private val validToken1Payload: TwitchTokenPayload = TwitchTokenPayload(validToken1.encode())
         private val validToken2: TwitchToken = TwitchToken(
-            access_token = "testValidToken2",
-            expires_in = 5035365,
-            token_type = "bearer",
-            receive_timestamp = ofEpochSecond(1_686_896_255, 123_000_000),
+            accessToken = "testValidToken2",
+            expiresIn = 5035365,
+            tokenType = "bearer",
+            receiveTimestamp = ofEpochSecond(1_686_896_255, 123_000_000),
         )
         private val validToken2Payload: TwitchTokenPayload = TwitchTokenPayload(validToken2.encode())
 

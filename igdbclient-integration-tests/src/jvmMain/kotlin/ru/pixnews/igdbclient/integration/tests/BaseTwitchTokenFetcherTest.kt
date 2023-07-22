@@ -72,10 +72,10 @@ abstract class BaseTwitchTokenFetcherTest {
         val response = fetcher(TestCredentials()) as? IgdbResult.Success
 
         checkNotNull(response).value.run {
-            access_token shouldBe "123"
-            expires_in shouldBe 5066399
-            token_type shouldBe "bearer"
-            receive_timestamp shouldBe Instant.ofEpochMilli(1_686_895_955_123)
+            accessToken shouldBe "123"
+            expiresIn shouldBe 5066399
+            tokenType shouldBe "bearer"
+            receiveTimestamp shouldBe Instant.ofEpochMilli(1_686_895_955_123)
         }
     }
 

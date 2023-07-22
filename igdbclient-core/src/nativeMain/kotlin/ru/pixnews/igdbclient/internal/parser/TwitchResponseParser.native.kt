@@ -23,7 +23,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
 /**
@@ -46,8 +46,8 @@ public actual fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSour
 public actual fun IgdbParser.twitchTokenParser(source: BufferedSource): TwitchToken {
     val jsonObject = Json.parseToJsonElement(source.readUtf8()).jsonObject
     return TwitchToken(
-        access_token = jsonObject["access_token"]?.jsonPrimitive?.contentOrNull ?: error("no access_token"),
-        expires_in = jsonObject["expires_in"]?.jsonPrimitive?.longOrNull ?: 0,
-        token_type = jsonObject["token_type"]?.jsonPrimitive?.contentOrNull ?: "",
+        accessToken = jsonObject["access_token"]?.jsonPrimitive?.contentOrNull ?: error("no access_token"),
+        expiresIn = jsonObject["expires_in"]?.jsonPrimitive?.longOrNull ?: 0,
+        tokenType = jsonObject["token_type"]?.jsonPrimitive?.contentOrNull ?: "",
     )
 }
