@@ -23,10 +23,10 @@ import assertk.assertions.prop
 import kotlinx.coroutines.test.runTest
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
-import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.dsl.IgdbClientConfigBlock
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher

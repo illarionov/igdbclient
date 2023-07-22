@@ -19,7 +19,7 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.tableOf
 import okio.Buffer
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 import ru.pixnews.igdbclient.library.test.IgnoreAndroid
 import kotlin.test.Test
 import kotlin.test.assertFails
@@ -45,15 +45,15 @@ class TwitchTokenParserTest {
         .row(
             """{"access_token":"123","expires_in":5035365,"token_type":"bearer"}""",
             TwitchToken(
-                access_token = "123",
-                expires_in = 5035365,
-                token_type = "bearer",
+                accessToken = "123",
+                expiresIn = 5035365,
+                tokenType = "bearer",
             ),
         )
         .row(
             """{"access_token":"123"}""",
             TwitchToken(
-                access_token = "123",
+                accessToken = "123",
             ),
         )
         .forAll { testSource, expectedResult ->

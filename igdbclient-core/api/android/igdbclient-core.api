@@ -237,28 +237,6 @@ public final class ru/pixnews/igdbclient/apicalypse/SortOrder : java/lang/Enum {
 	public static fun values ()[Lru/pixnews/igdbclient/apicalypse/SortOrder;
 }
 
-public final class ru/pixnews/igdbclient/auth/model/TwitchToken : com/squareup/wire/Message {
-	public static final field Companion Lru/pixnews/igdbclient/auth/model/TwitchToken$Companion;
-	public fun <init> ()V
-	public fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;)V
-	public synthetic fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;)Lru/pixnews/igdbclient/auth/model/TwitchToken;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/auth/model/TwitchToken;Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/auth/model/TwitchToken;
-	public fun equals (Ljava/lang/Object;)Z
-	public final fun getAccess_token ()Ljava/lang/String;
-	public final fun getExpires_in ()J
-	public final fun getReceive_timestamp ()Ljava/time/Instant;
-	public final fun getToken_type ()Ljava/lang/String;
-	public fun hashCode ()I
-	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
-	public synthetic fun newBuilder ()Ljava/lang/Void;
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class ru/pixnews/igdbclient/auth/model/TwitchToken$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
-}
-
 public final class ru/pixnews/igdbclient/auth/twitch/InMemoryTwitchTokenStorage : ru/pixnews/igdbclient/auth/twitch/TwitchTokenStorage {
 	public fun <init> ()V
 	public fun <init> (Lru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload;)V
@@ -281,7 +259,8 @@ public final class ru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload {
 
 public final class ru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload$Companion {
 	public final fun getNO_TOKEN ()Lru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload;
-	public final fun toTokenPayload (Lru/pixnews/igdbclient/auth/model/TwitchToken;)Lru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload;
+	public final fun getTwitchAccessToken (Lru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload;)Ljava/lang/String;
+	public final fun invoke (Ljava/lang/String;)Lru/pixnews/igdbclient/auth/twitch/TwitchTokenPayload;
 }
 
 public abstract interface class ru/pixnews/igdbclient/auth/twitch/TwitchTokenStorage {
@@ -397,6 +376,28 @@ public final class ru/pixnews/igdbclient/error/IgdbHttpException : ru/pixnews/ig
 	public fun getMessage ()Ljava/lang/String;
 	public final fun getRawResponseBody ()[B
 	public final fun getResponse ()Lru/pixnews/igdbclient/error/IgdbHttpErrorResponse;
+}
+
+public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto : com/squareup/wire/Message {
+	public static final field Companion Lru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;)Lru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto;Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAccess_token ()Ljava/lang/String;
+	public final fun getExpires_in ()J
+	public final fun getReceive_timestamp ()Ljava/time/Instant;
+	public final fun getToken_type ()Ljava/lang/String;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto$Companion {
+	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/internal/parser/IgdbErrorResponseParser_androidKt {

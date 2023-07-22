@@ -30,9 +30,8 @@ import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
-import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload.Companion.toTokenPayload
+import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.executeOrThrow
 import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
@@ -69,7 +68,7 @@ class RealKtorNetworkTestClient {
             clientId = testTokenProperties.clientId!!
             clientSecret = testTokenProperties.clientSecret!!
             storage = InMemoryTwitchTokenStorage(
-                token = TwitchToken(access_token = testTokenProperties.token!!).toTokenPayload(),
+                token = TwitchTokenPayload(testTokenProperties.token!!),
             )
         }
 

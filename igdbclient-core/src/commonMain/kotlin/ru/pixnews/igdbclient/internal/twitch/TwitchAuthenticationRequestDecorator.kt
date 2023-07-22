@@ -27,7 +27,6 @@ import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownFailure
 import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
 import ru.pixnews.igdbclient.IgdbResult.Success
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.model.TwitchToken
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenStorage
 import ru.pixnews.igdbclient.error.IgdbException
@@ -36,6 +35,8 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse.Message
 import ru.pixnews.igdbclient.internal.IgdbRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken.Companion.encode
 
 @InternalIgdbClientApi
 internal class TwitchAuthenticationRequestDecorator(
@@ -166,8 +167,8 @@ internal class TwitchAuthenticationRequestDecorator(
                 return null
             }
             return try {
-                val token = TwitchToken.ADAPTER.decode(payload)
-                if (token.access_token.isNotEmpty()) token else null
+                val token = TwitchToken.decode(payload)
+                if (token.accessToken.isNotEmpty()) token else null
             } catch (@Suppress("SwallowedException") exception: IOException) {
                 null
             }
@@ -175,7 +176,7 @@ internal class TwitchAuthenticationRequestDecorator(
 
         private fun TwitchToken.toIgdbToken(credentials: TwitchCredentials): IgdbAuthToken = object : IgdbAuthToken {
             override val clientId: String = credentials.clientId
-            override val token: String = this@toIgdbToken.access_token
+            override val token: String = this@toIgdbToken.accessToken
         }
 
         private fun IgdbResult<TwitchToken, TwitchErrorResponse>.asIgdbResult():

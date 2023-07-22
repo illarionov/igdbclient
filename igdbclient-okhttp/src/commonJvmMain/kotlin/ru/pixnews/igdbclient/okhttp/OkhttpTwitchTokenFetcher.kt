@@ -24,7 +24,7 @@ import okhttp3.HttpUrl
 import okhttp3.Request
 import okio.BufferedSource
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 import ru.pixnews.igdbclient.internal.parser.IgdbParser
 import ru.pixnews.igdbclient.internal.parser.twitchTokenErrorResponseParser
 import ru.pixnews.igdbclient.internal.parser.twitchTokenParser
@@ -68,7 +68,7 @@ internal class OkhttpTwitchTokenFetcher(
                 successResponseParser = { inputStream ->
                     @Suppress("MagicNumber")
                     twitchTokenParser(inputStream).copy(
-                        receive_timestamp = Instant.ofEpochSecond(
+                        receiveTimestamp = Instant.ofEpochSecond(
                             tokenReceivedTimestamp / 1000,
                             tokenReceivedTimestamp % 1000L * 1_000_000L,
                         ),

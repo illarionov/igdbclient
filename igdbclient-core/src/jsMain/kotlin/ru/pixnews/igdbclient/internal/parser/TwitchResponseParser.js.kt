@@ -17,7 +17,7 @@ package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 import kotlin.js.Json
 
@@ -48,9 +48,9 @@ public actual fun IgdbParser.twitchTokenParser(source: BufferedSource): TwitchTo
 
     return response.unsafeCast<Json>().let {
         TwitchToken(
-            access_token = it["access_token"] as String,
-            expires_in = it.optLong("expires_in"),
-            token_type = it.optString("token_type"),
+            accessToken = it["access_token"] as String,
+            expiresIn = it.optLong("expires_in"),
+            tokenType = it.optString("token_type"),
         )
     }
 }

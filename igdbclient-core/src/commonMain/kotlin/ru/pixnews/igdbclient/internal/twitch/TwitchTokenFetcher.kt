@@ -17,7 +17,7 @@ package ru.pixnews.igdbclient.internal.twitch
 
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
 
 @InternalIgdbClientApi
 public interface TwitchTokenFetcher {

@@ -15,7 +15,8 @@
  */
 package ru.pixnews.igdbclient.auth.twitch
 
-import ru.pixnews.igdbclient.auth.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken
+import ru.pixnews.igdbclient.internal.model.TwitchToken.Companion.encode
 
 public class TwitchTokenPayload(
     payload: ByteArray = ByteArray(0),
@@ -57,6 +58,23 @@ public class TwitchTokenPayload(
     public companion object {
         public val NO_TOKEN: TwitchTokenPayload = TwitchTokenPayload()
 
-        public fun TwitchToken.toTokenPayload(): TwitchTokenPayload = TwitchTokenPayload(this.encode())
+        public operator fun invoke(twitchAccessToken: String): TwitchTokenPayload = TwitchTokenPayload(
+            TwitchToken(twitchAccessToken).encode(),
+        )
+
+        /**
+         * Returns raw twitch access token.
+         *
+         * It can be used to revoke a token on a twitch server when it is no longer needed.
+         */
+        public fun TwitchTokenPayload.getTwitchAccessToken(): String? = try {
+            if (!isEmpty()) {
+                TwitchToken.decode(this.payload).accessToken
+            } else {
+                null
+            }
+        } catch (@Suppress("TooGenericExceptionCaught") _: Exception) {
+            null
+        }
     }
 }
