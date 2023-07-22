@@ -99,7 +99,6 @@ jobs:
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
-          restore-keys: ${{ runner.os }}-konan-
 
   static-analysis:
     name: Style check
@@ -165,4 +164,3 @@ jobs:
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
-          restore-keys: ${{ runner.os }}-konan-
