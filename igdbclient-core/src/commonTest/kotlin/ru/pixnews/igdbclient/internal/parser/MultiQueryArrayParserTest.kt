@@ -19,7 +19,7 @@ import assertk.assertThat
 import assertk.assertions.containsExactly
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
-import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQuery.Companion.apicalypseMultiQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseMultiQuery
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgnoreAndroid
 import ru.pixnews.igdbclient.library.test.IgnoreJs

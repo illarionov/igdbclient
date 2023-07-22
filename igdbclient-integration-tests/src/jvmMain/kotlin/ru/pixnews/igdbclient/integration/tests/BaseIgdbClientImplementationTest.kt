@@ -43,6 +43,7 @@ import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQueryBuilder
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.error.IgdbApiFailureException
 import ru.pixnews.igdbclient.error.IgdbException
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
@@ -275,7 +276,7 @@ abstract class BaseIgdbClientImplementationTest {
 
         val response = api.executeOrThrow(
             IgdbEndpoint.GAME.countEndpoint(),
-            ApicalypseQuery.apicalypseQuery {
+            apicalypseQuery {
                 fields("*")
                 search("Diablo")
             },

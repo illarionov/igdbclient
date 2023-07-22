@@ -22,7 +22,7 @@ import assertk.assertions.isTrue
 import assertk.assertions.prop
 import kotlinx.coroutines.test.runTest
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.dsl.IgdbClientConfigBlock
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken

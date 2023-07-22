@@ -36,7 +36,7 @@ import kotlinx.coroutines.Dispatchers
 import okio.BufferedSource
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.internal.IgdbRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor

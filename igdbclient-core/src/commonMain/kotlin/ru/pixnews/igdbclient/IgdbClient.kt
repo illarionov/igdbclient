@@ -23,11 +23,11 @@ import ru.pixnews.igdbclient.IgdbResult.Failure.NetworkFailure
 import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownFailure
 import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
 import ru.pixnews.igdbclient.IgdbResult.Success
-import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQuery.Companion.apicalypseMultiQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQueryBuilder
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
 import ru.pixnews.igdbclient.apicalypse.ApicalypseQueryBuilder
+import ru.pixnews.igdbclient.apicalypse.apicalypseMultiQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.dsl.IgdbClientConfigBlock
 import ru.pixnews.igdbclient.dsl.IgdbHttpEngineConfig
 import ru.pixnews.igdbclient.error.IgdbApiFailureException

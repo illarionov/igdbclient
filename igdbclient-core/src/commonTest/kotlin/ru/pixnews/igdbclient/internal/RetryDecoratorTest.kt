@@ -21,7 +21,7 @@ import assertk.assertions.isInstanceOf
 import assertk.assertions.prop
 import kotlinx.coroutines.test.runTest
 import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 import ru.pixnews.igdbclient.test.TracingRequestExecutor
 import kotlin.test.Test

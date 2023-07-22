@@ -17,7 +17,6 @@ package ru.pixnews.igdbclient.apicalypse
 
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQuery.Subquery
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
 
 /**
  * APICalypse multi-query builder.
