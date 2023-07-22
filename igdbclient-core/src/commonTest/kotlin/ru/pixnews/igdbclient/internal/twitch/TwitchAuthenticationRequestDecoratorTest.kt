@@ -44,7 +44,7 @@ import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbResult.Failure
 import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
 import ru.pixnews.igdbclient.IgdbResult.Success
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenStorage

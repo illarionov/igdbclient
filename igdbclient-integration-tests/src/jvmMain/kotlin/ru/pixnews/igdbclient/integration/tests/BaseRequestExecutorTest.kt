@@ -25,7 +25,7 @@ import mockwebserver3.RecordedRequest
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken

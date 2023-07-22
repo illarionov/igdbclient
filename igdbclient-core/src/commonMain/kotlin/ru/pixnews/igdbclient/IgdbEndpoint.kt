@@ -537,7 +537,6 @@ public open class IgdbEndpoint<out R : Any>(
         /**
          * Endpoint to execute multi-queries
          */
-        @OptIn(InternalIgdbClientApi::class)
         public val MULTIQUERY: IgdbEndpoint<List<UnpackedMultiQueryResult<*>>> = IgdbEndpoint(
             "multiquery",
             MultiQueryArrayParser::parse,

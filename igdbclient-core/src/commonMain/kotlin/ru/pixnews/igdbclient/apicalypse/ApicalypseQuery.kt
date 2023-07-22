@@ -16,19 +16,17 @@
 package ru.pixnews.igdbclient.apicalypse
 
 /**
+ * Builds a new [ApicalypseQuery]
+ */
+public fun apicalypseQuery(builder: ApicalypseQueryBuilder.() -> Unit): ApicalypseQuery {
+    return ApicalypseQueryBuilder().apply(builder).build()
+}
+
+/**
  * Apicalypse query.
  *
  * Use [apicalypseQuery] builder function to create and configure a new instance of a query.
  */
 public interface ApicalypseQuery {
     override fun toString(): String
-
-    public companion object {
-        /**
-         * Builds a new [ApicalypseQuery]
-         */
-        public fun apicalypseQuery(builder: ApicalypseQueryBuilder.() -> Unit): ApicalypseQuery {
-            return ApicalypseQueryBuilder().apply(builder).build()
-        }
-    }
 }

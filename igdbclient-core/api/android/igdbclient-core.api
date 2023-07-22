@@ -184,13 +184,8 @@ public abstract interface annotation class ru/pixnews/igdbclient/apicalypse/Apic
 }
 
 public abstract interface class ru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery : ru/pixnews/igdbclient/apicalypse/ApicalypseQuery {
-	public static final field Companion Lru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery$Companion;
 	public abstract fun getSubqueries ()Ljava/util/List;
 	public abstract fun toString ()Ljava/lang/String;
-}
-
-public final class ru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery$Companion {
-	public final fun apicalypseMultiQuery (Lkotlin/jvm/functions/Function1;)Lru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery;
 }
 
 public final class ru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery$Subquery {
@@ -208,13 +203,12 @@ public final class ru/pixnews/igdbclient/apicalypse/ApicalypseMultiQueryBuilder 
 	public final fun query (Lru/pixnews/igdbclient/IgdbEndpoint;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
 }
 
-public abstract interface class ru/pixnews/igdbclient/apicalypse/ApicalypseQuery {
-	public static final field Companion Lru/pixnews/igdbclient/apicalypse/ApicalypseQuery$Companion;
-	public abstract fun toString ()Ljava/lang/String;
+public final class ru/pixnews/igdbclient/apicalypse/ApicalypseMultiQueryKt {
+	public static final fun apicalypseMultiQuery (Lkotlin/jvm/functions/Function1;)Lru/pixnews/igdbclient/apicalypse/ApicalypseMultiQuery;
 }
 
-public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQuery$Companion {
-	public final fun apicalypseQuery (Lkotlin/jvm/functions/Function1;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQuery;
+public abstract interface class ru/pixnews/igdbclient/apicalypse/ApicalypseQuery {
+	public abstract fun toString ()Ljava/lang/String;
 }
 
 public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder {
@@ -228,6 +222,10 @@ public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder {
 	public final fun sort (Ljava/lang/String;Lru/pixnews/igdbclient/apicalypse/SortOrder;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public static synthetic fun sort$default (Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;Ljava/lang/String;Lru/pixnews/igdbclient/apicalypse/SortOrder;ILjava/lang/Object;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public final fun where (Ljava/lang/String;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
+}
+
+public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQueryKt {
+	public static final fun apicalypseQuery (Lkotlin/jvm/functions/Function1;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQuery;
 }
 
 public final class ru/pixnews/igdbclient/apicalypse/SortOrder : java/lang/Enum {
@@ -379,6 +377,7 @@ public final class ru/pixnews/igdbclient/error/IgdbHttpException : ru/pixnews/ig
 }
 
 public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/lang/String;JLjava/lang/String;Ljava/time/Instant;Lokio/ByteString;)V
@@ -397,7 +396,6 @@ public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto
 }
 
 public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/internal/parser/IgdbErrorResponseParser_androidKt {
@@ -410,6 +408,7 @@ public final class ru/pixnews/igdbclient/internal/parser/TwitchTokenParser_andro
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRating : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AgeRating$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -431,11 +430,11 @@ public final class ru/pixnews/igdbclient/model/AgeRating : com/squareup/wire/Mes
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRating$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
 	public static final field ACB Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field AGERATING_CATEGORY_NULL Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final field CERO Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final field CLASS_IND Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
@@ -444,6 +443,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingCategoryEnum : java/lang
 	public static final field GRAC Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final field PEGI Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final field USK Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
@@ -451,10 +451,10 @@ public final class ru/pixnews/igdbclient/model/AgeRatingCategoryEnum : java/lang
 
 public final class ru/pixnews/igdbclient/model/AgeRatingCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescription : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AgeRatingContentDescription$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -473,10 +473,10 @@ public final class ru/pixnews/igdbclient/model/AgeRatingContentDescription : com
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescription$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field AGERATINGCONTENTDESCRIPTION_CATEGORY_NULL Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final field CERO_CONTROLLED_SUBSTANCES Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final field CERO_CRIME Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
@@ -564,6 +564,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionCatego
 	public static final field PEGI_ONLINE_GAMEPLAY Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final field PEGI_SEX Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final field PEGI_VIOLENCE Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
@@ -571,10 +572,10 @@ public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionCatego
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -590,7 +591,6 @@ public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionResult
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum : java/lang/Enum, com/squareup/wire/WireEnum {
@@ -600,6 +600,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum : java/lang/E
 	public static final field ACB_PG Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field ACB_R18 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field ACB_RC Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field AGERATING_RATING_NULL Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field AO Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field CERO_A Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
@@ -635,6 +636,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum : java/lang/E
 	public static final field USK_16 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field USK_18 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field USK_6 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
@@ -642,10 +644,10 @@ public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum : java/lang/E
 
 public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AgeRatingResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -661,10 +663,10 @@ public final class ru/pixnews/igdbclient/model/AgeRatingResult : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/AgeRatingResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AlternativeName : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AlternativeName$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -684,10 +686,10 @@ public final class ru/pixnews/igdbclient/model/AlternativeName : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/AlternativeName$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/AlternativeNameResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AlternativeNameResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -703,10 +705,10 @@ public final class ru/pixnews/igdbclient/model/AlternativeNameResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/AlternativeNameResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Artwork : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Artwork$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZLru/pixnews/igdbclient/model/Game;ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -730,10 +732,10 @@ public final class ru/pixnews/igdbclient/model/Artwork : com/squareup/wire/Messa
 }
 
 public final class ru/pixnews/igdbclient/model/Artwork$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ArtworkResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ArtworkResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -749,10 +751,10 @@ public final class ru/pixnews/igdbclient/model/ArtworkResult : com/squareup/wire
 }
 
 public final class ru/pixnews/igdbclient/model/ArtworkResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Character : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Character$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GenderGenderEnum;Lru/pixnews/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -781,10 +783,10 @@ public final class ru/pixnews/igdbclient/model/Character : com/squareup/wire/Mes
 }
 
 public final class ru/pixnews/igdbclient/model/Character$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterMugShot : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CharacterMugShot$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -807,10 +809,10 @@ public final class ru/pixnews/igdbclient/model/CharacterMugShot : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterMugShot$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterMugShotResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CharacterMugShotResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -826,10 +828,10 @@ public final class ru/pixnews/igdbclient/model/CharacterMugShotResult : com/squa
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterMugShotResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CharacterResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -845,10 +847,10 @@ public final class ru/pixnews/igdbclient/model/CharacterResult : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CharacterSpeciesEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field ALIEN Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static final field ANDROID Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static final field ANIMAL Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
@@ -856,6 +858,7 @@ public final class ru/pixnews/igdbclient/model/CharacterSpeciesEnum : java/lang/
 	public static final field Companion Lru/pixnews/igdbclient/model/CharacterSpeciesEnum$Companion;
 	public static final field HUMAN Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static final field UNKNOWN Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
@@ -863,10 +866,10 @@ public final class ru/pixnews/igdbclient/model/CharacterSpeciesEnum : java/lang/
 
 public final class ru/pixnews/igdbclient/model/CharacterSpeciesEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Collection : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Collection$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -889,10 +892,10 @@ public final class ru/pixnews/igdbclient/model/Collection : com/squareup/wire/Me
 }
 
 public final class ru/pixnews/igdbclient/model/Collection$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CollectionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CollectionResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -908,10 +911,10 @@ public final class ru/pixnews/igdbclient/model/CollectionResult : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/CollectionResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Company : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Company$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;Lru/pixnews/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/CompanyLogo;Ljava/lang/String;Lru/pixnews/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
@@ -945,10 +948,10 @@ public final class ru/pixnews/igdbclient/model/Company : com/squareup/wire/Messa
 }
 
 public final class ru/pixnews/igdbclient/model/Company$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyLogo : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CompanyLogo$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -971,10 +974,10 @@ public final class ru/pixnews/igdbclient/model/CompanyLogo : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyLogo$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyLogoResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CompanyLogoResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -990,10 +993,10 @@ public final class ru/pixnews/igdbclient/model/CompanyLogoResult : com/squareup/
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyLogoResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CompanyResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1009,10 +1012,10 @@ public final class ru/pixnews/igdbclient/model/CompanyResult : com/squareup/wire
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyWebsite : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CompanyWebsite$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1032,10 +1035,10 @@ public final class ru/pixnews/igdbclient/model/CompanyWebsite : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyWebsite$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyWebsiteResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CompanyWebsiteResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1051,10 +1054,10 @@ public final class ru/pixnews/igdbclient/model/CompanyWebsiteResult : com/square
 }
 
 public final class ru/pixnews/igdbclient/model/CompanyWebsiteResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Count : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Count$Companion;
 	public fun <init> ()V
 	public fun <init> (JLokio/ByteString;)V
@@ -1070,10 +1073,10 @@ public final class ru/pixnews/igdbclient/model/Count : com/squareup/wire/Message
 }
 
 public final class ru/pixnews/igdbclient/model/Count$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Cover : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Cover$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZLru/pixnews/igdbclient/model/Game;ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lru/pixnews/igdbclient/model/GameLocalization;Lokio/ByteString;)V
@@ -1098,10 +1101,10 @@ public final class ru/pixnews/igdbclient/model/Cover : com/squareup/wire/Message
 }
 
 public final class ru/pixnews/igdbclient/model/Cover$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/CoverResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/CoverResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1117,10 +1120,10 @@ public final class ru/pixnews/igdbclient/model/CoverResult : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/CoverResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum$Companion;
 	public static final field TBD Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static final field YYYY Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
@@ -1130,6 +1133,7 @@ public final class ru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum 
 	public static final field YYYYQ2 Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static final field YYYYQ3 Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static final field YYYYQ4 Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
@@ -1137,10 +1141,10 @@ public final class ru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum 
 
 public final class ru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGame : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ExternalGame$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILru/pixnews/igdbclient/model/ExternalGameMediaEnum;Lru/pixnews/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
@@ -1168,10 +1172,10 @@ public final class ru/pixnews/igdbclient/model/ExternalGame : com/squareup/wire/
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGame$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGameCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum$Companion;
 	public static final field EXTERNALGAME_AMAZON_ADG Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static final field EXTERNALGAME_AMAZON_ASIN Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
@@ -1194,6 +1198,7 @@ public final class ru/pixnews/igdbclient/model/ExternalGameCategoryEnum : java/l
 	public static final field EXTERNALGAME_XBOX_GAME_PASS_ULTIMATE_CLOUD Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static final field EXTERNALGAME_XBOX_MARKETPLACE Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static final field EXTERNALGAME_YOUTUBE Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
@@ -1201,14 +1206,15 @@ public final class ru/pixnews/igdbclient/model/ExternalGameCategoryEnum : java/l
 
 public final class ru/pixnews/igdbclient/model/ExternalGameCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGameMediaEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ExternalGameMediaEnum$Companion;
 	public static final field EXTERNALGAME_DIGITAL Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static final field EXTERNALGAME_MEDIA_NULL Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static final field EXTERNALGAME_PHYSICAL Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
@@ -1216,10 +1222,10 @@ public final class ru/pixnews/igdbclient/model/ExternalGameMediaEnum : java/lang
 
 public final class ru/pixnews/igdbclient/model/ExternalGameMediaEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGameResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ExternalGameResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1235,10 +1241,10 @@ public final class ru/pixnews/igdbclient/model/ExternalGameResult : com/squareup
 }
 
 public final class ru/pixnews/igdbclient/model/ExternalGameResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Franchise : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Franchise$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1261,10 +1267,10 @@ public final class ru/pixnews/igdbclient/model/Franchise : com/squareup/wire/Mes
 }
 
 public final class ru/pixnews/igdbclient/model/Franchise$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/FranchiseResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/FranchiseResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1280,10 +1286,10 @@ public final class ru/pixnews/igdbclient/model/FranchiseResult : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/FranchiseResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Game : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Game$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)V
@@ -1355,10 +1361,10 @@ public final class ru/pixnews/igdbclient/model/Game : com/squareup/wire/Message 
 }
 
 public final class ru/pixnews/igdbclient/model/Game$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field BUNDLE Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameCategoryEnum$Companion;
 	public static final field DLC_ADDON Lru/pixnews/igdbclient/model/GameCategoryEnum;
@@ -1375,6 +1381,7 @@ public final class ru/pixnews/igdbclient/model/GameCategoryEnum : java/lang/Enum
 	public static final field SEASON Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static final field STANDALONE_EXPANSION Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static final field UPDATE Lru/pixnews/igdbclient/model/GameCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameCategoryEnum;
@@ -1382,10 +1389,10 @@ public final class ru/pixnews/igdbclient/model/GameCategoryEnum : java/lang/Enum
 
 public final class ru/pixnews/igdbclient/model/GameCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GameCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngine : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameEngine$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/util/List;Ljava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/GameEngineLogo;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1411,10 +1418,10 @@ public final class ru/pixnews/igdbclient/model/GameEngine : com/squareup/wire/Me
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngine$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineLogo : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameEngineLogo$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -1437,10 +1444,10 @@ public final class ru/pixnews/igdbclient/model/GameEngineLogo : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineLogo$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineLogoResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameEngineLogoResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1456,10 +1463,10 @@ public final class ru/pixnews/igdbclient/model/GameEngineLogoResult : com/square
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineLogoResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameEngineResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1475,10 +1482,10 @@ public final class ru/pixnews/igdbclient/model/GameEngineResult : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/GameEngineResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameLocalization : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameLocalization$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Lru/pixnews/igdbclient/model/Cover;Lru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Region;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -1501,10 +1508,10 @@ public final class ru/pixnews/igdbclient/model/GameLocalization : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/GameLocalization$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameLocalizationResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameLocalizationResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1520,10 +1527,10 @@ public final class ru/pixnews/igdbclient/model/GameLocalizationResult : com/squa
 }
 
 public final class ru/pixnews/igdbclient/model/GameLocalizationResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameMode : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameMode$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1545,10 +1552,10 @@ public final class ru/pixnews/igdbclient/model/GameMode : com/squareup/wire/Mess
 }
 
 public final class ru/pixnews/igdbclient/model/GameMode$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameModeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameModeResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1564,10 +1571,10 @@ public final class ru/pixnews/igdbclient/model/GameModeResult : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/GameModeResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1583,10 +1590,10 @@ public final class ru/pixnews/igdbclient/model/GameResult : com/squareup/wire/Me
 }
 
 public final class ru/pixnews/igdbclient/model/GameResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameStatusEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field ALPHA Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final field BETA Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final field CANCELLED Lru/pixnews/igdbclient/model/GameStatusEnum;
@@ -1596,6 +1603,7 @@ public final class ru/pixnews/igdbclient/model/GameStatusEnum : java/lang/Enum, 
 	public static final field OFFLINE Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final field RELEASED Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final field RUMORED Lru/pixnews/igdbclient/model/GameStatusEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameStatusEnum;
@@ -1603,10 +1611,10 @@ public final class ru/pixnews/igdbclient/model/GameStatusEnum : java/lang/Enum, 
 
 public final class ru/pixnews/igdbclient/model/GameStatusEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GameStatusEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersion : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersion$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/util/List;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1629,10 +1637,10 @@ public final class ru/pixnews/igdbclient/model/GameVersion : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersion$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeature : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeature$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
@@ -1654,13 +1662,14 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeature : com/squareup
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeature$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field BOOLEAN Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum$Companion;
 	public static final field DESCRIPTION Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
@@ -1668,10 +1677,10 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum : 
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1687,10 +1696,10 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureResult : com/sq
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValue : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureValue$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/GameVersionFeature;Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1711,14 +1720,15 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureValue : com/squ
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValue$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum$Companion;
 	public static final field INCLUDED Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static final field NOT_INCLUDED Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static final field PRE_ORDER_ONLY Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
@@ -1726,10 +1736,10 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFe
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureValueResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1745,10 +1755,10 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueResult : c
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1764,10 +1774,10 @@ public final class ru/pixnews/igdbclient/model/GameVersionResult : com/squareup/
 }
 
 public final class ru/pixnews/igdbclient/model/GameVersionResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVideo : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVideo$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1787,10 +1797,10 @@ public final class ru/pixnews/igdbclient/model/GameVideo : com/squareup/wire/Mes
 }
 
 public final class ru/pixnews/igdbclient/model/GameVideo$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GameVideoResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVideoResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1806,14 +1816,15 @@ public final class ru/pixnews/igdbclient/model/GameVideoResult : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/GameVideoResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GenderGenderEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GenderGenderEnum$Companion;
 	public static final field FEMALE Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static final field MALE Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static final field OTHER Lru/pixnews/igdbclient/model/GenderGenderEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GenderGenderEnum;
@@ -1821,10 +1832,10 @@ public final class ru/pixnews/igdbclient/model/GenderGenderEnum : java/lang/Enum
 
 public final class ru/pixnews/igdbclient/model/GenderGenderEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GenderGenderEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Genre : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Genre$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1846,10 +1857,10 @@ public final class ru/pixnews/igdbclient/model/Genre : com/squareup/wire/Message
 }
 
 public final class ru/pixnews/igdbclient/model/Genre$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/GenreResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GenreResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1865,7 +1876,6 @@ public final class ru/pixnews/igdbclient/model/GenreResult : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/GenreResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/IgdbImageFormat : java/lang/Enum {
@@ -1927,6 +1937,7 @@ public final class ru/pixnews/igdbclient/model/IgdbWebhookId {
 }
 
 public final class ru/pixnews/igdbclient/model/InvolvedCompany : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/InvolvedCompany$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/Company;Ljava/time/Instant;ZLru/pixnews/igdbclient/model/Game;ZZZLjava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -1951,10 +1962,10 @@ public final class ru/pixnews/igdbclient/model/InvolvedCompany : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/InvolvedCompany$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/InvolvedCompanyResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/InvolvedCompanyResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -1970,10 +1981,10 @@ public final class ru/pixnews/igdbclient/model/InvolvedCompanyResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/InvolvedCompanyResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Keyword : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Keyword$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -1995,10 +2006,10 @@ public final class ru/pixnews/igdbclient/model/Keyword : com/squareup/wire/Messa
 }
 
 public final class ru/pixnews/igdbclient/model/Keyword$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/KeywordResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/KeywordResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2014,10 +2025,10 @@ public final class ru/pixnews/igdbclient/model/KeywordResult : com/squareup/wire
 }
 
 public final class ru/pixnews/igdbclient/model/KeywordResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Language : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Language$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -2039,10 +2050,10 @@ public final class ru/pixnews/igdbclient/model/Language : com/squareup/wire/Mess
 }
 
 public final class ru/pixnews/igdbclient/model/Language$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/LanguageResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2058,10 +2069,10 @@ public final class ru/pixnews/igdbclient/model/LanguageResult : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupport : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/LanguageSupport$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Language;Lru/pixnews/igdbclient/model/LanguageSupportType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -2083,10 +2094,10 @@ public final class ru/pixnews/igdbclient/model/LanguageSupport : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupport$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/LanguageSupportResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2102,10 +2113,10 @@ public final class ru/pixnews/igdbclient/model/LanguageSupportResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/LanguageSupportType$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -2125,10 +2136,10 @@ public final class ru/pixnews/igdbclient/model/LanguageSupportType : com/squareu
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportType$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/LanguageSupportTypeResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2144,10 +2155,10 @@ public final class ru/pixnews/igdbclient/model/LanguageSupportTypeResult : com/s
 }
 
 public final class ru/pixnews/igdbclient/model/LanguageSupportTypeResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/MultiQueryResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/MultiQueryResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/lang/String;Ljava/util/List;JLokio/ByteString;)V
@@ -2165,10 +2176,10 @@ public final class ru/pixnews/igdbclient/model/MultiQueryResult : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/MultiQueryResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/MultiQueryResultArray : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/MultiQueryResultArray$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2184,10 +2195,10 @@ public final class ru/pixnews/igdbclient/model/MultiQueryResultArray : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/MultiQueryResultArray$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/MultiplayerMode : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/MultiplayerMode$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZLru/pixnews/igdbclient/model/Game;ZZIIZIILru/pixnews/igdbclient/model/Platform;ZZLjava/lang/String;Lokio/ByteString;)V
@@ -2217,10 +2228,10 @@ public final class ru/pixnews/igdbclient/model/MultiplayerMode : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/MultiplayerMode$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/MultiplayerModeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/MultiplayerModeResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2236,10 +2247,10 @@ public final class ru/pixnews/igdbclient/model/MultiplayerModeResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/MultiplayerModeResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Platform : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Platform$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lru/pixnews/igdbclient/model/PlatformLogo;Lru/pixnews/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
@@ -2270,10 +2281,10 @@ public final class ru/pixnews/igdbclient/model/Platform : com/squareup/wire/Mess
 }
 
 public final class ru/pixnews/igdbclient/model/Platform$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field ARCADE Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final field COMPUTER Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final field CONSOLE Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
@@ -2282,6 +2293,7 @@ public final class ru/pixnews/igdbclient/model/PlatformCategoryEnum : java/lang/
 	public static final field PLATFORM Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final field PLATFORM_CATEGORY_NULL Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final field PORTABLE_CONSOLE Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
@@ -2289,10 +2301,10 @@ public final class ru/pixnews/igdbclient/model/PlatformCategoryEnum : java/lang/
 
 public final class ru/pixnews/igdbclient/model/PlatformCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformFamily : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformFamily$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2311,10 +2323,10 @@ public final class ru/pixnews/igdbclient/model/PlatformFamily : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformFamily$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformFamilyResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformFamilyResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2330,10 +2342,10 @@ public final class ru/pixnews/igdbclient/model/PlatformFamilyResult : com/square
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformFamilyResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformLogo : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformLogo$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -2356,10 +2368,10 @@ public final class ru/pixnews/igdbclient/model/PlatformLogo : com/squareup/wire/
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformLogo$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformLogoResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformLogoResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2375,10 +2387,10 @@ public final class ru/pixnews/igdbclient/model/PlatformLogoResult : com/squareup
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformLogoResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2394,10 +2406,10 @@ public final class ru/pixnews/igdbclient/model/PlatformResult : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersion : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersion$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2433,10 +2445,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersion : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersion$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionCompany : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersionCompany$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Lru/pixnews/igdbclient/model/Company;ZZLjava/lang/String;Lokio/ByteString;)V
@@ -2457,10 +2469,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersionCompany : com/squa
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionCompany$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionCompanyResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersionCompanyResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2476,10 +2488,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersionCompanyResult : co
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionCompanyResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDate : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersionReleaseDate$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILru/pixnews/igdbclient/model/PlatformVersion;Lru/pixnews/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lokio/ByteString;)V
@@ -2505,10 +2517,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDate : com/
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDate$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDateResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersionReleaseDateResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2524,10 +2536,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDateResult 
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionReleaseDateResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformVersionResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2543,10 +2555,10 @@ public final class ru/pixnews/igdbclient/model/PlatformVersionResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformVersionResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformWebsite : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformWebsite$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2566,10 +2578,10 @@ public final class ru/pixnews/igdbclient/model/PlatformWebsite : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformWebsite$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformWebsiteResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlatformWebsiteResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2585,10 +2597,10 @@ public final class ru/pixnews/igdbclient/model/PlatformWebsiteResult : com/squar
 }
 
 public final class ru/pixnews/igdbclient/model/PlatformWebsiteResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlayerPerspective : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlayerPerspective$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2610,10 +2622,10 @@ public final class ru/pixnews/igdbclient/model/PlayerPerspective : com/squareup/
 }
 
 public final class ru/pixnews/igdbclient/model/PlayerPerspective$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/PlayerPerspectiveResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PlayerPerspectiveResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2629,10 +2641,10 @@ public final class ru/pixnews/igdbclient/model/PlayerPerspectiveResult : com/squ
 }
 
 public final class ru/pixnews/igdbclient/model/PlayerPerspectiveResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Region : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Region$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -2654,10 +2666,10 @@ public final class ru/pixnews/igdbclient/model/Region : com/squareup/wire/Messag
 }
 
 public final class ru/pixnews/igdbclient/model/Region$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/RegionRegionEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field ASIA Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final field AUSTRALIA Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final field BRAZIL Lru/pixnews/igdbclient/model/RegionRegionEnum;
@@ -2670,6 +2682,7 @@ public final class ru/pixnews/igdbclient/model/RegionRegionEnum : java/lang/Enum
 	public static final field NORTH_AMERICA Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final field REGION_REGION_NULL Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final field WORLDWIDE Lru/pixnews/igdbclient/model/RegionRegionEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/RegionRegionEnum;
@@ -2677,10 +2690,10 @@ public final class ru/pixnews/igdbclient/model/RegionRegionEnum : java/lang/Enum
 
 public final class ru/pixnews/igdbclient/model/RegionRegionEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/RegionRegionEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/RegionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/RegionResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2696,10 +2709,10 @@ public final class ru/pixnews/igdbclient/model/RegionResult : com/squareup/wire/
 }
 
 public final class ru/pixnews/igdbclient/model/RegionResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDate : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ReleaseDate$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;ILru/pixnews/igdbclient/model/Platform;Lru/pixnews/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lru/pixnews/igdbclient/model/ReleaseDateStatus;Lokio/ByteString;)V
@@ -2727,10 +2740,10 @@ public final class ru/pixnews/igdbclient/model/ReleaseDate : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDate$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ReleaseDateResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2746,10 +2759,10 @@ public final class ru/pixnews/igdbclient/model/ReleaseDateResult : com/squareup/
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateStatus : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ReleaseDateStatus$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
@@ -2770,10 +2783,10 @@ public final class ru/pixnews/igdbclient/model/ReleaseDateStatus : com/squareup/
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateStatus$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateStatusResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ReleaseDateStatusResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2789,10 +2802,10 @@ public final class ru/pixnews/igdbclient/model/ReleaseDateStatusResult : com/squ
 }
 
 public final class ru/pixnews/igdbclient/model/ReleaseDateStatusResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Screenshot : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Screenshot$Companion;
 	public fun <init> ()V
 	public fun <init> (JZZLru/pixnews/igdbclient/model/Game;ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Lokio/ByteString;)V
@@ -2816,10 +2829,10 @@ public final class ru/pixnews/igdbclient/model/Screenshot : com/squareup/wire/Me
 }
 
 public final class ru/pixnews/igdbclient/model/Screenshot$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ScreenshotResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ScreenshotResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2835,10 +2848,10 @@ public final class ru/pixnews/igdbclient/model/ScreenshotResult : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/ScreenshotResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Search : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Search$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/lang/String;Lru/pixnews/igdbclient/model/Character;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Company;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Lru/pixnews/igdbclient/model/Platform;Ljava/time/Instant;Lru/pixnews/igdbclient/model/TestDummy;Lru/pixnews/igdbclient/model/Theme;Ljava/lang/String;Lokio/ByteString;)V
@@ -2866,10 +2879,10 @@ public final class ru/pixnews/igdbclient/model/Search : com/squareup/wire/Messag
 }
 
 public final class ru/pixnews/igdbclient/model/Search$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/SearchResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/SearchResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2885,10 +2898,10 @@ public final class ru/pixnews/igdbclient/model/SearchResult : com/squareup/wire/
 }
 
 public final class ru/pixnews/igdbclient/model/SearchResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/TestDummy : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/TestDummy$Companion;
 	public fun <init> ()V
 	public fun <init> (JZLjava/time/Instant;Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;DLru/pixnews/igdbclient/model/Game;Ljava/util/List;ILjava/lang/String;IZLjava/lang/String;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/TestDummy;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2921,14 +2934,15 @@ public final class ru/pixnews/igdbclient/model/TestDummy : com/squareup/wire/Mes
 }
 
 public final class ru/pixnews/igdbclient/model/TestDummy$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/TestDummyEnumTestEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum$Companion;
 	public static final field ENUM1 Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static final field ENUM2 Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static final field TESTDUMMY_ENUM_TEST_NULL Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
@@ -2936,10 +2950,10 @@ public final class ru/pixnews/igdbclient/model/TestDummyEnumTestEnum : java/lang
 
 public final class ru/pixnews/igdbclient/model/TestDummyEnumTestEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/TestDummyResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/TestDummyResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2955,10 +2969,10 @@ public final class ru/pixnews/igdbclient/model/TestDummyResult : com/squareup/wi
 }
 
 public final class ru/pixnews/igdbclient/model/TestDummyResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/Theme : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Theme$Companion;
 	public fun <init> ()V
 	public fun <init> (JLjava/time/Instant;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -2980,10 +2994,10 @@ public final class ru/pixnews/igdbclient/model/Theme : com/squareup/wire/Message
 }
 
 public final class ru/pixnews/igdbclient/model/Theme$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/ThemeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/ThemeResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -2999,7 +3013,6 @@ public final class ru/pixnews/igdbclient/model/ThemeResult : com/squareup/wire/M
 }
 
 public final class ru/pixnews/igdbclient/model/ThemeResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/UnpackedMultiQueryResult {
@@ -3015,6 +3028,7 @@ public final class ru/pixnews/igdbclient/model/UnpackedMultiQueryResult {
 }
 
 public final class ru/pixnews/igdbclient/model/Website : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Website$Companion;
 	public fun <init> ()V
 	public fun <init> (JLru/pixnews/igdbclient/model/WebsiteCategoryEnum;Lru/pixnews/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
@@ -3035,10 +3049,10 @@ public final class ru/pixnews/igdbclient/model/Website : com/squareup/wire/Messa
 }
 
 public final class ru/pixnews/igdbclient/model/Website$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/WebsiteCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/WebsiteCategoryEnum$Companion;
 	public static final field WEBSITE_ANDROID Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_CATEGORY_NULL Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
@@ -3058,6 +3072,7 @@ public final class ru/pixnews/igdbclient/model/WebsiteCategoryEnum : java/lang/E
 	public static final field WEBSITE_WIKIA Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_WIKIPEDIA Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_YOUTUBE Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
@@ -3065,10 +3080,10 @@ public final class ru/pixnews/igdbclient/model/WebsiteCategoryEnum : java/lang/E
 
 public final class ru/pixnews/igdbclient/model/WebsiteCategoryEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/model/WebsiteResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/WebsiteResult$Companion;
 	public fun <init> ()V
 	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
@@ -3084,7 +3099,6 @@ public final class ru/pixnews/igdbclient/model/WebsiteResult : com/squareup/wire
 }
 
 public final class ru/pixnews/igdbclient/model/WebsiteResult$Companion {
-	public final fun getADAPTER ()Lcom/squareup/wire/ProtoAdapter;
 }
 
 public final class ru/pixnews/igdbclient/util/IgdbImageUtilKt {

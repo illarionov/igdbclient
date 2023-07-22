@@ -29,7 +29,7 @@ import org.junit.jupiter.api.extension.RegisterExtension
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery.Companion.apicalypseQuery
+import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.executeOrThrow

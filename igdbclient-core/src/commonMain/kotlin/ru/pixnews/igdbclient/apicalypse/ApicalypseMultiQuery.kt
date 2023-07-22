@@ -16,7 +16,13 @@
 package ru.pixnews.igdbclient.apicalypse
 
 import ru.pixnews.igdbclient.IgdbEndpoint
-import ru.pixnews.igdbclient.apicalypse.ApicalypseMultiQuery.Companion.apicalypseMultiQuery
+
+/**
+ * Builds a new [ApicalypseMultiQuery]
+ */
+public fun apicalypseMultiQuery(builder: ApicalypseMultiQueryBuilder.() -> Unit): ApicalypseMultiQuery {
+    return ApicalypseMultiQueryBuilder().apply(builder).build()
+}
 
 /**
  * Apicalypse multi-query.
@@ -33,13 +39,4 @@ public interface ApicalypseMultiQuery : ApicalypseQuery {
         public val resultName: String = "",
         public val query: ApicalypseQuery,
     )
-
-    public companion object {
-        /**
-         * Builds a new [ApicalypseMultiQuery]
-         */
-        public fun apicalypseMultiQuery(builder: ApicalypseMultiQueryBuilder.() -> Unit): ApicalypseMultiQuery {
-            return ApicalypseMultiQueryBuilder().apply(builder).build()
-        }
-    }
 }
