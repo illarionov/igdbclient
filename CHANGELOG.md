@@ -1,7 +1,7 @@
 # Change Log
 
-## Version 0.1.0
+## Version 0.1
 
-_Unreleased_
+_2023-07-24_
 
  * Initial release. API is subject to change.

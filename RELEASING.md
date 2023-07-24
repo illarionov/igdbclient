@@ -6,7 +6,7 @@
 4. `git commit -am "Prepare for release X.Y.Z."` (where X.Y.Z is the new version)
 5. `git tag -a X.Y.Z -m "Version X.Y.Z"` (where X.Y.Z is the new version)
 6. `. /gradlew clean build publishAllPublicationsToMavenCentralRepository`
-    Or trigger publish workflow in GitHub Actions
+    Or `git push` and trigger publish workflow in GitHub Actions
 7. `./gradlew closeAndReleaseRepository`
     Or visit [Sonatype Nexus](https://s01.oss.sonatype.org/) and promote the artifact.
 8. Update the `config/version.properties` to the next SNAPSHOT version.

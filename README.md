@@ -26,25 +26,11 @@ repositories {
 }
 ```
 
-Snapshot builds are available on s01.oss.sonatype.org:
-
-```kotlin
-repositories {
-    maven {
-        url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-        mavenContent {
-            includeGroup("ru.pixnews.igdbclient")
-            snapshotsOnly()
-        }
-   }
-}
-```
-
 Dependency when using *Кtor* client (supported on all targets):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1-SNAPSHOT")
+    implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1")
 }
 ```
 
@@ -53,7 +39,7 @@ In Kotlin Multiplatform projects, this dependency can be added to the *commonMai
 ```kotlin
 commonMain {
     dependencies {
-        implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1-SNAPSHOT")
+        implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1")
     }
 }
 ```
@@ -62,7 +48,7 @@ Dependency when using *Okhttp* (JVM and Android):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-okhttp:0.1-SNAPSHOT")
+    implementation("ru.pixnews.igdbclient:igdbclient-okhttp:0.1")
 }
 ```
 
