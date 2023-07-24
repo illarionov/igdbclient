@@ -21,4 +21,4 @@ This document contains a list of third-party libraries that Igdbclient uses.
 * [Okio](https://square.github.io/okio/). Apache 2.0 License.
 * [Spotless](https://github.com/diffplug/spotless). Apache 2.0 License.
 * [Turbine](https://github.com/cashapp/turbine). Apache 2.0 License.
-* [Wire](https://github.com/square/wire).  Apache 2.0 License.
+* [Wire](https://github.com/square/wire). Apache 2.0 License.
