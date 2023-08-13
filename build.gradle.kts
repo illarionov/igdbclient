@@ -19,7 +19,7 @@ rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlu
     rootProject.the<YarnRootExtension>().yarnLockMismatchReport = YarnLockMismatchReport.WARNING
 }
 
-val styleCheck = tasks.register("styleCheck") {
+tasks.register("styleCheck") {
     group = "Verification"
     description = "Runs code style checking tools (excluding tests and Android Lint)"
     dependsOn(tasks.named("detektCheck"), tasks.named("spotlessCheck"))
