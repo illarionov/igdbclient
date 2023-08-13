@@ -17,7 +17,7 @@ internal fun buildRequestExecutor(
     val originalExecutorFactory = igdbHttpClient.requestExecutorFactory
     val requestExecutorFactory: (IgdbAuthToken?) -> RequestExecutor = if (config.retryPolicy.enabled) {
         with(config.retryPolicy) {
-            { token ->
+            return@with { token ->
                 RetryDecorator(
                     initialInterval = this.initialDelay,
                     factor = this.factor,
