@@ -47,7 +47,9 @@ public class ApicalypseQueryBuilder {
     }
 
     /**
-     * SQL-like query filter
+     * SQL-like query filter.
+     *
+     * [where] value is expected to be pre-escaped as it will be added to the request in raw form.
      *
      * See [https://api-docs.igdb.com/#filters](https://api-docs.igdb.com/#filters)
      */
@@ -134,7 +136,7 @@ public class ApicalypseQueryBuilder {
                 )
             }
             where?.let {
-                append("w ", quoteString(it), ';')
+                append("w ", it, ';')
             }
             limit?.let {
                 append("l ", it, ';')

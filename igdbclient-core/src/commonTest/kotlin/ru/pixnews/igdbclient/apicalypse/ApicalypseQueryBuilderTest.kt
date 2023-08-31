@@ -59,4 +59,14 @@ class ApicalypseQueryBuilderTest {
                 assertThat(result.toString()).isEqualTo(expectedResult)
             }
     }
+
+    // https://github.com/illarionov/igdbclient/issues/31
+    @Test
+    fun whereClauseExpectedToBeUnescaped() {
+        val query = apicalypseQuery {
+            fields("*")
+            where("""slug = "my-slug"""")
+        }
+        assertThat(query.toString()).isEqualTo("""f *;w slug = "my-slug";""")
+    }
 }
