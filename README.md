@@ -30,7 +30,7 @@ Dependency when using *Кtor* client (supported on all targets):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1")
+    implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.2")
 }
 ```
 
@@ -39,7 +39,7 @@ In Kotlin Multiplatform projects, this dependency can be added to the *commonMai
 ```kotlin
 commonMain {
     dependencies {
-        implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.1")
+        implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.2")
     }
 }
 ```
@@ -48,7 +48,7 @@ Dependency when using *Okhttp* (JVM and Android):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-okhttp:0.1")
+    implementation("ru.pixnews.igdbclient:igdbclient-okhttp:0.2")
 }
 ```
 
