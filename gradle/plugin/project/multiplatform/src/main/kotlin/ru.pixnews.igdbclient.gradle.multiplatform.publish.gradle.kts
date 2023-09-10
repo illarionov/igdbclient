@@ -40,7 +40,7 @@ mavenPublishing {
     signAllPublications()
 
     configure(
-        KotlinMultiplatform(javadocJar = JavadocJar.Empty()),
+        KotlinMultiplatform(javadocJar = JavadocJar.Dokka("dokkaHtml")),
     )
 
     pom {
