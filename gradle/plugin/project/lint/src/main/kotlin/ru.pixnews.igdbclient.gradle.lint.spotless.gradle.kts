@@ -3,7 +3,6 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
-import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
 
 /*
@@ -18,18 +17,6 @@ spotless {
 
     val rootDir = lintedFileTree
 
-    kotlin {
-        target(rootDir.filter { it.name.endsWith(".kt") })
-
-        diktat().configFile(configRootDir.file("diktat.yml"))
-        licenseHeaderFile(configRootDir.file("copyright/copyright.kt"))
-    }
-    kotlinGradle {
-        target(rootDir.filter { it.name.endsWith(".gradle.kts") })
-
-        diktat().configFile(configRootDir.file("diktat.yml"))
-        licenseHeaderFile(configRootDir.file("copyright/copyright.kt"), "(^(?![\\/ ]\\*).*$)")
-    }
     format("properties") {
         // "**/.gitignore" does not work: https://github.com/diffplug/spotless/issues/1146
         val propertyFiles = setOf(

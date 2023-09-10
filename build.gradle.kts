@@ -12,6 +12,7 @@ plugins {
     alias(libs.plugins.gradle.maven.publish.plugin.base) apply false
     alias(libs.plugins.kotlin.multiplatform) apply false
     id("ru.pixnews.igdbclient.gradle.lint.detekt")
+    id("ru.pixnews.igdbclient.gradle.lint.diktat")
     id("ru.pixnews.igdbclient.gradle.lint.spotless")
 }
 
@@ -22,5 +23,5 @@ rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.yarn.YarnPlu
 tasks.register("styleCheck") {
     group = "Verification"
     description = "Runs code style checking tools (excluding tests and Android Lint)"
-    dependsOn(tasks.named("detektCheck"), tasks.named("spotlessCheck"))
+    dependsOn("detektCheck", "spotlessCheck", "diktatCheck")
 }

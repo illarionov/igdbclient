@@ -6,6 +6,7 @@ agp = "8.0.2"
 assertk = "0.26.1"
 atomicfu = '0.21.0'
 detekt = "1.23.1"
+diktat = "1.2.5"
 dokka = "1.9.0"
 junit5 = "5.10.0"
 junit-platform-launcher = "1.10.0"
@@ -74,6 +75,7 @@ agp-plugin-api = { module = "com.android.tools.build:gradle-api", version.ref = 
 atomicfu-plugin = { module = "org.jetbrains.kotlinx:atomicfu-gradle-plugin", version.ref = "atomicfu" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 detekt-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+diktat-plugin = { group = "org.cqfn.diktat", name = "diktat-gradle-plugin", version.ref = "diktat" }
 dokka-plugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
 gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "gradle-maven-publish-plugin" }
 kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -86,6 +88,7 @@ agp = { id = "com.android.tools.build:gradle", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 atomicfu = { id = "kotlinx-atomicfu", version.ref = "atomicfu" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+diktat = { id = "org.cqfn.diktat.diktat-gradle-plugin", version.ref = "diktat" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 gradle-maven-publish-plugin = { id = "com.vanniktech.maven.publish", version.ref = "gradle-maven-publish-plugin" }
 gradle-maven-publish-plugin-base = { id = "com.vanniktech.maven.publish.base", version.ref = "gradle-maven-publish-plugin" }

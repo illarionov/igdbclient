@@ -17,6 +17,7 @@ dependencies {
     implementation(project(":utils"))
     implementation(libs.agp.plugin.api)
     implementation(libs.detekt.plugin)
+    implementation(libs.diktat.plugin)
     implementation(libs.kotlinx.binary.compatibility.validator)
     implementation(libs.spotless.plugin)
 }
