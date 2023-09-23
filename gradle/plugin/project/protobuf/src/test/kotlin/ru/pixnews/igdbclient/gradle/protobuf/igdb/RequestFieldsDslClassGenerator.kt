@@ -18,10 +18,10 @@ import org.junit.jupiter.api.Test
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.DEFAULT_FIELD
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.DEFAULT_MESSAGE_TYPE
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_AGE_RATING_MODEL_STUB
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_FIELD_DSL_STUB
+import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_CLIENT_DSL_STUB
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_FIELD_STUB
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_GAME_MODEL_STUB
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_REQUEST_FIELDS_STUB
+import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_REQUEST_FIELD_DSL_STUB
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.IGDB_REQUEST_FIELD_STUB
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.FieldsTestFixtures.forceSetType
 
@@ -78,11 +78,11 @@ class RequestFieldsDslClassGenerator {
         return KotlinCompilation().apply {
             sources = listOf(
                 IGDB_AGE_RATING_MODEL_STUB,
-                IGDB_FIELD_DSL_STUB,
+                IGDB_CLIENT_DSL_STUB,
                 IGDB_FIELD_STUB,
                 IGDB_GAME_MODEL_STUB,
                 IGDB_REQUEST_FIELD_STUB,
-                IGDB_REQUEST_FIELDS_STUB,
+                IGDB_REQUEST_FIELD_DSL_STUB,
             ) + generatedSources
             inheritClassPath = false
             messageOutputStream = System.out

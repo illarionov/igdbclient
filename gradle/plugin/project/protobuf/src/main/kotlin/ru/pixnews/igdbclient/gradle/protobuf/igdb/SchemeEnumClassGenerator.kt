@@ -22,6 +22,7 @@ import com.squareup.wire.schema.Type
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_FIELD_INTERFACE
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.SCHEME_PACKAGE_NAME
+import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.getIgdbEntityReferenceUrl
 import java.util.Locale
 
 /**
@@ -60,6 +61,7 @@ internal class SchemeEnumClassGenerator(
                     .initializer(igdbnameParameter.name)
                     .build(),
             )
+            .addClassDocumentation()
 
         when (type) {
             is MessageType -> enumBuilder.addFieldsAsEnumConstants(type.declaredFields)
@@ -78,12 +80,38 @@ internal class SchemeEnumClassGenerator(
         return enumBuilder.build()
     }
 
+    private fun TypeSpec.Builder.addClassDocumentation(): TypeSpec.Builder {
+        val igdbReferenceUrl = getIgdbEntityReferenceUrl(type)
+        return addKdoc(
+            """
+            | Fields of the [%T] IGDB entity.
+            |
+            | See [%L](%L)
+            """.trimMargin(),
+            igdbclientModel,
+            igdbReferenceUrl,
+            igdbReferenceUrl,
+        )
+    }
+
     private fun TypeSpec.Builder.addFieldsAsEnumConstants(fields: List<Field>) = fields.forEach { field ->
         val enumConstantName = field.name.uppercase(Locale.ROOT)
         val typeSpec = TypeSpec.anonymousClassBuilder()
             .addSuperclassConstructorParameter("%S", field.name)
+            .addFieldDocumentation(field)
             .build()
         addEnumConstant(enumConstantName, typeSpec)
+    }
+
+    private fun TypeSpec.Builder.addFieldDocumentation(field: Field): TypeSpec.Builder {
+        return addKdoc(
+            """
+            | Field %S of the [%T] IGDB entity. Matches [%T].
+        """.trimMargin(),
+            field.name,
+            igdbclientModel,
+            igdbclientModel.nestedClass(field.name),
+        )
     }
 
     internal companion object {

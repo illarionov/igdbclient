@@ -3,7 +3,6 @@
 [![Maven Central](https://img.shields.io/maven-central/v/ru.pixnews.igdbclient/igdbclient-core)](https://central.sonatype.com/artifact/ru.pixnews.igdbclient/igdbclient-core/)
 [![build](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml/badge.svg)](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml)
 
-
 Igdbclient is a Kotlin Multiplatform library for fetching information about games from the
 [IGDB.com](https://www.igdb.com/) Video Game Database.
 
@@ -279,6 +278,12 @@ Check the setup instructions for your client:
 ## Contributing
 
 Any type of contributions are welcome. Please see [the contribution guide](CONTRIBUTING.md).
+
+The following types of contributions are especially welcome:
+
+- Additions and corrections to documentation
+- Suggestions for refactoring and improving the API
+- New feature proposals (only for this library only, not the parent IGDB API)
 
 [Ktor]: https://ktor.io/
 [Okhttp]: https://square.github.io/okhttp/

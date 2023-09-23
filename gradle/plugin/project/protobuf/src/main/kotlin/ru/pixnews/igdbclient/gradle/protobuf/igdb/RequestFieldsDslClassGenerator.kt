@@ -23,7 +23,7 @@ import com.squareup.wire.schema.MessageType
 import com.squareup.wire.schema.ProtoType
 import com.squareup.wire.schema.Type
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FEATURE_FLAG_WITH_BACKING_INSTANCE
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FIELD_FIELD_ID_METHOD_NAME
+import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FIELD_WITH_ID_METHOD_NAME
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_DSL_CLASS
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_REQUEST_FIELDS_DSL_BASE_CLASS
@@ -108,7 +108,7 @@ internal class RequestFieldsDslClassGenerator(
 
     /**
      * ```
-     * public class GameFields internal constructor()...
+     * public class GameFieldDsl internal constructor()...
      * ```
      */
     private fun generateFieldsClass(): TypeSpec {
@@ -126,6 +126,7 @@ internal class RequestFieldsDslClassGenerator(
                     .parameterizedBy(fieldsClassName, igdbclientModel),
             )
             .addSuperclassConstructorParameter("%N", parentConstructorParameter)
+            .addClassDocumentation()
 
         when (type) {
             is MessageType -> classBuilder.addProperties(type.declaredFields.map(::generateProperty))
@@ -134,6 +135,20 @@ internal class RequestFieldsDslClassGenerator(
         }
 
         return classBuilder.build()
+    }
+
+    private fun TypeSpec.Builder.addClassDocumentation(): TypeSpec.Builder {
+        val igdbReferenceUrl = IgdbFieldsDslGeneratorPaths.getIgdbEntityReferenceUrl(type)
+        return addKdoc(
+            """
+            | Dsl to generate a query string for a field of the [%T] IGDB entity.
+            |
+            | See [%L](%L)
+            """.trimMargin(),
+            igdbclientModel,
+            igdbReferenceUrl,
+            igdbReferenceUrl,
+        )
     }
 
     /**
@@ -146,33 +161,61 @@ internal class RequestFieldsDslClassGenerator(
     private fun generateProperty(field: Field): PropertySpec {
         val returnType: TypeName
         val getter: FunSpec
+        val documentationBuilder: PropertySpec.Builder.() -> PropertySpec.Builder
 
         val enumFieldRef = fieldsClassName.nestedClass(field.name.uppercase())
 
         if (field.isIgdbObjectModel()) {
-            val fieldFieldsClass = outputFieldDslClassName(field.type?.simpleName ?: error("field.type not set"))
-            returnType = fieldFieldsClass
+            val fieldTypeName = field.type?.simpleName ?: error("field.type not set")
+            val fieldDslClass = outputFieldDslClassName(fieldTypeName)
+            returnType = fieldDslClass
             getter = FunSpec.getterBuilder()
                 .addStatement(
                     "return %T(%L(%T))",
-                    fieldFieldsClass,
-                    FIELD_FIELD_ID_METHOD_NAME,
+                    fieldDslClass,
+                    FIELD_WITH_ID_METHOD_NAME,
                     enumFieldRef,
                 )
                 .build()
+            documentationBuilder = {
+                val fieldType = ClassName(IGDBCLIENT_MODEL_PACKAGE_NAME, fieldTypeName)
+                addKdoc(
+                    """
+                    | Fields of the %S ([%L][%T]) nested IGDB entity
+                """.trimMargin(),
+                    field.name,
+                    fieldType.simpleName,
+                    fieldType,
+                )
+            }
         } else {
             returnType = fieldsReturnType
             getter = FunSpec.getterBuilder()
                 .addStatement(
                     "return %L(%T)",
-                    FIELD_FIELD_ID_METHOD_NAME,
+                    FIELD_WITH_ID_METHOD_NAME,
                     enumFieldRef,
                 )
                 .build()
+            documentationBuilder = {
+                addKdoc(
+                    """
+                    | Query for the %S field of the [%T] Igdb entity.
+                    |
+                    | The value will be returned in the [%T] field of the response
+                """.trimMargin(),
+                    field.name,
+                    igdbclientModel,
+                    igdbclientModel.nestedClass(field.name),
+                )
+            }
         }
 
         return PropertySpec.builder(field.name, returnType, PUBLIC)
             .getter(getter)
+            .apply {
+                documentationBuilder(this)
+            }
             .build()
     }
 

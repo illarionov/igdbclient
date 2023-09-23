@@ -49,21 +49,25 @@ internal object FieldsTestFixtures {
         isOneOf = false,
         declaredJsonName = null,
     )
-    val IGDB_FIELD_DSL_STUB = SourceFile.kotlin(
-        "IgdbFieldDsl.kt",
+    val IGDB_CLIENT_DSL_STUB = SourceFile.kotlin(
+        "IgdbClientDsl.kt",
         """
-                package ru.pixnews.feature.calendar.datasource.igdb.dsl
+            package ru.pixnews.igdbclient.dsl
 
-                @DslMarker
-                @Target(AnnotationTarget.CLASS, AnnotationTarget.TYPEALIAS, AnnotationTarget.TYPE, AnnotationTarget.FUNCTION)
-                public annotation class IgdbFieldDsl
+            @DslMarker
+            @Target(AnnotationTarget.CLASS, AnnotationTarget.TYPEALIAS, AnnotationTarget.TYPE, AnnotationTarget.FUNCTION)
+            public annotation class IgdbClientDsl
             """.trimIndent(),
     )
     val IGDB_REQUEST_FIELD_STUB = SourceFile.kotlin(
         "IgdbRequestField.kt",
         """
-            package ru.pixnews.feature.calendar.datasource.igdb.dsl
-            import ru.pixnews.feature.calendar.datasource.igdb.field.scheme.IgdbField
+            package ru.pixnews.igdbclient.dsl.field
+
+            import ru.pixnews.igdbclient.dsl.IgdbClientDsl
+            import ru.pixnews.igdbclient.scheme.field.IgdbField
+
+            @IgdbClientDsl
             public data class IgdbRequestField<out O : Any> internal constructor(
                 public val igdbField: IgdbField<O>,
                 public val parent: IgdbRequestField<*>? = null,
@@ -77,21 +81,21 @@ internal object FieldsTestFixtures {
 
                 override fun toString(): String = igdbFullName
             }
-
             """.trimIndent(),
     )
     val IGDB_FIELD_STUB = SourceFile.kotlin(
         "IgdbField.kt",
         """
-        package ru.pixnews.feature.calendar.datasource.igdb.field.scheme
+        package ru.pixnews.igdbclient.scheme.field
         public interface IgdbField<out O : Any> {
             public val igdbName: String
 
             public companion object {
                 public val ALL: IgdbField<Nothing> = IgdbFieldAll
 
-                private data object IgdbFieldAll : IgdbField<Nothing> {
+                public object IgdbFieldAll : IgdbField<Nothing> {
                     override val igdbName: String = "*"
+                    override fun toString(): String = igdbName
                 }
             }
         }
@@ -115,21 +119,21 @@ internal object FieldsTestFixtures {
                 }
             """.trimIndent(),
     )
-    val IGDB_REQUEST_FIELDS_STUB = SourceFile.kotlin(
-        "IgdbRequestFields.kt",
+    val IGDB_REQUEST_FIELD_DSL_STUB = SourceFile.kotlin(
+        "IgdbRequestFieldDsl.kt",
         """
-            package ru.pixnews.feature.calendar.datasource.igdb.field
-            import ru.pixnews.feature.calendar.datasource.igdb.dsl.IgdbFieldDsl
-            import ru.pixnews.feature.calendar.datasource.igdb.dsl.IgdbRequestField
-            import ru.pixnews.feature.calendar.datasource.igdb.field.scheme.IgdbField
+            package ru.pixnews.igdbclient.dsl.field
 
-            @IgdbFieldDsl
-            public sealed class IgdbRequestFields<F: IgdbField<T>, out T: Any>(
+            import ru.pixnews.igdbclient.dsl.IgdbClientDsl
+            import ru.pixnews.igdbclient.scheme.field.IgdbField
+
+            @IgdbClientDsl
+            public sealed class IgdbRequestFieldDsl<F : IgdbField<T>, out T : Any>(
                 protected val parentIgdbField: IgdbRequestField<*>? = null,
             ) {
                 public val all: IgdbRequestField<F> get() = IgdbRequestField(IgdbField.ALL, parentIgdbField)
 
-                public fun fieldWithId(field: F): IgdbRequestField<T> = IgdbRequestField(field, parentIgdbField)
+                public fun fieldWithId(fieldId: F): IgdbRequestField<T> = IgdbRequestField(fieldId, parentIgdbField)
             }
             """.trimIndent(),
     )

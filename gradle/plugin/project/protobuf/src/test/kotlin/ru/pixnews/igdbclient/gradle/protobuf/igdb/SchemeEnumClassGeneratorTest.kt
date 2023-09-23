@@ -54,7 +54,7 @@ class SchemeEnumClassGeneratorTest {
 
         return KotlinCompilation().apply {
             sources = listOf(
-                FieldsTestFixtures.IGDB_FIELD_DSL_STUB,
+                FieldsTestFixtures.IGDB_CLIENT_DSL_STUB,
                 FieldsTestFixtures.IGDB_FIELD_STUB,
                 FieldsTestFixtures.IGDB_GAME_MODEL_STUB,
                 generatedSource,
