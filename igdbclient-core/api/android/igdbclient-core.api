@@ -215,7 +215,9 @@ public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder {
 	public fun <init> ()V
 	public final fun build ()Lru/pixnews/igdbclient/apicalypse/ApicalypseQuery;
 	public final fun exclude ([Ljava/lang/String;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
+	public final fun exclude ([Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public final fun fields ([Ljava/lang/String;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
+	public final fun fields ([Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public final fun limit (I)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public final fun offset (I)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
 	public final fun search (Ljava/lang/String;)Lru/pixnews/igdbclient/apicalypse/ApicalypseQueryBuilder;
@@ -332,6 +334,837 @@ public final class ru/pixnews/igdbclient/dsl/TwitchAuthConfig {
 	public final fun setEnabled (Z)V
 	public final fun setMaxRequestRetries (I)V
 	public final fun setStorage (Lru/pixnews/igdbclient/auth/twitch/TwitchTokenStorage;)V
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/AgeRatingContentDescription$Companion;)Lru/pixnews/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AgeRatingFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getContent_descriptions ()Lru/pixnews/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRating ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRating_cover_url ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSynopsis ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AgeRatingFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/AgeRating$Companion;)Lru/pixnews/igdbclient/dsl/field/AgeRatingFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AlternativeNameFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getComment ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/AlternativeNameFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/AlternativeName$Companion;)Lru/pixnews/igdbclient/dsl/field/AlternativeNameFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ArtworkFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ArtworkFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Artwork$Companion;)Lru/pixnews/igdbclient/dsl/field/ArtworkFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CharacterFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAkas ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCountry_name ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getGender ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getMug_shot ()Lru/pixnews/igdbclient/dsl/field/CharacterMugShotFieldDsl;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSpecies ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CharacterFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Character$Companion;)Lru/pixnews/igdbclient/dsl/field/CharacterFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CharacterMugShotFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CharacterMugShotFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CharacterMugShot$Companion;)Lru/pixnews/igdbclient/dsl/field/CharacterMugShotFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Collection$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChange_date ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChange_date_category ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChanged_company_id ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCountry ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDeveloped ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getLogo ()Lru/pixnews/igdbclient/dsl/field/CompanyLogoFieldDsl;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getParent ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getPublished ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStart_date ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStart_date_category ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWebsites ()Lru/pixnews/igdbclient/dsl/field/CompanyWebsiteFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Company$Companion;)Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyLogoFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyLogoFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CompanyLogo$Companion;)Lru/pixnews/igdbclient/dsl/field/CompanyLogoFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyWebsiteFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTrusted ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CompanyWebsiteFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CompanyWebsite$Companion;)Lru/pixnews/igdbclient/dsl/field/CompanyWebsiteFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CoverFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getGame_localization ()Lru/pixnews/igdbclient/dsl/field/GameLocalizationFieldDsl;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CoverFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Cover$Companion;)Lru/pixnews/igdbclient/dsl/field/CoverFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ExternalGameFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCountries ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getMedia ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getUid ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getYear ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ExternalGameFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/ExternalGame$Companion;)Lru/pixnews/igdbclient/dsl/field/ExternalGameFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/FranchiseFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/FranchiseFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Franchise$Companion;)Lru/pixnews/igdbclient/dsl/field/FranchiseFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameEngineFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCompanies ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getLogo ()Lru/pixnews/igdbclient/dsl/field/GameEngineLogoFieldDsl;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatforms ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameEngineFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameEngine$Companion;)Lru/pixnews/igdbclient/dsl/field/GameEngineFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameEngineLogoFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameEngineLogoFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameEngineLogo$Companion;)Lru/pixnews/igdbclient/dsl/field/GameEngineLogoFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAge_ratings ()Lru/pixnews/igdbclient/dsl/field/AgeRatingFieldDsl;
+	public final fun getAggregated_rating ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAggregated_rating_count ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAlternative_names ()Lru/pixnews/igdbclient/dsl/field/AlternativeNameFieldDsl;
+	public final fun getArtworks ()Lru/pixnews/igdbclient/dsl/field/ArtworkFieldDsl;
+	public final fun getBundles ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCollection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getCover ()Lru/pixnews/igdbclient/dsl/field/CoverFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDlcs ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getExpanded_games ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getExpansions ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getExternal_games ()Lru/pixnews/igdbclient/dsl/field/ExternalGameFieldDsl;
+	public final fun getFirst_release_date ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getFollows ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getForks ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getFranchise ()Lru/pixnews/igdbclient/dsl/field/FranchiseFieldDsl;
+	public final fun getFranchises ()Lru/pixnews/igdbclient/dsl/field/FranchiseFieldDsl;
+	public final fun getGame_engines ()Lru/pixnews/igdbclient/dsl/field/GameEngineFieldDsl;
+	public final fun getGame_localizations ()Lru/pixnews/igdbclient/dsl/field/GameLocalizationFieldDsl;
+	public final fun getGame_modes ()Lru/pixnews/igdbclient/dsl/field/GameModeFieldDsl;
+	public final fun getGenres ()Lru/pixnews/igdbclient/dsl/field/GenreFieldDsl;
+	public final fun getHypes ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getInvolved_companies ()Lru/pixnews/igdbclient/dsl/field/InvolvedCompanyFieldDsl;
+	public final fun getKeywords ()Lru/pixnews/igdbclient/dsl/field/KeywordFieldDsl;
+	public final fun getLanguage_supports ()Lru/pixnews/igdbclient/dsl/field/LanguageSupportFieldDsl;
+	public final fun getMultiplayer_modes ()Lru/pixnews/igdbclient/dsl/field/MultiplayerModeFieldDsl;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getParent_game ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getPlatforms ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getPlayer_perspectives ()Lru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDsl;
+	public final fun getPorts ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getRating ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRating_count ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRelease_dates ()Lru/pixnews/igdbclient/dsl/field/ReleaseDateFieldDsl;
+	public final fun getRemakes ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getRemasters ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getScreenshots ()Lru/pixnews/igdbclient/dsl/field/ScreenshotFieldDsl;
+	public final fun getSimilar_games ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStandalone_expansions ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getStatus ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStoryline ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSummary ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTags ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getThemes ()Lru/pixnews/igdbclient/dsl/field/ThemeFieldDsl;
+	public final fun getTotal_rating ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTotal_rating_count ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getVersion_parent ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getVersion_title ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getVideos ()Lru/pixnews/igdbclient/dsl/field/GameVideoFieldDsl;
+	public final fun getWebsites ()Lru/pixnews/igdbclient/dsl/field/WebsiteFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Game$Companion;)Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameLocalizationFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCover ()Lru/pixnews/igdbclient/dsl/field/CoverFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRegion ()Lru/pixnews/igdbclient/dsl/field/RegionFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameLocalizationFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameLocalization$Companion;)Lru/pixnews/igdbclient/dsl/field/GameLocalizationFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameModeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameModeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameMode$Companion;)Lru/pixnews/igdbclient/dsl/field/GameModeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPosition ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTitle ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getValues ()Lru/pixnews/igdbclient/dsl/field/GameVersionFeatureValueFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameVersionFeature$Companion;)Lru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFeatureValueFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getGame_feature ()Lru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getIncluded_feature ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getNote ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFeatureValueFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameVersionFeatureValue$Companion;)Lru/pixnews/igdbclient/dsl/field/GameVersionFeatureValueFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getFeatures ()Lru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDsl;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVersionFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameVersion$Companion;)Lru/pixnews/igdbclient/dsl/field/GameVersionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVideoFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getVideo_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameVideoFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameVideo$Companion;)Lru/pixnews/igdbclient/dsl/field/GameVideoFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GenreFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GenreFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Genre$Companion;)Lru/pixnews/igdbclient/dsl/field/GenreFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/IgdbRequestField {
+	public final fun component1 ()Lru/pixnews/igdbclient/scheme/field/IgdbField;
+	public final fun component2 ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun copy (Lru/pixnews/igdbclient/scheme/field/IgdbField;Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;)Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;Lru/pixnews/igdbclient/scheme/field/IgdbField;Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;ILjava/lang/Object;)Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIgdbField ()Lru/pixnews/igdbclient/scheme/field/IgdbField;
+	public final fun getIgdbFullName ()Ljava/lang/String;
+	public final fun getParent ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public synthetic fun <init> (Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun fieldWithId (Lru/pixnews/igdbclient/scheme/field/IgdbField;)Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAll ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	protected final fun getParentIgdbField ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/InvolvedCompanyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCompany ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDeveloper ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPorting ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPublisher ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSupporting ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/InvolvedCompanyFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/InvolvedCompany$Companion;)Lru/pixnews/igdbclient/dsl/field/InvolvedCompanyFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/KeywordFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/KeywordFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Keyword$Companion;)Lru/pixnews/igdbclient/dsl/field/KeywordFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getLocale ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getNative_name ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Language$Companion;)Lru/pixnews/igdbclient/dsl/field/LanguageFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageSupportFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getLanguage ()Lru/pixnews/igdbclient/dsl/field/LanguageFieldDsl;
+	public final fun getLanguage_support_type ()Lru/pixnews/igdbclient/dsl/field/LanguageSupportTypeFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageSupportFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/LanguageSupport$Companion;)Lru/pixnews/igdbclient/dsl/field/LanguageSupportFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageSupportTypeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/LanguageSupportTypeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/LanguageSupportType$Companion;)Lru/pixnews/igdbclient/dsl/field/LanguageSupportTypeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/MultiplayerModeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCampaigncoop ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDropin ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getLancoop ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOfflinecoop ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOfflinecoopmax ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOfflinemax ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOnlinecoop ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOnlinecoopmax ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOnlinemax ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getSplitscreen ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSplitscreenonline ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/MultiplayerModeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/MultiplayerMode$Companion;)Lru/pixnews/igdbclient/dsl/field/MultiplayerModeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformFamilyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformFamilyFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformFamily$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformFamilyFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAbbreviation ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAlternative_name ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGeneration ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform_family ()Lru/pixnews/igdbclient/dsl/field/PlatformFamilyFieldDsl;
+	public final fun getPlatform_logo ()Lru/pixnews/igdbclient/dsl/field/PlatformLogoFieldDsl;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSummary ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getVersions ()Lru/pixnews/igdbclient/dsl/field/PlatformVersionFieldDsl;
+	public final fun getWebsites ()Lru/pixnews/igdbclient/dsl/field/PlatformWebsiteFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Platform$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformLogoFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformLogoFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformLogo$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformLogoFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getComment ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCompany ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getDeveloper ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getManufacturer ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionCompanyFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformVersionCompany$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCompanies ()Lru/pixnews/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl;
+	public final fun getConnectivity ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCpu ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGraphics ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getMain_manufacturer ()Lru/pixnews/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl;
+	public final fun getMedia ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getMemory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOnline ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOs ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOutput ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform_logo ()Lru/pixnews/igdbclient/dsl/field/PlatformLogoFieldDsl;
+	public final fun getPlatform_version_release_dates ()Lru/pixnews/igdbclient/dsl/field/PlatformVersionReleaseDateFieldDsl;
+	public final fun getResolutions ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSound ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStorage ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSummary ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformVersion$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformVersionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionReleaseDateFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDate ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHuman ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getM ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform_version ()Lru/pixnews/igdbclient/dsl/field/PlatformVersionFieldDsl;
+	public final fun getRegion ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getY ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformVersionReleaseDateFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformVersionReleaseDate$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformVersionReleaseDateFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformWebsiteFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTrusted ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlatformWebsiteFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlatformWebsite$Companion;)Lru/pixnews/igdbclient/dsl/field/PlatformWebsiteFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PlayerPerspective$Companion;)Lru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/RegionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getIdentifier ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/RegionFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Region$Companion;)Lru/pixnews/igdbclient/dsl/field/RegionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ReleaseDateFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDate ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getHuman ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getM ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getRegion ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStatus ()Lru/pixnews/igdbclient/dsl/field/ReleaseDateStatusFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getY ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ReleaseDateFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/ReleaseDate$Companion;)Lru/pixnews/igdbclient/dsl/field/ReleaseDateFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ReleaseDateStatusFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ReleaseDateStatusFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/ReleaseDateStatus$Companion;)Lru/pixnews/igdbclient/dsl/field/ReleaseDateStatusFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ScreenshotFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlpha_channel ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getAnimated ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getHeight ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getImage_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getWidth ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ScreenshotFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Screenshot$Companion;)Lru/pixnews/igdbclient/dsl/field/ScreenshotFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/SearchFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAlternative_name ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCharacter ()Lru/pixnews/igdbclient/dsl/field/CharacterFieldDsl;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCollection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getCompany ()Lru/pixnews/igdbclient/dsl/field/CompanyFieldDsl;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPlatform ()Lru/pixnews/igdbclient/dsl/field/PlatformFieldDsl;
+	public final fun getPublished_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTest_dummy ()Lru/pixnews/igdbclient/dsl/field/TestDummyFieldDsl;
+	public final fun getTheme ()Lru/pixnews/igdbclient/dsl/field/ThemeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/SearchFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Search$Companion;)Lru/pixnews/igdbclient/dsl/field/SearchFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/TestDummyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getBool_value ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getEnum_test ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getFloat_value ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getInteger_array ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getInteger_value ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getNew_integer_value ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPrivate ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getString_array ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTest_dummies ()Lru/pixnews/igdbclient/dsl/field/TestDummyFieldDsl;
+	public final fun getTest_dummy ()Lru/pixnews/igdbclient/dsl/field/TestDummyFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/TestDummyFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/TestDummy$Companion;)Lru/pixnews/igdbclient/dsl/field/TestDummyFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ThemeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/ThemeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Theme$Companion;)Lru/pixnews/igdbclient/dsl/field/ThemeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/WebsiteFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getTrusted ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/WebsiteFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/Website$Companion;)Lru/pixnews/igdbclient/dsl/field/WebsiteFieldDsl;
 }
 
 public class ru/pixnews/igdbclient/error/IgdbApiFailureException : ru/pixnews/igdbclient/error/IgdbException {
@@ -3099,6 +3932,780 @@ public final class ru/pixnews/igdbclient/model/WebsiteResult : com/squareup/wire
 }
 
 public final class ru/pixnews/igdbclient/model/WebsiteResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/AgeRatingField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field CONTENT_DESCRIPTIONS Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field RATING Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field RATING_COVER_URL Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static final field SYNOPSIS Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/AlternativeNameField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static final field COMMENT Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ArtworkField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CharacterField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field AKAS Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field COUNTRY_NAME Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field GENDER Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field MUG_SHOT Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field SPECIES Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CharacterField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CharacterMugShotField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CompanyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHANGED_COMPANY_ID Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field CHANGE_DATE Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field CHANGE_DATE_CATEGORY Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field COUNTRY Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field DEVELOPED Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field LOGO Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field PARENT Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field PUBLISHED Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field START_DATE Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field START_DATE_CATEGORY Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CompanyField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CompanyLogoField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CompanyWebsiteField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CoverField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field GAME_LOCALIZATION Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CoverField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ExternalGameField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field COUNTRIES Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field MEDIA Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field PLATFORM Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field UID Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static final field YEAR Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/FranchiseField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameEngineField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field COMPANIES Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field LOGO Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field PLATFORMS Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameEngineLogoField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field AGE_RATINGS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field AGGREGATED_RATING Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field AGGREGATED_RATING_COUNT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field ALTERNATIVE_NAMES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field ARTWORKS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field BUNDLES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field COLLECTION Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field COVER Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field DLCS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field EXPANDED_GAMES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field EXPANSIONS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field EXTERNAL_GAMES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field FIRST_RELEASE_DATE Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field FOLLOWS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field FORKS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field FRANCHISE Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field FRANCHISES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field GAME_ENGINES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field GAME_LOCALIZATIONS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field GAME_MODES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field GENRES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field HYPES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field INVOLVED_COMPANIES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field KEYWORDS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field LANGUAGE_SUPPORTS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field MULTIPLAYER_MODES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field PARENT_GAME Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field PLATFORMS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field PLAYER_PERSPECTIVES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field PORTS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field RATING Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field RATING_COUNT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field RELEASE_DATES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field REMAKES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field REMASTERS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field SCREENSHOTS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field SIMILAR_GAMES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field STANDALONE_EXPANSIONS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field STATUS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field STORYLINE Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field SUMMARY Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field TAGS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field THEMES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field TOTAL_RATING Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field TOTAL_RATING_COUNT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field VERSION_PARENT Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field VERSION_TITLE Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field VIDEOS Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameLocalizationField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field COVER Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field REGION Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameModeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameModeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameVersionFeatureField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field POSITION Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field TITLE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static final field VALUES Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static final field GAME_FEATURE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static final field INCLUDED_FEATURE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static final field NOTE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameVersionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field FEATURES Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameVideoField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static final field VIDEO_ID Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GenreField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GenreField;
+}
+
+public abstract interface class ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field Companion Lru/pixnews/igdbclient/scheme/field/IgdbField$Companion;
+	public abstract fun getIgdbName ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/IgdbField$Companion {
+	public final fun getALL ()Lru/pixnews/igdbclient/scheme/field/IgdbField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/InvolvedCompanyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field COMPANY Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field DEVELOPER Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field PORTING Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field PUBLISHER Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field SUPPORTING Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/KeywordField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/KeywordField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/LanguageField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field LOCALE Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field NATIVE_NAME Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/LanguageField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/LanguageSupportField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field LANGUAGE Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field LANGUAGE_SUPPORT_TYPE Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/MultiplayerModeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CAMPAIGNCOOP Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field DROPIN Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field LANCOOP Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field OFFLINECOOP Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field OFFLINECOOPMAX Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field OFFLINEMAX Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field ONLINECOOP Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field ONLINECOOPMAX Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field ONLINEMAX Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field PLATFORM Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field SPLITSCREEN Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static final field SPLITSCREENONLINE Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformFamilyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ABBREVIATION Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field ALTERNATIVE_NAME Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field GENERATION Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field PLATFORM_FAMILY Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field PLATFORM_LOGO Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field SUMMARY Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field VERSIONS Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformLogoField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static final field COMMENT Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static final field COMPANY Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static final field DEVELOPER Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static final field MANUFACTURER Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field COMPANIES Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field CONNECTIVITY Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field CPU Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field GRAPHICS Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field MAIN_MANUFACTURER Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field MEDIA Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field MEMORY Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field ONLINE Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field OS Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field OUTPUT Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field PLATFORM_LOGO Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field PLATFORM_VERSION_RELEASE_DATES Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field RESOLUTIONS Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field SOUND Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field STORAGE Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field SUMMARY Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field DATE Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field HUMAN Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field M Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field PLATFORM_VERSION Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field REGION Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field Y Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlatformWebsiteField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/RegionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field IDENTIFIER Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/RegionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ReleaseDateField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field DATE Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field HUMAN Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field M Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field PLATFORM Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field REGION Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field STATUS Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static final field Y Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ScreenshotField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALPHA_CHANNEL Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field ANIMATED Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field HEIGHT Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/SearchField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALTERNATIVE_NAME Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field CHARACTER Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field COLLECTION Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field COMPANY Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field PLATFORM Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field PUBLISHED_AT Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field TEST_DUMMY Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static final field THEME Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/SearchField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/TestDummyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field BOOL_VALUE Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field ENUM_TEST Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field FLOAT_VALUE Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field INTEGER_ARRAY Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field INTEGER_VALUE Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field NEW_INTEGER_VALUE Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field PRIVATE Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field STRING_ARRAY Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field TEST_DUMMIES Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field TEST_DUMMY Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/ThemeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/ThemeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/WebsiteField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static final field URL Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/WebsiteField;
 }
 
 public final class ru/pixnews/igdbclient/util/IgdbImageUtilKt {

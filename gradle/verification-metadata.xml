@@ -233,9 +233,19 @@
             <pgp value="1d2c7ef8ada0f794b58c7c63436902af59edf60e"/>
          </artifact>
       </component>
+      <component group="dev.zacsweers.kctfork" name="core" version="0.3.2">
+         <artifact name="core-0.3.2.jar">
+            <pgp value="719f7c29985a8e95f58f47194d8159d6a1159b69"/>
+         </artifact>
+      </component>
       <component group="info.picocli" name="picocli" version="4.6.3">
          <artifact name="picocli-4.6.3.jar">
             <pgp value="aa417737bd805456db3cbdde6601e5c08dccbb96"/>
+         </artifact>
+      </component>
+      <component group="io.github.classgraph" name="classgraph" version="4.8.161">
+         <artifact name="classgraph-4.8.161.jar">
+            <pgp value="1f47744c9b6e14f2049c2857f1f111af65925306"/>
          </artifact>
       </component>
       <component group="io.github.davidburstrom.contester" name="contester-breakpoint" version="0.2.0">
@@ -386,6 +396,11 @@
       <component group="org.jetbrains.kotlinx" name="kotlinx-html-jvm" version="0.8.1">
          <artifact name="kotlinx-html-jvm-0.8.1.jar">
             <pgp value="8e3a02905a1ae67e7b0f9acd3967d4eda591b991"/>
+         </artifact>
+      </component>
+      <component group="org.jline" name="jline" version="3.3.1">
+         <artifact name="jline-3.3.1.jar">
+            <pgp value="ea23db1360d9029481e7f2efecdfea3cb4493b94"/>
          </artifact>
       </component>
       <component group="org.json" name="json" version="20230227">

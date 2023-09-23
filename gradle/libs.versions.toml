@@ -14,6 +14,8 @@ gradle-maven-publish-plugin = "0.25.3"
 kermit = "1.2.2"
 kotest = "5.6.2"
 kotlin = "1.9.10"
+kotlin-compile-testing-fork = "0.3.2"
+kotlinpoet = "1.14.2"
 kotlinx-binary-compatibility-validator = "0.13.2"
 kotlinx-coroutines = "1.7.3"
 kotlinx-serialization = "1.6.0"
@@ -39,12 +41,14 @@ junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform
 kermit = { group = "co.touchlab", name = "kermit", version.ref = "kermit" }
 kermit-jvm = { group = "co.touchlab", name = "kermit-jvm", version.ref = "kermit" }
 kotest-bom = { group = "io.kotest", name = "kotest-bom", version.ref = "kotest" }
-kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { group = "io.kotest", name = "kotest-property" }
+kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "kotlin" }
-kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8" }
 kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8" }
+kotlin-compile-testing = { group = "dev.zacsweers.kctfork", name = "core", version.ref = "kotlin-compile-testing-fork" }
+kotlinpoet = { group = "com.squareup", name = "kotlinpoet", version.ref = "kotlinpoet" }
 kotlinx-atomicfu = { group = "org.jetbrains.kotlinx", name = "atomicfu", version.ref = "atomicfu" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android" }
 kotlinx-coroutines-bom = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-bom", version.ref = "kotlinx-coroutines" }
@@ -68,6 +72,7 @@ org-json = { group = "org.json", name = "json", version.ref = "orgjson" }
 slf4j-simple = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j" }
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 wire-runtime = { group = "com.squareup.wire", name = "wire-runtime", version.ref = "wire" }
+wire-schema = { group = "com.squareup.wire", name = "wire-schema", version.ref = "wire" }
 
 # Dependencies of the included build-logic
 agp-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
