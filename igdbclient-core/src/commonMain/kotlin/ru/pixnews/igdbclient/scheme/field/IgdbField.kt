@@ -5,10 +5,21 @@
 
 package ru.pixnews.igdbclient.scheme.field
 
+/**
+ * Single field of the IGDB Entity [O].
+ *
+ * See [Fields](https://api-docs.igdb.com/#fields)
+ */
 public interface IgdbField<out O : Any> {
+    /**
+     * Name of the field in the IGDB API
+     */
     public val igdbName: String
 
     public companion object {
+        /**
+         * Field with the value "*" used to request all fields of an entity
+         */
         public val ALL: IgdbField<Nothing> = IgdbFieldAll
 
         private object IgdbFieldAll : IgdbField<Nothing> {

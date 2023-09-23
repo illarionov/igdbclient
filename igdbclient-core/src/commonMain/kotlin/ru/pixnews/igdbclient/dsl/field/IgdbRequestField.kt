@@ -5,8 +5,10 @@
 
 package ru.pixnews.igdbclient.dsl.field
 
+import ru.pixnews.igdbclient.dsl.IgdbClientDsl
 import ru.pixnews.igdbclient.scheme.field.IgdbField
 
+@IgdbClientDsl
 public data class IgdbRequestField<out O : Any> internal constructor(
     public val igdbField: IgdbField<O>,
     public val parent: IgdbRequestField<*>? = null,

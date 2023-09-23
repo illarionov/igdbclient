@@ -9,6 +9,8 @@ import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.tableOf
 import ru.pixnews.igdbclient.apicalypse.SortOrder.DESC
+import ru.pixnews.igdbclient.dsl.field.field
+import ru.pixnews.igdbclient.model.Game
 import kotlin.test.Test
 
 class ApicalypseQueryBuilderTest {
@@ -54,6 +56,26 @@ class ApicalypseQueryBuilderTest {
                     search("special symbols search \u0010 \t \u001F\u0001")
                 },
                 "search \"special symbols search \\u0010 \\t \\u001f\\u0001\";",
+            )
+            .row(
+                {
+                    @Suppress("COMPLEX_EXPRESSION")
+                    fields(
+                        Game.field.all,
+                        Game.field.collection.created_at,
+                        Game.field.collection.games.name,
+                        Game.field.collection.games.release_dates.date,
+                    )
+                },
+                "f *,collection.created_at,collection.games.name,collection.games.release_dates.date;",
+            )
+            .row(
+                {
+                    @Suppress("COMPLEX_EXPRESSION")
+                    fields(Game.field.all)
+                    exclude(Game.field.aggregated_rating)
+                },
+                "f *;x aggregated_rating;",
             )
             .forAll { builder, expectedResult ->
                 val result = ApicalypseQueryBuilder().apply(builder).build()
