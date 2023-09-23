@@ -22,6 +22,7 @@ import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
 import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
 import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
+import ru.pixnews.igdbclient.dsl.field.field
 import ru.pixnews.igdbclient.executeOrThrow
 import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
@@ -101,7 +102,7 @@ class RealKtorNetworkTestClient {
             async {
                 client.getGames {
                     search("Diablo $it")
-                    fields("id")
+                    fields(Game.field.all)
                     limit(1)
                 }
             }
@@ -115,7 +116,7 @@ class RealKtorNetworkTestClient {
         val response = client.multiquery {
             query(IgdbEndpoint.PLATFORM.countEndpoint(), "Count of Platforms") {}
             query(IgdbEndpoint.GAME, "Playstation Games") {
-                fields("name", "category", "platforms.name")
+                fields(Game.field.id, Game.field.name, Game.field.genres.name)
                 where("platforms !=n ")
                 limit(5)
             }

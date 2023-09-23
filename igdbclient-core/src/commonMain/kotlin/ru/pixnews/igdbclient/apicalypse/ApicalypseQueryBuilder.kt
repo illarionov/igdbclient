@@ -6,6 +6,7 @@
 package ru.pixnews.igdbclient.apicalypse
 
 import ru.pixnews.igdbclient.apicalypse.SortOrder.ASC
+import ru.pixnews.igdbclient.dsl.field.IgdbRequestField
 import kotlin.jvm.JvmInline
 
 /**
@@ -26,11 +27,27 @@ public class ApicalypseQueryBuilder {
     /**
      * Fields that should be returned as a result of an API request.
      *
-     * Set to '*'  to return all of the fields
+     * Set to '*'  to return all the fields
      *
      * See [https://api-docs.igdb.com/#fields](https://api-docs.igdb.com/#fields)
      */
     public fun fields(vararg fieldList: String): ApicalypseQueryBuilder {
+        fields.clear()
+        fields.addAll(fieldList.map(::ApiField))
+        return this
+    }
+
+    /**
+     * Fields that should be returned as a result of an API request.
+     *
+     * Use [Game.field][ru.pixnews.igdbclient.model.Game.Companion.field] extension function to start building a
+     * field request for the Game object.
+     *
+     * For example, you can use `Game.Companion.field.all` to query all fields
+     *
+     * See [https://api-docs.igdb.com/#fields](https://api-docs.igdb.com/#fields)
+     */
+    public fun fields(vararg fieldList: IgdbRequestField<*>): ApicalypseQueryBuilder {
         fields.clear()
         fields.addAll(fieldList.map(::ApiField))
         return this
@@ -42,6 +59,20 @@ public class ApicalypseQueryBuilder {
      * See [https://api-docs.igdb.com/#exclude](https://api-docs.igdb.com/#exclude)
      */
     public fun exclude(vararg excludes: String): ApicalypseQueryBuilder {
+        exclude.clear()
+        exclude += excludes.map(::ApiField)
+        return this
+    }
+
+    /**
+     * Fields to exclude when using '*' wildcard when specifying the list of [fields]
+     *
+     * Use [Game.field][ru.pixnews.igdbclient.model.Game.Companion.field] extension function to start building a
+     * field request for the Game object.
+     *
+     * See [https://api-docs.igdb.com/#exclude](https://api-docs.igdb.com/#exclude)
+     */
+    public fun exclude(vararg excludes: IgdbRequestField<*>): ApicalypseQueryBuilder {
         exclude.clear()
         exclude += excludes.map(::ApiField)
         return this
@@ -168,6 +199,7 @@ public class ApicalypseQueryBuilder {
                 "Incorrect field name `$name`"
             }
         }
+        constructor(field: IgdbRequestField<*>) : this(field.igdbFullName)
 
         private companion object {
             val FIELD_REGEX = Regex("""^[a-z_*.]+$""")

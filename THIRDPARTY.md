@@ -13,6 +13,8 @@ This document contains a list of third-party libraries that Igdbclient uses.
 * [Kermit](https://kermit.touchlab.co/). Apache 2.0 License.
 * [Kotest](https://kotest.io/). Apache 2.0 License.
 * [Kotlin](https://kotlinlang.org). Apache 2.0 License.
+* [Kotlin Compile Testing (dev.zacsweers.kctfork)](https://github.com/ZacSweers/kotlin-compile-testing). Mozilla Public License 2.0.
+* [KotlinPoet](https://square.github.io/kotlinpoet/). Apache 2.0 License.
 * [Kotlinx Binary compatibility validator](https://github.com/Kotlin/binary-compatibility-validator). Apache 2.0 License.
 * [Kotlinx Coroutines](https://github.com/Kotlin/kotlinx.coroutines). Apache 2.0 License.
 * [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization). Apache 2.0 License.

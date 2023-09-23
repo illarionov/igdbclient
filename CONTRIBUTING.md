@@ -1,6 +1,6 @@
 # How to Contribute
 
-All types of contributions are encouraged and valued. 
+All types of contributions are encouraged and valued.
 
 If you would like to contribute code to Igdbclient you can do so through GitHub by forking the repository and
 sending a pull request.

@@ -3,7 +3,6 @@
 [![Maven Central](https://img.shields.io/maven-central/v/ru.pixnews.igdbclient/igdbclient-core)](https://central.sonatype.com/artifact/ru.pixnews.igdbclient/igdbclient-core/)
 [![build](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml/badge.svg)](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml)
 
-
 Igdbclient is a Kotlin Multiplatform library for fetching information about games from the
 [IGDB.com](https://www.igdb.com/) Video Game Database.
 
@@ -61,31 +60,18 @@ val client = IgdbClient(IgdbKtorEngine) {
 }
 ```
 
-Example to fetch the games:
+This client is ready to be used to make network requests to the IGDB server.
+For example, this is a request to fetch games:
 
 ```kotlin
 val games: GameResult = client.getGames {
-    fields("*")
+    fields(Game.field.all)
     search("Diablo")
 }
 log.i("games: $games")
 ```
 
-Apicalypse query with all the fields:
-
-```kotlin
-apicalypseQuery {
-    fields("id", "name", "genres.name")
-    exclude("rating")
-    where("rating >= 80 & release_dates.date > 631152000")
-    search("Diablo")
-    sort("release_dates.date", DESC)
-    offset(5)
-    limit(10)
-}
-```
-
-Each public IGDB API endpoint has a function defined in the client to fetch data.
+Each IGDB API endpoint has a public method defined in the client to fetch data.
 All the client methods are suspend functions and should be called from the coroutine context.
 
 ```kotlin
@@ -95,6 +81,20 @@ client.getAlternativeNames {…}
 …
 client.getThemes {…}
 client.getWebsites {…}
+```
+
+Apicalypse query with all the fields:
+
+```kotlin
+apicalypseQuery {
+    fields(Game.field.id, Game.field.name, Game.field.genres.name)
+    exclude("rating")
+    where("rating >= 80 & release_dates.date > 631152000")
+    search("Diablo")
+    sort("release_dates.date", DESC)
+    offset(5)
+    limit(10)
+}
 ```
 
 Example of count — query:
@@ -117,7 +117,7 @@ To make multiple queries in a single request, you can use the `client.multiquery
 val response = client.multiquery {
     query(IgdbEndpoint.PLATFORM.countEndpoint(), "Count of Platforms") {}
     query(IgdbEndpoint.GAME, "Playstation Games") {
-        fields("name", "category", "platforms.name")
+        fields(Game.field.name, Game.field.category, Game.field.platforms.name)
         limit(5)
     }  
 }  
@@ -278,6 +278,12 @@ Check the setup instructions for your client:
 ## Contributing
 
 Any type of contributions are welcome. Please see [the contribution guide](CONTRIBUTING.md).
+
+The following types of contributions are especially welcome:
+
+- Additions and corrections to documentation
+- Suggestions for refactoring and improving the API
+- New feature proposals (only for this library only, not the parent IGDB API)
 
 [Ktor]: https://ktor.io/
 [Okhttp]: https://square.github.io/okhttp/

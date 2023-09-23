@@ -4,6 +4,7 @@
  */
 
 import ru.pixnews.igdbclient.gradle.base.versionCatalog
+import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorFactory
 
 plugins {
     id("com.squareup.wire")
@@ -18,5 +19,11 @@ wire {
         javaInterop = false
         emitDeclaredOptions = false
         emitAppliedOptions = false
+        exclusive = false
+    }
+    custom {
+        schemaHandlerFactoryClass = IgdbFieldsDslGeneratorFactory::class.java.canonicalName
+        exclusive = false
+        out = layout.buildDirectory.dir("generated/source/wire-igdb-fields").get().toString()
     }
 }
