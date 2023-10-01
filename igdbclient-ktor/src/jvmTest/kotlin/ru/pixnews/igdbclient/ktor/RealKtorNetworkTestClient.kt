@@ -24,10 +24,18 @@ import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.dsl.field.field
 import ru.pixnews.igdbclient.executeOrThrow
+import ru.pixnews.igdbclient.getEventLogos
+import ru.pixnews.igdbclient.getEventNetworkTypes
+import ru.pixnews.igdbclient.getEventNetworks
+import ru.pixnews.igdbclient.getEvents
 import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.model.Event
+import ru.pixnews.igdbclient.model.EventLogo
+import ru.pixnews.igdbclient.model.EventNetwork
+import ru.pixnews.igdbclient.model.EventNetworkType
 import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.multiquery
 import java.util.Properties
@@ -139,6 +147,35 @@ class RealKtorNetworkTestClient {
         )
 
         logger.i { "games count: $diabloGamesCount" }
+    }
+
+    @Test
+    fun testEventRequests() = runBlocking {
+        val events = client.getEvents {
+            fields(Event.field.all)
+            limit(10)
+        }
+        logger.i { "events: $events" }
+
+        val eventLogos = client.getEventLogos {
+            fields(EventLogo.field.all)
+            limit(10)
+        }
+        logger.i { "event logos: $eventLogos" }
+
+        val eventNetworks = client.getEventNetworks {
+            fields(EventNetwork.field.all)
+            limit(10)
+        }
+        logger.i { "event networks : $eventNetworks" }
+
+        val eventNetworksTypes = client.getEventNetworkTypes {
+            fields(EventNetworkType.field.all)
+            limit(100)
+        }
+        logger.i { "event network types : $eventNetworksTypes" }
+
+        Unit
     }
 
     class TestTokenProperties(

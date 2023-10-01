@@ -46,6 +46,10 @@
   configuration:
     useRecommendedImportsOrder: false
 
+#  Enabled in Detekt
+- name: FILE_WILDCARD_IMPORTS
+  enabled: false
+
 - name: FUNCTION_NAME_INCORRECT_CASE
   enabled: false
 
