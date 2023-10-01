@@ -54,7 +54,7 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyId: FCF62075
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_IN_MEMORY_KEY_PASSWORD }}
         run: >
-          ./gradlew -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
+          ./gradlew --scan -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
           build publishAllPublicationsToMavenCentralRepository --stacktrace
 
       - name: Upload build artifacts

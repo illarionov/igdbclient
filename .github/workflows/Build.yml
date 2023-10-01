@@ -59,7 +59,7 @@ jobs:
 
       - name: Assemble debug build, run tests
         run: >
-          ./gradlew -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
+          ./gradlew --scan -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
           build --stacktrace
 
       - name: Upload build artifacts
@@ -137,7 +137,7 @@ jobs:
 
       - name: Run static code analyzers
         run: >
-          ./gradlew -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
+          ./gradlew --scan -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
           styleCheck --continue
 
       - name: Uploads .sarif files to GitHub
