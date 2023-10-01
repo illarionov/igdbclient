@@ -8,10 +8,6 @@ plugins {
 
 group = "ru.pixnews.igdbclient.gradle.protobuf"
 
-kotlin {
-    jvmToolchain(17)
-}
-
 tasks.withType<Test> {
     useJUnitPlatform()
     maxHeapSize = "1G"

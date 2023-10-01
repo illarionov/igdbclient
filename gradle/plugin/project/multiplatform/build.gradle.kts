@@ -9,10 +9,6 @@ plugins {
 
 group = "ru.pixnews.igdbclient.gradle"
 
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
     implementation(project(":lint"))
     implementation(project(":utils"))

@@ -8,10 +8,6 @@ plugins {
 
 group = "ru.pixnews.igdbclient.gradle.settings"
 
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
     implementation("com.gradle:gradle-enterprise-gradle-plugin:3.14.1")
 }
