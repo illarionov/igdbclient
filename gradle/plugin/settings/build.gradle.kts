@@ -13,5 +13,5 @@ kotlin {
 }
 
 dependencies {
-    implementation("com.gradle:gradle-enterprise-gradle-plugin:3.13.4")
+    implementation("com.gradle:gradle-enterprise-gradle-plugin:3.14.1")
 }
