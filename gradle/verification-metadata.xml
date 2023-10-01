@@ -31,6 +31,7 @@
          <trusted-key id="08f0aab4d0c1a4bdde340765b341ddb020fcb6ab" group="org.bouncycastle"/>
          <trusted-key id="0d35d3f60078655126908e8af3d1600878e85a3d" group="io.netty"/>
          <trusted-key id="120d6f34e627ed3a772ebbfe55c7e5e701832382" group="org.snakeyaml" name="snakeyaml-engine"/>
+         <trusted-key id="19beab2d799c020f17c69126b16698a4adf4d638" group="org.checkerframework" name="checker-qual"/>
          <trusted-key id="2db4f1ef0fa761ecc4ea935c86fdc7e2a11262cb" group="commons-codec"/>
          <trusted-key id="314fe82e5a4c5377bca2edec5208812e1e4a6db0">
             <trusting group="com.gradle" name="gradle-enterprise-gradle-plugin"/>
@@ -75,6 +76,7 @@
          <trusted-key id="e62231331bca7e1f292c9b88c1b12a5d99c0729d" group="org.jetbrains"/>
          <trusted-key id="e77417ac194160a3fabd04969a259c7ee636c5ed" group="com.google.errorprone" name="error_prone_annotations"/>
          <trusted-key id="e7dc75fc24fb3c8dfe8086ad3d5839a2262cbbfb" group="org.jetbrains.kotlinx"/>
+         <trusted-key id="ee0ca873074092f806f59b65d364abaa39a47320" group="com.google.errorprone" name="error_prone_annotations"/>
          <trusted-key id="f1a51e051f527e0c8e24d54d4b1e11d5a4b91e89" group="com.google.protobuf"/>
          <trusted-key id="f254b35617dc255d9344bcfa873a8e86b4372146" group="^org[.]eclipse[.]jetty($|([.].*))" regex="true"/>
          <trusted-key id="fa7929f83ad44c4590f6cc6815c71c0a4e0b8edd" group="net.java.dev.jna"/>
@@ -148,6 +150,11 @@
             <pgp value="e77417ac194160a3fabd04969a259c7ee636c5ed"/>
          </artifact>
       </component>
+      <component group="com.google.errorprone" name="error_prone_annotations" version="2.20.0">
+         <artifact name="error_prone_annotations-2.20.0.jar">
+            <pgp value="ee0ca873074092f806f59b65d364abaa39a47320"/>
+         </artifact>
+      </component>
       <component group="com.google.flatbuffers" name="flatbuffers-java" version="1.12.0">
          <artifact name="flatbuffers-java-1.12.0.jar">
             <pgp value="bcc135fc7ed8214f823d73e97fe9900f412d622e"/>
@@ -156,6 +163,16 @@
       <component group="com.google.j2objc" name="j2objc-annotations" version="1.3">
          <artifact name="j2objc-annotations-1.3.jar">
             <pgp value="b801e2f8ef035068ec1139cc29579f18fa8fd93b"/>
+         </artifact>
+      </component>
+      <component group="com.google.j2objc" name="j2objc-annotations" version="2.8">
+         <artifact name="j2objc-annotations-2.8.jar">
+            <pgp value="eb1b3de71713c9ec2e87cc26ee92349ad86de446"/>
+         </artifact>
+      </component>
+      <component group="com.google.protobuf" name="protobuf-java" version="3.24.3">
+         <artifact name="protobuf-java-3.24.3.jar">
+            <pgp value="1a55f091ad28c07f831fa44d7905de25c78ad456"/>
          </artifact>
       </component>
       <component group="com.googlecode.concurrent-trees" name="concurrent-trees" version="2.6.1">
@@ -351,6 +368,11 @@
       <component group="org.freemarker" name="freemarker" version="2.3.31">
          <artifact name="freemarker-2.3.31.jar">
             <pgp value="13ac2213964abe1d1c147c0e1939a2520bab1d90"/>
+         </artifact>
+      </component>
+      <component group="org.gradle" name="github-dependency-graph-gradle-plugin" version="0.4.1">
+         <artifact name="github-dependency-graph-gradle-plugin-0.4.1.jar">
+            <pgp value="7b79add11f8a779fe90fd3d0893a028475557671"/>
          </artifact>
       </component>
       <component group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins" version="4.0.14">

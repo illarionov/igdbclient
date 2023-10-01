@@ -9,6 +9,7 @@
 pluginManagement {
     repositories {
         googleExclusiveContent()
+        mavenCentral()
         gradlePluginPortal()
     }
 
