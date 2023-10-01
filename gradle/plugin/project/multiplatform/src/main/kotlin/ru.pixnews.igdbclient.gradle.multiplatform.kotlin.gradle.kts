@@ -15,7 +15,6 @@ plugins {
 }
 
 kotlin {
-    jvmToolchain(17)
     explicitApi = ExplicitApiMode.Warning
 
     sourceSets {

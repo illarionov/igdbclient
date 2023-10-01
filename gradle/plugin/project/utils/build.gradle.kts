@@ -8,10 +8,6 @@ plugins {
 
 group = "ru.pixnews.igdbclient.gradle"
 
-kotlin {
-    jvmToolchain(17)
-}
-
 dependencies {
     implementation(gradleKotlinDsl())
 }
