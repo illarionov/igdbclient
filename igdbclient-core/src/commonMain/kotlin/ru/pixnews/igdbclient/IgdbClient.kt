@@ -37,6 +37,10 @@ import ru.pixnews.igdbclient.model.CompanyLogoResult
 import ru.pixnews.igdbclient.model.CompanyResult
 import ru.pixnews.igdbclient.model.CompanyWebsiteResult
 import ru.pixnews.igdbclient.model.CoverResult
+import ru.pixnews.igdbclient.model.EventLogoResult
+import ru.pixnews.igdbclient.model.EventNetworkResult
+import ru.pixnews.igdbclient.model.EventNetworkTypeResult
+import ru.pixnews.igdbclient.model.EventResult
 import ru.pixnews.igdbclient.model.ExternalGameResult
 import ru.pixnews.igdbclient.model.FranchiseResult
 import ru.pixnews.igdbclient.model.GameEngineLogoResult
@@ -185,6 +189,30 @@ public suspend fun IgdbClient.getCompanyWebsites(builder: ApicalypseQueryBuilder
  */
 public suspend fun IgdbClient.getCovers(builder: ApicalypseQueryBuilder.() -> Unit): CoverResult =
     executeOrThrow(IgdbEndpoint.COVER, apicalypseQuery(builder))
+
+/**
+ * Gaming events
+ */
+public suspend fun IgdbClient.getEvents(builder: ApicalypseQueryBuilder.() -> Unit): EventResult =
+    executeOrThrow(IgdbEndpoint.EVENT, apicalypseQuery(builder))
+
+/**
+ * The logos of gaming events
+ */
+public suspend fun IgdbClient.getEventLogos(builder: ApicalypseQueryBuilder.() -> Unit): EventLogoResult =
+    executeOrThrow(IgdbEndpoint.EVENT_LOGO, apicalypseQuery(builder))
+
+/**
+ * Gaming Event networks
+ */
+public suspend fun IgdbClient.getEventNetworks(builder: ApicalypseQueryBuilder.() -> Unit): EventNetworkResult =
+    executeOrThrow(IgdbEndpoint.EVENT_NETWORK, apicalypseQuery(builder))
+
+/**
+ * Gaming Event network types
+ */
+public suspend fun IgdbClient.getEventNetworkTypes(builder: ApicalypseQueryBuilder.() -> Unit): EventNetworkTypeResult =
+    executeOrThrow(IgdbEndpoint.EVENT_NETWORK_TYPE, apicalypseQuery(builder))
 
 /**
  * Game IDs on other services

@@ -395,6 +395,79 @@ message Cover {
     GameLocalization game_localization = 10;
 }
 
+message EventResult {
+    repeated Event events = 1;
+}
+
+message Event {
+    uint64 id = 1;
+    string name = 2;
+    string description = 3;
+    string slug = 4;
+    EventLogo event_logo = 5;
+    repeated EventEventCategoriesEnum event_categories = 6;
+    Event event = 7;
+    google.protobuf.Timestamp start_time = 8;
+    string start_zone = 9;
+    google.protobuf.Timestamp end_time = 10;
+    string end_zone = 11;
+    string live_stream_url = 12;
+    repeated Game games = 13;
+    repeated GameVideo videos = 14;
+    repeated EventNetwork event_networks = 15;
+    string checksum = 16;
+}
+
+
+enum EventEventCategoriesEnum {
+    EVENT_EVENT_CATEGORIES_NULL = 0;
+    INDUSTRY_CONFERENCE = 1;
+    STREAM_EVENT = 2;
+    AWARD = 3;
+    GAME_EXPO = 4;
+    E_SPORT = 5;
+    OTHER_MISC = 6;
+}
+
+message EventLogoResult {
+    repeated EventLogo eventlogos = 1;
+}
+
+message EventLogo {
+    uint64 id = 1;
+    Event event = 2;
+    bool alpha_channel = 3;
+    bool animated = 4;
+    int32 height = 5;
+    string image_id = 6;
+    string url = 7;
+    int32 width = 8;
+    string checksum = 9;
+}
+
+message EventNetworkResult {
+    repeated EventNetwork eventnetworks = 1;
+}
+
+message EventNetwork {
+    uint64 id = 1;
+    Event event = 2;
+    string url = 3;
+    EventNetworkType event_network_type = 4;
+    string checksum = 5;
+}
+
+message EventNetworkTypeResult {
+    repeated EventNetworkType eventnetworktypes = 1;
+}
+
+message EventNetworkType {
+    uint64 id = 1;
+    string name = 2;
+    repeated EventNetwork event_networks = 3;
+    string checksum = 4;
+}
+
 message ExternalGameResult {
     repeated ExternalGame externalgames = 1;
 }
