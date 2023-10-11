@@ -1,10 +1,24 @@
 # Change Log
 
+## Version 0.3
+
+_2023-10-11_
+
+ * New: Support for IGDB Gaming Events API
+ * New: DSL for forming a list of requested fields (`fields(Game.field.all)`)
+ * Fix: Restored Dokka documentation
+ * Upgrade: Bump dependency versions
+   * Kotlin 1.9.10
+   * Kotlinx.serialization 1.6.0
+   * Ktor 2.3.5
+   * Okio 3.6.0
+   * Wire 4.9.1
+
 ## Version 0.2
 
 _2023-08-31_
 
- * Fix: Disabled "where" clause escaping (Issue #31)
+ * Fix: Disabled "where" clause escaping (Issue #31 by @maicol07)
  * Upgrade: Bump dependency versions
    * okio 3.5.0
    * ktor 2.3.3
