@@ -406,15 +406,15 @@ message Event {
     string slug = 4;
     EventLogo event_logo = 5;
     repeated EventEventCategoriesEnum event_categories = 6;
-    Event event = 7;
-    google.protobuf.Timestamp start_time = 8;
-    string start_zone = 9;
-    google.protobuf.Timestamp end_time = 10;
-    string end_zone = 11;
-    string live_stream_url = 12;
-    repeated Game games = 13;
-    repeated GameVideo videos = 14;
-    repeated EventNetwork event_networks = 15;
+    google.protobuf.Timestamp start_time = 7;
+    string time_zone = 8;
+    google.protobuf.Timestamp end_time = 9;
+    string live_stream_url = 10;
+    repeated Game games = 11;
+    repeated GameVideo videos = 12;
+    repeated EventNetwork event_networks = 13;
+    google.protobuf.Timestamp created_at = 14;
+    google.protobuf.Timestamp updated_at = 15;
     string checksum = 16;
 }
 
@@ -442,7 +442,9 @@ message EventLogo {
     string image_id = 6;
     string url = 7;
     int32 width = 8;
-    string checksum = 9;
+    google.protobuf.Timestamp created_at = 9;
+    google.protobuf.Timestamp updated_at = 10;
+    string checksum = 11;
 }
 
 message EventNetworkResult {
@@ -453,19 +455,10 @@ message EventNetwork {
     uint64 id = 1;
     Event event = 2;
     string url = 3;
-    EventNetworkType event_network_type = 4;
-    string checksum = 5;
-}
-
-message EventNetworkTypeResult {
-    repeated EventNetworkType eventnetworktypes = 1;
-}
-
-message EventNetworkType {
-    uint64 id = 1;
-    string name = 2;
-    repeated EventNetwork event_networks = 3;
-    string checksum = 4;
+    NetworkType network_type = 4;
+    google.protobuf.Timestamp created_at = 5;
+    google.protobuf.Timestamp updated_at = 6;
+    string checksum = 7;
 }
 
 message ExternalGameResult {
@@ -864,6 +857,19 @@ message MultiplayerMode {
     bool splitscreen = 13;
     bool splitscreenonline = 14;
     string checksum = 15;
+}
+
+message NetworkTypeResult {
+    repeated NetworkType networktypes = 1;
+}
+
+message NetworkType {
+    uint64 id = 1;
+    string name = 2;
+    repeated EventNetwork event_networks = 3;
+    google.protobuf.Timestamp created_at = 4;
+    google.protobuf.Timestamp updated_at = 5;
+    string checksum = 6;
 }
 
 message PlatformResult {

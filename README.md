@@ -127,6 +127,16 @@ val games = response[1].results as List<Game>?
 
 See https://api-docs.igdb.com/#multi-query for additional info.
 
+Requesting gaming events:
+
+```kotlin
+val events = client.getEvents {
+    fields(Event.field.all)
+    limit(10)
+}
+logger.i { "events: $events" }
+```
+
 ### Ktor client
 
 Pass `IgdbKtorEngine` as the first argument to `IgdbClient()` when using the Ktor client.\
