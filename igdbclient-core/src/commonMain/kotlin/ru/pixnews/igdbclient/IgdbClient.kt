@@ -39,7 +39,6 @@ import ru.pixnews.igdbclient.model.CompanyWebsiteResult
 import ru.pixnews.igdbclient.model.CoverResult
 import ru.pixnews.igdbclient.model.EventLogoResult
 import ru.pixnews.igdbclient.model.EventNetworkResult
-import ru.pixnews.igdbclient.model.EventNetworkTypeResult
 import ru.pixnews.igdbclient.model.EventResult
 import ru.pixnews.igdbclient.model.ExternalGameResult
 import ru.pixnews.igdbclient.model.FranchiseResult
@@ -59,6 +58,7 @@ import ru.pixnews.igdbclient.model.LanguageResult
 import ru.pixnews.igdbclient.model.LanguageSupportResult
 import ru.pixnews.igdbclient.model.LanguageSupportTypeResult
 import ru.pixnews.igdbclient.model.MultiplayerModeResult
+import ru.pixnews.igdbclient.model.NetworkTypeResult
 import ru.pixnews.igdbclient.model.PlatformFamilyResult
 import ru.pixnews.igdbclient.model.PlatformLogoResult
 import ru.pixnews.igdbclient.model.PlatformResult
@@ -203,16 +203,10 @@ public suspend fun IgdbClient.getEventLogos(builder: ApicalypseQueryBuilder.() -
     executeOrThrow(IgdbEndpoint.EVENT_LOGO, apicalypseQuery(builder))
 
 /**
- * Gaming Event networks
+ * Urls related to the gaming event
  */
 public suspend fun IgdbClient.getEventNetworks(builder: ApicalypseQueryBuilder.() -> Unit): EventNetworkResult =
     executeOrThrow(IgdbEndpoint.EVENT_NETWORK, apicalypseQuery(builder))
-
-/**
- * Gaming Event network types
- */
-public suspend fun IgdbClient.getEventNetworkTypes(builder: ApicalypseQueryBuilder.() -> Unit): EventNetworkTypeResult =
-    executeOrThrow(IgdbEndpoint.EVENT_NETWORK_TYPE, apicalypseQuery(builder))
 
 /**
  * Game IDs on other services
@@ -333,6 +327,12 @@ public suspend fun IgdbClient.multiquery(
 ): List<UnpackedMultiQueryResult<*>> {
     return executeOrThrow(IgdbEndpoint.MULTIQUERY, apicalypseMultiQuery(builder))
 }
+
+/**
+ * Social networks related to the gaming event
+ */
+public suspend fun IgdbClient.getNetworkTypes(builder: ApicalypseQueryBuilder.() -> Unit): NetworkTypeResult =
+    executeOrThrow(IgdbEndpoint.NETWORK_TYPE, apicalypseQuery(builder))
 
 /**
  * The hardware used to run the game or game delivery network

@@ -36,8 +36,6 @@ import ru.pixnews.igdbclient.model.EventLogo
 import ru.pixnews.igdbclient.model.EventLogoResult
 import ru.pixnews.igdbclient.model.EventNetwork
 import ru.pixnews.igdbclient.model.EventNetworkResult
-import ru.pixnews.igdbclient.model.EventNetworkType
-import ru.pixnews.igdbclient.model.EventNetworkTypeResult
 import ru.pixnews.igdbclient.model.EventResult
 import ru.pixnews.igdbclient.model.ExternalGame
 import ru.pixnews.igdbclient.model.ExternalGameResult
@@ -76,6 +74,8 @@ import ru.pixnews.igdbclient.model.LanguageSupportType
 import ru.pixnews.igdbclient.model.LanguageSupportTypeResult
 import ru.pixnews.igdbclient.model.MultiplayerMode
 import ru.pixnews.igdbclient.model.MultiplayerModeResult
+import ru.pixnews.igdbclient.model.NetworkType
+import ru.pixnews.igdbclient.model.NetworkTypeResult
 import ru.pixnews.igdbclient.model.Platform
 import ru.pixnews.igdbclient.model.PlatformFamily
 import ru.pixnews.igdbclient.model.PlatformFamilyResult
@@ -249,21 +249,12 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Gaming Event networks
+         * Urls related to the gaming event
          */
         public val EVENT_NETWORK: IgdbEndpoint<EventNetworkResult> = IgdbEndpoint(
             "event_networks",
             EventNetworkResult.ADAPTER::decode,
             EventNetwork.ADAPTER::decode,
-        )
-
-        /**
-         * Gaming Event network types
-         */
-        public val EVENT_NETWORK_TYPE: IgdbEndpoint<EventNetworkTypeResult> = IgdbEndpoint(
-            "event_network_types",
-            EventNetworkTypeResult.ADAPTER::decode,
-            EventNetworkType.ADAPTER::decode,
         )
 
         /**
@@ -427,6 +418,15 @@ public open class IgdbEndpoint<out R : Any>(
             "multiplayer_modes",
             MultiplayerModeResult.ADAPTER::decode,
             MultiplayerMode.ADAPTER::decode,
+        )
+
+        /**
+         * Social networks related to the gaming event
+         */
+        public val NETWORK_TYPE: IgdbEndpoint<NetworkTypeResult> = IgdbEndpoint(
+            "network_types",
+            NetworkTypeResult.ADAPTER::decode,
+            NetworkType.ADAPTER::decode,
         )
 
         /**
