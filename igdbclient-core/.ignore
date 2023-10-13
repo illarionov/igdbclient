@@ -1,0 +1,4 @@
+# Ignored files for tools like scc / ripgrep / ag / tokei
+
+src/commonMain/proto/igdbapi.proto
+
