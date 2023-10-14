@@ -440,6 +440,11 @@
             <pgp value="fb35c8d02b4724dada23de0afd116c1969fccff3"/>
          </artifact>
       </component>
+      <component group="org.json" name="json" version="20231013">
+         <artifact name="json-20231013.jar">
+            <pgp value="fb35c8d02b4724dada23de0afd116c1969fccff3"/>
+         </artifact>
+      </component>
       <component group="org.jsoup" name="jsoup" version="1.15.3">
          <artifact name="jsoup-1.15.3.jar">
             <pgp value="f3184bcd55f4d016e30d4c9bf42e87f9665015c9"/>
