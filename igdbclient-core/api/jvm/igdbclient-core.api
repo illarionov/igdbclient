@@ -441,18 +441,96 @@ public final class ru/pixnews/igdbclient/dsl/field/CharacterMugShotFieldDslKt {
 
 public final class ru/pixnews/igdbclient/dsl/field/CollectionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
+	public final fun getAs_child_relations ()Lru/pixnews/igdbclient/dsl/field/CollectionRelationFieldDsl;
+	public final fun getAs_parent_relations ()Lru/pixnews/igdbclient/dsl/field/CollectionRelationFieldDsl;
 	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
 	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getSlug ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl;
 	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getUrl ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 }
 
 public final class ru/pixnews/igdbclient/dsl/field/CollectionFieldDslKt {
 	public static final fun getField (Lru/pixnews/igdbclient/model/Collection$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionMembershipFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCollection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lru/pixnews/igdbclient/dsl/field/CollectionMembershipTypeFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionMembershipFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CollectionMembership$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionMembershipFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionMembershipTypeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAllowed_collection_type ()Lru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionMembershipTypeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CollectionMembershipType$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionMembershipTypeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionRelationFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChild_collection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getParent_collection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getType ()Lru/pixnews/igdbclient/dsl/field/CollectionRelationTypeFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionRelationFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CollectionRelation$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionRelationFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionRelationTypeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getAllowed_child_type ()Lru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl;
+	public final fun getAllowed_parent_type ()Lru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionRelationTypeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CollectionRelationType$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionRelationTypeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/CollectionType$Companion;)Lru/pixnews/igdbclient/dsl/field/CollectionTypeFieldDsl;
 }
 
 public final class ru/pixnews/igdbclient/dsl/field/CompanyFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -535,7 +613,6 @@ public final class ru/pixnews/igdbclient/dsl/field/EventFieldDsl : ru/pixnews/ig
 	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getEnd_time ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
-	public final fun getEvent_categories ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getEvent_logo ()Lru/pixnews/igdbclient/dsl/field/EventLogoFieldDsl;
 	public final fun getEvent_networks ()Lru/pixnews/igdbclient/dsl/field/EventNetworkFieldDsl;
 	public final fun getGames ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
@@ -670,6 +747,7 @@ public final class ru/pixnews/igdbclient/dsl/field/GameFieldDsl : ru/pixnews/igd
 	public final fun getCategory ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCollection ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
+	public final fun getCollections ()Lru/pixnews/igdbclient/dsl/field/CollectionFieldDsl;
 	public final fun getCover ()Lru/pixnews/igdbclient/dsl/field/CoverFieldDsl;
 	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDlcs ()Lru/pixnews/igdbclient/dsl/field/GameFieldDsl;
@@ -1785,17 +1863,20 @@ public final class ru/pixnews/igdbclient/model/Collection : com/squareup/wire/Me
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Collection$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Collection;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Collection;JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/Collection;
+	public fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/util/List;Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Collection;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Collection;JLjava/time/Instant;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/util/List;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/Collection;
 	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAs_child_relations ()Ljava/util/List;
+	public final fun getAs_parent_relations ()Ljava/util/List;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getGames ()Ljava/util/List;
 	public final fun getId ()J
 	public final fun getName ()Ljava/lang/String;
 	public final fun getSlug ()Ljava/lang/String;
+	public final fun getType ()Lru/pixnews/igdbclient/model/CollectionType;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public final fun getUrl ()Ljava/lang/String;
 	public fun hashCode ()I
@@ -1805,6 +1886,183 @@ public final class ru/pixnews/igdbclient/model/Collection : com/squareup/wire/Me
 }
 
 public final class ru/pixnews/igdbclient/model/Collection$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembership : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionMembership$Companion;
+	public fun <init> ()V
+	public fun <init> (JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionMembershipType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionMembershipType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionMembershipType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionMembership;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionMembership;JLru/pixnews/igdbclient/model/Game;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionMembershipType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionMembership;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCollection ()Lru/pixnews/igdbclient/model/Collection;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getGame ()Lru/pixnews/igdbclient/model/Game;
+	public final fun getId ()J
+	public final fun getType ()Lru/pixnews/igdbclient/model/CollectionMembershipType;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembership$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionMembershipResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionMembershipResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionMembershipResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionMembershipResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCollectionmemberships ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionMembershipType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionMembershipType;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionMembershipType;JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionMembershipType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAllowed_collection_type ()Lru/pixnews/igdbclient/model/CollectionType;
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipType$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionMembershipTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionMembershipTypeResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionMembershipTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionMembershipTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCollectionmembershiptypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionMembershipTypeResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelation : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionRelation$Companion;
+	public fun <init> ()V
+	public fun <init> (JLru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionRelationType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionRelationType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionRelationType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionRelation;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionRelation;JLru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/CollectionRelationType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionRelation;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getChild_collection ()Lru/pixnews/igdbclient/model/Collection;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getParent_collection ()Lru/pixnews/igdbclient/model/Collection;
+	public final fun getType ()Lru/pixnews/igdbclient/model/CollectionRelationType;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelation$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionRelationResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionRelationResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionRelationResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionRelationResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCollectionrelations ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionRelationType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionRelationType;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionRelationType;JLjava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/CollectionType;Lru/pixnews/igdbclient/model/CollectionType;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionRelationType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAllowed_child_type ()Lru/pixnews/igdbclient/model/CollectionType;
+	public final fun getAllowed_parent_type ()Lru/pixnews/igdbclient/model/CollectionType;
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationType$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionRelationTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionRelationTypeResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionRelationTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionRelationTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCollectionrelationtypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionRelationTypeResult$Companion {
 }
 
 public final class ru/pixnews/igdbclient/model/CollectionResult : com/squareup/wire/Message {
@@ -1824,6 +2082,49 @@ public final class ru/pixnews/igdbclient/model/CollectionResult : com/squareup/w
 }
 
 public final class ru/pixnews/igdbclient/model/CollectionResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionType;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionType;JLjava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionType$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/CollectionTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/CollectionTypeResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/CollectionTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/CollectionTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCollectiontypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/CollectionTypeResult$Companion {
 }
 
 public final class ru/pixnews/igdbclient/model/Company : com/squareup/wire/Message {
@@ -2060,16 +2361,15 @@ public final class ru/pixnews/igdbclient/model/Event : com/squareup/wire/Message
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Event$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/util/List;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/util/List;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/util/List;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Event;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Event;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/util/List;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/Event;
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Event;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Event;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/pixnews/igdbclient/model/EventLogo;Ljava/time/Instant;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/Event;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getDescription ()Ljava/lang/String;
 	public final fun getEnd_time ()Ljava/time/Instant;
-	public final fun getEvent_categories ()Ljava/util/List;
 	public final fun getEvent_logo ()Lru/pixnews/igdbclient/model/EventLogo;
 	public final fun getEvent_networks ()Ljava/util/List;
 	public final fun getGames ()Ljava/util/List;
@@ -2088,26 +2388,6 @@ public final class ru/pixnews/igdbclient/model/Event : com/squareup/wire/Message
 }
 
 public final class ru/pixnews/igdbclient/model/Event$Companion {
-}
-
-public final class ru/pixnews/igdbclient/model/EventEventCategoriesEnum : java/lang/Enum, com/squareup/wire/WireEnum {
-	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
-	public static final field AWARD Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field Companion Lru/pixnews/igdbclient/model/EventEventCategoriesEnum$Companion;
-	public static final field EVENT_EVENT_CATEGORIES_NULL Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field E_SPORT Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field GAME_EXPO Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field INDUSTRY_CONFERENCE Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field OTHER_MISC Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final field STREAM_EVENT Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public fun getValue ()I
-	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-	public static fun values ()[Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
-}
-
-public final class ru/pixnews/igdbclient/model/EventEventCategoriesEnum$Companion {
-	public final fun fromValue (I)Lru/pixnews/igdbclient/model/EventEventCategoriesEnum;
 }
 
 public final class ru/pixnews/igdbclient/model/EventLogo : com/squareup/wire/Message {
@@ -2370,10 +2650,10 @@ public final class ru/pixnews/igdbclient/model/Game : com/squareup/wire/Message 
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Game$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Game;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Game;JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILjava/lang/Object;)Lru/pixnews/igdbclient/model/Game;
+	public fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/Game;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/Game;JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lru/pixnews/igdbclient/model/GameCategoryEnum;Lru/pixnews/igdbclient/model/Collection;Lru/pixnews/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILru/pixnews/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lru/pixnews/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lru/pixnews/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILjava/lang/Object;)Lru/pixnews/igdbclient/model/Game;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAge_ratings ()Ljava/util/List;
 	public final fun getAggregated_rating ()D
@@ -2384,6 +2664,7 @@ public final class ru/pixnews/igdbclient/model/Game : com/squareup/wire/Message 
 	public final fun getCategory ()Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCollection ()Lru/pixnews/igdbclient/model/Collection;
+	public final fun getCollections ()Ljava/util/List;
 	public final fun getCover ()Lru/pixnews/igdbclient/model/Cover;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getDlcs ()Ljava/util/List;
@@ -4312,18 +4593,91 @@ public final class ru/pixnews/igdbclient/scheme/field/CharacterMugShotField : ja
 }
 
 public final class ru/pixnews/igdbclient/scheme/field/CollectionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field AS_CHILD_RELATIONS Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field AS_PARENT_RELATIONS Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionMembershipField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field COLLECTION Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field GAME Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALLOWED_COLLECTION_TYPE Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionRelationField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field CHILD_COLLECTION Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field PARENT_COLLECTION Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field ALLOWED_CHILD_TYPE Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field ALLOWED_PARENT_TYPE Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/CollectionTypeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
 }
 
 public final class ru/pixnews/igdbclient/scheme/field/CompanyField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
@@ -4401,7 +4755,6 @@ public final class ru/pixnews/igdbclient/scheme/field/EventField : java/lang/Enu
 	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field END_TIME Lru/pixnews/igdbclient/scheme/field/EventField;
-	public static final field EVENT_CATEGORIES Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field EVENT_LOGO Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field EVENT_NETWORKS Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field GAMES Lru/pixnews/igdbclient/scheme/field/EventField;
@@ -4529,6 +4882,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameField : java/lang/Enum
 	public static final field CATEGORY Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field COLLECTION Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static final field COLLECTIONS Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field COVER Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field DLCS Lru/pixnews/igdbclient/scheme/field/GameField;

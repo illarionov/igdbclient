@@ -289,6 +289,79 @@ message Collection {
     google.protobuf.Timestamp updated_at = 6;
     string url = 7;
     string checksum = 8;
+    CollectionType type = 9;
+    repeated CollectionRelation as_parent_relations = 10;
+    repeated CollectionRelation as_child_relations = 11;
+}
+
+message CollectionMembershipResult {
+    repeated CollectionMembership collectionmemberships = 1;
+}
+
+message CollectionMembership {
+    uint64 id = 1;
+    Game game = 2;
+    Collection collection = 3;
+    CollectionMembershipType type = 4;
+    google.protobuf.Timestamp updated_at = 5;
+    google.protobuf.Timestamp created_at = 6;
+    string checksum = 7;
+}
+
+message CollectionMembershipTypeResult {
+    repeated CollectionMembershipType collectionmembershiptypes = 1;
+}
+
+message CollectionMembershipType {
+    uint64 id = 1;
+    string name = 2;
+    string description = 3;
+    CollectionType allowed_collection_type = 4;
+    google.protobuf.Timestamp updated_at = 5;
+    google.protobuf.Timestamp created_at = 6;
+    string checksum = 7;
+}
+
+message CollectionRelationResult {
+    repeated CollectionRelation collectionrelations = 1;
+}
+
+message CollectionRelation {
+    uint64 id = 1;
+    Collection child_collection = 2;
+    Collection parent_collection = 3;
+    CollectionRelationType type = 4;
+    google.protobuf.Timestamp updated_at = 5;
+    google.protobuf.Timestamp created_at = 6;
+    string checksum = 7;
+}
+
+message CollectionRelationTypeResult {
+    repeated CollectionRelationType collectionrelationtypes = 1;
+}
+
+message CollectionRelationType {
+    uint64 id = 1;
+    string name = 2;
+    string description = 3;
+    CollectionType allowed_child_type = 4;
+    CollectionType allowed_parent_type = 5;
+    google.protobuf.Timestamp updated_at = 6;
+    google.protobuf.Timestamp created_at = 7;
+    string checksum = 8;
+}
+
+message CollectionTypeResult {
+    repeated CollectionType collectiontypes = 1;
+}
+
+message CollectionType {
+    uint64 id = 1;
+    string name = 2;
+    string description = 3;
+    google.protobuf.Timestamp updated_at = 4;
+    google.protobuf.Timestamp created_at = 5;
+    string checksum = 6;
 }
 
 message CompanyResult {
@@ -405,28 +478,16 @@ message Event {
     string description = 3;
     string slug = 4;
     EventLogo event_logo = 5;
-    repeated EventEventCategoriesEnum event_categories = 6;
-    google.protobuf.Timestamp start_time = 7;
-    string time_zone = 8;
-    google.protobuf.Timestamp end_time = 9;
-    string live_stream_url = 10;
-    repeated Game games = 11;
-    repeated GameVideo videos = 12;
-    repeated EventNetwork event_networks = 13;
-    google.protobuf.Timestamp created_at = 14;
-    google.protobuf.Timestamp updated_at = 15;
-    string checksum = 16;
-}
-
-
-enum EventEventCategoriesEnum {
-    EVENT_EVENT_CATEGORIES_NULL = 0;
-    INDUSTRY_CONFERENCE = 1;
-    STREAM_EVENT = 2;
-    AWARD = 3;
-    GAME_EXPO = 4;
-    E_SPORT = 5;
-    OTHER_MISC = 6;
+    google.protobuf.Timestamp start_time = 6;
+    string time_zone = 7;
+    google.protobuf.Timestamp end_time = 8;
+    string live_stream_url = 9;
+    repeated Game games = 10;
+    repeated GameVideo videos = 11;
+    repeated EventNetwork event_networks = 12;
+    google.protobuf.Timestamp created_at = 13;
+    google.protobuf.Timestamp updated_at = 14;
+    string checksum = 15;
 }
 
 message EventLogoResult {
@@ -590,6 +651,7 @@ message Game {
     repeated Game forks = 55;
     repeated LanguageSupport language_supports = 56;
     repeated GameLocalization game_localizations = 57;
+    repeated Collection collections = 58;
 }
 
 
