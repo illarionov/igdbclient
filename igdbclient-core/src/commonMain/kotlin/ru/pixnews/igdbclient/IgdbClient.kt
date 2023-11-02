@@ -32,7 +32,12 @@ import ru.pixnews.igdbclient.model.AlternativeNameResult
 import ru.pixnews.igdbclient.model.ArtworkResult
 import ru.pixnews.igdbclient.model.CharacterMugShotResult
 import ru.pixnews.igdbclient.model.CharacterResult
+import ru.pixnews.igdbclient.model.CollectionMembershipResult
+import ru.pixnews.igdbclient.model.CollectionMembershipTypeResult
+import ru.pixnews.igdbclient.model.CollectionRelationResult
+import ru.pixnews.igdbclient.model.CollectionRelationTypeResult
 import ru.pixnews.igdbclient.model.CollectionResult
+import ru.pixnews.igdbclient.model.CollectionTypeResult
 import ru.pixnews.igdbclient.model.CompanyLogoResult
 import ru.pixnews.igdbclient.model.CompanyResult
 import ru.pixnews.igdbclient.model.CompanyWebsiteResult
@@ -165,6 +170,40 @@ public suspend fun IgdbClient.getCharacterMugShots(builder: ApicalypseQueryBuild
  */
 public suspend fun IgdbClient.getCollections(builder: ApicalypseQueryBuilder.() -> Unit): CollectionResult =
     executeOrThrow(IgdbEndpoint.COLLECTION, apicalypseQuery(builder))
+
+/**
+ * Collection memberships
+ */
+public suspend fun IgdbClient.getCollectionMemberships(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CollectionMembershipResult = executeOrThrow(IgdbEndpoint.COLLECTION_MEMBERSHIP, apicalypseQuery(builder))
+
+/**
+ * Collection membership types
+ */
+public suspend fun IgdbClient.getCollectionMembershipTypes(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CollectionMembershipTypeResult = executeOrThrow(IgdbEndpoint.COLLECTION_MEMBERSHIP_TYPE, apicalypseQuery(builder))
+
+/**
+ * Describes Relationship between Collections
+ */
+public suspend fun IgdbClient.getCollectionRelations(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CollectionRelationResult = executeOrThrow(IgdbEndpoint.COLLECTION_RELATION, apicalypseQuery(builder))
+
+/**
+ * Collection Relation types
+ */
+public suspend fun IgdbClient.getCollectionRelationTypes(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CollectionRelationTypeResult = executeOrThrow(IgdbEndpoint.COLLECTION_RELATION_TYPE, apicalypseQuery(builder))
+
+/**
+ * Collection types
+ */
+public suspend fun IgdbClient.getCollectionTypes(builder: ApicalypseQueryBuilder.() -> Unit): CollectionTypeResult =
+    executeOrThrow(IgdbEndpoint.COLLECTION_TYPE, apicalypseQuery(builder))
 
 /**
  * Video game companies. Both publishers & developers

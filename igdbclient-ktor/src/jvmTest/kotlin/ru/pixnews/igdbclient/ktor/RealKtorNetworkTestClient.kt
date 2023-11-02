@@ -24,6 +24,11 @@ import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
 import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
 import ru.pixnews.igdbclient.dsl.field.field
 import ru.pixnews.igdbclient.executeOrThrow
+import ru.pixnews.igdbclient.getCollectionMembershipTypes
+import ru.pixnews.igdbclient.getCollectionMemberships
+import ru.pixnews.igdbclient.getCollectionRelationTypes
+import ru.pixnews.igdbclient.getCollectionRelations
+import ru.pixnews.igdbclient.getCollectionTypes
 import ru.pixnews.igdbclient.getEventLogos
 import ru.pixnews.igdbclient.getEventNetworks
 import ru.pixnews.igdbclient.getEvents
@@ -32,6 +37,10 @@ import ru.pixnews.igdbclient.getNetworkTypes
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
+import ru.pixnews.igdbclient.model.CollectionMembership
+import ru.pixnews.igdbclient.model.CollectionMembershipType
+import ru.pixnews.igdbclient.model.CollectionRelation
+import ru.pixnews.igdbclient.model.CollectionType
 import ru.pixnews.igdbclient.model.Event
 import ru.pixnews.igdbclient.model.EventLogo
 import ru.pixnews.igdbclient.model.EventNetwork
@@ -174,6 +183,41 @@ class RealKtorNetworkTestClient {
             limit(100)
         }
         logger.i { "event network types : $eventNetworksTypes" }
+
+        Unit
+    }
+
+    @Test
+    fun testCollectionTypes() = runBlocking {
+        val collectionMemberships = client.getCollectionMemberships {
+            fields(CollectionMembership.field.all)
+            limit(10)
+        }
+        logger.i { "collection memberships: $collectionMemberships" }
+
+        val collectionMembershipTypes = client.getCollectionMembershipTypes {
+            fields(CollectionMembershipType.field.all)
+            limit(10)
+        }
+        logger.i { "collection membership types: $collectionMembershipTypes" }
+
+        val collectionRelations = client.getCollectionRelations {
+            fields(CollectionRelation.field.all)
+            limit(10)
+        }
+        logger.i { "collection relations: $collectionRelations" }
+
+        val collectionRelationTypes = client.getCollectionRelationTypes {
+            fields(CollectionMembershipType.field.all)
+            limit(10)
+        }
+        logger.i { "collection relation types: $collectionRelationTypes" }
+
+        val collectionTypes = client.getCollectionTypes {
+            fields(CollectionType.field.all)
+            limit(10)
+        }
+        logger.i { "collection types: $collectionTypes" }
 
         Unit
     }
