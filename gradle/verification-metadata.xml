@@ -110,6 +110,11 @@
             <pgp value="4797b4f5dcc46cea61059071a1ae06236ca2ba62"/>
          </artifact>
       </component>
+      <component group="com.diffplug.durian" name="durian-swt.os" version="4.2.1">
+         <artifact name="durian-swt.os-4.2.1.jar">
+            <pgp value="4797b4f5dcc46cea61059071a1ae06236ca2ba62"/>
+         </artifact>
+      </component>
       <component group="com.fasterxml.jackson.core" name="jackson-databind" version="2.12.7.1">
          <artifact name="jackson-databind-2.12.7.1.jar">
             <pgp value="28118c070cb22a0175a2e8d43d12ca2ac19f3181"/>
@@ -250,8 +255,18 @@
             <pgp value="1d2c7ef8ada0f794b58c7c63436902af59edf60e"/>
          </artifact>
       </component>
+      <component group="dev.equo.ide" name="solstice" version="1.7.3">
+         <artifact name="solstice-1.7.3.jar">
+            <pgp value="1d2c7ef8ada0f794b58c7c63436902af59edf60e"/>
+         </artifact>
+      </component>
       <component group="dev.zacsweers.kctfork" name="core" version="0.3.2">
          <artifact name="core-0.3.2.jar">
+            <pgp value="719f7c29985a8e95f58f47194d8159d6a1159b69"/>
+         </artifact>
+      </component>
+      <component group="dev.zacsweers.kctfork" name="core" version="0.4.0">
+         <artifact name="core-0.4.0.jar">
             <pgp value="719f7c29985a8e95f58f47194d8159d6a1159b69"/>
          </artifact>
       </component>
@@ -262,6 +277,11 @@
       </component>
       <component group="io.github.classgraph" name="classgraph" version="4.8.161">
          <artifact name="classgraph-4.8.161.jar">
+            <pgp value="1f47744c9b6e14f2049c2857f1f111af65925306"/>
+         </artifact>
+      </component>
+      <component group="io.github.classgraph" name="classgraph" version="4.8.162">
+         <artifact name="classgraph-4.8.162.jar">
             <pgp value="1f47744c9b6e14f2049c2857f1f111af65925306"/>
          </artifact>
       </component>
