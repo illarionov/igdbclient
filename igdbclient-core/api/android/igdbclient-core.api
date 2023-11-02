@@ -12,6 +12,11 @@ public final class ru/pixnews/igdbclient/IgdbClientKt {
 	public static final fun getArtworks (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCharacterMugShots (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCharacters (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCollectionMembershipTypes (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCollectionMemberships (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCollectionRelationTypes (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCollectionRelations (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCollectionTypes (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCollections (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCompanies (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCompanyLogos (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -79,6 +84,11 @@ public final class ru/pixnews/igdbclient/IgdbEndpoint$Companion {
 	public final fun getCHARACTER ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getCHARACTER_MUG_SHOT ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getCOLLECTION ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getCOLLECTION_MEMBERSHIP ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getCOLLECTION_MEMBERSHIP_TYPE ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getCOLLECTION_RELATION ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getCOLLECTION_RELATION_TYPE ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getCOLLECTION_TYPE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY_LOGO ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY_WEBSITE ()Lru/pixnews/igdbclient/IgdbEndpoint;

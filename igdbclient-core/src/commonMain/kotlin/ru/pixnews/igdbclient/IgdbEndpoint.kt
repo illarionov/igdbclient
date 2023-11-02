@@ -21,7 +21,17 @@ import ru.pixnews.igdbclient.model.CharacterMugShot
 import ru.pixnews.igdbclient.model.CharacterMugShotResult
 import ru.pixnews.igdbclient.model.CharacterResult
 import ru.pixnews.igdbclient.model.Collection
+import ru.pixnews.igdbclient.model.CollectionMembership
+import ru.pixnews.igdbclient.model.CollectionMembershipResult
+import ru.pixnews.igdbclient.model.CollectionMembershipType
+import ru.pixnews.igdbclient.model.CollectionMembershipTypeResult
+import ru.pixnews.igdbclient.model.CollectionRelation
+import ru.pixnews.igdbclient.model.CollectionRelationResult
+import ru.pixnews.igdbclient.model.CollectionRelationType
+import ru.pixnews.igdbclient.model.CollectionRelationTypeResult
 import ru.pixnews.igdbclient.model.CollectionResult
+import ru.pixnews.igdbclient.model.CollectionType
+import ru.pixnews.igdbclient.model.CollectionTypeResult
 import ru.pixnews.igdbclient.model.Company
 import ru.pixnews.igdbclient.model.CompanyLogo
 import ru.pixnews.igdbclient.model.CompanyLogoResult
@@ -192,6 +202,51 @@ public open class IgdbEndpoint<out R : Any>(
             "collections",
             CollectionResult.ADAPTER::decode,
             Collection.ADAPTER::decode,
+        )
+
+        /**
+         * Collection Memberships
+         */
+        public val COLLECTION_MEMBERSHIP: IgdbEndpoint<CollectionMembershipResult> = IgdbEndpoint(
+            "collection_memberships",
+            CollectionMembershipResult.ADAPTER::decode,
+            CollectionMembership.ADAPTER::decode,
+        )
+
+        /**
+         * Collection Membership Types
+         */
+        public val COLLECTION_MEMBERSHIP_TYPE: IgdbEndpoint<CollectionMembershipTypeResult> = IgdbEndpoint(
+            "collection_membership_types",
+            CollectionMembershipTypeResult.ADAPTER::decode,
+            CollectionMembershipType.ADAPTER::decode,
+        )
+
+        /**
+         * Describes Relationship between Collections
+         */
+        public val COLLECTION_RELATION: IgdbEndpoint<CollectionRelationResult> = IgdbEndpoint(
+            "collection_relations",
+            CollectionRelationResult.ADAPTER::decode,
+            CollectionRelation.ADAPTER::decode,
+        )
+
+        /**
+         * Collection Relation Types
+         */
+        public val COLLECTION_RELATION_TYPE: IgdbEndpoint<CollectionRelationTypeResult> = IgdbEndpoint(
+            "collection_relation_types",
+            CollectionRelationTypeResult.ADAPTER::decode,
+            CollectionRelationType.ADAPTER::decode,
+        )
+
+        /**
+         * Enums for collection types.
+         */
+        public val COLLECTION_TYPE: IgdbEndpoint<CollectionTypeResult> = IgdbEndpoint(
+            "collection_types",
+            CollectionTypeResult.ADAPTER::decode,
+            CollectionType.ADAPTER::decode,
         )
 
         /**
