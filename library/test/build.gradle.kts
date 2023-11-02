@@ -3,8 +3,6 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
@@ -14,8 +12,7 @@ plugins {
 group = "ru.pixnews.igdbclient.library.test"
 
 kotlin {
-    @OptIn(ExperimentalKotlinGradlePluginApi::class)
-    targetHierarchy.default()
+    applyDefaultHierarchyTemplate()
 
     jvm()
     js(IR) {
@@ -62,4 +59,12 @@ kotlin {
 
 android {
     namespace = "ru.pixnews.igdbclient.library.test"
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
+    compilerOptions {
+        freeCompilerArgs.addAll(
+            "-Xexpect-actual-classes",
+        )
+    }
 }
