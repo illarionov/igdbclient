@@ -8,6 +8,8 @@ package ru.pixnews.igdbclient.ktor.integration
 import io.ktor.client.HttpClient
 import mockwebserver3.SocketPolicy
 import org.junit.jupiter.api.Disabled
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.EnumSource
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.ktor.IgdbKtorEngine
@@ -38,7 +40,16 @@ abstract class KtorBaseIgdbClientImplementationTest : BaseIgdbClientImplementati
     }
 
     @Suppress("BACKTICKS_PROHIBITED")
-    @Disabled("Flaky and slow")
+    @ParameterizedTest
+    @EnumSource(
+        value = SocketPolicy::class,
+        names = [
+            "DISCONNECT_AFTER_REQUEST",
+            "DISCONNECT_DURING_RESPONSE_BODY",
+            "NO_RESPONSE",
+        ],
+    )
+    @Disabled("Flacky and slow")
     override fun `Implementation should throw correct exception on network error`(policy: SocketPolicy) {
         super.`Implementation should throw correct exception on network error`(policy)
     }

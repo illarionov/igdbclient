@@ -191,6 +191,7 @@ public final class ru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod : java/lan
 	public static final field CREATE Lru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod;
 	public static final field DELETE Lru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod;
 	public static final field UPDATE Lru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod;
 	public static fun values ()[Lru/pixnews/igdbclient/IgdbWebhookApi$WebhookMethod;
 }
@@ -251,6 +252,7 @@ public final class ru/pixnews/igdbclient/apicalypse/ApicalypseQueryKt {
 public final class ru/pixnews/igdbclient/apicalypse/SortOrder : java/lang/Enum {
 	public static final field ASC Lru/pixnews/igdbclient/apicalypse/SortOrder;
 	public static final field DESC Lru/pixnews/igdbclient/apicalypse/SortOrder;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/apicalypse/SortOrder;
 	public static fun values ()[Lru/pixnews/igdbclient/apicalypse/SortOrder;
 }
@@ -1445,6 +1447,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingCategoryEnum : java/lang
 	public static final field PEGI Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final field USK Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingCategoryEnum;
@@ -1566,6 +1569,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingContentDescriptionCatego
 	public static final field PEGI_SEX Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final field PEGI_VIOLENCE Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingContentDescriptionCategoryEnum;
@@ -1638,6 +1642,7 @@ public final class ru/pixnews/igdbclient/model/AgeRatingRatingEnum : java/lang/E
 	public static final field USK_18 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final field USK_6 Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/AgeRatingRatingEnum;
@@ -1860,6 +1865,7 @@ public final class ru/pixnews/igdbclient/model/CharacterSpeciesEnum : java/lang/
 	public static final field HUMAN Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static final field UNKNOWN Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/CharacterSpeciesEnum;
@@ -2358,6 +2364,7 @@ public final class ru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum 
 	public static final field YYYYQ3 Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static final field YYYYQ4 Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/DateFormatChangeDateCategoryEnum;
@@ -2567,6 +2574,7 @@ public final class ru/pixnews/igdbclient/model/ExternalGameCategoryEnum : java/l
 	public static final field EXTERNALGAME_XBOX_MARKETPLACE Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static final field EXTERNALGAME_YOUTUBE Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/ExternalGameCategoryEnum;
@@ -2583,6 +2591,7 @@ public final class ru/pixnews/igdbclient/model/ExternalGameMediaEnum : java/lang
 	public static final field EXTERNALGAME_MEDIA_NULL Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static final field EXTERNALGAME_PHYSICAL Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/ExternalGameMediaEnum;
@@ -2751,6 +2760,7 @@ public final class ru/pixnews/igdbclient/model/GameCategoryEnum : java/lang/Enum
 	public static final field STANDALONE_EXPANSION Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static final field UPDATE Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameCategoryEnum;
@@ -2973,6 +2983,7 @@ public final class ru/pixnews/igdbclient/model/GameStatusEnum : java/lang/Enum, 
 	public static final field RELEASED Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final field RUMORED Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameStatusEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameStatusEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameStatusEnum;
@@ -3039,6 +3050,7 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum : 
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum$Companion;
 	public static final field DESCRIPTION Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameVersionFeatureCategoryEnum;
@@ -3098,6 +3110,7 @@ public final class ru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFe
 	public static final field NOT_INCLUDED Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static final field PRE_ORDER_ONLY Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GameVersionFeatureValueIncludedFeatureEnum;
@@ -3194,6 +3207,7 @@ public final class ru/pixnews/igdbclient/model/GenderGenderEnum : java/lang/Enum
 	public static final field MALE Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static final field OTHER Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/GenderGenderEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/GenderGenderEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/GenderGenderEnum;
@@ -3252,6 +3266,7 @@ public final class ru/pixnews/igdbclient/model/IgdbImageFormat : java/lang/Enum 
 	public static final field JPEG Lru/pixnews/igdbclient/model/IgdbImageFormat;
 	public static final field PNG Lru/pixnews/igdbclient/model/IgdbImageFormat;
 	public static final field WEBP Lru/pixnews/igdbclient/model/IgdbImageFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getIgdbId ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/IgdbImageFormat;
 	public static fun values ()[Lru/pixnews/igdbclient/model/IgdbImageFormat;
@@ -3268,6 +3283,7 @@ public final class ru/pixnews/igdbclient/model/IgdbImageSize : java/lang/Enum {
 	public static final field SCREENSHOT_HUGE Lru/pixnews/igdbclient/model/IgdbImageSize;
 	public static final field SCREENSHOT_MEDIUM Lru/pixnews/igdbclient/model/IgdbImageSize;
 	public static final field THUMB Lru/pixnews/igdbclient/model/IgdbImageSize;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public final fun getIgdbId ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/IgdbImageSize;
 	public static fun values ()[Lru/pixnews/igdbclient/model/IgdbImageSize;
@@ -3706,6 +3722,7 @@ public final class ru/pixnews/igdbclient/model/PlatformCategoryEnum : java/lang/
 	public static final field PLATFORM_CATEGORY_NULL Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final field PORTABLE_CONSOLE Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/PlatformCategoryEnum;
@@ -4095,6 +4112,7 @@ public final class ru/pixnews/igdbclient/model/RegionRegionEnum : java/lang/Enum
 	public static final field REGION_REGION_NULL Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final field WORLDWIDE Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/RegionRegionEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/RegionRegionEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/RegionRegionEnum;
@@ -4355,6 +4373,7 @@ public final class ru/pixnews/igdbclient/model/TestDummyEnumTestEnum : java/lang
 	public static final field ENUM2 Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static final field TESTDUMMY_ENUM_TEST_NULL Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/TestDummyEnumTestEnum;
@@ -4485,6 +4504,7 @@ public final class ru/pixnews/igdbclient/model/WebsiteCategoryEnum : java/lang/E
 	public static final field WEBSITE_WIKIPEDIA Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_YOUTUBE Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getValue ()I
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
 	public static fun values ()[Lru/pixnews/igdbclient/model/WebsiteCategoryEnum;
@@ -4518,6 +4538,7 @@ public final class ru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptio
 	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
 	public static final field DESCRIPTION Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AgeRatingContentDescriptionField;
@@ -4532,6 +4553,7 @@ public final class ru/pixnews/igdbclient/scheme/field/AgeRatingField : java/lang
 	public static final field RATING Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
 	public static final field RATING_COVER_URL Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
 	public static final field SYNOPSIS Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AgeRatingField;
@@ -4544,6 +4566,7 @@ public final class ru/pixnews/igdbclient/scheme/field/AlternativeNameField : jav
 	public static final field GAME Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/AlternativeNameField;
@@ -4560,6 +4583,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ArtworkField : java/lang/E
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/ArtworkField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/ArtworkField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/ArtworkField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ArtworkField;
@@ -4581,6 +4605,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CharacterField : java/lang
 	public static final field SPECIES Lru/pixnews/igdbclient/scheme/field/CharacterField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CharacterField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CharacterField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CharacterField;
@@ -4596,6 +4621,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CharacterMugShotField : ja
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CharacterMugShotField;
@@ -4614,6 +4640,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionField : java/lan
 	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CollectionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionField;
@@ -4628,6 +4655,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionMembershipField 
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
 	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionMembershipField;
@@ -4642,6 +4670,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeFi
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionMembershipTypeField;
@@ -4656,6 +4685,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionRelationField : 
 	public static final field PARENT_COLLECTION Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
 	public static final field TYPE Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionRelationField;
@@ -4671,6 +4701,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionRelationTypeFiel
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionRelationTypeField;
@@ -4684,6 +4715,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CollectionTypeField : java
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CollectionTypeField;
@@ -4710,6 +4742,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CompanyField : java/lang/E
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/CompanyField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyField;
 	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/CompanyField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyField;
@@ -4725,6 +4758,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CompanyLogoField : java/la
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyLogoField;
@@ -4737,6 +4771,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CompanyWebsiteField : java
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CompanyWebsiteField;
@@ -4754,6 +4789,7 @@ public final class ru/pixnews/igdbclient/scheme/field/CoverField : java/lang/Enu
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/CoverField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/CoverField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/CoverField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/CoverField;
@@ -4776,6 +4812,7 @@ public final class ru/pixnews/igdbclient/scheme/field/EventField : java/lang/Enu
 	public static final field TIME_ZONE Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/EventField;
 	public static final field VIDEOS Lru/pixnews/igdbclient/scheme/field/EventField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/EventField;
@@ -4794,6 +4831,7 @@ public final class ru/pixnews/igdbclient/scheme/field/EventLogoField : java/lang
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/EventLogoField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/EventLogoField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/EventLogoField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/EventLogoField;
@@ -4808,6 +4846,7 @@ public final class ru/pixnews/igdbclient/scheme/field/EventNetworkField : java/l
 	public static final field NETWORK_TYPE Lru/pixnews/igdbclient/scheme/field/EventNetworkField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/EventNetworkField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/EventNetworkField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/EventNetworkField;
@@ -4828,6 +4867,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ExternalGameField : java/l
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
 	public static final field YEAR Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ExternalGameField;
@@ -4843,6 +4883,7 @@ public final class ru/pixnews/igdbclient/scheme/field/FranchiseField : java/lang
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/FranchiseField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/FranchiseField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/FranchiseField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/FranchiseField;
@@ -4861,6 +4902,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameEngineField : java/lan
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GameEngineField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameEngineField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameEngineField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameEngineField;
@@ -4876,6 +4918,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameEngineLogoField : java
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameEngineLogoField;
@@ -4941,6 +4984,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameField : java/lang/Enum
 	public static final field VERSION_TITLE Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field VIDEOS Lru/pixnews/igdbclient/scheme/field/GameField;
 	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/GameField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameField;
@@ -4956,6 +5000,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameLocalizationField : ja
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
 	public static final field REGION Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameLocalizationField;
@@ -4970,6 +5015,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameModeField : java/lang/
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GameModeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameModeField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameModeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameModeField;
@@ -4984,6 +5030,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameVersionFeatureField : 
 	public static final field POSITION Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
 	public static final field TITLE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
 	public static final field VALUES Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureField;
@@ -4997,6 +5044,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueFie
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
 	public static final field INCLUDED_FEATURE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
 	public static final field NOTE Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionFeatureValueField;
@@ -5012,6 +5060,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameVersionField : java/la
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVersionField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameVersionField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/GameVersionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVersionField;
@@ -5024,6 +5073,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GameVideoField : java/lang
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameVideoField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/GameVideoField;
 	public static final field VIDEO_ID Lru/pixnews/igdbclient/scheme/field/GameVideoField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameVideoField;
@@ -5038,6 +5088,7 @@ public final class ru/pixnews/igdbclient/scheme/field/GenreField : java/lang/Enu
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/GenreField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GenreField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/GenreField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GenreField;
@@ -5064,6 +5115,7 @@ public final class ru/pixnews/igdbclient/scheme/field/InvolvedCompanyField : jav
 	public static final field PUBLISHER Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
 	public static final field SUPPORTING Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/InvolvedCompanyField;
@@ -5078,6 +5130,7 @@ public final class ru/pixnews/igdbclient/scheme/field/KeywordField : java/lang/E
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/KeywordField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/KeywordField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/KeywordField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/KeywordField;
@@ -5092,6 +5145,7 @@ public final class ru/pixnews/igdbclient/scheme/field/LanguageField : java/lang/
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/LanguageField;
 	public static final field NATIVE_NAME Lru/pixnews/igdbclient/scheme/field/LanguageField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageField;
@@ -5106,6 +5160,7 @@ public final class ru/pixnews/igdbclient/scheme/field/LanguageSupportField : jav
 	public static final field LANGUAGE Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
 	public static final field LANGUAGE_SUPPORT_TYPE Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageSupportField;
@@ -5118,6 +5173,7 @@ public final class ru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField :
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/LanguageSupportTypeField;
@@ -5140,6 +5196,7 @@ public final class ru/pixnews/igdbclient/scheme/field/MultiplayerModeField : jav
 	public static final field PLATFORM Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
 	public static final field SPLITSCREEN Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
 	public static final field SPLITSCREENONLINE Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/MultiplayerModeField;
@@ -5153,6 +5210,7 @@ public final class ru/pixnews/igdbclient/scheme/field/NetworkTypeField : java/la
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/NetworkTypeField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/NetworkTypeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/NetworkTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/NetworkTypeField;
@@ -5164,6 +5222,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformFamilyField : java
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformFamilyField;
@@ -5187,6 +5246,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformField : java/lang/
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformField;
 	public static final field VERSIONS Lru/pixnews/igdbclient/scheme/field/PlatformField;
 	public static final field WEBSITES Lru/pixnews/igdbclient/scheme/field/PlatformField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformField;
@@ -5202,6 +5262,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformLogoField : java/l
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformLogoField;
@@ -5215,6 +5276,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyFiel
 	public static final field DEVELOPER Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
 	public static final field MANUFACTURER Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionCompanyField;
@@ -5243,6 +5305,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionField : jav
 	public static final field STORAGE Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
 	public static final field SUMMARY Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionField;
@@ -5261,6 +5324,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDate
 	public static final field REGION Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field Y Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformVersionReleaseDateField;
@@ -5273,6 +5337,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlatformWebsiteField : jav
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
 	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlatformWebsiteField;
@@ -5287,6 +5352,7 @@ public final class ru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField : j
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
@@ -5301,6 +5367,7 @@ public final class ru/pixnews/igdbclient/scheme/field/RegionField : java/lang/En
 	public static final field IDENTIFIER Lru/pixnews/igdbclient/scheme/field/RegionField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/RegionField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/RegionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/RegionField;
@@ -5321,6 +5388,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ReleaseDateField : java/la
 	public static final field STATUS Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
 	public static final field Y Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ReleaseDateField;
@@ -5334,6 +5402,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField : j
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
 	public static final field NAME Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ReleaseDateStatusField;
@@ -5350,6 +5419,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ScreenshotField : java/lan
 	public static final field IMAGE_ID Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
 	public static final field WIDTH Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ScreenshotField;
@@ -5370,6 +5440,7 @@ public final class ru/pixnews/igdbclient/scheme/field/SearchField : java/lang/En
 	public static final field PUBLISHED_AT Lru/pixnews/igdbclient/scheme/field/SearchField;
 	public static final field TEST_DUMMY Lru/pixnews/igdbclient/scheme/field/SearchField;
 	public static final field THEME Lru/pixnews/igdbclient/scheme/field/SearchField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/SearchField;
@@ -5395,6 +5466,7 @@ public final class ru/pixnews/igdbclient/scheme/field/TestDummyField : java/lang
 	public static final field TEST_DUMMY Lru/pixnews/igdbclient/scheme/field/TestDummyField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/TestDummyField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/TestDummyField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/TestDummyField;
@@ -5409,6 +5481,7 @@ public final class ru/pixnews/igdbclient/scheme/field/ThemeField : java/lang/Enu
 	public static final field SLUG Lru/pixnews/igdbclient/scheme/field/ThemeField;
 	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/ThemeField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/ThemeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/ThemeField;
@@ -5422,6 +5495,7 @@ public final class ru/pixnews/igdbclient/scheme/field/WebsiteField : java/lang/E
 	public static final field ID Lru/pixnews/igdbclient/scheme/field/WebsiteField;
 	public static final field TRUSTED Lru/pixnews/igdbclient/scheme/field/WebsiteField;
 	public static final field URL Lru/pixnews/igdbclient/scheme/field/WebsiteField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/WebsiteField;
