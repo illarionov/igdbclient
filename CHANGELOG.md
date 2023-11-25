@@ -1,5 +1,18 @@
 # Change Log
 
+## Version 0.4
+
+_2023-11-25_
+
+* Add new endpoints: collection types, memberships and relations
+* Upgrade: Bump dependency versions
+  * Kotlin 1.9.21
+  * Kotlinx.serialization 1.6.1
+  * Ktor 2.3.6
+  * Wire 4.9.3
+  * AGP 8.1.4
+  * orgjson 20231013
+
 ## Version 0.3
 
 _2023-10-11_
