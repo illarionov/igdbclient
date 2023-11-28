@@ -11,6 +11,8 @@ import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
+// XXX: copy of the jvmMain implementation
+
 /**
  * Implementation of the error response parser received from Twitch server.
  *

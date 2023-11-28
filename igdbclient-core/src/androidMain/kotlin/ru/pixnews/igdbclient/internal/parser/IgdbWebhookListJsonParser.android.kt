@@ -12,6 +12,8 @@ import org.json.JSONTokener
 import ru.pixnews.igdbclient.model.IgdbWebhook
 import ru.pixnews.igdbclient.model.IgdbWebhookId
 
+// XXX: copy of the jvmMain implementation
+
 internal actual fun IgdbParser.igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook> {
     val response = source.readUtf8()
     val jsonArray = JSONTokener(response).nextValue() as? JSONArray ?: error("Malformed JSON")
