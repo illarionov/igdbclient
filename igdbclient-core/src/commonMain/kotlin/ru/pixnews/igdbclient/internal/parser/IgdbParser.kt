@@ -25,4 +25,5 @@ public object IgdbParser
 @InternalIgdbClientApi
 public expect fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse
 
+@InternalIgdbClientApi
 internal expect fun IgdbParser.igdbWebhookListJsonParser(source: BufferedSource): List<IgdbWebhook>

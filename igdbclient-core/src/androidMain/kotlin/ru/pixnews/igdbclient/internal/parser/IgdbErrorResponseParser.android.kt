@@ -12,6 +12,8 @@ import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 
+// XXX: copy of the jvmMain implementation
+
 /**
  * Implementation of the Igdb server response parser using the [org.json.JSONTokener]
  */

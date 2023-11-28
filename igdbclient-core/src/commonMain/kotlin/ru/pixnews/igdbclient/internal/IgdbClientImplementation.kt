@@ -6,6 +6,7 @@
 package ru.pixnews.igdbclient.internal
 
 import ru.pixnews.igdbclient.IgdbClient
+import ru.pixnews.igdbclient.IgdbDumpApi
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbWebhookApi
@@ -18,6 +19,9 @@ internal class IgdbClientImplementation(
 ) : IgdbClient {
     override val webhookApi: IgdbWebhookApi by lazy {
         IgdbWebhookApiImplementation(requestExecutor)
+    }
+    override val dumpApi: IgdbDumpApi by lazy {
+        IgdbDumpApiImplementation(requestExecutor)
     }
 
     override suspend fun <T : Any> execute(

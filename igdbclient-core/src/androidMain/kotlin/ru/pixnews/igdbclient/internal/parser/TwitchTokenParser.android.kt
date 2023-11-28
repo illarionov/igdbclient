@@ -11,6 +11,8 @@ import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.internal.model.TwitchToken
 
+// XXX: copy of the jvmMain implementation
+
 /**
  * Implementation of a parser for JSON responses received from the Twitch server during the Client Credentials
  * Grant Flow.

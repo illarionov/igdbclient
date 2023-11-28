@@ -113,6 +113,8 @@ public fun <C : IgdbHttpEngineConfig> IgdbClient(
  */
 public interface IgdbClient {
     public val webhookApi: IgdbWebhookApi
+    public val dumpApi: IgdbDumpApi
+        get() = error("Not implemented")
 
     /**
      * General method for making requests to the igdb server.
