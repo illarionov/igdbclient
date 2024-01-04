@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -20,6 +20,7 @@ import io.kotest.matchers.shouldBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import okhttp3.Headers.Companion.headersOf
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -29,7 +30,7 @@ import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.IgdbWebhookApi
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants
+import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
@@ -90,10 +91,11 @@ abstract class BaseIgdbWebhookApiImplementationTest {
             updatedAt = 1_688_017_855,
         )
 
-        fun createSuccessMockResponse(response: String = SINGLE_WEBHOOK_RESPONSE) = MockResponse()
-            .setResponseCode(200)
-            .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
-            .setBody(response)
+        fun createSuccessMockResponse(response: String = SINGLE_WEBHOOK_RESPONSE) = MockResponse(
+            code = 200,
+            headers = headersOf("Content-Type", MediaType.APPLICATION_JSON),
+            body = response,
+        )
     }
 
     @Nested
@@ -222,10 +224,11 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     inner class TestWebhookTest {
         val api = startMockServerCreateClient { request ->
             if (request.path == "/v4/games/webhooks/test/7138?entityId=12") {
-                MockResponse()
-                    .setResponseCode(200)
-                    .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
-                    .setBody("OK")
+                MockResponse(
+                    code = 200,
+                    headers = headersOf("Content-Type", MediaType.APPLICATION_JSON),
+                    body = "OK",
+                )
             } else {
                 null
             }

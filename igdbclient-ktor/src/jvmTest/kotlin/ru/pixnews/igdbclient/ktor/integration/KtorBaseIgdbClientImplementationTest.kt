@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -9,7 +9,7 @@ import io.ktor.client.HttpClient
 import mockwebserver3.SocketPolicy
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.EnumSource
+import org.junit.jupiter.params.provider.MethodSource
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.ktor.IgdbKtorEngine
@@ -41,14 +41,7 @@ abstract class KtorBaseIgdbClientImplementationTest : BaseIgdbClientImplementati
 
     @Suppress("BACKTICKS_PROHIBITED")
     @ParameterizedTest
-    @EnumSource(
-        value = SocketPolicy::class,
-        names = [
-            "DISCONNECT_AFTER_REQUEST",
-            "DISCONNECT_DURING_RESPONSE_BODY",
-            "NO_RESPONSE",
-        ],
-    )
+    @MethodSource("ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies")
     @Disabled("Flacky and slow")
     override fun `Implementation should throw correct exception on network error`(policy: SocketPolicy) {
         super.`Implementation should throw correct exception on network error`(policy)
