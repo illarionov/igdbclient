@@ -275,6 +275,11 @@
             <pgp value="1D2C7EF8ADA0F794B58C7C63436902AF59EDF60E"/>
          </artifact>
       </component>
+      <component group="dev.equo.ide" name="solstice" version="1.7.4">
+         <artifact name="solstice-1.7.4.jar">
+            <pgp value="1D2C7EF8ADA0F794B58C7C63436902AF59EDF60E"/>
+         </artifact>
+      </component>
       <component group="dev.zacsweers.kctfork" name="core" version="0.3.2">
          <artifact name="core-0.3.2.jar">
             <pgp value="719F7C29985A8E95F58F47194D8159D6A1159B69"/>

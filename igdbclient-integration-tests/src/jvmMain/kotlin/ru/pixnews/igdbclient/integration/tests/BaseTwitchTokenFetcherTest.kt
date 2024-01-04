@@ -19,6 +19,7 @@ import io.kotest.matchers.types.shouldBeInstanceOf
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
@@ -113,19 +114,17 @@ abstract class BaseTwitchTokenFetcherTest {
     }
 
     companion object {
-        fun createSuccessMockResponse() = MockResponse()
-            .setResponseCode(200)
-            .setHeader("Content-Type", MediaType.APPLICATION_JSON)
-            .setBody(
-                """{"access_token":"123","expires_in":5066399,"token_type":"bearer"}""",
-            )
+        fun createSuccessMockResponse() = MockResponse(
+            code = 200,
+            headers = Headers.headersOf("Content-Type", MediaType.APPLICATION_JSON),
+            body = """{"access_token":"123","expires_in":5066399,"token_type":"bearer"}""",
+        )
 
-        fun createError403IncorrectClientSecretResponse() = MockResponse()
-            .setResponseCode(403)
-            .setHeader("Content-Type", MediaType.APPLICATION_JSON)
-            .setBody(
-                """{"status":403,"message":"invalid client secret"}""",
-            )
+        fun createError403IncorrectClientSecretResponse() = MockResponse(
+            code = 403,
+            headers = Headers.headersOf("Content-Type", MediaType.APPLICATION_JSON),
+            body = """{"status":403,"message":"invalid client secret"}""",
+        )
 
         private data class TestCredentials(
             override val clientId: String = "test_client_id",

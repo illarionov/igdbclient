@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -13,6 +13,7 @@ import io.kotest.matchers.shouldBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
@@ -23,7 +24,7 @@ import ru.pixnews.igdbclient.IgdbDumpApi
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.getDump
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants
+import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
@@ -101,10 +102,11 @@ abstract class BaseIgdbDumpApiImplementationTest {
             ),
         )
 
-        fun createSuccessMockResponse(response: String = DUMPS_RESPONSE) = MockResponse()
-            .setResponseCode(200)
-            .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
-            .setBody(response)
+        fun createSuccessMockResponse(response: String = DUMPS_RESPONSE) = MockResponse(
+            code = 200,
+            headers = Headers.headersOf("Content-Type", MediaType.APPLICATION_JSON),
+            body = response,
+        )
 
         fun RecordedRequest.validateRequestParams() {
             method shouldBe "GET"

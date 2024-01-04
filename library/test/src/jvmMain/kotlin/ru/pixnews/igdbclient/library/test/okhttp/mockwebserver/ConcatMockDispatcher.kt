@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -8,6 +8,7 @@ package ru.pixnews.igdbclient.library.test.okhttp.mockwebserver
 import mockwebserver3.Dispatcher
 import mockwebserver3.MockResponse
 import mockwebserver3.RecordedRequest
+import okhttp3.Headers.Companion.headersOf
 
 public open class ConcatMockDispatcher(
     private val producers: List<(RecordedRequest) -> MockResponse?>,
@@ -25,9 +26,10 @@ public open class ConcatMockDispatcher(
 
     public companion object {
         public val DEFAULT_MOCK_RESPONSE: MockResponse
-            get() = MockResponse()
-                .setResponseCode(404)
-                .setHeader("Content-Type", "application/json")
-                .setBody("Not Found")
+            get() = MockResponse(
+                code = 404,
+                headers = headersOf("Content-Type", "application/json"),
+                body = "Not Found",
+            )
     }
 }

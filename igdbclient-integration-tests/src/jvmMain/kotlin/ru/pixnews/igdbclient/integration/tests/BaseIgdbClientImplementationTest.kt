@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -23,11 +23,14 @@ import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
 import mockwebserver3.SocketPolicy
+import mockwebserver3.SocketPolicy.DisconnectAfterRequest
+import mockwebserver3.SocketPolicy.DisconnectDuringResponseBody
+import mockwebserver3.SocketPolicy.NoResponse
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.EnumSource
+import org.junit.jupiter.params.provider.MethodSource
 import ru.pixnews.igdbclient.IgdbClient
 import ru.pixnews.igdbclient.IgdbEndpoint
 import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
@@ -46,7 +49,7 @@ import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.createSuccessMockResponse
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import ru.pixnews.igdbclient.model.Game
@@ -75,7 +78,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should correctly parse success HTTP 200 response`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games.pb") createSuccessMockResponse() else null
+            if (request.path == "/v4/games.pb") successMockResponseBuilder().build() else null
         }
 
         val response = api.getGames(createTestSuccessQuery())
@@ -86,7 +89,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should send correct headers`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            createSuccessMockResponse()
+            successMockResponseBuilder().build()
         }
 
         api.getGames(createTestSuccessQuery())
@@ -109,12 +112,13 @@ abstract class BaseIgdbClientImplementationTest {
             authToken = null,
         ) { request ->
             when {
-                request.getHeader("Authorization") != "Bearer ${Fixtures.TEST_TOKEN}" -> MockResponse()
-                    .setResponseCode(401)
+                request.headers["Authorization"] != "Bearer ${Fixtures.TEST_TOKEN}" -> MockResponse.Builder()
+                    .code(401)
                     .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
-                    .setBody(Fixtures.MockIgdbResponseContent.authFailure)
+                    .body(Fixtures.MockIgdbResponseContent.authFailure)
+                    .build()
 
-                else -> createSuccessMockResponse()
+                else -> successMockResponseBuilder().build()
             }
         }
 
@@ -129,10 +133,11 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should throw correct exception on HTTP 400, syntax error`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            MockResponse()
-                .setResponseCode(400)
+            MockResponse.Builder()
+                .code(400)
                 .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_JSON)
-                .setBody(Fixtures.MockIgdbResponseContent.syntaxError)
+                .body(Fixtures.MockIgdbResponseContent.syntaxError)
+                .build()
         }
 
         val exception: IgdbHttpException = shouldThrow {
@@ -173,10 +178,11 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should throw correct exception on HTTP 200, unparsable response`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            MockResponse()
-                .setResponseCode(200)
+            MockResponse.Builder()
+                .code(200)
                 .setHeader("Content-Type", IgdbClientConstants.MediaType.APPLICATION_PROTOBUF)
-                .setBody("Not really a protobuf")
+                .body("Not really a protobuf")
+                .build()
         }
 
         shouldThrow<IgdbApiFailureException> {
@@ -185,19 +191,12 @@ abstract class BaseIgdbClientImplementationTest {
     }
 
     @ParameterizedTest
-    @EnumSource(
-        value = SocketPolicy::class,
-        names = [
-            "DISCONNECT_AFTER_REQUEST",
-            "DISCONNECT_DURING_RESPONSE_BODY",
-            "NO_RESPONSE",
-        ],
-    )
+    @MethodSource("ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies")
     open fun `Implementation should throw correct exception on network error`(
         policy: SocketPolicy,
     ) = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            createSuccessMockResponse().setSocketPolicy(policy)
+            successMockResponseBuilder().socketPolicy(policy).build()
         }
 
         shouldThrowExactly<IgdbException> {
@@ -209,8 +208,9 @@ abstract class BaseIgdbClientImplementationTest {
     fun `Implementation should correctly parse multiquery responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
             if (request.path == "/v4/multiquery.pb") {
-                createSuccessMockResponse()
-                    .setBody(Fixtures.MockIgdbResponseContent.multiQueryPlatformsCountPsGames)
+                successMockResponseBuilder()
+                    .body(Fixtures.MockIgdbResponseContent.multiQueryPlatformsCountPsGames)
+                    .build()
             } else {
                 null
             }
@@ -257,8 +257,9 @@ abstract class BaseIgdbClientImplementationTest {
     fun `Implementation should correctly parse count() responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
             if (request.path == "/v4/games/count.pb") {
-                createSuccessMockResponse()
-                    .setBody(Fixtures.MockIgdbResponseContent.countGames)
+                successMockResponseBuilder()
+                    .body(Fixtures.MockIgdbResponseContent.countGames)
+                    .build()
             } else {
                 null
             }
@@ -290,5 +291,12 @@ abstract class BaseIgdbClientImplementationTest {
             fields("*")
             limit(5)
         }
+
+        @JvmStatic
+        fun networkErrorSocketPolicies(): List<SocketPolicy> = listOf(
+            DisconnectAfterRequest,
+            DisconnectDuringResponseBody,
+            NoResponse,
+        )
     }
 }

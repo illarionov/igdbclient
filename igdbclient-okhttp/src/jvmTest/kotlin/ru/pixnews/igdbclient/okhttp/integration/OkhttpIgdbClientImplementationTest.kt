@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
@@ -21,7 +21,7 @@ import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
 import ru.pixnews.igdbclient.library.test.Fixtures
 import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.createSuccessMockResponse
+import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
 import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
 import ru.pixnews.igdbclient.okhttp.IgdbOkhttpEngine
 import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
@@ -56,8 +56,9 @@ class OkhttpIgdbClientImplementationTest : BaseIgdbClientImplementationTest() {
                 )
                 .build(),
         ) {
-            createSuccessMockResponse()
-                .setBodyDelay(50, TimeUnit.MILLISECONDS)
+            successMockResponseBuilder()
+                .bodyDelay(50, TimeUnit.MILLISECONDS)
+                .build()
         }
 
         val request = backgroundScope.launch {
