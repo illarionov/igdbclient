@@ -1,5 +1,17 @@
 # Change Log
 
+## Version 0.5
+
+_2023-01-05_
+
+* New: experimental Dumps API support
+* Upgrade: Bump dependency versions
+  * Kotlin 1.9.22
+  * Kotlinx.serialization 1.6.2
+  * Ktor 2.3.7
+  * Okio 3.7.0
+  * AGP 8.2.1
+
 ## Version 0.4
 
 _2023-11-25_
