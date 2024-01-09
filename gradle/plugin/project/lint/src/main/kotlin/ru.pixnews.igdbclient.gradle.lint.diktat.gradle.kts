@@ -3,6 +3,7 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+import com.saveourtool.diktat.plugin.gradle.tasks.DiktatTaskBase
 import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.excludeNonLintedDirectories
 
@@ -10,7 +11,7 @@ import ru.pixnews.igdbclient.gradle.lint.excludeNonLintedDirectories
  * Convention plugin that configures Diktat
  */
 plugins {
-    id("org.cqfn.diktat.diktat-gradle-plugin")
+    id("com.saveourtool.diktat")
 }
 
 diktat {
@@ -20,6 +21,13 @@ diktat {
         include("**/*.gradle.kts")
         excludeNonLintedDirectories()
     }
-    githubActions = false
+    reporters {
+        plain()
+        sarif()
+    }
     debug = false
+}
+
+tasks.withType<DiktatTaskBase>().configureEach {
+    notCompatibleWithConfigurationCache("invocation of 'Task.project' at execution time is unsupported")
 }
