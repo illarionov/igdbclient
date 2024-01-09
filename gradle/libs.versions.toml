@@ -6,11 +6,11 @@ agp = "8.2.1"
 assertk = "0.28.0"
 atomicfu = '0.23.1'
 detekt = "1.23.4"
-diktat = "1.2.5"
+diktat = "2.0.0"
 dokka = "1.9.10"
 junit5 = "5.10.1"
 junit-platform-launcher = "1.10.1"
-gradle-maven-publish-plugin = "0.26.0"
+gradle-maven-publish-plugin = "0.27.0"
 kermit = "1.2.3"
 kotest = "5.8.0"
 kotlin = "1.9.22"
@@ -80,7 +80,7 @@ agp-plugin-api = { module = "com.android.tools.build:gradle-api", version.ref = 
 atomicfu-plugin = { module = "org.jetbrains.kotlinx:atomicfu-gradle-plugin", version.ref = "atomicfu" }
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
 detekt-plugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
-diktat-plugin = { group = "org.cqfn.diktat", name = "diktat-gradle-plugin", version.ref = "diktat" }
+diktat-plugin = { group = "com.saveourtool.diktat", name = "diktat-gradle-plugin", version.ref = "diktat" }
 dokka-plugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
 gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "gradle-maven-publish-plugin" }
 kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -91,15 +91,7 @@ wire-plugin = { group = "com.squareup.wire", name = "wire-gradle-plugin", versio
 [plugins]
 agp = { id = "com.android.tools.build:gradle", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-atomicfu = { id = "kotlinx-atomicfu", version.ref = "atomicfu" }
-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-diktat = { id = "org.cqfn.diktat.diktat-gradle-plugin", version.ref = "diktat" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
-gradle-maven-publish-plugin = { id = "com.vanniktech.maven.publish", version.ref = "gradle-maven-publish-plugin" }
 gradle-maven-publish-plugin-base = { id = "com.vanniktech.maven.publish.base", version.ref = "gradle-maven-publish-plugin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlinx-binary-compatibility-validator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "kotlinx-binary-compatibility-validator" }
-kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
-wire = { id = "com.squareup.wire", version.ref = "wire" }

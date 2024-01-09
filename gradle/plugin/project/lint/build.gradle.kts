@@ -10,7 +10,6 @@ plugins {
 group = "ru.pixnews.igdbclient.gradle.lint"
 
 dependencies {
-    implementation(project(":utils"))
     implementation(libs.agp.plugin.api)
     implementation(libs.detekt.plugin)
     implementation(libs.diktat.plugin)

@@ -3,8 +3,8 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+import gradle.kotlin.dsl.accessors._1ffbe1ad02abacea25c9328b2ef9c24c.versionCatalogs
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
 
 /*
  * Convention plugin that configures kotlinx-atomicfu in projects with the Kotlin Multiplatform plugin
@@ -15,7 +15,7 @@ plugins.withId("org.jetbrains.kotlin.multiplatform") {
     the<KotlinMultiplatformExtension>().sourceSets {
         getByName("commonTest") {
             dependencies {
-                implementation(versionCatalog.findLibrary("kotlinx-atomicfu").orElseThrow())
+                implementation(versionCatalogs.named("libs").findLibrary("kotlinx-atomicfu").orElseThrow())
             }
         }
     }

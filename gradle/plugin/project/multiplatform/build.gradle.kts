@@ -11,7 +11,6 @@ group = "ru.pixnews.igdbclient.gradle"
 
 dependencies {
     implementation(project(":lint"))
-    implementation(project(":utils"))
     implementation(libs.agp.plugin.api)
     implementation(libs.atomicfu.plugin)
     implementation(libs.kotlin.plugin)

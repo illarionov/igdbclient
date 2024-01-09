@@ -4,7 +4,6 @@
  */
 
 import io.gitlab.arturbosch.detekt.Detekt
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
 import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
 
@@ -48,9 +47,6 @@ val detektCheck = tasks.register("detektCheck", Detekt::class) {
     }
 }
 
-// https://github.com/gradle/gradle/issues/22468
-if (project.name != "gradle-kotlin-dsl-accessors") {
-    dependencies {
-        detektPlugins(versionCatalog.findLibrary("detekt.formatting").get())
-    }
+dependencies {
+    detektPlugins(versionCatalogs.named("libs").findLibrary("detekt.formatting").get())
 }

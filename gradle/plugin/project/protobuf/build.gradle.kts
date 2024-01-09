@@ -17,7 +17,6 @@ tasks.withType<Test> {
 }
 
 dependencies {
-    implementation(project(":utils"))
     implementation(libs.wire.plugin)
     api(libs.wire.schema)
     implementation(libs.kotlinpoet) {
