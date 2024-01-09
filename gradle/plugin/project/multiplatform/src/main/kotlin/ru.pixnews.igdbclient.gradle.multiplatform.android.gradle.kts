@@ -6,7 +6,6 @@
 import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.kotlin.dsl.apply
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
 
 /*
  * Convention plugin that configures Android target in projects with the Kotlin Multiplatform plugin
@@ -36,9 +35,9 @@ kotlin {
 }
 
 extensions.configure<LibraryExtension>("android") {
-    compileSdk = versionCatalog.findVersion("androidCompileSdk").get().displayName.toInt()
+    compileSdk = versionCatalogs.named("libs").findVersion("androidCompileSdk").get().displayName.toInt()
     defaultConfig {
-        minSdk = versionCatalog.findVersion("androidMinSdk").get().displayName.toInt()
+        minSdk = versionCatalogs.named("libs").findVersion("androidMinSdk").get().displayName.toInt()
     }
     compileOptions {
         targetCompatibility = JavaVersion.VERSION_11

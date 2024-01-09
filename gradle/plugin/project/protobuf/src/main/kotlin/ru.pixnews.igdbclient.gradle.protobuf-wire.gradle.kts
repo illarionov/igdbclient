@@ -3,7 +3,6 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
 import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorFactory
 
 plugins {
@@ -11,7 +10,7 @@ plugins {
 }
 
 dependencies {
-    add("implementation", versionCatalog.findLibrary("wire.runtime").orElseThrow())
+    add("implementation", versionCatalogs.named("libs").findLibrary("wire.runtime").orElseThrow())
 }
 
 wire {

@@ -18,7 +18,6 @@ dependencyResolutionManagement {
     }
 }
 
-include("utils")
 include("multiplatform")
 include("lint")
 include("protobuf")

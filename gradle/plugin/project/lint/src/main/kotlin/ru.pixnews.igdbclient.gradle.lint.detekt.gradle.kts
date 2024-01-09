@@ -4,7 +4,6 @@
  */
 
 import io.gitlab.arturbosch.detekt.Detekt
-import ru.pixnews.igdbclient.gradle.base.versionCatalog
 import ru.pixnews.igdbclient.gradle.lint.configRootDir
 import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
 
@@ -46,4 +45,8 @@ val detektCheck = tasks.register("detektCheck", Detekt::class) {
         txt.outputLocation.set(file("build/reports/detekt/report.txt"))
         sarif.outputLocation.set(file("build/reports/detekt/report.sarif"))
     }
+}
+
+dependencies {
+    detektPlugins(versionCatalogs.named("libs").findLibrary("detekt.formatting").get())
 }
