@@ -47,10 +47,3 @@ val detektCheck = tasks.register("detektCheck", Detekt::class) {
         sarif.outputLocation.set(file("build/reports/detekt/report.sarif"))
     }
 }
-
-// https://github.com/gradle/gradle/issues/22468
-if (project.name != "gradle-kotlin-dsl-accessors") {
-    dependencies {
-        detektPlugins(versionCatalog.findLibrary("detekt.formatting").get())
-    }
-}
