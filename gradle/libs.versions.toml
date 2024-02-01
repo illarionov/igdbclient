@@ -4,7 +4,7 @@ androidCompileSdk = "33"
 
 agp = "8.2.1"
 assertk = "0.28.0"
-atomicfu = '0.23.1'
+atomicfu = '0.23.2'
 detekt = "1.23.4"
 diktat = "2.0.0"
 dokka = "1.9.10"
