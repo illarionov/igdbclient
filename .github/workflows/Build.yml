@@ -43,12 +43,12 @@ jobs:
           java-version: '21'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/actions/setup-gradle@v3
         with:
           dependency-graph: generate
 
       - name: Restore Kotlin Native Cache
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}
@@ -118,12 +118,12 @@ jobs:
           java-version: '21'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/actions/setup-gradle@v3
         with:
           dependency-graph: generate
 
       - name: Restore Kotlin Native Cache
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: ~/.konan
           key: ${{ runner.os }}-konan-${{ hashFiles('**/*.gradle.kts', 'buildSrc') }}

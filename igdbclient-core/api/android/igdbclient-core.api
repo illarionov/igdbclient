@@ -1411,15 +1411,6 @@ public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto
 public final class ru/pixnews/igdbclient/internal/model/InternalTwitchTokenProto$Companion {
 }
 
-public final class ru/pixnews/igdbclient/internal/parser/IgdbErrorResponseParser_androidKt {
-}
-
-public final class ru/pixnews/igdbclient/internal/parser/TwitchTokenErrorResponseParser_androidKt {
-}
-
-public final class ru/pixnews/igdbclient/internal/parser/TwitchTokenParser_androidKt {
-}
-
 public final class ru/pixnews/igdbclient/model/AgeRating : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/AgeRating$Companion;

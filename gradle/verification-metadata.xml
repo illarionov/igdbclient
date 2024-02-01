@@ -340,6 +340,11 @@
             <pgp value="78AB011FA6E5907950EA3E2747DCFC2A59F59B5B"/>
          </artifact>
       </component>
+      <component group="io.outfoxx" name="swiftpoet" version="1.6.4">
+         <artifact name="swiftpoet-1.6.4.jar">
+            <pgp value="78AB011FA6E5907950EA3E2747DCFC2A59F59B5B"/>
+         </artifact>
+      </component>
       <component group="io.perfmark" name="perfmark-api" version="0.23.0">
          <artifact name="perfmark-api-0.23.0.jar">
             <pgp value="C6F7D1C804C821F49AF3BFC13AD93C3C677A106E"/>
