@@ -28,6 +28,10 @@ diktat {
     debug = false
 }
 
+tasks.named("mergeDiktatReports").configure {
+    enabled = false
+}
+
 tasks.withType<DiktatTaskBase>().configureEach {
     notCompatibleWithConfigurationCache("invocation of 'Task.project' at execution time is unsupported")
 }
