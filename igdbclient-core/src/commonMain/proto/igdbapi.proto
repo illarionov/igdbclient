@@ -609,7 +609,7 @@ message Game {
     repeated Game expansions = 13;
     repeated ExternalGame external_games = 14;
     google.protobuf.Timestamp first_release_date = 15;
-    int32 follows = 16;
+    int32 follows = 16 [deprecated = true];
     Franchise franchise = 17;
     repeated Franchise franchises = 18;
     repeated GameEngine game_engines = 19;
