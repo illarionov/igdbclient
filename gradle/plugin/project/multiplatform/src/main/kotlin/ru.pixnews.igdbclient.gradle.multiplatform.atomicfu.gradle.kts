@@ -3,7 +3,6 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
-import gradle.kotlin.dsl.accessors._1ffbe1ad02abacea25c9328b2ef9c24c.versionCatalogs
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 /*
