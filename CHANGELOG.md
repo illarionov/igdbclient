@@ -2,7 +2,7 @@
 
 ## Version 0.5
 
-_2023-01-05_
+_2024-01-05_
 
 * New: experimental Dumps API support
 * Upgrade: Bump dependency versions
