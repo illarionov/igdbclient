@@ -232,6 +232,11 @@
             <pgp value="31BAE2E51D95E0F8AD9B7BCC40A3C4432BD7308C"/>
          </artifact>
       </component>
+      <component group="com.gradle" name="develocity-gradle-plugin" version="3.17.2">
+         <artifact name="develocity-gradle-plugin-3.17.2.jar">
+            <pgp value="7B79ADD11F8A779FE90FD3D0893A028475557671"/>
+         </artifact>
+      </component>
       <component group="com.pinterest" name="ktlint" version="0.46.1">
          <artifact name="ktlint-0.46.1.jar">
             <pgp value="ADBC987D1A7B91DB6B0AAA81995EFBF4A3D20BEB"/>
