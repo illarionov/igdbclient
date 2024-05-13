@@ -3,6 +3,8 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
+
 package ru.pixnews.igdbclient.okhttp.integration
 
 import io.kotest.matchers.shouldBe
@@ -13,6 +15,7 @@ import mockwebserver3.MockResponse
 import mockwebserver3.RecordedRequest
 import okhttp3.Call
 import okhttp3.EventListener
+import okhttp3.ExperimentalOkHttpApi
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import org.junit.jupiter.api.Test

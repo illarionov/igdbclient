@@ -3,9 +3,12 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
+
 package ru.pixnews.igdbclient.okhttp
 
 import kotlinx.coroutines.CoroutineDispatcher
+import okhttp3.ExperimentalOkHttpApi
 import ru.pixnews.igdbclient.integration.tests.BaseRequestExecutorTest
 import ru.pixnews.igdbclient.internal.RequestExecutor
 import ru.pixnews.igdbclient.internal.model.IgdbAuthToken

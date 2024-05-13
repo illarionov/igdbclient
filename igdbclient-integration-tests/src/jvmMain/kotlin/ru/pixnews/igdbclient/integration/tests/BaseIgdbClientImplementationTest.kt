@@ -3,6 +3,7 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress(
     "FunctionName",
     "KDOC_NO_EMPTY_TAGS",
@@ -26,6 +27,7 @@ import mockwebserver3.SocketPolicy
 import mockwebserver3.SocketPolicy.DisconnectAfterRequest
 import mockwebserver3.SocketPolicy.DisconnectDuringResponseBody
 import mockwebserver3.SocketPolicy.NoResponse
+import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
