@@ -3,6 +3,7 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress("FunctionName", "MISSING_KDOC_CLASS_ELEMENTS", "KDOC_NO_EMPTY_TAGS", "MISSING_KDOC_ON_FUNCTION")
 
 package ru.pixnews.igdbclient.integration.tests
@@ -12,6 +13,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension

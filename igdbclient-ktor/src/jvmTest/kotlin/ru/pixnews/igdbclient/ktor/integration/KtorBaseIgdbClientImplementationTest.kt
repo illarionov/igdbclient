@@ -3,10 +3,13 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
+
 package ru.pixnews.igdbclient.ktor.integration
 
 import io.ktor.client.HttpClient
 import mockwebserver3.SocketPolicy
+import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource

@@ -3,6 +3,7 @@
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress("FunctionNaming", "MagicNumber")
 
 package ru.pixnews.igdbclient.integration.tests
@@ -13,6 +14,7 @@ import io.kotest.matchers.shouldBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
+import okhttp3.ExperimentalOkHttpApi
 import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.DisplayName
