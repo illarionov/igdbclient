@@ -53,6 +53,8 @@ public final class ru/pixnews/igdbclient/IgdbClientKt {
 	public static final fun getPlatformWebsites (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatforms (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlayerPerspectives (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getPopularityPrimitives (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getPopularityTypes (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getRegions (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getReleaseDateStatuses (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getReleaseDates (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -134,6 +136,8 @@ public final class ru/pixnews/igdbclient/IgdbEndpoint$Companion {
 	public final fun getPLATFORM_VERSION_RELEASE_DATE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_WEBSITE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getPLAYER_PERSPECTIVE ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getPOPULARITY_PRIMITIVE ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getPOPULARITY_TYPE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getREGION ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getRELEASE_DATE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getRELEASE_DATE_STATUS ()Lru/pixnews/igdbclient/IgdbEndpoint;
@@ -1202,6 +1206,37 @@ public final class ru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDsl : r
 
 public final class ru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDslKt {
 	public static final fun getField (Lru/pixnews/igdbclient/model/PlayerPerspective$Companion;)Lru/pixnews/igdbclient/dsl/field/PlayerPerspectiveFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PopularityPrimitiveFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getCalculated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPopularity_source ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPopularity_type ()Lru/pixnews/igdbclient/dsl/field/PopularityTypeFieldDsl;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getValue ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PopularityPrimitiveFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PopularityPrimitive$Companion;)Lru/pixnews/igdbclient/dsl/field/PopularityPrimitiveFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PopularityTypeFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getPopularity_source ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/PopularityTypeFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/PopularityType$Companion;)Lru/pixnews/igdbclient/dsl/field/PopularityTypeFieldDsl;
 }
 
 public final class ru/pixnews/igdbclient/dsl/field/RegionFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -4073,6 +4108,112 @@ public final class ru/pixnews/igdbclient/model/PlayerPerspectiveResult : com/squ
 public final class ru/pixnews/igdbclient/model/PlayerPerspectiveResult$Companion {
 }
 
+public final class ru/pixnews/igdbclient/model/PopularityPrimitive : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularityPrimitive$Companion;
+	public fun <init> ()V
+	public fun <init> (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityPrimitive;JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCalculated_at ()Ljava/time/Instant;
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getGame_id ()I
+	public final fun getId ()J
+	public final fun getPopularity_source ()I
+	public final fun getPopularity_type ()Lru/pixnews/igdbclient/model/PopularityType;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public final fun getValue_ ()D
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityPrimitive$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityPrimitiveResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularityPrimitiveResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityPrimitiveResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityPrimitiveResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityPrimitiveResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPopularityprimitives ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityPrimitiveResult$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularityType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityType;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityType;JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getPopularity_source ()Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityType$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum$Companion;
+	public static final field IGDB Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public static final field POPULARITYTYPE_POPULARITY_SOURCE_NULL Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public static final field TWITCH Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public static fun values ()[Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum$Companion {
+	public final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularityTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityTypeResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPopularitytypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularityTypeResult$Companion {
+}
+
 public final class ru/pixnews/igdbclient/model/Region : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/Region$Companion;
@@ -5382,6 +5523,37 @@ public final class ru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField : j
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
 	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PlayerPerspectiveField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CALCULATED_AT Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field GAME_ID Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field POPULARITY_SOURCE Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field POPULARITY_TYPE Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field VALUE Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PopularityPrimitiveField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/PopularityTypeField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static final field NAME Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static final field POPULARITY_SOURCE Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/PopularityTypeField;
 }
 
 public final class ru/pixnews/igdbclient/scheme/field/RegionField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
