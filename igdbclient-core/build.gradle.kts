@@ -12,7 +12,7 @@ plugins {
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
     id("ru.pixnews.igdbclient.gradle.multiplatform.publish")
     id("ru.pixnews.igdbclient.gradle.multiplatform.test")
-    id("ru.pixnews.igdbclient.gradle.protobuf-wire")
+    id("ru.pixnews.igdbclient.gradle.protobuf.igdb.wire")
 }
 
 group = "ru.pixnews.igdbclient"
