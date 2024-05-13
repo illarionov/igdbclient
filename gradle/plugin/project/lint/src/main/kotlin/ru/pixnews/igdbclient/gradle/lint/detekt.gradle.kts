@@ -1,11 +1,13 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
+ * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
  * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
  */
 
+package ru.pixnews.igdbclient.gradle.lint
+
 import io.gitlab.arturbosch.detekt.Detekt
-import ru.pixnews.igdbclient.gradle.lint.configRootDir
-import ru.pixnews.igdbclient.gradle.lint.lintedFileTree
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.register
 
 /*
  * Convention plugin that creates and configures task designated to run Detekt static code analyzer
