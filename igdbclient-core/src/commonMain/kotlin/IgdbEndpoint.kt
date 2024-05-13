@@ -102,6 +102,10 @@ import ru.pixnews.igdbclient.model.PlatformWebsite
 import ru.pixnews.igdbclient.model.PlatformWebsiteResult
 import ru.pixnews.igdbclient.model.PlayerPerspective
 import ru.pixnews.igdbclient.model.PlayerPerspectiveResult
+import ru.pixnews.igdbclient.model.PopularityPrimitive
+import ru.pixnews.igdbclient.model.PopularityPrimitiveResult
+import ru.pixnews.igdbclient.model.PopularityType
+import ru.pixnews.igdbclient.model.PopularityTypeResult
 import ru.pixnews.igdbclient.model.Region
 import ru.pixnews.igdbclient.model.RegionResult
 import ru.pixnews.igdbclient.model.ReleaseDate
@@ -557,6 +561,24 @@ public open class IgdbEndpoint<out R : Any>(
             "player_perspectives",
             PlayerPerspectiveResult.ADAPTER::decode,
             PlayerPerspective.ADAPTER::decode,
+        )
+
+        /**
+         * Popularity primitive
+         */
+        public val POPULARITY_PRIMITIVE: IgdbEndpoint<PopularityPrimitiveResult> = IgdbEndpoint(
+            "popularity_primitive",
+            PopularityPrimitiveResult.ADAPTER::decode,
+            PopularityPrimitive.ADAPTER::decode,
+        )
+
+        /**
+         * Popularity type
+         */
+        public val POPULARITY_TYPE: IgdbEndpoint<PopularityTypeResult> = IgdbEndpoint(
+            "popularity_type",
+            PopularityTypeResult.ADAPTER::decode,
+            PopularityType.ADAPTER::decode,
         )
 
         /**
