@@ -5,21 +5,9 @@
 
 package ru.pixnews.igdbclient.gradle.multiplatform
 
-import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.the
-import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
-
 /*
  * Convention plugin that configures kotlinx-atomicfu in projects with the Kotlin Multiplatform plugin
  */
 plugins.withId("org.jetbrains.kotlin.multiplatform") {
-    apply(plugin = "kotlinx-atomicfu")
-
-    the<KotlinMultiplatformExtension>().sourceSets {
-        getByName("commonTest") {
-            dependencies {
-                implementation(versionCatalogs.named("libs").findLibrary("kotlinx-atomicfu").orElseThrow())
-            }
-        }
-    }
+    apply(plugin = "org.jetbrains.kotlinx.atomicfu")
 }
