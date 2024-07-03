@@ -231,7 +231,7 @@ class RealKtorNetworkTestClient {
     fun testPopularityPrimitives() = runBlocking {
         val popularityPrimitives = client.getPopularityPrimitives {
             fields(PopularityPrimitive.field.all)
-            where("${PopularityPrimitiveField.GAME_ID} == 133236")
+            where("${PopularityPrimitiveField.GAME_ID} = 133236")
         }
         logger.i { "popularity primitives: $popularityPrimitives" }
 

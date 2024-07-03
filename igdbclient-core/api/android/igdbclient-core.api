@@ -4112,17 +4112,17 @@ public final class ru/pixnews/igdbclient/model/PopularityPrimitive : com/squareu
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PopularityPrimitive$Companion;
 	public fun <init> ()V
-	public fun <init> (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityPrimitive;JILru/pixnews/igdbclient/model/PopularityType;IDLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
+	public fun <init> (JILru/pixnews/igdbclient/model/PopularityType;Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JILru/pixnews/igdbclient/model/PopularityType;Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JILru/pixnews/igdbclient/model/PopularityType;Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityPrimitive;JILru/pixnews/igdbclient/model/PopularityType;Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityPrimitive;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCalculated_at ()Ljava/time/Instant;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getGame_id ()I
 	public final fun getId ()J
-	public final fun getPopularity_source ()I
+	public final fun getPopularity_source ()Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
 	public final fun getPopularity_type ()Lru/pixnews/igdbclient/model/PopularityType;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public final fun getValue_ ()D
@@ -4154,20 +4154,36 @@ public final class ru/pixnews/igdbclient/model/PopularityPrimitiveResult : com/s
 public final class ru/pixnews/igdbclient/model/PopularityPrimitiveResult$Companion {
 }
 
+public final class ru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum : java/lang/Enum, com/squareup/wire/WireEnum {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum$Companion;
+	public static final field IGDB Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+	public static final field POPULARITYSOURCE_POPULARITY_SOURCE_NULL Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+	public static fun values ()[Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+}
+
+public final class ru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum$Companion {
+	public final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
+}
+
 public final class ru/pixnews/igdbclient/model/PopularityType : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/PopularityType$Companion;
 	public fun <init> ()V
-	public fun <init> (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityType;
-	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityType;JLru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityType;
+	public fun <init> (JLru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/PopularityType;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/PopularityType;JLru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/PopularityType;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getId ()J
 	public final fun getName ()Ljava/lang/String;
-	public final fun getPopularity_source ()Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
+	public final fun getPopularity_source ()Lru/pixnews/igdbclient/model/PopularitySourcePopularitySourceEnum;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public fun hashCode ()I
 	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
@@ -4176,23 +4192,6 @@ public final class ru/pixnews/igdbclient/model/PopularityType : com/squareup/wir
 }
 
 public final class ru/pixnews/igdbclient/model/PopularityType$Companion {
-}
-
-public final class ru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum : java/lang/Enum, com/squareup/wire/WireEnum {
-	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
-	public static final field Companion Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum$Companion;
-	public static final field IGDB Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-	public static final field POPULARITYTYPE_POPULARITY_SOURCE_NULL Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-	public static final field TWITCH Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-	public static final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-	public static fun getEntries ()Lkotlin/enums/EnumEntries;
-	public fun getValue ()I
-	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-	public static fun values ()[Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
-}
-
-public final class ru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum$Companion {
-	public final fun fromValue (I)Lru/pixnews/igdbclient/model/PopularityTypePopularitySourceEnum;
 }
 
 public final class ru/pixnews/igdbclient/model/PopularityTypeResult : com/squareup/wire/Message {

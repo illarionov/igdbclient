@@ -564,19 +564,19 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Popularity primitive
+         * Popularity Primitives, this endpoint lists available primitives with their source and popularity type
          */
         public val POPULARITY_PRIMITIVE: IgdbEndpoint<PopularityPrimitiveResult> = IgdbEndpoint(
-            "popularity_primitive",
+            "popularity_primitives",
             PopularityPrimitiveResult.ADAPTER::decode,
             PopularityPrimitive.ADAPTER::decode,
         )
 
         /**
-         * Popularity type
+         * This describes what type of popularity primitive or popularity indicator the popularity value is
          */
         public val POPULARITY_TYPE: IgdbEndpoint<PopularityTypeResult> = IgdbEndpoint(
-            "popularity_type",
+            "popularity_types",
             PopularityTypeResult.ADAPTER::decode,
             PopularityType.ADAPTER::decode,
         )

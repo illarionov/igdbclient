@@ -431,14 +431,14 @@ public suspend fun IgdbClient.getPlayerPerspectives(
 ): PlayerPerspectiveResult = executeOrThrow(IgdbEndpoint.PLAYER_PERSPECTIVE, apicalypseQuery(builder))
 
 /**
- * Popularity primitives
+ * Popularity Primitives, this endpoint lists available primitives with their source and popularity type
  */
 public suspend fun IgdbClient.getPopularityPrimitives(
     builder: ApicalypseQueryBuilder.() -> Unit,
 ): PopularityPrimitiveResult = executeOrThrow(IgdbEndpoint.POPULARITY_PRIMITIVE, apicalypseQuery(builder))
 
 /**
- * Popularity types
+ * This describes what type of popularity primitive or popularity indicator the popularity value is
  */
 public suspend fun IgdbClient.getPopularityTypes(
     builder: ApicalypseQueryBuilder.() -> Unit,
