@@ -10,5 +10,4 @@ package ru.pixnews.igdbclient.gradle.settings
  */
 plugins {
     id("ru.pixnews.igdbclient.gradle.settings.repositories")
-    id("ru.pixnews.igdbclient.gradle.settings.gradle-enterprise")
 }
