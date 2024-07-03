@@ -34,6 +34,8 @@ import ru.pixnews.igdbclient.getEventNetworks
 import ru.pixnews.igdbclient.getEvents
 import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.getNetworkTypes
+import ru.pixnews.igdbclient.getPopularityPrimitives
+import ru.pixnews.igdbclient.getPopularityTypes
 import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
 import ru.pixnews.igdbclient.library.test.TestingLoggers
 import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
@@ -46,7 +48,10 @@ import ru.pixnews.igdbclient.model.EventLogo
 import ru.pixnews.igdbclient.model.EventNetwork
 import ru.pixnews.igdbclient.model.Game
 import ru.pixnews.igdbclient.model.NetworkType
+import ru.pixnews.igdbclient.model.PopularityPrimitive
+import ru.pixnews.igdbclient.model.PopularityType
 import ru.pixnews.igdbclient.multiquery
+import ru.pixnews.igdbclient.scheme.field.PopularityPrimitiveField
 import java.util.Properties
 import kotlin.time.Duration.Companion.seconds
 
@@ -220,6 +225,20 @@ class RealKtorNetworkTestClient {
         logger.i { "collection types: $collectionTypes" }
 
         Unit
+    }
+
+    @Test
+    fun testPopularityPrimitives() = runBlocking {
+        val popularityPrimitives = client.getPopularityPrimitives {
+            fields(PopularityPrimitive.field.all)
+            where("${PopularityPrimitiveField.GAME_ID} = 133236")
+        }
+        logger.i { "popularity primitives: $popularityPrimitives" }
+
+        val popularityTypes = client.getPopularityTypes {
+            fields(PopularityType.field.all)
+        }
+        logger.i { "popularity types: $popularityTypes" }
     }
 
     class TestTokenProperties(

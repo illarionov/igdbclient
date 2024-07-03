@@ -102,6 +102,10 @@ import ru.pixnews.igdbclient.model.PlatformWebsite
 import ru.pixnews.igdbclient.model.PlatformWebsiteResult
 import ru.pixnews.igdbclient.model.PlayerPerspective
 import ru.pixnews.igdbclient.model.PlayerPerspectiveResult
+import ru.pixnews.igdbclient.model.PopularityPrimitive
+import ru.pixnews.igdbclient.model.PopularityPrimitiveResult
+import ru.pixnews.igdbclient.model.PopularityType
+import ru.pixnews.igdbclient.model.PopularityTypeResult
 import ru.pixnews.igdbclient.model.Region
 import ru.pixnews.igdbclient.model.RegionResult
 import ru.pixnews.igdbclient.model.ReleaseDate
@@ -557,6 +561,24 @@ public open class IgdbEndpoint<out R : Any>(
             "player_perspectives",
             PlayerPerspectiveResult.ADAPTER::decode,
             PlayerPerspective.ADAPTER::decode,
+        )
+
+        /**
+         * Popularity Primitives, this endpoint lists available primitives with their source and popularity type
+         */
+        public val POPULARITY_PRIMITIVE: IgdbEndpoint<PopularityPrimitiveResult> = IgdbEndpoint(
+            "popularity_primitives",
+            PopularityPrimitiveResult.ADAPTER::decode,
+            PopularityPrimitive.ADAPTER::decode,
+        )
+
+        /**
+         * This describes what type of popularity primitive or popularity indicator the popularity value is
+         */
+        public val POPULARITY_TYPE: IgdbEndpoint<PopularityTypeResult> = IgdbEndpoint(
+            "popularity_types",
+            PopularityTypeResult.ADAPTER::decode,
+            PopularityType.ADAPTER::decode,
         )
 
         /**

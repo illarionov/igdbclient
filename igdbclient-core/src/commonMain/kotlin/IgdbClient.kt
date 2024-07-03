@@ -72,6 +72,8 @@ import ru.pixnews.igdbclient.model.PlatformVersionReleaseDateResult
 import ru.pixnews.igdbclient.model.PlatformVersionResult
 import ru.pixnews.igdbclient.model.PlatformWebsiteResult
 import ru.pixnews.igdbclient.model.PlayerPerspectiveResult
+import ru.pixnews.igdbclient.model.PopularityPrimitiveResult
+import ru.pixnews.igdbclient.model.PopularityTypeResult
 import ru.pixnews.igdbclient.model.RegionResult
 import ru.pixnews.igdbclient.model.ReleaseDateResult
 import ru.pixnews.igdbclient.model.ReleaseDateStatusResult
@@ -427,6 +429,20 @@ public suspend fun IgdbClient.getPlatformLogos(builder: ApicalypseQueryBuilder.(
 public suspend fun IgdbClient.getPlayerPerspectives(
     builder: ApicalypseQueryBuilder.() -> Unit,
 ): PlayerPerspectiveResult = executeOrThrow(IgdbEndpoint.PLAYER_PERSPECTIVE, apicalypseQuery(builder))
+
+/**
+ * Popularity Primitives, this endpoint lists available primitives with their source and popularity type
+ */
+public suspend fun IgdbClient.getPopularityPrimitives(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): PopularityPrimitiveResult = executeOrThrow(IgdbEndpoint.POPULARITY_PRIMITIVE, apicalypseQuery(builder))
+
+/**
+ * This describes what type of popularity primitive or popularity indicator the popularity value is
+ */
+public suspend fun IgdbClient.getPopularityTypes(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): PopularityTypeResult = executeOrThrow(IgdbEndpoint.POPULARITY_TYPE, apicalypseQuery(builder))
 
 /**
  * Region for game localization
