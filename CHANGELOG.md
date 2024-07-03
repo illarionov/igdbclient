@@ -1,4 +1,25 @@
-# Change Log
+# Changelog
+
+## [0.6] — 2024-07-03
+
+### Added
+
+- ["Popularity Primitives"](https://api-docs.igdb.com/#popularity-primitive) and
+  ["Popularity Types"](https://api-docs.igdb.com/#popularity-type) endpoints.
+
+### Changed
+
+- Bump dependency versions:
+  * AGP 8.2.2
+  * Kotlin 2.0.0
+  * Wire 4.9.9
+  * Okio 3.9.0
+  * Ktor 2.3.12
+  * orgjson 20240303
+  * Kotlinx.serialization 1.7.1
+  * kotlinx-coroutines 1.8.1
+  * AtomicFU 0.25.0
+  * Other internal dependencies
 
 ## Version 0.5
 
