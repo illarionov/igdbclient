@@ -1,7 +1,7 @@
 pub    80C08B1C29100955
 sub    CF771F914C2A4A73
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBE2fCWARBAC3v9wYo5kmynmVP+43ccamidflSLQjjpsXpSDLPFokGxeuw0OC
 QJy46m8b5ACoCqRlfwnRRcEHxiSlaBATJA6hi7NRO41R39C62JXsIxNJR16JNQ5k
@@ -32,7 +32,7 @@ pub    82B5574242C20D6F
 uid    Sam Harwell <sam@tunnelvisionlabs.com>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBFC1VWUBDADZwqBEEmSjwy2JADG0qCpvVQzC5KszL0CjzqTLPMBmLKNuc/36
 26MU4yI8Y+pcCTnC3LN9hrI0hxiP4zFFFyLYKkUWCZRAwj4OQlnyTDKa9frKBMed
@@ -52,7 +52,7 @@ uid    J. Daniel Kulp <dan@kulp.com>
 
 sub    594E23256A36A392
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBEqQOcwBEACdPSfBAkHm1b2GdOjB3gGerx/JDn3zYNnNpcQrM8Do0bxDwlfT
 qwLA0P9ju4mzTfHU5kEvm2lrXz8QCZPLe9eY6GxzzSbeXtt+4fP84/YGmsK6DQTy
@@ -97,7 +97,7 @@ uid    Marc Philipp <marc@junit.org>
 
 sub    8B2A34A7D4A9B8B3
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFrKW9IBEACkqUvM7hU1WqOOeb1gZ7pUsRliHuoUvYIrd+hdp+qhPmJ0NG0W
 YhZK5UtJBmqvtHKRkbwYxUuya9zlBmCfQFf0GpFKJ65JSrPSkZADI3aZ4aUkxIUw
@@ -142,7 +142,7 @@ uid    Jesse Wilson <jesse@swank.ca>
 
 sub    51F5B36C761AA122
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFoQh54BEADOuivAfgGKc4/zDwx+AwJdctjTT0znL9knRTYG6ediv2Eq+CXm
 gBM9m5twl+qhUB1NtrdHb4BH49VY9/gHr3JDyo5ewu96qkbeQl4pxW0zmHg/yJx7
@@ -187,7 +187,7 @@ uid    Gary David Gregory (Code signing key) <ggregory@apache.org>
 
 sub    59BA7BFEAD3D7F94
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE2kzuwBCACYV+G9yxNkSjAKSji0B5ipMGM74JAL1Ogtcu+993pLHHYsdXri
 WWXi37x9PLjeHxw63mN26SFyrbMJ4A8erLB03PDjw0DEzAwiu9P2vSvL/RFxGBbk
@@ -216,7 +216,7 @@ uid    Olivier Lamy <olamy@apache.org>
 
 sub    1AFEC329B615D06C
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEdddbQRBADRgstdUZq7ceq3NYcR5kpoU2tN2Zvg1vptE9FxpDbL73gdLWnI
 C7IAx+NNjdG7Ncdg+u10UZv6OSmhWAd8ubWcD9JxKtS4UXkNPHxhHFHqVPHuCwsQ
@@ -249,7 +249,7 @@ uid    Gradle Inc. <info@gradle.com>
 
 sub    5E9AEEBA28836032
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGUVRogBEAChVh0t3YAJIdreb6SP/lf4x097IRpOiJ7Ww+DDtXFUhKJBwgfC
 4T10TBGP835tV6TfkEeCPGWABoxaD88zUlSHs7k7v/SfedwfOKbOE3c+oR43JL7P
@@ -292,7 +292,7 @@ WzZKkqBVoahM3qqyoKOy7mfpt1hB4gEq
 pub    8D7F1BEC1E2ECAE7
 sub    E98008460EB9BB34
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBF8kuOUBCACo8/VYVfmglgTgmai5FvmNzKi9XIJIK4fHCA1r+t47aGkGy36E
 dSOlApDjqbtuodnyH4jiyBvT599yeMA0O/Pr+zL+dOwdT1kYL/owvT0U9oczvwUj
@@ -320,7 +320,7 @@ uid    DiffPlug LLC <sslcert@diffplug.com>
 
 sub    E09F6A4522F77DB9
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGBs2wABDAC+hlEcwcAqPBo183xD18nAU7fBJI3lkg8zCvMgpMzPH8uD54wS
 fd0q+7k+2Ddf6L3VLW7+uxuQDNw1gLfIWHcSxGI151pyXkSmYlWsLmGRRwWNSIDS
@@ -357,7 +357,7 @@ uid    Ktlint (ktlint signing key) <ktlint-admin@pinterest.com>
 
 sub    B89991D171A02F5C
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBF9amNkBEADKyJj5snYd8bZpONpu1QHf7c/TK9HxcMzGZaIv9QzViX6CtEHb
 2Q2x6ejXQ2frECMrvns5JAJd21B6215EhlOqrHSMkTrQ6fvOIfWd0huZ0QHr4FME
@@ -403,7 +403,7 @@ uid    Liam Miller-Cushon <cushon@google.com>
 
 sub    D66472CF54179CC4
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFKD+PgBEAC8IkWujQlmU0/7+QPZFsc/z/rXgg7BQyo330QK4HeMzeCK6WHa
 SWzVDM9h6nFDs6Xln6YexbZUjLsxS/a/Ox2i26Qg8B+NghgiratbdJsByRrU/3la
@@ -448,7 +448,7 @@ uid    Slawomir Jaranowski <s.jaranowski@gmail.com>
 
 sub    E3F6790A5A167F5A
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGHDIagBEADpzdCwVjVlHuo8qpu9HtmqNpEW4TB7y6+NX7Q39mj8w+iVskE1
 sL0+BOCdP6ZMiQziWbOQ2FxCd3mD0ixZ7v1i7+0jowySPacJbVNaPPECP38gDte4
@@ -493,7 +493,7 @@ uid    DiffPlug LLC <sslcert@diffplug.com>
 
 sub    030DD9087C31C9AF
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGPAYVUBDADCs9PkY8zzhzE38bRZX+vTrr3LdChGNBmObV858NGRrXeZtyLu
 U7YwYVF7w2vHUI/JQWrlPZc5tBFicefucfUtKt790WzAk3NBjGtX4IWpG57C1Z5t
@@ -530,7 +530,7 @@ uid    Stefan Bodewig <bodewig@bost.de>
 
 sub    6366592024774157
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBDsSIk4RBADSCj6rUjV64tYCGT1DYKYR7GthyWpNdGHSYLbETBcDatAe1dzQ
 5NsCgfrlybfyeY+y1lxr3T9bqf6zJWDw/718wff96qmmv1qzexSYtmIrj+h53V82
@@ -557,7 +557,7 @@ jKjGuiwdKSnkFbNcFS3g
 pub    A41F13C999945293
 sub    8183E80D264EE073
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBE8YNGIBEADEgcfvs8TL3X2Ql62HJ6SrXWAOoHw5CquJxUQkvBGesIT1Hk24
 exiPwrlNE1qUjbVlef1Cwk9ZfwMOpJdfP2MQQbx0nxxqv+JtsoeXUy9bTSvZYBUL
@@ -601,7 +601,7 @@ uid    Tom Denley (scarytom) <t.denley@cantab.net>
 
 sub    9C4C23E6FFE405BD
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE+xZxIBCACzKctn4ez8xOC0pGThhAwjYWGkzcwK4HNaC1usHThBFz3/t8JN
 OqUXRixLyi5wELN6GHlsGVUQS3IfB4JtuhScsieSB8PTree68/knMq6JI08mJqZr
@@ -629,7 +629,7 @@ pub    A6EA2E2BF22E0543
 uid    Tobias Warneke (for development purposes) <t.warneke@gmx.net>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBFJQhigBDADpuhND/VUQwJT0nnJxfjAIur59hyaZZ3Ph/KIgmCneyq7lzYO6
 xa1ucH8mqNBVNLLBhs4CjihBddU/ZKTX3WnZyhQKQMZr3Tg+TCNFmAR4/hnZ3NjZ
@@ -649,7 +649,7 @@ uid    Egor Andreevici <egor@squareup.com>
 
 sub    1A94B14C6A03458D
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGI8r9sBEACZJBV2TNUSsLRo89uC4lfmQxfNDqkE0uZghfFY/p0fr6fkBybO
 WDkPFskAPD32fzrWxZd2kkyCRyUrOmAUC22q8hw96t28+RqZymvetIa0f8GQGgkO
@@ -694,7 +694,7 @@ uid    ?amonn McManus <eamonn@mcmanus.net>
 
 sub    7892707E9657EBD4
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFdbSfIBCACrFI0ai/abnV2U2Wa9QQZwGk3Fegc8laiuTKc0GoYdyptd83/H
 hD5S61ppdkOugBjVTHdgda3xJ7zBZdnwjZvV/TyayQltbh6hU+BMlEolzXLgyvY7
@@ -723,7 +723,7 @@ uid    Checker Framework (Official Release) <checker-framework-dev@googlegroups.
 
 sub    32784D4F004B405B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFM1v9ABCADD0KoXq2ZKlUHeIVovQy3gFmW9oFAaraV48ouv8cYvqdf+s91H
 NyqeyNPT/ihFeNqZJUAMyPdwN5xrWD6gxMrOCR7BFhA5kLmAKz4HfFCQ05ViyQdI
@@ -751,7 +751,7 @@ PA==
 pub    B341DDB020FCB6AB
 sub    315693699F8D102F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEowbDsRBAD2jx/Q2jNuCkgiS3fzIj6EzDP+2kipIKH2LEnpnTiBlds2PFYM
 xYibVab/grgQODxTdDnAKifbJA/4h1/T7ba+OV+xIUoSI5MbgaF3USidiDHPX0pY
@@ -781,7 +781,7 @@ JI97g3GZQ2CHkQwJ3+WcPw==
 pub    B6D3AB9BCC641282
 sub    700E4F39BC05364B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFhaXO0BEAC8WCdwrJNF/W+C8m9FYwAhEvKBvQ7xmoGYZqgcYe2ntT8udvgZ
 k+dRwZJnu1VI3a8feOLrAmeNI2MxPP0+l2kGeC55c10duXPzLvW9oHONm39FZpCM
@@ -860,7 +860,7 @@ uid    Ben Podgursky <bpodgursky@gmail.com>
 
 sub    F4B1A89247EB40B1
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mDMEYw0eeRYJKwYBBAHaRw8BAQdAWhZd8KrKXdEEaFXJCaSOglySpyHcxUSL/K1S
 L+JuB8G0JEJlbiBQb2RndXJza3kgPGJwb2RndXJza3lAZ21haWwuY29tPrg4BGMN
@@ -876,7 +876,7 @@ uid    IntelliJ IDEA Sign Key <intellij-idea-sign-key-noreply@jetbrains.com>
 
 sub    C9F04E6E2DC4F7F8
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFKneXIBCACtnX3ZQmPujf6ocvdnhsBheze71DSl34TfebyW2Qt+g9NhMxo4
 DaJy+iFNnsaMwLZRr6k/qf+ISE3A4opWAQlbk+Wb5s6DPPA2cHH6W4GdkxtuJzqt
@@ -905,7 +905,7 @@ uid    Egor Andreevici <egor@squareup.com>
 
 sub    84761D363E7B0FC4
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBF7rgogBCADU9OwoEFdIgN5U0JU5pI7s3T1T1LeDMzAQ8l2Hq4jFrhnrjcEA
 ieDSut1YIv5NTBoZv4CrklaKvvQNUXPvKrFImA4OKhBodKV3wsq2efCATDGa1JAw
@@ -934,7 +934,7 @@ uid    Valentin Fondaratov <fondarat@gmail.com>
 
 sub    606CC6C4533E81A2
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGAic/4BDACtIv4a32pL+84jJNhJ1yb6GFgoWknJSJ6IELIL0Z7m+FYsymRs
 lTJ/QwBgjZlgS3HS7IBhEl5o+kEt2/U5lPkz/krP8By8EvRv18PpfBzmXNT8rGqc
@@ -971,7 +971,7 @@ uid    TFLite Support <tflite-support-github-robot@google.com>
 
 sub    29E792953D515FC5
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF8pVB0BDADcwRGpJUDe8eVSlJ0yPQl/CyeYc0RWq2f1seUMQO0xFW1xPIeL
 IE68D9VdgarA88qDLYesfBqzn57/r/ztj2aLEKt8IRunJzd0w0G2rrgSCZQ8RmzL
@@ -1007,7 +1007,7 @@ XjYxnM4pLyU=
 pub    C9FBAA83A8753994
 sub    AFF3E378166B1F0F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFeWvEwBCAC7oSQ7XqcGDc6YL4KAGvDVZYigcJmv0y5hWT4wv9ABP4Jhzr1H
 NDmmGyWzhzTeMxwuZnc9vhxCQRwyxj3gGI5lYPEARswbi2fWk//78/3Wk+YMHJw3
@@ -1035,7 +1035,7 @@ uid    Sebastiano Vigna <sebastiano.vigna@gmail.com>
 
 sub    17755EEA52A858CE
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF+oUkoBDADeE9IXjwvW9HlfIYhQfTlJ29cReMfOM0UW3dAn3XJduUcnYKoc
 3dKGCcsanzIELL6QuapXYAlq2WWlP1oC2IEbYyilKs/ocv2gc6/GQFKBAEqHKVXH
@@ -1070,7 +1070,7 @@ U5Ox+ofx2IJKMWGZcjKdEom1sO3BnXQgpbBHsEkh+TJcWoMFNxiiIVXcI0zn0A==
 pub    CE8B1D1D2530EDC5
 sub    7ECBD740FF06AEB5
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFuX5CkBEADkTgn4nzuq0lWR+7kFGYLKvmPLjes4j2nmygIafUjVbNmD70gY
 DPpbSP02HxgicM6xSSqzZuBVxpbcffqjMPXf8LkVX4iWKZtyzLpf34yaojigU3qF
@@ -1125,7 +1125,7 @@ uid    Deanna <deannagarcia@google.com>
 
 sub    5199F3DAE89C332D
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGCtdhoBDADdopjDt4eUNEqLJSw1ZICSR0oq09SOVtJSaSYdF8UiXjBfL1Ds
 fhTDqSv5pT2a2gLj0OU3tFhWHvINLaKKCjQnHVcFXi2LTxt+XBOjRYkFjHVisbaZ
@@ -1162,7 +1162,7 @@ uid    Liam Miller-Cushon (Error Prone releases) <cushon@google.com>
 
 sub    3F606403DCA455C8
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGH0NlsBEACnLJ3vl/aV+4ytkJ6QSfDFHrwzSo1eEXyuFZ85mLijvgGuaKRr
 c9/lKed0MuyhLJ7YD752kcFCEIyPbjeqEFsBcgU/RWa1AEfaay4eMLBzLSOwCvhD
@@ -1206,7 +1206,7 @@ xquhnpl2HvE=
 pub    D9C565AA72BA2FDD
 sub    9121AD263441EEDD
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBFrjUQUBDADTMQL/4d9EyVhsO4XBH9wbGWxcEJvsu/HvppN5fY8hpMV0+Cr9
 wjAeJ7d9zdFJVB8vPLN7bb5dm6SNyK3KiOugqVgZrQ+ZPTvCCgFbFyEXuZwDiOa1
@@ -1242,7 +1242,7 @@ uid    kaml GitHub Actions <githubactions@charleskorn.com>
 
 sub    66A2CBDE49E8A25D
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBGAwdRsBCADCXfWdHhywp8Rcgt834W/Z3MFEAxYdxjAJOTQhc/In1SJfIqi/
 xD7OKHA2fbwzRnS/UmXkmElTK7JI3/1gWRm8kEaaHTnlI63Z9MZV0DHMpJMgvpFM
@@ -1269,7 +1269,7 @@ yJrvVkAea4RiwsfPq44ip/pcdsVQhMW12M85KImZCEiCIULO8VKCvHqMplJHTg==
 pub    DE453E55DC86FC9B
 sub    A947A3FCB1697B4F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBF7H/6gBCACbEuIbxWAfHEYViPqdpwxDYauxsYwk6FgA9sSO1nS95KRwx+Cs
 X6F8nRGnfLtbo6Ffcp6r58fNi9RvY7ueRGiL0kQd6c5GYx6dH1b91Q1qrdVOeEdj
@@ -1297,7 +1297,7 @@ uid    Google Api Client Libraries (Releases) <google-api-client-libraries@googl
 
 sub    5A34A5E06B936F93
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFF/4bYBCADTeOLZiVGNbjlPrwG7UcMl+yXmEqpf9dB1A9cuicH3PWXj0WOb
 LSzHjzoRvRekEqSUmgoveey1lPuA2qjOUkXY6Kiyx+oLiG0/ObJHUQW2O+tjSQ0R
@@ -1327,7 +1327,7 @@ uid    Gradle Inc. <maven-publishing@gradle.com>
 
 sub    1B80C80E07BC7190
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGOtCzoBEAC7hGOPLFnfvQKzCZpJb3QYq8X9OiUL4tVa5mG0lDTeBBiuQCDy
 Iyhpo8IypllGG6Wxj6ZJbhuHXcnXSu/atmtrnnjARMvDnQ20jX77B+g39ZYuqxgw
@@ -1372,7 +1372,7 @@ sub    9351716690874F25
 sub    60EB70DDAAC2EC21
 sub    3D5839A2262CBBFB
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF/RX/MBDADSqelDQKobURExWUKALq86yTPMxMasxmDlccKFpk5xjWrryL7z
 qg4Fnb7IK5fKDtcnTANtOv2hlIli1h131+SmjJdD3qhfly7QoszOpr5izDS+FOCj
@@ -1452,7 +1452,7 @@ pub    E93671C7272B7B3F
 uid    Rolf Lear (JDOM) (Used to sign JDOM Packages) <jdom@tuis.net>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFCPD00BCAC4tY8wMQTsCKyII/mMkUDAkXA2cLM47fY1Wn+iohtgtalUdA0v
 AhGvTdFU6/St35rOKNoyLC7Sy30FBYpAEfMB/x9j/CaQtdtGhaQU0hCvtWGhhS3J
@@ -1468,7 +1468,7 @@ pub    ECDFEA3CB4493B94
 sub    BC7DF305D87BDFA7
 sub    3BD211F725778C36
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBERFeVERBACjfASThn15ynIICr0Gu8quGCl2rSSRar8TsjrbiwYB2MTW35Rg
 NjLU6MN5Nq4d5G8D5aMeoyGODstIHH8zA52sDGeHOMKfDaAraL+lGzElbpmaqP2s
@@ -1527,7 +1527,7 @@ uid    Thomas Ball <tball@google.com>
 
 sub    E68665C8F91BDE69
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBGO91akBCADDDpIrW/IohUSJNDu9VOUlnfEOm5VS49uqM0uucLi0BeAhy1Fo
 P6Yg1cJkcK66DtnUoTM/JJLyDzJRlKnniLrYCkw8ScvtPdA5cQKJTY5ecn+9ouR2
@@ -1554,7 +1554,7 @@ AwT14IRCih4oeUsICRfb9e23BVJGWs2x1VvzaIrLsQ==
 pub    F067A2FD751AE3E4
 sub    28CFDE1EB61BB6AA
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mDMEYknmAxYJKwYBBAHaRw8BAQdA/xS5rgP6lF5fl8l+rJB1UiF+7KKDse0PmKYp
 TNBH7si4OARiSeYDEgorBgEEAZdVAQUBAQdA+9/L4P4Yhd5EIOE/I428Wqk+ljCs
@@ -1569,7 +1569,7 @@ uid    abosch (bintray) <arturbosch@gmx.de>
 
 sub    504F10B64E007C78
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFsRgCkBEADaI8lsWsDCfPfT1Vj4h/oY8EoZst/fG9wnMyLvfemLJWGVb20h
 uRe7vwBHhtczlAeRYtfNzQ1xLKXWNpMfiJNr8PeZVhZyTN7My3JYJZnmQm1MN53l
@@ -1612,7 +1612,7 @@ b4Hd5Y4JunWGyPr8uYmpyzRL/Kufbhgal3FTJRTnpQ==
 pub    F1F111AF65925306
 sub    EF375EEBBDEFD775
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFS2J+0BCADZI8RYk32YeO9gnEkY9RN+4dKb+H1AR4v+IGxmy0UYy+O8bo4m
 YzkQHTlPpEPGe10/quKk1embDifEfNa9mwcSJl+XUPFlTrSA97SR31mdyK/Ua146
@@ -1640,7 +1640,7 @@ uid    Netty Project Bot <netty-project-bot@users.noreply.github.com>
 
 sub    1C9F436B883DCCF6
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGAhOxEBEADdB5Jy2sSOndOMCTyk8IFIJYPogjXtN7CnyIlqr4jEB5G87TJf
 m7OxB95aIVS1vSA5ghCm88N1mKtW6jyYjgLFQbbyD9/X3ShVZjh8B2R4atL93SSK
@@ -1686,7 +1686,7 @@ uid    Jonathan Hedley <jonathan@hedley.net>
 
 sub    6064B04A9DC688E0
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEtsF2oRBACcai1CJgjBfgteTh61OuTg4dxFwvLSxXy8uM1ouJw5sMx+OKR9
 Uq6pAZ1+NAUckUrha9J6qhQ+WQtaO5PI1Cz2f9rY+FBRx3O+jeTaCgGxM8mGUM5e
@@ -1721,7 +1721,7 @@ uid    Christopher Povirk <cpovirk@google.com>
 
 sub    B5CB27F94F97173B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE89LqsBCAC/C7QToaRF8eZgGOxcvp9aG+mFFCMjaRAb4Mh59OYdmUb6ZjfO
 9388HPebGbPNR8SHYs0dBIuWY4ZJ7oUTYPswasL8vB0iPFdyHhvkCca+yk0b8ZBM
@@ -1750,7 +1750,7 @@ uid    Sean Leary <stleary@gmail.com>
 
 sub    012F07EDD27CB2E2
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mDMEZI8otBYJKwYBBAHaRw8BAQdAL5VNS8O2NJbsTZaMphHGdxsSaLUj0tZLI6+R
 /pve51q0HlNlYW4gTGVhcnkgPHN0bGVhcnlAZ21haWwuY29tPrg4BGSPKLQSCisG
@@ -1766,7 +1766,7 @@ uid    Chao Zhang <zhangchao6865@gmail.com>
 
 sub    8C40458A5F28CF7B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGADx6IBDADoHin1LGQ8dhnlhfNCBZ3IyXS2NpR1VjmYtHSlh1hGsPcmHuwo
 1mLA6JzXF7NuK3Y52pbTr6vz9bAap8Ysjq/3UJeiDbf7FvmO5xAEVUhrpc7AEY7G
@@ -1803,7 +1803,7 @@ uid    Carlos Ballesteros Velasco (Deploy) <soywiz+deploy@gmail.com>
 
 sub    74237AD167FFEE52
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBGBJD1kBCAC2OgrVeUz5GtDnUh1fSKqEDN+3tjFKmCKj92buwiDLz8sWtzEE
 ncMlGSic0yAVxMTNIlfq0ec1AFWIFKsMkcpYX435UapQz8S19XhIIROsy5i/bZcg
@@ -1833,7 +1833,7 @@ uid    Norman Maurer <norman@apache.org>
 
 sub    DECB4AA7ECD68C0E
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEoo3BYRBACXE2oGRA58Ml6s+kvfk6n/AJ+5OFeRT/Xelco/cpdxOVF5LkRk
 yd+vR2+F9ldBlH7CSTCmrdZIN3M3zrcWndrk/OQkCxNWVnE/a1li7L3G9nYr011k
@@ -1860,7 +1860,7 @@ sub    6005789E24E5AD1E
 sub    6A0975F8B1127B83
 sub    3FF44D37464BBB7E
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBFzy4ngBDAC4mz6ELMWjfJ8GZtolq3E96T7qjfp4J9FxGVxdbJxkEDnn6MTg
 V8zhD7yeSZcUSvwzPiDlB/b4RYnh+5LjzKHTsrtr9ja0SupuCkVGkMGWeHhpIGV9
@@ -1978,7 +1978,7 @@ uid    Eclipse Project for JAXB <jaxb-dev@eclipse.org>
 
 sub    8118B3BCDB1A5000
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFu1EwUBEADAXapH49L1Lwt28iK737X/+4bRDE+lkMxehnUZ7QJs5zkFz5Sh
 9K2rQO0PpvoMSdadGplFyhKdDP/iEUpzxTTbqMs5UjbJr0MoFfE957Vz59mNf9WY
@@ -2035,7 +2035,7 @@ uid    sksamuel <sam@sksamuel.com>
 
 sub    54EB00732104EF7A
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBF7ByYMBEADHxAxXj4u914xQb5fJ+sBvk0rKpqOZPFMIiuyNMD72Dk2jZbvW
 ESuRlzp9MObyylGTsxeX+f+Fq+piqqgAAFWyXx+JNV4UkDLSt8g6n0phW97Wj89b
@@ -2080,7 +2080,7 @@ uid    JetBrains Markdown <markdown@jetbrains.com>
 
 sub    FA258103C03E2F42
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGN3aiEBEACcTTRnXSSYz7c47qYZnsAITOilVO7xwCIG1ud1Ov7N/OLC9/Fr
 J+Me85WceOLPo5daOOO4nSjO9T4I1wgNQOrlgsYHWYaIeru9ucopXTc5vMkH6+r/
@@ -2125,7 +2125,7 @@ uid    gradle-maven-publish-plugin <niklas.baudy@vanniktech.de>
 
 sub    0E6A26CDAAFC89CD
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBF9qRXgBEADl/XqfEB2kT1CqdulQoYlRMVwVbvGlzFoRsuT9tl4GaTW6QsSv
 Xi/SiRG0rFFEDnWeraLTMw+2u7kTmbFat+/vRywB57QW7RWCyAhRiRs/gMCwP7mt
@@ -2169,7 +2169,7 @@ FFj5
 pub    0DA8A5EC02D11EAD
 sub    71499A87DC1FF84B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBE3LMfMRBAD90h69D8yyPWaSoAyh2mOOOZ/XH0isuBpDZCWptemlMHgImqdQ
 2sXLXYT1bJKmSaMw+yKjp8J/NYk69EbmSK1C2nypLQtWhUmXXd3XVYw6hrG/dGvi
@@ -2201,7 +2201,7 @@ uid    Peter Palaga <peter@palaga.org>
 
 sub    83552A552A0D431C
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFBIm/wBCACgqvegptBhfKbyBXZiW+7XchIJCOpwq0/9QgSehKMwELbUKqNM
 sIVrywANqYn32S9hNRvBiKGm/KY7VwN9p1Cr6Ey3XuGSbRo/xN6tqfV/rV5YClL5
@@ -2230,7 +2230,7 @@ uid    Andrey Shcheglov <shcheglov.av@phystech.edu>
 
 sub    DF6A86F185ABFD5F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGNr014BEADSQF6XXGUwJ0karYxSSgQ3NsBzh7MWGXRAV4DMBdr7CWdAhapZ
 KNuSK7O/ATCvZuJV9bsCLuSz/1+ewKegRM2t+WcuG8xNQ3MujeVOic0m5kJoAUX9
@@ -2273,7 +2273,7 @@ DxGnlmEdxDXUOdd60XaDBDbqX5XZrqu3ze8UtX5lkIWfzIbWaTzG
 pub    15C71C0A4E0B8EDD
 sub    891E4C2D471515FE
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFcyNOoBEACj0zTN3GkRNAY3jihHZdGvi70i4R8mUfcQUwWGRsGGlzSwyJfe
 20qNOHqwHaxVCAIp4e5paNf9cEKepOv5IqMkmaRdiC2W+BHDxcJgBot/IrC81ube
@@ -2322,7 +2322,7 @@ sub    46C2130DFD2497F5
 sub    D101F7899D41F3C3
 sub    E074D16EB6FF4DE3
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFf0j5oBEADS6cItqCbf4lOLICohq2aHqM5I1jsz3DC4ddIU5ONbKXP1t0wk
 FEUPRzd6m80cTo7Q02Bw7enh4J6HvM5XVBSSGKENP6XAsiOZnY9nkXlcQAPFRnCn
@@ -2824,7 +2824,7 @@ YhUaalY3n8JV0iRAx1j9wpdnLqNpiY3g4IY+NNFOqY0lFt2yAvzy
 pub    1939A2520BAB1D90
 sub    D068F0D7B6A63980
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFHNxM8BCADYmt+HKkEwu89KQbwV7XIbgwZSfWc7y1HvA2YJpJRXJQsU/Pzv
 BhsHnm9ZIScBLIlgE5OUnMNz8ktPDdsFg3j/L0HREXOAqkOFxWx2kANsRo2HmkM3
@@ -2854,7 +2854,7 @@ sub    7D1BE4480B61E2A7
 sub    C2148900BCD3C2AF
 sub    CFF46EE3C17E53E9
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGBP58sBDADYRZmxLOkqrz0QZ/yESRpv7IeHGLqDE1a8QfFtFb14MJCLSAAS
 3nMD6Szi9mEjEqYdJURRcMjbUBhePgbhzGa3FYkjAB8lj6IKbu+ogCwVm1S8+caZ
@@ -2936,7 +2936,7 @@ uid    Cedric Beust <cedric@beust.com>
 
 sub    BFE9E301CD277BAF
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFpqN94BCACaAb8Afmng1QPu5k5uzLoA1FJnF6Wf31ZU1FzDxHFHLNUYSWN2
 Bg6k95QH5ruZ+Z/QOJSoIB+b3htDklyxd8m+G2KsMIqnQs0BaTN18hb3PFyMIknM
@@ -2963,7 +2963,7 @@ tQidSFbes+7ku5tM61P6ggfv5FJQgQk7WEQ=
 pub    27F164F945828C4C
 sub    5BE125C87925F4B3
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mDMEY7d3lxYJKwYBBAHaRw8BAQdANOiFgriHFNDUJrXPLAjQCiIr19kAZqds47TA
 YYQWQiy4OARjt3eXEgorBgEEAZdVAQUBAQdAIs4w5LEeBqRLpgth6P8BX5cR1T3P
@@ -2977,7 +2977,7 @@ pub    280D66A55F5316C5
 uid    Brian Campbell (key for signing maven artifacts) <brian.d.campbell@gmail.com>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFOOGVgBCACiDwUZOc6943aBGUrxikkfUnsyZfHtF9jihYmA1pSgfsye+JxR
 oG9QWW9+3qx4L/d4ZEqBftTWpsjyrY7NyMaeXtJEjE0vhiWNehgXB1z4XTJ66zCX
@@ -2995,7 +2995,7 @@ uid    Tom Ball <tball724@gmail.com>
 
 sub    9DF7F2349731D55B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFYFiMABCADYpblWssqGxbjTwsyroPh48BwdSKl59zbFKoEHDw87NeWq7fik
 h95RkbdeWsQSvduXWgQZsUDq9cLOkuS/ChAMkAAd3MPp1NMdFmAqS7BX5wU5s5I7
@@ -3022,7 +3022,7 @@ Dw==
 pub    296CD27F60EED12C
 sub    D95ECEC170500D9F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBFsHC7gBDADlkoJglNVbX9MShcAm6jvS5atCZwWT63gSasObXFxswsJQd1NK
 qryHNcj9tKBfLbSpMOoHeyyIKDdwdxN+6+N9Hi4hf0j1Ub6deJyI8ace8VERWaxF
@@ -3058,7 +3058,7 @@ uid    Ceki Gulcu <ceki@qos.ch>
 
 sub    10DA72CD7FBFA159
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE+ZO+EBCAC3fZOOuYKthr0GcUge0PH2bh18sbM9XUmPKQz/W15l1NA/2ARS
 2gUXM0R+SunMlun9KsqjnojJ2ObVPvbm1Hg/66JSRgR3JWfIpSlJxLicpfu8rCfN
@@ -3086,7 +3086,7 @@ uid    Brad Corso <bcorso@google.com>
 
 sub    5CE9BCD2ED28F793
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF0vfHYBDADEDPY9ub98c7jQe4yMbPke3A/sxNHnn0WuA9JN880DPs3L7lrv
 9VHTOlFXslDNBPYSbgFXH5YlMGg8ZY8bhngjc+Z3dtrCX1cAjUXOnibi7fBFomLB
@@ -3121,7 +3121,7 @@ K0rLXbIe/0Q1MkLjnJ9MqcnGGPSNV5d2f/Q9Y8U9EA==
 pub    36D4E9618F3ADAB5
 sub    C4935FA8AC763C70
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGGiftwBDAC94Yhhh/5yO8jYFkg01MPnooXKZEPwxAbAg9wn5iM0tHxhEpkU
 zJVYZ+JYq013+Ldp8Of7A/d6hKTtZ0xwSeY7S/WFykIk6tc0P5j0sfFS3pGPDk+W
@@ -3157,7 +3157,7 @@ uid    Bintray (by JFrog) <bintray@bintray.com>
 
 sub    0CFE993CDBE1D0A2
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFTi8JIBEACcN1ucQ1uCOZ1owTELQV/6i4q7NbYdJ5wf7yPYfEugSo3yfbo3
 Pw/XEvlnpDZmT155sGNOkteZtZMdcm5XhFbdtquLlrkjAcUGatq5rAt3eLAlvU7u
@@ -3200,7 +3200,7 @@ E/XhP4QkRJrZI1F/
 pub    38EE757D69184620
 sub    5923A9D358ADF744
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBEzEOZIBEACxg/IuXERlDB48JBWmF4NxNUuuup1IhJAJyFGFSKh3OGAO2Ard
 sNuRLjANsFXA7m7P5eTFcG+BoHHuAVYmKnI3PPZtHVLnUt4pGItPczQZ2BE1WpcI
@@ -3302,7 +3302,7 @@ kYGSRLp1SxkBXtp7FajZkMabS2k87ctWb9nQjhJuVv6UnpCwiz3gyuipl/GVUWiz
 pub    3A1959EEF8726006
 sub    D908A43FB7EC07AC
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFu07rsBEADYizNlY0FYNZ6q2wx7AmWLw6PHje55uFhYM8Saqtwg/rm1tl78
 j28E/coP2zMFf/ec+zqKsfYi4DMmLZ9ESIngMUOIE7mY0Pp4WN7oYFRtvU0ARWyp
@@ -3358,7 +3358,7 @@ uid    Carl Mastrangelo <carl@carlmastrangelo.com>
 
 sub    9B2A1B698A113AAD
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFzwo60BEACg1rgL5jUtKkFE5DiwqJwxzJyJDH00TBSN6ZT+nXh1UxgC9q2h
 olF9V+2+LV1Jcmnc946xzIMiWLG33QB0NKVCdU5jNuLahOcViQQjNfGXwNzYoNCR
@@ -3403,7 +3403,7 @@ uid    Tatu Saloranta (cowtowncoder) <tatu.saloranta@iki.fi>
 
 sub    575D6C921D84AC76
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGL4BxIBEAC+lX44fd/zrVQPzdKygarBd/X0bBpGakT++Kfk4UBGl3q+wd2G
 R9puB9R377ds8hU7U3To8sHguUZo6DbD9Gb/is/WajSb9g92z+rMow3KbqfCYqWr
@@ -3449,7 +3449,7 @@ uid    Gregory Brail <gregbrail@google.com>
 
 sub    97859F2FE8EAEB26
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFmfSwYBCADdZEuR8cs2ejLLW3+Glxiq15rVbHbxaWmmZApGNijFro/LzFrR
 z+99N1mnA5+Ar/yKmn8lsCiTWukGQzWbdH/QSRUdyHtzxbCSeONdMhdKl3sJY1h2
@@ -3478,7 +3478,7 @@ uid    Rob Tompkins <chtompki@apache.org>
 
 sub    3260CB2DEF74135B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFhqdSMBEACmveOOsQrTky8b5M+Cq6lbhqRB4+INnfigxr7+EMpswo4AxYuA
 Op/YG+G7NU5h6EK6Tj2dVfXga90GYFkehtFRZgOUJUGKPU/53upsbnsWS8qjJD8g
@@ -3523,7 +3523,7 @@ uid    Michael Schierl (Maven Project Release Key) <schierlm@users.sourceforge.n
 
 sub    C0B9C2CC3DD97C16
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE5zrtcBCADFfU0ugIGUCM44fqPJKrsB3TaDu5EpauvFfYqUfyookzMHSKtB
 4YqBSKzBEiZ1rFB/KCn7XJTh5epoCau4DsG4U0XZjsx+esDR4ZtL42LEzeMTuluV
@@ -3551,7 +3551,7 @@ pub    436902AF59EDF60E
 uid    Sebastian Sampaoli <ssampaoli@equo.dev>
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mDMEY4fp+xYJKwYBBAHaRw8BAQdArb04PVwQKvEhtUEmEu7/aASZivOWgEkZBqX0
 Tovwvq+0J1NlYmFzdGlhbiBTYW1wYW9saSA8c3NhbXBhb2xpQGVxdW8uZGV2Pg==
@@ -3564,7 +3564,7 @@ uid    Stanley Shyiko <stanley.shyiko@gmail.com>
 sub    8067ECAA8D58321C
 sub    750F9A735EECF640
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFkgff4BEADQW10I1gEirYflEkNU9ukvBD/UFzsNxtKKxiDB58O1j9/o8bJN
 uM56B/skfFg1V4Gkpmnf9sJyakI8jHIvZ720dPHB8nVRBKV+sUD7hoI2QYVJMJMV
@@ -3632,7 +3632,7 @@ uid    Simon Mittermueller (none) <simon.mittermueller@gmail.com>
 
 sub    4CE6E05D128BCFAD
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFE0soEBCADAy/iIRT/lpb+vfDjWs/k1XQNU3mzXoMm1mmS/Z8VOc0jF7sVB
 A5z2pC6u2OmEr1oJkhWefX+mU//7kXs6VvUCReE4uheGBlisg/ELEXkTm342TcwS
@@ -3661,7 +3661,7 @@ uid    Kevin Wooten <kevin@wooten.com>
 
 sub    FCB1A11865F6A17A
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFVB0KABCAC8YRgcTIomAMw865DHxS/tbFgqN9i7M+tgpih1ETJbb4enhIBj
 Upeq+MoFCtxN86zGu2gsA4DOMEXVCReJ4O5n0F8E03+NUraCnJjbXLW9eEyRQRaU
@@ -3690,7 +3690,7 @@ uid    Adam Cozzette <acozzette@google.com>
 
 sub    726F4E5C34CFD750
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF8QwXwBDADKNLAHhjWUqnLYiO+ws3Hy1du6tMvkR3nfsnIDqpCvSjb+3/rI
 OHSyq8TbaGLLuHOM4K/KvrKgjhTbXQxvx1WR5IpoylcINzI959yAbaywBj6gVQB3
@@ -3725,7 +3725,7 @@ AGg2/CyrKszDpsR8R04jHL/ZAxrodA4Awc3BTpNxQDPfdRPc8w==
 pub    4D8159D6A1159B69
 sub    A568CCD291175902
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFUpCooBCACj6t0qOEGqMpX3puhk5W1TXZ1ewSXPS1yaoiFD2rysxjVWmXxG
 wvon31ed6PaZqtv+CUCIjbCjJN50dQF6g1I4FLvDcpF8LuLGriYtFW43lJ/GW//G
@@ -3751,7 +3751,7 @@ CGBWFMRVAQugNmWmXbzteaqt
 pub    4DBF5995D492505D
 sub    BE0F021FCB5F68A0
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGBFmccBDADIusjFY82nMHFXYxY1b5eIWtyaXTQxv/bXfjR2Yb16dURgFjai
 OeuYzapF7vVqNV8/H7Sya0W9z4OWf0ZttWhtQFcmhF90586OArXEikKcFgO8EL+l
@@ -3787,7 +3787,7 @@ uid    Gradle Inc. <info@gradle.com>
 
 sub    33AEBC1F01C98081
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFxaxWYBCADI4/gRCJYfXwZYdUoEGlAlCfRgABy90rvebzcs8MKtolAbPVkG
 iqnjftXd28sZhEDx9YJrUfmzspdrYmU7hy1kgV1/WGIcWyTExTH3bqlnaIWnnTxA
@@ -3813,7 +3813,7 @@ wc/ZbMFjyklLBAm1WETBiqR+k5uwXmJ8
 
 pub    55C7E5E701832382
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mI0EVdDLQQEEAJMtYCaTA56YsP5RzQzPvqVTaR2nZ27qRk36blHB9WmXK+NHpGeH
 PHgq59mLPVueo2/M5k/fFrCe36jHePP31gYpFtueeYDfsofHwod0WhsHyC7JfG8d
@@ -3826,7 +3826,7 @@ sub    7EC19439E4D4C2A0
 sub    D89D05374952262B
 sub    B5681E477AD61C38
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF+7lwIBDACcXIXAwFDoWvCCWn+OImyyJQvSnnte93Mc1ZJtlArkrjeGU7Mu
 5giUH+FOyiXlj7CU4G9RTnAzDgM8XPncWOERgRG2dXtO03Li7iUEX4Z8PCUGsTxP
@@ -3905,7 +3905,7 @@ XY66vjIUs3ySXgpmQAwf9KmRMlXn8kMtTDO0E/vlayaTh7qaMdyLLllj0ZmV5/nc
 pub    59A252FB1199D873
 sub    92BD2D0B5B21ABA2
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFUBG7QBCADRWXf0Fw05qRhM4cRnGKlOW1ecue1DCxHAtFwoqmAXyTCO+tI0
 MEW5SyXUkX6FsWLl6A2y+KgOs669ogzfQ0rnZMEt4HisRp8wpgk3GWR1/9aKYz/c
@@ -3933,7 +3933,7 @@ uid    Matthias Sohn <matthias.sohn@sap.com>
 
 sub    9D29AE4A6B50E01F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQMuBEwVZOURCADNnKQzSjFuI9/IGj3WTJcPU2B/H8NbZaTsz5WE91WumgZulK2q
 YeD4u6zdOyFK7DEScgxk7dicox9cNEgYKQnQXctDhfqER9bnvA2iJ+AFxjRAWyvs
@@ -3973,7 +3973,7 @@ wA==
 pub    5F69AD087600B22C
 sub    0440006D577EAE4B
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE7JURcBCADO+9Dc4/JnB+wX+fq+Fr2zUGSPOT6/qjE5kXL4FEbJKsqDSAKG
 VnbtRrsIUdmNIFQmz71bBDFhRBbrSrkz927k8eUPhYtxE2NmmWSuKgrjF4qviPQv
@@ -4001,7 +4001,7 @@ uid    J?rg Schaible (Codehaus) <joerg.schaible@gmx.de>
 
 sub    4830C9FB8B680A97
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBEymS9UBEADcrmFYq+YjA87HLx+UugKSIutOap7Yc5PJTZ9sAUOEtDhs0WwP
 bsyNdxu+aQJwowEIIaXci5YzimRzkuDNrfDFYpWyGq8O2yAsccMc4+HnQfcroayX
@@ -4046,7 +4046,7 @@ uid    java_re <GF_RELEASE_WW@oracle.com>
 
 sub    D547B4A01F74AC1E
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE3XFIUBCADcj1zw8m1evCgEMqxgOfl6L8y1tsYWsX7tVPvHEkYlXHrdcpkB
 fGuWPrauvhBmB9sBkFfxzU98Ilz3Xk9pfISYiaMUk9Mk1ZxsCoYPVhxvOSvk5LgS
@@ -4075,7 +4075,7 @@ uid    Popma Remko <remkop@yahoo.com>
 
 sub    0AC07D0BBD11498C
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGBVUWMBDACXALXWXSrB2V95lR1L+i+sQsTQt8tCIgX0iX9UZ7Vw2K/lLnLw
 WYtM3oTxYox4OdgkK9tK6771EdCH5wQtRdUQJjlsBfZDPMiGqmh1jrAxAugEkFyC
@@ -4109,7 +4109,7 @@ AA4fEAfsK22q/zZWGn1aDs1RyzdSprcN2g==
 
 pub    66B50994442D2D40
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBGDoYisBEACqUDZnT4h6ma6XIzdC6KR++uDbR2VKdhCuv0Og/sHEKkm6ZbG0
 OFB8tAaQx/WlsoQyf3DlLfUEOGDai875Aqor3fbM+E1hrZbQNfsOySKEE52k7PYe
@@ -4130,7 +4130,7 @@ uid    Ceki Gulcu <ceki@qos.ch>
 
 sub    A1766BE5F812AC2E
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mJMEYvEGpBMFK4EEACMEIwQA6knc/2gtbqDhPh5EzrymR4Hwi1Xf2S0aqMopA1zg
 IeZzBgSfL+4fEfpXL4eAzvrk29jIXSizDEOgFpw3PW3Om1gASxub4Jo6EQrRgOdd
@@ -4152,7 +4152,7 @@ uid    Paul King <paulk@apache.org>
 sub    EA8543C570FAF804
 sub    CA890A5FA09CFD80
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQINBFgMcBMBEAC/xcIVVOOh+F7S0OTzBlFH34s5fDbi6Zto469tZyW1peyWtXAZ
 m+2jzFfeTCHaUQO3YjoTy2fPygS4tVD+ew4EAzMG5Uti4kwWZw0PYKz2JO/gl1JY
@@ -4220,7 +4220,7 @@ uid    Daniel Lemire <lemire@gmail.com>
 
 sub    1723844CF9A045EC
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE7+huMBCADW9rfqKBXOqUSLCK5Klag5WqLFxAOddqEM7wTx/42XaIKjDiAW
 gmFnV4XBKm/7Z4fwWq7+ku6NDYUjBpI4vcQ2hYJJ4SRWZHT5wWzOmqgznf+/Qwug
@@ -4249,7 +4249,7 @@ uid    Colin Decker <cgdecker@google.com>
 
 sub    ABE9F3126BB741C1
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFIXyRQBCADe285y3Pu7KzoKyP6wqeNXtvvuwMatAmPm5x/i+S8MlryqzsYa
 x6twUmXV1yKjjtGrO+9fHvTOWBfSSP+fP9KTaTQYSasoJq2Mw4cQDy1i0zrxNZUw
@@ -4284,7 +4284,7 @@ uid    Protobuf Release <protobuf@googlegroups.com>
 
 sub    DBC5123E2E98FEFE
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBGSsZCsBDADJZoPoHGJNAB3sn/kFQ3zlj+vZ7OY5aWoH2nL3tHQYZvN/pJRs
 8wu4Cw1ApatqLIaur6S6LR+s4xB7HxnMvpiF3NMwr6ZeZBUUTGEJbRgFhY9TqZam
@@ -4321,7 +4321,7 @@ uid    Rob Manning <robert.m.manning@gmail.com>
 
 sub    AC9F6F1991913E30
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEqXMWkRBACnsxVroe9ojc2AnRn/85KJi/Ntsbku5iJ5z72B6I+VGn/b1Xln
 kuvRJ41RLG13lKVmHtSTq2pajjmAr9jY5gS8nJ3JUES9bG3yKNN1IDswXExfAUJp
@@ -4364,7 +4364,7 @@ uid    Oleg Kalnichevski <oleg@ural.ru>
 
 sub    926DFB2EDB329089
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGiBEPonucRBACtbhYckAoyz1tuSXYX4XiqGa5390gIMcxe2hJ+Ncx9o3zX09Im
 f8PW27BnMrz7EIydgB2wphhjfK4vkNNtm5ZDWH/zJStsk1Fe7lNuuxs8XorX1+8D
@@ -4396,7 +4396,7 @@ sub    72FF58594F983302
 sub    0588BC69A286FF16
 sub    3967D4EDA591B991
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQGNBF+TCd4BDACbIA94MfIWL0SpvZwBddXgx36Lp9GYOWNgGoQCWSvk9vaMrLaI
 rEll0xnoP98CfBQYrVSAmHDMhSLBCjNB3V1Sdz8GRdOG7HUffF7Cqwbm3Fxo3H/h
@@ -4477,7 +4477,7 @@ uid    Niall Gallagher (www.npgall.com) <niall@npgall.com>
 
 sub    DC0B7E986BD7398F
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBE9/RAsBCADI/pVIFcoLmbq4LCKkqeN4i5xgGKsuQsDAf/ndFkILDUA2FaPN
 7cI3EvZacWnWUA0QkkKNKpajU2OjjQlu4IyBosJht3VMtD0BJ2nL8eIDvwO6L8TS
@@ -4510,7 +4510,7 @@ x1rrD3BL6LwVJtHcfQxuT3IRDnjnYXZAUOVAlQ==
 pub    7FE9900F412D622E
 sub    AE6B5325E74ED034
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: BCPG v1.77.00
+Version: BCPG v@RELEASE_NAME@
 
 mQENBFnyVlkBCACe8zGkIlDV0dUKmk9PWe2Hw8qM9DdPbtpUOpmUOidGY5svQDL3
 eqvHk85TbxqFEe3Qbjjt+R+iApFuXy5kmueXTvwCm7nAU+k/pZtPuzHyhDs3iFFH
