@@ -7,13 +7,12 @@ package ru.pixnews.igdbclient.gradle.multiplatform
 
 import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
-import org.gradle.kotlin.dsl.apply
 
 /*
  * Convention plugin that configures Android target in projects with the Kotlin Multiplatform plugin
  */
 plugins {
-    id("org.jetbrains.kotlin.multiplatform") apply false
+    id("org.jetbrains.kotlin.multiplatform")
     id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
     id("ru.pixnews.igdbclient.gradle.lint.android-lint")
     id("com.android.library")

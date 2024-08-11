@@ -5,7 +5,6 @@
 
 package ru.pixnews.igdbclient.gradle.multiplatform
 
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.dsl.ExplicitApiMode
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -15,7 +14,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
  * Convention plugin that configures Kotlin in projects with the Kotlin Multiplatform plugin
  */
 plugins {
-    id("org.jetbrains.kotlin.multiplatform") apply false
+    id("org.jetbrains.kotlin.multiplatform")
 }
 
 kotlin {
