@@ -6,9 +6,9 @@
 package ru.pixnews.igdbclient.library.test
 
 import co.touchlab.kermit.LogWriter
-import co.touchlab.kermit.SystemWriter
+import co.touchlab.kermit.platformLogWriter
 
-internal actual val testLogWriter: LogWriter = SystemWriter()
+internal actual val testLogWriter: LogWriter = platformLogWriter()
 
 public actual typealias IgnoreAndroid = org.junit.jupiter.api.Disabled
 
