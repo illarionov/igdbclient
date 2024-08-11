@@ -8,7 +8,6 @@ package ru.pixnews.igdbclient.gradle.multiplatform
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
 import com.vanniktech.maven.publish.SonatypeHost
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.named
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.dokka.gradle.DokkaTask
@@ -18,7 +17,7 @@ import ru.pixnews.igdbclient.gradle.multiplatform.publish.createIgdbclientVersio
  * Convention plugin with publishing defaults
  */
 plugins {
-    id("org.jetbrains.kotlin.multiplatform") apply false
+    id("org.jetbrains.kotlin.multiplatform")
     id("com.vanniktech.maven.publish.base")
     id("org.jetbrains.dokka")
 }
