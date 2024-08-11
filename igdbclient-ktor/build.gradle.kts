@@ -20,8 +20,6 @@ version = igdbVersions.getSubmoduleVersionProvider(
 ).get()
 
 kotlin {
-    applyDefaultHierarchyTemplate()
-
     androidTarget()
     jvm()
     js(IR) {

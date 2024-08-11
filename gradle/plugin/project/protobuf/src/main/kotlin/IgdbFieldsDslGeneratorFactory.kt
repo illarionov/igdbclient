@@ -14,10 +14,6 @@ import com.squareup.wire.schema.Type
 import okio.Path
 
 public class IgdbFieldsDslGeneratorFactory : SchemaHandler.Factory {
-    @Suppress("WRONG_OVERLOADING_FUNCTION_ARGUMENTS")
-    @Deprecated("Deprecated in parent")
-    override fun create(): SchemaHandler = error("Should not be called")
-
     override fun create(
         includes: List<String>,
         excludes: List<String>,

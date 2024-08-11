@@ -18,7 +18,7 @@ kotlin {
 
     sourceSets {
         /* Main source sets */
-        val commonMain by getting {
+        named("commonMain") {
             dependencies {
                 api(project(":igdbclient-core"))
                 implementation(libs.kermit)
@@ -29,7 +29,7 @@ kotlin {
                 implementation(libs.okio)
             }
         }
-        val jvmMain by getting {
+        named("jvmMain") {
             dependencies {
                 implementation(project(":library:test"))
                 implementation(kotlin("test"))
@@ -39,8 +39,5 @@ kotlin {
                 implementation(libs.slf4j.simple)
             }
         }
-
-        /* Main hierarchy */
-        jvmMain.dependsOn(commonMain)
     }
 }

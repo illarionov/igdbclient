@@ -5,6 +5,7 @@
 /build
 */build
 /captures
+.konan/
 .kotlin/
 .externalNativeBuild
 .cxx
