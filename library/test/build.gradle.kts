@@ -38,7 +38,6 @@ kotlin {
         getByName("androidMain") {
             dependencies {
                 api(libs.junit.jupiter.api)
-                implementation(libs.kermit.jvm)
                 implementation(libs.okhttp3)
                 implementation(libs.okhttp3.logging.interceptor)
                 implementation(libs.okhttp5.mockwebserver.junit5)
@@ -57,6 +56,12 @@ kotlin {
 
 android {
     namespace = "ru.pixnews.igdbclient.library.test"
+    packaging {
+        resources.excludes += listOf(
+            "META-INF/LICENSE-notice.md",
+            "META-INF/LICENSE.md",
+        )
+    }
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask<*>>().configureEach {
