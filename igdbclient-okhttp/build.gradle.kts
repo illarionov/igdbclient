@@ -20,10 +20,10 @@ version = igdbVersions.getSubmoduleVersionProvider(
 ).get()
 
 kotlin {
-    applyDefaultHierarchyTemplate()
-
     androidTarget()
     jvm()
+
+    applyDefaultHierarchyTemplate()
 
     sourceSets {
         val commonMain by getting {

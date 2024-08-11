@@ -12,8 +12,6 @@ plugins {
 group = "ru.pixnews.igdbclient.library.test"
 
 kotlin {
-    applyDefaultHierarchyTemplate()
-
     jvm()
     js(IR) {
         browser()

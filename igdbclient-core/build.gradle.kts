@@ -22,8 +22,6 @@ version = igdbVersions.getSubmoduleVersionProvider(
 ).get()
 
 kotlin {
-    applyDefaultHierarchyTemplate()
-
     androidTarget()
     jvm()
     js(IR) {
@@ -37,6 +35,8 @@ kotlin {
     macosX64()
     macosArm64()
     mingwX64()
+
+    applyDefaultHierarchyTemplate()
 
     sourceSets {
         /* Main source sets */
