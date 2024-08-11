@@ -33,7 +33,10 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          cache-encryption-key: ${{ secrets.GradleEncryptionKey }}
+          build-scan-publish: true
+          build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
+          build-scan-terms-of-use-agree: "yes"
+          cache-encryption-key: ${{ secrets.GRADLEENCRYPTIONKEY }}
           dependency-graph: generate
 
       - name: Restore Kotlin Native Cache
@@ -51,7 +54,7 @@ jobs:
           ORG_GRADLE_PROJECT_signingInMemoryKeyId: FCF62075
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_IN_MEMORY_KEY_PASSWORD }}
         run: >
-          ./gradlew --scan -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
+          ./gradlew --no-configuration-cache --scan -Pkotlin.daemon.jvmargs="${{ env.KOTLIN_DAEMON_JVMARGS }}"
           build publishAllPublicationsToMavenCentralRepository --stacktrace
 
       - name: Upload build artifacts
