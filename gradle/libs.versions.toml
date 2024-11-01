@@ -25,7 +25,7 @@ okhttp5 = "5.0.0-alpha.14"
 okio = "3.9.1"
 orgjson = "20240303"
 slf4j = "2.0.16"
-spotless = "7.0.0.BETA1"
+spotless = "7.0.0.BETA4"
 turbine = "1.1.0"
 wire = "5.0.0"
 
