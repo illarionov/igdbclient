@@ -27,7 +27,7 @@ orgjson = "20240303"
 slf4j = "2.0.16"
 spotless = "7.0.0.BETA1"
 turbine = "1.1.0"
-wire = "5.0.0"
+wire = "5.1.0"
 
 [libraries]
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
