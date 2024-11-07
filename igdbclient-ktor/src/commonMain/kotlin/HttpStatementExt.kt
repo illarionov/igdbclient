@@ -5,22 +5,23 @@
 
 package ru.pixnews.igdbclient.ktor
 
-import io.ktor.client.call.body
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.HttpStatement
+import io.ktor.client.statement.bodyAsChannel
 import io.ktor.util.flattenEntries
 import io.ktor.utils.io.ByteReadChannel
-import io.ktor.utils.io.core.isEmpty
-import io.ktor.utils.io.core.readBytes
-import io.ktor.utils.io.errors.IOException
+import io.ktor.utils.io.readRemaining
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.io.IOException
+import kotlinx.io.readByteArray
 import okio.Buffer
 import okio.BufferedSource
 import okio.use
 import ru.pixnews.igdbclient.IgdbResult
 import ru.pixnews.igdbclient.ktor.KtorIgdbConstants.DEFAULT_BUFFER_SIZE
+import kotlinx.io.Source as kotlinxSource
 
 internal suspend fun <T : Any, E : Any> HttpStatement.executeAsyncWithResult(
     backgroundDispatcher: CoroutineDispatcher = Dispatchers.Default,
@@ -51,13 +52,13 @@ private suspend fun <T : Any, E : Any> readHttpResponse(
     successResponseParser: (BufferedSource) -> T,
     errorResponseParser: (BufferedSource) -> E,
 ): IgdbResult<T, E> {
-    val channel: ByteReadChannel = response.body()
+    val channel: ByteReadChannel = response.bodyAsChannel()
     val responseBody = Buffer()
 
     while (!channel.isClosedForRead) {
-        val packet = channel.readRemaining(DEFAULT_BUFFER_SIZE)
-        while (!packet.isEmpty) {
-            val bytes = packet.readBytes()
+        val packet: kotlinxSource = channel.readRemaining(DEFAULT_BUFFER_SIZE)
+        while (!packet.exhausted()) {
+            val bytes = packet.readByteArray()
             responseBody.write(bytes)
         }
     }
