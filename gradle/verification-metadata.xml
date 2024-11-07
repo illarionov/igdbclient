@@ -98,11 +98,6 @@
       </trusted-keys>
    </configuration>
    <components>
-      <component group="com.beust" name="jcommander" version="1.82">
-         <artifact name="jcommander-1.82.jar">
-            <pgp value="C70B844F002F21F6D2B9C87522E44AC0622B91C3"/>
-         </artifact>
-      </component>
       <component group="com.diffplug.durian" name="durian-swt.os" version="4.3.0">
          <artifact name="durian-swt.os-4.3.0.jar">
             <pgp value="4797B4F5DCC46CEA61059071A1AE06236CA2BA62"/>
@@ -198,8 +193,8 @@
             <pgp value="09939C73246B4BA7444CAA453D002DBC5EA9615F"/>
          </artifact>
       </component>
-      <component group="dev.equo.ide" name="solstice" version="1.7.6">
-         <artifact name="solstice-1.7.6.jar">
+      <component group="dev.equo.ide" name="solstice" version="1.8.0">
+         <artifact name="solstice-1.8.0.jar">
             <pgp value="1D2C7EF8ADA0F794B58C7C63436902AF59EDF60E"/>
          </artifact>
       </component>
@@ -231,11 +226,6 @@
       <component group="io.perfmark" name="perfmark-api" version="0.26.0">
          <artifact name="perfmark-api-0.26.0.jar">
             <pgp value="C6F7D1C804C821F49AF3BFC13AD93C3C677A106E"/>
-         </artifact>
-      </component>
-      <component group="it.krzeminski" name="snakeyaml-engine-kmp-jvm" version="2.7.5">
-         <artifact name="snakeyaml-engine-kmp-jvm-2.7.5.jar">
-            <pgp value="8247F88933C2D56F830AF73436AB7ACFFF2027B1"/>
          </artifact>
       </component>
       <component group="it.krzeminski" name="snakeyaml-engine-kmp-jvm" version="3.0.1">
@@ -311,11 +301,6 @@
       <component group="org.freemarker" name="freemarker" version="2.3.32">
          <artifact name="freemarker-2.3.32.jar">
             <pgp value="13AC2213964ABE1D1C147C0E1939A2520BAB1D90"/>
-         </artifact>
-      </component>
-      <component group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins" version="4.4.0">
-         <artifact name="gradle-kotlin-dsl-plugins-4.4.0.jar">
-            <pgp value="1BD97A6A154E7810EE0BC832E2F38302C8075E3D"/>
          </artifact>
       </component>
       <component group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins" version="4.5.0">
