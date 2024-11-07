@@ -64,7 +64,6 @@ class RealKtorNetworkTestClient {
     var coroutinesExt: MainCoroutineExtension = MainCoroutineExtension()
     val testTokenProperties = TestTokenProperties.loadFromResources()
     private val ktorHttpClient: HttpClient = HttpClient(Java) {
-        developmentMode = true
         install(Logging) {
             logger = IgdbKtorLogger()
             level = LogLevel.ALL
