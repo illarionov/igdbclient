@@ -32,6 +32,7 @@ public final class ru/pixnews/igdbclient/IgdbClientKt {
 	public static final fun getGameEngines (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameLocalizations (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameModes (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getGameTimeToBeat (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersionFeatureValues (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersionFeatures (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersions (Lru/pixnews/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -115,6 +116,7 @@ public final class ru/pixnews/igdbclient/IgdbEndpoint$Companion {
 	public final fun getGAME_ENGINE_LOGO ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getGAME_LOCALIZATION ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getGAME_MODE ()Lru/pixnews/igdbclient/IgdbEndpoint;
+	public final fun getGAME_TIME_TO_BEAT ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION_FEATURE ()Lru/pixnews/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION_FEATURE_VALUE ()Lru/pixnews/igdbclient/IgdbEndpoint;
@@ -857,6 +859,23 @@ public final class ru/pixnews/igdbclient/dsl/field/GameModeFieldDsl : ru/pixnews
 
 public final class ru/pixnews/igdbclient/dsl/field/GameModeFieldDslKt {
 	public static final fun getField (Lru/pixnews/igdbclient/model/GameMode$Companion;)Lru/pixnews/igdbclient/dsl/field/GameModeFieldDsl;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameTimeToBeatFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCompletely ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCount ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getGame_id ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getHastily ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getNormally ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lru/pixnews/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class ru/pixnews/igdbclient/dsl/field/GameTimeToBeatFieldDslKt {
+	public static final fun getField (Lru/pixnews/igdbclient/model/GameTimeToBeat$Companion;)Lru/pixnews/igdbclient/dsl/field/GameTimeToBeatFieldDsl;
 }
 
 public final class ru/pixnews/igdbclient/dsl/field/GameVersionFeatureFieldDsl : ru/pixnews/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -3029,6 +3048,52 @@ public final class ru/pixnews/igdbclient/model/GameStatusEnum$Companion {
 	public final fun fromValue (I)Lru/pixnews/igdbclient/model/GameStatusEnum;
 }
 
+public final class ru/pixnews/igdbclient/model/GameTimeToBeat : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/GameTimeToBeat$Companion;
+	public fun <init> ()V
+	public fun <init> (JIIIIILjava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JIIIIILjava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JIIIIILjava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lru/pixnews/igdbclient/model/GameTimeToBeat;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/GameTimeToBeat;JIIIIILjava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/GameTimeToBeat;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCompletely ()I
+	public final fun getCount ()I
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getGame_id ()I
+	public final fun getHastily ()I
+	public final fun getId ()J
+	public final fun getNormally ()I
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/GameTimeToBeat$Companion {
+}
+
+public final class ru/pixnews/igdbclient/model/GameTimeToBeatResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lru/pixnews/igdbclient/model/GameTimeToBeatResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lru/pixnews/igdbclient/model/GameTimeToBeatResult;
+	public static synthetic fun copy$default (Lru/pixnews/igdbclient/model/GameTimeToBeatResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lru/pixnews/igdbclient/model/GameTimeToBeatResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGametimetobeats ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class ru/pixnews/igdbclient/model/GameTimeToBeatResult$Companion {
+}
+
 public final class ru/pixnews/igdbclient/model/GameVersion : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lru/pixnews/igdbclient/model/GameVersion$Companion;
@@ -5185,6 +5250,23 @@ public final class ru/pixnews/igdbclient/scheme/field/GameModeField : java/lang/
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameModeField;
 	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameModeField;
+}
+
+public final class ru/pixnews/igdbclient/scheme/field/GameTimeToBeatField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field COMPLETELY Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field COUNT Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field CREATED_AT Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field GAME_ID Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field HASTILY Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field ID Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field NORMALLY Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static final field UPDATED_AT Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
+	public static fun values ()[Lru/pixnews/igdbclient/scheme/field/GameTimeToBeatField;
 }
 
 public final class ru/pixnews/igdbclient/scheme/field/GameVersionFeatureField : java/lang/Enum, ru/pixnews/igdbclient/scheme/field/IgdbField {
