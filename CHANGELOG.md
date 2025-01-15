@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.7] — 2025-01-15
+
+### Added
+
+- ["GameTimeToBeat"](https://api-docs.igdb.com/#game-time-to-beat) endpoint.
+
+### Changed
+
+- Package and maven coordinates have been changed.
+  Replace the prefix "ru.pixnews.igdbclient" in all imports to "at.released.igdbclient".  
+  New maven group: "at.released.igdbclient"
+
+- Bump dependency versions:
+    * AGP 8.7.3
+    * Kotlin 2.1.0
+    * AtomicFU 0.27.0
+    * Wire 5.2.1
+    * Okio 3.10.2
+    * Ktor 3.0.3
+    * orgjson 20250107
+    * Kotlinx.serialization 1.8.0
+    * kotlinx-coroutines 1.10.1
+    * Other internal dependencies
+
 ## [0.6] — 2024-07-03
 
 ### Added

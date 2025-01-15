@@ -29,7 +29,7 @@ Dependency when using *Кtor* client (supported on all targets):
 
 ```kotlin
 dependencies {
-    implementation("at.released.igdbclient:igdbclient-ktor:0.6")
+    implementation("at.released.igdbclient:igdbclient-ktor:0.7")
 }
 ```
 
@@ -38,7 +38,7 @@ In Kotlin Multiplatform projects, this dependency can be added to the *commonMai
 ```kotlin
 commonMain {
     dependencies {
-        implementation("at.released.igdbclient:igdbclient-ktor:0.6")
+        implementation("at.released.igdbclient:igdbclient-ktor:0.7")
     }
 }
 ```
@@ -47,7 +47,7 @@ Dependency when using *Okhttp* (JVM and Android):
 
 ```kotlin
 dependencies {
-    implementation("at.released.igdbclient:igdbclient-okhttp:0.6")
+    implementation("at.released.igdbclient:igdbclient-okhttp:0.7")
 }
 ```
 
@@ -307,7 +307,7 @@ These services are licensed under Apache 2.0 License.\
 Authors and contributors are listed in the [Authors](AUTHORS) file.
 
 ```
-Copyright 2023-2024 Igdbclient project authors and contributors.
+Copyright 2023-2025 Igdbclient project authors and contributors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
