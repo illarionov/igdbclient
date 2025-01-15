@@ -2,12 +2,12 @@
 androidMinSdk = "14"
 androidCompileSdk = "33"
 
-agp = "8.5.2"
+agp = "8.7.3"
 assertk = "0.28.1"
-atomicfu = '0.26.1'
+atomicfu = '0.27.0'
 detekt = "1.23.7"
 diktat = "2.0.0"
-dokka = "1.9.20"
+dokka = "2.0.0"
 junit5 = "5.11.4"
 junit-platform-launcher = "1.11.4"
 gradle-maven-publish-plugin = "0.30.0"
@@ -18,16 +18,16 @@ kotlin-compile-testing-fork = "0.7.0"
 kotlinpoet = "2.0.0"
 kotlinx-binary-compatibility-validator = "0.17.0"
 kotlinx-coroutines = "1.10.1"
-kotlinx-serialization = "1.7.3"
+kotlinx-serialization = "1.8.0"
 ktor = "3.0.3"
 okhttp3 = "4.12.0"
 okhttp5 = "5.0.0-alpha.14"
-okio = "3.9.1"
-orgjson = "20240303"
+okio = "3.10.2"
+orgjson = "20250107"
 slf4j = "2.0.16"
-spotless = "7.0.0.BETA4"
+spotless = "7.0.0"
 turbine = "1.2.0"
-wire = "5.1.0"
+wire = "5.2.1"
 
 [libraries]
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }

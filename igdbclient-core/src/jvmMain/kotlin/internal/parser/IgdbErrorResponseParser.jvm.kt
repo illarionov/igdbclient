@@ -8,7 +8,6 @@ package ru.pixnews.igdbclient.internal.parser
 import okio.BufferedSource
 import org.json.JSONArray
 import org.json.JSONObject
-import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 
@@ -18,7 +17,7 @@ import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
 @InternalIgdbClientApi
 public actual fun IgdbParser.igdbErrorResponseParser(source: BufferedSource): IgdbHttpErrorResponse {
     val response = source.readUtf8()
-    val tokener = JSONTokener(response).nextValue() as? JSONArray ?: error("Malformed JSON")
+    val tokener = response.jsonTokener().nextValue() as? JSONArray ?: error("Malformed JSON")
     return IgdbHttpErrorResponse(readMessageArray(tokener))
 }
 

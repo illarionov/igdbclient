@@ -82,7 +82,7 @@ abstract class BaseIgdbDumpApiImplementationTest {
                     "franchises": "LONG[]",
                     "rating": "DOUBLE",
                     "created_at": "TIMESTAMP",
-                    "checksum": "UUID",
+                    "checksum": "UUID"
                 }
             }
         """

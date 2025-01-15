@@ -7,7 +7,6 @@ package ru.pixnews.igdbclient.internal.parser
 
 import okio.BufferedSource
 import org.json.JSONObject
-import org.json.JSONTokener
 import ru.pixnews.igdbclient.InternalIgdbClientApi
 import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 
@@ -19,7 +18,7 @@ import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
 @InternalIgdbClientApi
 public actual fun IgdbParser.twitchTokenErrorResponseParser(source: BufferedSource): TwitchErrorResponse {
     val response = source.readUtf8()
-    val jsonObject = JSONTokener(response).nextValue() as? JSONObject ?: error("Malformed JSON")
+    val jsonObject = response.jsonTokener().nextValue() as? JSONObject ?: error("Malformed JSON")
     return TwitchErrorResponse(
         status = jsonObject.optInt("status"),
         message = jsonObject.optString("message"),

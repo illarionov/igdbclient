@@ -18,7 +18,7 @@ import ru.pixnews.igdbclient.model.dump.IgdbDumpSummary
 @InternalIgdbClientApi
 internal actual fun IgdbParser.igdbDumpJsonParser(source: BufferedSource): IgdbDump {
     val response = source.readUtf8()
-    val tokener = JSONTokener(response).nextValue() as? JSONObject ?: error("Malformed JSON")
+    val tokener = response.jsonTokener().nextValue() as? JSONObject ?: error("Malformed JSON")
     return IgdbDump(
         s3Url = tokener.getString("s3_url"),
         endpoint = tokener.getString("endpoint"),
