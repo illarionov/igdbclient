@@ -1,15 +1,16 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.internal
+package at.released.igdbclient.internal
 
-import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
-import ru.pixnews.igdbclient.internal.model.IgdbClientConfig
-import ru.pixnews.igdbclient.internal.twitch.TwitchAuthenticationRequestDecorator
-import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
+import at.released.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
+import at.released.igdbclient.internal.model.IgdbAuthToken
+import at.released.igdbclient.internal.model.IgdbClientConfig
+import at.released.igdbclient.internal.twitch.TwitchAuthenticationRequestDecorator
+import at.released.igdbclient.internal.twitch.TwitchCredentials
 
 internal fun buildRequestExecutor(
     config: IgdbClientConfig<*>,

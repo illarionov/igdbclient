@@ -1,12 +1,13 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.apicalypse
+package at.released.igdbclient.apicalypse
 
-import ru.pixnews.igdbclient.apicalypse.SortOrder.ASC
-import ru.pixnews.igdbclient.dsl.field.IgdbRequestField
+import at.released.igdbclient.apicalypse.SortOrder.ASC
+import at.released.igdbclient.dsl.field.IgdbRequestField
 import kotlin.jvm.JvmInline
 
 /**
@@ -40,7 +41,7 @@ public class ApicalypseQueryBuilder {
     /**
      * Fields that should be returned as a result of an API request.
      *
-     * Use [Game.field][ru.pixnews.igdbclient.model.Game.Companion.field] extension function to start building a
+     * Use [Game.field][at.released.igdbclient.model.Game.Companion.field] extension function to start building a
      * field request for the Game object.
      *
      * For example, you can use `Game.field.all` to query all fields
@@ -67,7 +68,7 @@ public class ApicalypseQueryBuilder {
     /**
      * Fields to exclude when using '*' wildcard when specifying the list of [fields]
      *
-     * Use [Game.field][ru.pixnews.igdbclient.model.Game.Companion.field] extension function to start building a
+     * Use [Game.field][at.released.igdbclient.model.Game.Companion.field] extension function to start building a
      * field request for the Game object.
      *
      * See [https://api-docs.igdb.com/#exclude](https://api-docs.igdb.com/#exclude)

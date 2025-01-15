@@ -1,14 +1,15 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.okhttp
+package at.released.igdbclient.okhttp
 
+import at.released.igdbclient.integration.tests.BaseTwitchTokenFetcherTest
+import at.released.igdbclient.internal.twitch.TwitchTokenFetcher
+import at.released.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 import okhttp3.HttpUrl.Companion.toHttpUrl
-import ru.pixnews.igdbclient.integration.tests.BaseTwitchTokenFetcherTest
-import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
-import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 
 class OkhttpTwitchTokenFetcherTest : BaseTwitchTokenFetcherTest() {
     override fun createTwitchTokenFetcher(

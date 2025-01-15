@@ -1,18 +1,19 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.okhttp
+package at.released.igdbclient.okhttp
 
+import at.released.igdbclient.internal.IgdbHttpClient
+import at.released.igdbclient.internal.RequestExecutor
+import at.released.igdbclient.internal.model.IgdbAuthToken
+import at.released.igdbclient.internal.model.IgdbClientConfig
+import at.released.igdbclient.internal.twitch.TwitchTokenFetcher
+import at.released.igdbclient.okhttp.dsl.IgdbOkhttpConfig
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.OkHttpClient
-import ru.pixnews.igdbclient.internal.IgdbHttpClient
-import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
-import ru.pixnews.igdbclient.internal.model.IgdbClientConfig
-import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
-import ru.pixnews.igdbclient.okhttp.dsl.IgdbOkhttpConfig
 
 internal class OkhttpIgdbHttpClientImplementation(
     config: IgdbClientConfig<IgdbOkhttpConfig>,

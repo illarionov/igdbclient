@@ -1,23 +1,24 @@
 /*
- * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2024-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
 
-package ru.pixnews.igdbclient.ktor.integration
+package at.released.igdbclient.ktor.integration
 
+import at.released.igdbclient.IgdbClient
+import at.released.igdbclient.integration.tests.BaseIgdbClientImplementationTest
+import at.released.igdbclient.ktor.IgdbKtorEngine
+import at.released.igdbclient.library.test.Fixtures
+import at.released.igdbclient.library.test.IgdbClientConstants
 import io.ktor.client.HttpClient
 import mockwebserver3.SocketPolicy
 import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
-import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
-import ru.pixnews.igdbclient.ktor.IgdbKtorEngine
-import ru.pixnews.igdbclient.library.test.Fixtures
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants
 
 abstract class KtorBaseIgdbClientImplementationTest : BaseIgdbClientImplementationTest() {
     abstract fun createKtorClient(): HttpClient
@@ -44,7 +45,9 @@ abstract class KtorBaseIgdbClientImplementationTest : BaseIgdbClientImplementati
 
     @Suppress("BACKTICKS_PROHIBITED")
     @ParameterizedTest
-    @MethodSource("ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies")
+    @MethodSource(
+        "at.released.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies",
+    )
     @Disabled("Flacky and slow")
     override fun `Implementation should throw correct exception on network error`(policy: SocketPolicy) {
         super.`Implementation should throw correct exception on network error`(policy)

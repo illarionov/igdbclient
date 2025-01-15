@@ -1,10 +1,48 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.ktor
+package at.released.igdbclient.ktor
 
+import at.released.igdbclient.IgdbClient
+import at.released.igdbclient.IgdbEndpoint
+import at.released.igdbclient.IgdbEndpoint.Companion.countEndpoint
+import at.released.igdbclient.apicalypse.apicalypseQuery
+import at.released.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
+import at.released.igdbclient.auth.twitch.TwitchTokenPayload
+import at.released.igdbclient.dsl.field.field
+import at.released.igdbclient.executeOrThrow
+import at.released.igdbclient.getCollectionMembershipTypes
+import at.released.igdbclient.getCollectionMemberships
+import at.released.igdbclient.getCollectionRelationTypes
+import at.released.igdbclient.getCollectionRelations
+import at.released.igdbclient.getCollectionTypes
+import at.released.igdbclient.getEventLogos
+import at.released.igdbclient.getEventNetworks
+import at.released.igdbclient.getEvents
+import at.released.igdbclient.getGameTimeToBeat
+import at.released.igdbclient.getGames
+import at.released.igdbclient.getNetworkTypes
+import at.released.igdbclient.getPopularityPrimitives
+import at.released.igdbclient.getPopularityTypes
+import at.released.igdbclient.ktor.integration.IgdbKtorLogger
+import at.released.igdbclient.library.test.TestingLoggers
+import at.released.igdbclient.library.test.jupiter.MainCoroutineExtension
+import at.released.igdbclient.model.CollectionMembership
+import at.released.igdbclient.model.CollectionMembershipType
+import at.released.igdbclient.model.CollectionRelation
+import at.released.igdbclient.model.CollectionType
+import at.released.igdbclient.model.Event
+import at.released.igdbclient.model.EventLogo
+import at.released.igdbclient.model.EventNetwork
+import at.released.igdbclient.model.Game
+import at.released.igdbclient.model.NetworkType
+import at.released.igdbclient.model.PopularityPrimitive
+import at.released.igdbclient.model.PopularityType
+import at.released.igdbclient.multiquery
+import at.released.igdbclient.scheme.field.PopularityPrimitiveField
 import io.kotest.matchers.collections.shouldHaveSize
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.java.Java
@@ -16,43 +54,6 @@ import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable
 import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.IgdbEndpoint
-import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
-import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
-import ru.pixnews.igdbclient.auth.twitch.InMemoryTwitchTokenStorage
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
-import ru.pixnews.igdbclient.dsl.field.field
-import ru.pixnews.igdbclient.executeOrThrow
-import ru.pixnews.igdbclient.getCollectionMembershipTypes
-import ru.pixnews.igdbclient.getCollectionMemberships
-import ru.pixnews.igdbclient.getCollectionRelationTypes
-import ru.pixnews.igdbclient.getCollectionRelations
-import ru.pixnews.igdbclient.getCollectionTypes
-import ru.pixnews.igdbclient.getEventLogos
-import ru.pixnews.igdbclient.getEventNetworks
-import ru.pixnews.igdbclient.getEvents
-import ru.pixnews.igdbclient.getGameTimeToBeat
-import ru.pixnews.igdbclient.getGames
-import ru.pixnews.igdbclient.getNetworkTypes
-import ru.pixnews.igdbclient.getPopularityPrimitives
-import ru.pixnews.igdbclient.getPopularityTypes
-import ru.pixnews.igdbclient.ktor.integration.IgdbKtorLogger
-import ru.pixnews.igdbclient.library.test.TestingLoggers
-import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.model.CollectionMembership
-import ru.pixnews.igdbclient.model.CollectionMembershipType
-import ru.pixnews.igdbclient.model.CollectionRelation
-import ru.pixnews.igdbclient.model.CollectionType
-import ru.pixnews.igdbclient.model.Event
-import ru.pixnews.igdbclient.model.EventLogo
-import ru.pixnews.igdbclient.model.EventNetwork
-import ru.pixnews.igdbclient.model.Game
-import ru.pixnews.igdbclient.model.NetworkType
-import ru.pixnews.igdbclient.model.PopularityPrimitive
-import ru.pixnews.igdbclient.model.PopularityType
-import ru.pixnews.igdbclient.multiquery
-import ru.pixnews.igdbclient.scheme.field.PopularityPrimitiveField
 import java.util.Properties
 import kotlin.time.Duration.Companion.seconds
 

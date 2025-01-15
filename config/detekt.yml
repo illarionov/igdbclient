@@ -53,7 +53,7 @@ naming:
     active: false
   InvalidPackageDeclaration:
     active: false
-    rootPackage: "ru.pixnews.igdbclient"
+    rootPackage: "at.released.igdbclient"
     requireRootInDeclaration: false
   TopLevelPropertyNaming:
     active: true

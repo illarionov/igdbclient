@@ -1,10 +1,15 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.gradle.protobuf.igdb
+package at.released.igdbclient.gradle.protobuf.igdb
 
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_FIELD_INTERFACE
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.SCHEME_PACKAGE_NAME
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.getIgdbEntityReferenceUrl
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
@@ -19,10 +24,6 @@ import com.squareup.wire.schema.Field
 import com.squareup.wire.schema.MessageType
 import com.squareup.wire.schema.ProtoType
 import com.squareup.wire.schema.Type
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_FIELD_INTERFACE
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.SCHEME_PACKAGE_NAME
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.getIgdbEntityReferenceUrl
 import java.util.Locale
 
 /**

@@ -1,7 +1,7 @@
 # https://github.com/saveourtool/diktat/blob/master/diktat-rules/src/main/resources/diktat-analysis.yml
 - name: DIKTAT_COMMON
   configuration:
-    domainName: ru.pixnews.igdbclient
+    domainName: at.released.igdbclient
     testDirs: test
     disabledChapters: ""
     kotlinVersion: 1.8

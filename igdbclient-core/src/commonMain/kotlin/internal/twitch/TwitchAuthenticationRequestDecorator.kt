@@ -1,32 +1,33 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.internal.twitch
+package at.released.igdbclient.internal.twitch
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.IgdbResult.Failure
+import at.released.igdbclient.IgdbResult.Failure.ApiFailure
+import at.released.igdbclient.IgdbResult.Failure.HttpFailure
+import at.released.igdbclient.IgdbResult.Failure.NetworkFailure
+import at.released.igdbclient.IgdbResult.Failure.UnknownFailure
+import at.released.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
+import at.released.igdbclient.IgdbResult.Success
+import at.released.igdbclient.InternalIgdbClientApi
+import at.released.igdbclient.auth.twitch.TwitchTokenPayload
+import at.released.igdbclient.auth.twitch.TwitchTokenStorage
+import at.released.igdbclient.error.IgdbException
+import at.released.igdbclient.error.IgdbHttpErrorResponse
+import at.released.igdbclient.error.IgdbHttpErrorResponse.Message
+import at.released.igdbclient.internal.IgdbRequest
+import at.released.igdbclient.internal.RequestExecutor
+import at.released.igdbclient.internal.model.IgdbAuthToken
+import at.released.igdbclient.internal.model.TwitchToken
+import at.released.igdbclient.internal.model.TwitchToken.Companion.encode
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import okio.IOException
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.IgdbResult.Failure
-import ru.pixnews.igdbclient.IgdbResult.Failure.ApiFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.NetworkFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
-import ru.pixnews.igdbclient.IgdbResult.Success
-import ru.pixnews.igdbclient.InternalIgdbClientApi
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenStorage
-import ru.pixnews.igdbclient.error.IgdbException
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse.Message
-import ru.pixnews.igdbclient.internal.IgdbRequest
-import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
-import ru.pixnews.igdbclient.internal.model.TwitchToken
-import ru.pixnews.igdbclient.internal.model.TwitchToken.Companion.encode
 
 @InternalIgdbClientApi
 internal class TwitchAuthenticationRequestDecorator(

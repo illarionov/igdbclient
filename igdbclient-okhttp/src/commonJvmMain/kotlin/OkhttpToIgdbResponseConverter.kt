@@ -1,25 +1,26 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:Suppress("TooGenericExceptionCaught")
 
-package ru.pixnews.igdbclient.okhttp
+package at.released.igdbclient.okhttp
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.IgdbResult.Failure.ApiFailure
+import at.released.igdbclient.IgdbResult.Failure.HttpFailure
+import at.released.igdbclient.IgdbResult.Failure.NetworkFailure
+import at.released.igdbclient.IgdbResult.Failure.UnknownFailure
+import at.released.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
+import at.released.igdbclient.IgdbResult.Success
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.Response
 import okio.Buffer
 import okio.BufferedSource
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.IgdbResult.Failure.ApiFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.HttpFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.NetworkFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownFailure
-import ru.pixnews.igdbclient.IgdbResult.Failure.UnknownHttpCodeFailure
-import ru.pixnews.igdbclient.IgdbResult.Success
 import java.io.IOException
 
 internal suspend fun <T : Any, E : Any> Result<Response>.toIgdbResult(

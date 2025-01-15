@@ -1,4 +1,4 @@
-public final class ru/pixnews/igdbclient/ktor/IgdbKtorConfig : ru/pixnews/igdbclient/dsl/IgdbHttpEngineConfig {
+public final class at/released/igdbclient/ktor/IgdbKtorConfig : at/released/igdbclient/dsl/IgdbHttpEngineConfig {
 	public fun <init> ()V
 	public final fun getBackgroundDispatcher ()Lkotlinx/coroutines/CoroutineDispatcher;
 	public final fun getHttpClient ()Lio/ktor/client/HttpClient;
@@ -6,8 +6,8 @@ public final class ru/pixnews/igdbclient/ktor/IgdbKtorConfig : ru/pixnews/igdbcl
 	public final fun setHttpClient (Lio/ktor/client/HttpClient;)V
 }
 
-public final class ru/pixnews/igdbclient/ktor/IgdbKtorEngine : ru/pixnews/igdbclient/IgdbHttpEngine {
-	public static final field INSTANCE Lru/pixnews/igdbclient/ktor/IgdbKtorEngine;
-	public fun create (Lru/pixnews/igdbclient/internal/model/IgdbClientConfig;)Lru/pixnews/igdbclient/internal/IgdbHttpClient;
+public final class at/released/igdbclient/ktor/IgdbKtorEngine : at/released/igdbclient/IgdbHttpEngine {
+	public static final field INSTANCE Lat/released/igdbclient/ktor/IgdbKtorEngine;
+	public fun create (Lat/released/igdbclient/internal/model/IgdbClientConfig;)Lat/released/igdbclient/internal/IgdbHttpClient;
 }
 

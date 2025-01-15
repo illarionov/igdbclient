@@ -1,13 +1,24 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress("FunctionName", "MISSING_KDOC_CLASS_ELEMENTS", "KDOC_NO_EMPTY_TAGS", "MISSING_KDOC_ON_FUNCTION")
 
-package ru.pixnews.igdbclient.integration.tests
+package at.released.igdbclient.integration.tests
 
+import at.released.igdbclient.apicalypse.apicalypseQuery
+import at.released.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
+import at.released.igdbclient.internal.RequestExecutor
+import at.released.igdbclient.internal.model.IgdbAuthToken
+import at.released.igdbclient.library.test.Fixtures
+import at.released.igdbclient.library.test.IgdbClientConstants.Header.AUTHORIZATION
+import at.released.igdbclient.library.test.IgdbClientConstants.Header.CLIENT_ID
+import at.released.igdbclient.library.test.jupiter.MainCoroutineExtension
+import at.released.igdbclient.library.test.okhttp.mockwebserver.start
+import at.released.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.CoroutineDispatcher
 import mockwebserver3.MockResponse
@@ -17,16 +28,6 @@ import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
-import ru.pixnews.igdbclient.internal.IgdbRequest.ApicalypsePostRequest
-import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
-import ru.pixnews.igdbclient.library.test.Fixtures
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.AUTHORIZATION
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants.Header.CLIENT_ID
-import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 
 /**
  * Base class with integration tests running on different implementations of the RequestExecutor

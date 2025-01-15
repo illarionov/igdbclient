@@ -1,6 +1,6 @@
 # Igdbclient
 
-[![Maven Central](https://img.shields.io/maven-central/v/ru.pixnews.igdbclient/igdbclient-core)](https://central.sonatype.com/artifact/ru.pixnews.igdbclient/igdbclient-core/)
+[![Maven Central](https://img.shields.io/maven-central/v/at.released.igdbclient/igdbclient-core)](https://central.sonatype.com/artifact/at.released.igdbclient/igdbclient-core/)
 [![build](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml/badge.svg)](https://github.com/illarionov/igdbclient/actions/workflows/Build.yml)
 
 Igdbclient is a Kotlin Multiplatform library for fetching information about games from the
@@ -29,7 +29,7 @@ Dependency when using *Кtor* client (supported on all targets):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.6")
+    implementation("at.released.igdbclient:igdbclient-ktor:0.6")
 }
 ```
 
@@ -38,7 +38,7 @@ In Kotlin Multiplatform projects, this dependency can be added to the *commonMai
 ```kotlin
 commonMain {
     dependencies {
-        implementation("ru.pixnews.igdbclient:igdbclient-ktor:0.6")
+        implementation("at.released.igdbclient:igdbclient-ktor:0.6")
     }
 }
 ```
@@ -47,7 +47,7 @@ Dependency when using *Okhttp* (JVM and Android):
 
 ```kotlin
 dependencies {
-    implementation("ru.pixnews.igdbclient:igdbclient-okhttp:0.6")
+    implementation("at.released.igdbclient:igdbclient-okhttp:0.6")
 }
 ```
 
@@ -298,7 +298,7 @@ The following types of contributions are especially welcome:
 [Ktor]: https://ktor.io/
 [Okhttp]: https://square.github.io/okhttp/
 [IGDB API]: https://api-docs.igdb.com/
-[Maven Central]: https://search.maven.org/artifact/ru.pixnews.igdbclient/igdbclient
+[Maven Central]: https://search.maven.org/artifact/at.released.igdbclient/igdbclient
 
 ## License
 

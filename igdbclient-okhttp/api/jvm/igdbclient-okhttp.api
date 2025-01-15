@@ -1,9 +1,9 @@
-public final class ru/pixnews/igdbclient/okhttp/IgdbOkhttpEngine : ru/pixnews/igdbclient/IgdbHttpEngine {
-	public static final field INSTANCE Lru/pixnews/igdbclient/okhttp/IgdbOkhttpEngine;
-	public fun create (Lru/pixnews/igdbclient/internal/model/IgdbClientConfig;)Lru/pixnews/igdbclient/internal/IgdbHttpClient;
+public final class at/released/igdbclient/okhttp/IgdbOkhttpEngine : at/released/igdbclient/IgdbHttpEngine {
+	public static final field INSTANCE Lat/released/igdbclient/okhttp/IgdbOkhttpEngine;
+	public fun create (Lat/released/igdbclient/internal/model/IgdbClientConfig;)Lat/released/igdbclient/internal/IgdbHttpClient;
 }
 
-public final class ru/pixnews/igdbclient/okhttp/dsl/IgdbOkhttpConfig : ru/pixnews/igdbclient/dsl/IgdbHttpEngineConfig {
+public final class at/released/igdbclient/okhttp/dsl/IgdbOkhttpConfig : at/released/igdbclient/dsl/IgdbHttpEngineConfig {
 	public fun <init> ()V
 	public final fun getBackgroundDispatcher ()Lkotlinx/coroutines/CoroutineDispatcher;
 	public final fun getCallFactory ()Lokhttp3/Call$Factory;

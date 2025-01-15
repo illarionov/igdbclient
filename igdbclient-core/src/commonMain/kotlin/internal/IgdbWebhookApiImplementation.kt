@@ -1,25 +1,26 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.internal
+package at.released.igdbclient.internal
 
-import ru.pixnews.igdbclient.IgdbEndpoint
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.IgdbWebhookApi
-import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod
-import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.CREATE
-import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.DELETE
-import ru.pixnews.igdbclient.IgdbWebhookApi.WebhookMethod.UPDATE
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
-import ru.pixnews.igdbclient.internal.IgdbRequest.DeleteRequest
-import ru.pixnews.igdbclient.internal.IgdbRequest.FormUrlEncodedPostRequest
-import ru.pixnews.igdbclient.internal.IgdbRequest.GetRequest
-import ru.pixnews.igdbclient.internal.parser.IgdbParser
-import ru.pixnews.igdbclient.internal.parser.igdbWebhookListJsonParser
-import ru.pixnews.igdbclient.model.IgdbWebhook
-import ru.pixnews.igdbclient.model.IgdbWebhookId
+import at.released.igdbclient.IgdbEndpoint
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.IgdbWebhookApi
+import at.released.igdbclient.IgdbWebhookApi.WebhookMethod
+import at.released.igdbclient.IgdbWebhookApi.WebhookMethod.CREATE
+import at.released.igdbclient.IgdbWebhookApi.WebhookMethod.DELETE
+import at.released.igdbclient.IgdbWebhookApi.WebhookMethod.UPDATE
+import at.released.igdbclient.error.IgdbHttpErrorResponse
+import at.released.igdbclient.internal.IgdbRequest.DeleteRequest
+import at.released.igdbclient.internal.IgdbRequest.FormUrlEncodedPostRequest
+import at.released.igdbclient.internal.IgdbRequest.GetRequest
+import at.released.igdbclient.internal.parser.IgdbParser
+import at.released.igdbclient.internal.parser.igdbWebhookListJsonParser
+import at.released.igdbclient.model.IgdbWebhook
+import at.released.igdbclient.model.IgdbWebhookId
 
 internal class IgdbWebhookApiImplementation(
     val requestExecutor: RequestExecutor,
