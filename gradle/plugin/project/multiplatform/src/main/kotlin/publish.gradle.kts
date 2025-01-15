@@ -8,7 +8,6 @@ package ru.pixnews.igdbclient.gradle.multiplatform
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
 import com.vanniktech.maven.publish.SonatypeHost
-import org.jetbrains.dokka.gradle.DokkaTask
 import ru.pixnews.igdbclient.gradle.multiplatform.publish.createIgdbclientVersionsExtension
 
 /*
@@ -71,7 +70,7 @@ mavenPublishing {
     }
 }
 
-tasks.named<DokkaTask>("dokkaHtml") {
+dokka {
     dokkaSourceSets.configureEach {
         skipDeprecated.set(true)
     }
