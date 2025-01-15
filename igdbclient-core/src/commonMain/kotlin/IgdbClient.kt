@@ -52,6 +52,7 @@ import ru.pixnews.igdbclient.model.GameEngineResult
 import ru.pixnews.igdbclient.model.GameLocalizationResult
 import ru.pixnews.igdbclient.model.GameModeResult
 import ru.pixnews.igdbclient.model.GameResult
+import ru.pixnews.igdbclient.model.GameTimeToBeatResult
 import ru.pixnews.igdbclient.model.GameVersionFeatureResult
 import ru.pixnews.igdbclient.model.GameVersionFeatureValueResult
 import ru.pixnews.igdbclient.model.GameVersionResult
@@ -292,6 +293,12 @@ public suspend fun IgdbClient.getGameLocalizations(builder: ApicalypseQueryBuild
  */
 public suspend fun IgdbClient.getGameModes(builder: ApicalypseQueryBuilder.() -> Unit): GameModeResult =
     executeOrThrow(IgdbEndpoint.GAME_MODE, apicalypseQuery(builder))
+
+/**
+ * Average time to beat times for a game
+ */
+public suspend fun IgdbClient.getGameTimeToBeat(builder: ApicalypseQueryBuilder.() -> Unit): GameTimeToBeatResult =
+    executeOrThrow(IgdbEndpoint.GAME_TIME_TO_BEAT, apicalypseQuery(builder))
 
 /**
  * Details about game editions and versions

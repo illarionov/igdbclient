@@ -32,6 +32,7 @@ import ru.pixnews.igdbclient.getCollectionTypes
 import ru.pixnews.igdbclient.getEventLogos
 import ru.pixnews.igdbclient.getEventNetworks
 import ru.pixnews.igdbclient.getEvents
+import ru.pixnews.igdbclient.getGameTimeToBeat
 import ru.pixnews.igdbclient.getGames
 import ru.pixnews.igdbclient.getNetworkTypes
 import ru.pixnews.igdbclient.getPopularityPrimitives
@@ -238,6 +239,15 @@ class RealKtorNetworkTestClient {
             fields(PopularityType.field.all)
         }
         logger.i { "popularity types: $popularityTypes" }
+    }
+
+    @Test
+    fun testGameTimeToBeat() = runBlocking {
+        val timeToBeat = client.getGameTimeToBeat {
+            fields("*")
+            where("${PopularityPrimitiveField.GAME_ID} = 133236")
+        }
+        logger.i { "timeToBeat: $timeToBeat" }
     }
 
     class TestTokenProperties(

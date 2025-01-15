@@ -43,7 +43,7 @@ public class ApicalypseQueryBuilder {
      * Use [Game.field][ru.pixnews.igdbclient.model.Game.Companion.field] extension function to start building a
      * field request for the Game object.
      *
-     * For example, you can use `Game.Companion.field.all` to query all fields
+     * For example, you can use `Game.field.all` to query all fields
      *
      * See [https://api-docs.igdb.com/#fields](https://api-docs.igdb.com/#fields)
      */

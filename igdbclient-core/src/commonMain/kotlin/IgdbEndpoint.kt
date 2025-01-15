@@ -61,6 +61,8 @@ import ru.pixnews.igdbclient.model.GameLocalizationResult
 import ru.pixnews.igdbclient.model.GameMode
 import ru.pixnews.igdbclient.model.GameModeResult
 import ru.pixnews.igdbclient.model.GameResult
+import ru.pixnews.igdbclient.model.GameTimeToBeat
+import ru.pixnews.igdbclient.model.GameTimeToBeatResult
 import ru.pixnews.igdbclient.model.GameVersion
 import ru.pixnews.igdbclient.model.GameVersionFeature
 import ru.pixnews.igdbclient.model.GameVersionFeatureResult
@@ -377,6 +379,15 @@ public open class IgdbEndpoint<out R : Any>(
             "game_modes",
             GameModeResult.ADAPTER::decode,
             GameMode.ADAPTER::decode,
+        )
+
+        /**
+         * Average time to beat times for a game
+         */
+        public val GAME_TIME_TO_BEAT: IgdbEndpoint<GameTimeToBeatResult> = IgdbEndpoint(
+            "game_time_to_beats",
+            GameTimeToBeatResult.ADAPTER::decode,
+            GameTimeToBeat.ADAPTER::decode,
         )
 
         /**

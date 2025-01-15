@@ -602,7 +602,7 @@ message Game {
     repeated Artwork artworks = 6;
     repeated Game bundles = 7;
     GameCategoryEnum category = 8;
-    Collection collection = 9;
+    Collection collection = 9 [deprecated = true];
     Cover cover = 10;
     google.protobuf.Timestamp created_at = 11;
     repeated Game dlcs = 12;
@@ -745,6 +745,22 @@ message GameMode {
     google.protobuf.Timestamp updated_at = 5;
     string url = 6;
     string checksum = 7;
+}
+
+message GameTimeToBeatResult {
+    repeated GameTimeToBeat gametimetobeats = 1;
+}
+
+message GameTimeToBeat {
+    uint64 id = 1;
+    int32 game_id = 2;
+    int32 hastily = 3;
+    int32 normally = 4;
+    int32 completely = 5;
+    int32 count = 6;
+    google.protobuf.Timestamp created_at = 7;
+    google.protobuf.Timestamp updated_at = 8;
+    string checksum = 9;
 }
 
 message GameVersionResult {
