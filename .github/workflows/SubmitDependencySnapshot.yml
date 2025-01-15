@@ -12,5 +12,5 @@ jobs:
       - name: Retrieve dependency graph artifact and submit
         uses: gradle/actions/setup-gradle@v4
         with:
-          cache-encryption-key: ${{ secrets.GradleEncryptionKey }}
+          cache-encryption-key: ${{ secrets.GRADLEENCRYPTIONKEY }}
           dependency-graph: download-and-submit
