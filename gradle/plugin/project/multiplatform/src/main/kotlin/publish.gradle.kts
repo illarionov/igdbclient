@@ -8,8 +8,6 @@ package ru.pixnews.igdbclient.gradle.multiplatform
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
 import com.vanniktech.maven.publish.SonatypeHost
-import org.gradle.kotlin.dsl.named
-import org.gradle.kotlin.dsl.withType
 import org.jetbrains.dokka.gradle.DokkaTask
 import ru.pixnews.igdbclient.gradle.multiplatform.publish.createIgdbclientVersionsExtension
 
@@ -30,7 +28,7 @@ tasks.withType<AbstractArchiveTask>().configureEach {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.S01)
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     publishing {
         repositories {
             maven {
@@ -43,7 +41,7 @@ mavenPublishing {
     signAllPublications()
 
     configure(
-        KotlinMultiplatform(javadocJar = JavadocJar.Dokka("dokkaHtml")),
+        KotlinMultiplatform(javadocJar = JavadocJar.Empty()),
     )
 
     pom {
