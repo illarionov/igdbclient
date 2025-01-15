@@ -1,10 +1,13 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.ktor
+package at.released.igdbclient.ktor
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.ktor.KtorIgdbConstants.DEFAULT_BUFFER_SIZE
 import io.ktor.client.statement.HttpResponse
 import io.ktor.client.statement.HttpStatement
 import io.ktor.client.statement.bodyAsChannel
@@ -19,8 +22,6 @@ import kotlinx.io.readByteArray
 import okio.Buffer
 import okio.BufferedSource
 import okio.use
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.ktor.KtorIgdbConstants.DEFAULT_BUFFER_SIZE
 import kotlinx.io.Source as kotlinxSource
 
 internal suspend fun <T : Any, E : Any> HttpStatement.executeAsyncWithResult(

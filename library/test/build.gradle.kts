@@ -1,15 +1,16 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.android")
+    id("at.released.igdbclient.gradle.multiplatform.kotlin")
+    id("at.released.igdbclient.gradle.multiplatform.android")
 }
 
-group = "ru.pixnews.igdbclient.library.test"
+group = "at.released.igdbclient.library.test"
 
 kotlin {
     jvm()
@@ -55,7 +56,7 @@ kotlin {
 }
 
 android {
-    namespace = "ru.pixnews.igdbclient.library.test"
+    namespace = "at.released.igdbclient.library.test"
     packaging {
         resources.excludes += listOf(
             "META-INF/LICENSE-notice.md",

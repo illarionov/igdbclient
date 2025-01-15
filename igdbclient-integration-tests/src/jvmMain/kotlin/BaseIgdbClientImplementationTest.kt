@@ -1,6 +1,7 @@
 /*
- * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2024-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
@@ -13,8 +14,33 @@
     "TooManyFunctions",
 )
 
-package ru.pixnews.igdbclient.integration.tests
+package at.released.igdbclient.integration.tests
 
+import at.released.igdbclient.IgdbClient
+import at.released.igdbclient.IgdbEndpoint
+import at.released.igdbclient.IgdbEndpoint.Companion.countEndpoint
+import at.released.igdbclient.apicalypse.ApicalypseQuery
+import at.released.igdbclient.apicalypse.ApicalypseQueryBuilder
+import at.released.igdbclient.apicalypse.apicalypseQuery
+import at.released.igdbclient.error.IgdbApiFailureException
+import at.released.igdbclient.error.IgdbException
+import at.released.igdbclient.error.IgdbHttpErrorResponse
+import at.released.igdbclient.error.IgdbHttpException
+import at.released.igdbclient.executeOrThrow
+import at.released.igdbclient.getAgeRatings
+import at.released.igdbclient.getGames
+import at.released.igdbclient.getWebsites
+import at.released.igdbclient.library.test.Fixtures
+import at.released.igdbclient.library.test.IgdbClientConstants
+import at.released.igdbclient.library.test.TestingLoggers
+import at.released.igdbclient.library.test.jupiter.MainCoroutineExtension
+import at.released.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
+import at.released.igdbclient.library.test.okhttp.mockwebserver.start
+import at.released.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
+import at.released.igdbclient.model.Game
+import at.released.igdbclient.model.Platform
+import at.released.igdbclient.model.UnpackedMultiQueryResult
+import at.released.igdbclient.multiquery
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.matchers.collections.shouldHaveSize
@@ -33,31 +59,6 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource
-import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.IgdbEndpoint
-import ru.pixnews.igdbclient.IgdbEndpoint.Companion.countEndpoint
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQueryBuilder
-import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
-import ru.pixnews.igdbclient.error.IgdbApiFailureException
-import ru.pixnews.igdbclient.error.IgdbException
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
-import ru.pixnews.igdbclient.error.IgdbHttpException
-import ru.pixnews.igdbclient.executeOrThrow
-import ru.pixnews.igdbclient.getAgeRatings
-import ru.pixnews.igdbclient.getGames
-import ru.pixnews.igdbclient.getWebsites
-import ru.pixnews.igdbclient.library.test.Fixtures
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.TestingLoggers
-import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
-import ru.pixnews.igdbclient.model.Game
-import ru.pixnews.igdbclient.model.Platform
-import ru.pixnews.igdbclient.model.UnpackedMultiQueryResult
-import ru.pixnews.igdbclient.multiquery
 
 /**
  * Base class with common tests running on different implementations of the IgdbClient
@@ -193,7 +194,9 @@ abstract class BaseIgdbClientImplementationTest {
     }
 
     @ParameterizedTest
-    @MethodSource("ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies")
+    @MethodSource(
+        "at.released.igdbclient.integration.tests.BaseIgdbClientImplementationTest#networkErrorSocketPolicies",
+    )
     open fun `Implementation should throw correct exception on network error`(
         policy: SocketPolicy,
     ) = coroutinesExt.runTest {

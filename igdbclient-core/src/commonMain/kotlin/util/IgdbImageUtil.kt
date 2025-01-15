@@ -1,22 +1,23 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.util
+package at.released.igdbclient.util
 
-import ru.pixnews.igdbclient.dsl.IgdbClientConfigBlock.Companion.IGDB_IMAGE_URL
-import ru.pixnews.igdbclient.model.Artwork
-import ru.pixnews.igdbclient.model.CharacterMugShot
-import ru.pixnews.igdbclient.model.CompanyLogo
-import ru.pixnews.igdbclient.model.Cover
-import ru.pixnews.igdbclient.model.GameEngineLogo
-import ru.pixnews.igdbclient.model.IgdbImageFormat
-import ru.pixnews.igdbclient.model.IgdbImageFormat.WEBP
-import ru.pixnews.igdbclient.model.IgdbImageSize
-import ru.pixnews.igdbclient.model.IgdbImageSize.H1080P
-import ru.pixnews.igdbclient.model.PlatformLogo
-import ru.pixnews.igdbclient.model.Screenshot
+import at.released.igdbclient.dsl.IgdbClientConfigBlock.Companion.IGDB_IMAGE_URL
+import at.released.igdbclient.model.Artwork
+import at.released.igdbclient.model.CharacterMugShot
+import at.released.igdbclient.model.CompanyLogo
+import at.released.igdbclient.model.Cover
+import at.released.igdbclient.model.GameEngineLogo
+import at.released.igdbclient.model.IgdbImageFormat
+import at.released.igdbclient.model.IgdbImageFormat.WEBP
+import at.released.igdbclient.model.IgdbImageSize
+import at.released.igdbclient.model.IgdbImageSize.H1080P
+import at.released.igdbclient.model.PlatformLogo
+import at.released.igdbclient.model.Screenshot
 
 @Suppress("AVOID_USING_UTILITY_CLASS")
 public fun igdbImageUrl(

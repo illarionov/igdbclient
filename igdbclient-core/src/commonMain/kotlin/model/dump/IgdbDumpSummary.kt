@@ -1,11 +1,12 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:Suppress("NO_BRACES_IN_CONDITIONALS_AND_LOOPS")
 
-package ru.pixnews.igdbclient.model.dump
+package at.released.igdbclient.model.dump
 
 import com.squareup.wire.Instant
 

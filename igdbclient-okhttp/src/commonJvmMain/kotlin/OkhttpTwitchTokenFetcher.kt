@@ -1,10 +1,19 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.okhttp
+package at.released.igdbclient.okhttp
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.internal.model.TwitchToken
+import at.released.igdbclient.internal.parser.IgdbParser
+import at.released.igdbclient.internal.parser.twitchTokenErrorResponseParser
+import at.released.igdbclient.internal.parser.twitchTokenParser
+import at.released.igdbclient.internal.twitch.TwitchCredentials
+import at.released.igdbclient.internal.twitch.TwitchErrorResponse
+import at.released.igdbclient.internal.twitch.TwitchTokenFetcher
 import com.squareup.wire.Instant
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -13,14 +22,6 @@ import okhttp3.FormBody
 import okhttp3.HttpUrl
 import okhttp3.Request
 import okio.BufferedSource
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.internal.model.TwitchToken
-import ru.pixnews.igdbclient.internal.parser.IgdbParser
-import ru.pixnews.igdbclient.internal.parser.twitchTokenErrorResponseParser
-import ru.pixnews.igdbclient.internal.parser.twitchTokenParser
-import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
-import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
-import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
 
 /**
  * Twitch Client Credentials Grant Flow fetcher

@@ -1,26 +1,27 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.util
+package at.released.igdbclient.util
 
 import assertk.assertFailure
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isInstanceOf
 import assertk.tableOf
-import ru.pixnews.igdbclient.model.IgdbImageFormat
-import ru.pixnews.igdbclient.model.IgdbImageSize.COVER_BIG
-import ru.pixnews.igdbclient.model.IgdbImageSize.COVER_SMALL
-import ru.pixnews.igdbclient.model.IgdbImageSize.H1080P
-import ru.pixnews.igdbclient.model.IgdbImageSize.H720P
-import ru.pixnews.igdbclient.model.IgdbImageSize.LOGO_MEDIUM
-import ru.pixnews.igdbclient.model.IgdbImageSize.MICRO
-import ru.pixnews.igdbclient.model.IgdbImageSize.SCREENSHOT_BIG
-import ru.pixnews.igdbclient.model.IgdbImageSize.SCREENSHOT_HUGE
-import ru.pixnews.igdbclient.model.IgdbImageSize.SCREENSHOT_MEDIUM
-import ru.pixnews.igdbclient.model.IgdbImageSize.THUMB
+import at.released.igdbclient.model.IgdbImageFormat
+import at.released.igdbclient.model.IgdbImageSize.COVER_BIG
+import at.released.igdbclient.model.IgdbImageSize.COVER_SMALL
+import at.released.igdbclient.model.IgdbImageSize.H1080P
+import at.released.igdbclient.model.IgdbImageSize.H720P
+import at.released.igdbclient.model.IgdbImageSize.LOGO_MEDIUM
+import at.released.igdbclient.model.IgdbImageSize.MICRO
+import at.released.igdbclient.model.IgdbImageSize.SCREENSHOT_BIG
+import at.released.igdbclient.model.IgdbImageSize.SCREENSHOT_HUGE
+import at.released.igdbclient.model.IgdbImageSize.SCREENSHOT_MEDIUM
+import at.released.igdbclient.model.IgdbImageSize.THUMB
 import kotlin.test.Test
 
 @Suppress("AVOID_USING_UTILITY_CLASS")

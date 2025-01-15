@@ -1,6 +1,7 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
@@ -12,8 +13,16 @@
     "MagicNumber",
 )
 
-package ru.pixnews.igdbclient.integration.tests
+package at.released.igdbclient.integration.tests
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.internal.twitch.TwitchCredentials
+import at.released.igdbclient.internal.twitch.TwitchErrorResponse
+import at.released.igdbclient.internal.twitch.TwitchTokenFetcher
+import at.released.igdbclient.library.test.IgdbClientConstants.MediaType
+import at.released.igdbclient.library.test.jupiter.MainCoroutineExtension
+import at.released.igdbclient.library.test.okhttp.mockwebserver.start
+import at.released.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import io.kotest.matchers.collections.shouldContainExactlyInAnyOrder
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeInstanceOf
@@ -25,14 +34,6 @@ import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.internal.twitch.TwitchCredentials
-import ru.pixnews.igdbclient.internal.twitch.TwitchErrorResponse
-import ru.pixnews.igdbclient.internal.twitch.TwitchTokenFetcher
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
-import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
 import java.time.Instant
 
 /**

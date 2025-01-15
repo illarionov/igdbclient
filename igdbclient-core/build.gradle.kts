@@ -1,21 +1,22 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.dokka)
-    id("ru.pixnews.igdbclient.gradle.lint.binary.compatibility.validator")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.android")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.atomicfu")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.publish")
-    id("ru.pixnews.igdbclient.gradle.multiplatform.test")
-    id("ru.pixnews.igdbclient.gradle.protobuf.igdb.wire")
+    id("at.released.igdbclient.gradle.lint.binary.compatibility.validator")
+    id("at.released.igdbclient.gradle.multiplatform.android")
+    id("at.released.igdbclient.gradle.multiplatform.atomicfu")
+    id("at.released.igdbclient.gradle.multiplatform.kotlin")
+    id("at.released.igdbclient.gradle.multiplatform.publish")
+    id("at.released.igdbclient.gradle.multiplatform.test")
+    id("at.released.igdbclient.gradle.protobuf.igdb.wire")
 }
 
-group = "ru.pixnews.igdbclient"
+group = "at.released.igdbclient"
 version = igdbVersions.getSubmoduleVersionProvider(
     propertiesFileKey = "igdbclient_core_version",
     envVariableName = "IGDBCLIENT_CORE_VERSION",
@@ -79,5 +80,5 @@ kotlin {
 }
 
 android {
-    namespace = "ru.pixnews.igdbclient"
+    namespace = "at.released.igdbclient"
 }

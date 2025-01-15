@@ -1,10 +1,18 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.gradle.protobuf.igdb
+package at.released.igdbclient.gradle.protobuf.igdb
 
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FEATURE_FLAG_WITH_BACKING_INSTANCE
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FIELD_WITH_ID_METHOD_NAME
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_DSL_CLASS
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_REQUEST_FIELDS_DSL_BASE_CLASS
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_REQUEST_FIELD_CLASS
+import at.released.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.REQUEST_FIELDS_DSL_PACKAGE_NAME
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.FunSpec
@@ -22,13 +30,6 @@ import com.squareup.wire.schema.Field
 import com.squareup.wire.schema.MessageType
 import com.squareup.wire.schema.ProtoType
 import com.squareup.wire.schema.Type
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FEATURE_FLAG_WITH_BACKING_INSTANCE
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.FIELD_WITH_ID_METHOD_NAME
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDBCLIENT_MODEL_PACKAGE_NAME
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_DSL_CLASS
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_REQUEST_FIELDS_DSL_BASE_CLASS
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.IGDB_REQUEST_FIELD_CLASS
-import ru.pixnews.igdbclient.gradle.protobuf.igdb.IgdbFieldsDslGeneratorPaths.REQUEST_FIELDS_DSL_PACKAGE_NAME
 import java.util.Locale
 import kotlin.LazyThreadSafetyMode.NONE
 

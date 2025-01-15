@@ -1,9 +1,10 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.gradle.protobuf.igdb
+package at.released.igdbclient.gradle.protobuf.igdb
 
 import com.squareup.wire.Syntax.PROTO_3
 import com.squareup.wire.schema.Field
@@ -18,7 +19,7 @@ import kotlin.reflect.jvm.isAccessible
 
 internal object FieldsTestFixtures {
     val DEFAULT_MESSAGE_TYPE = MessageType(
-        type = ProtoType.get("ru.pixnews.igdbclient.model.Game"),
+        type = ProtoType.get("at.released.igdbclient.model.Game"),
         location = Location.get("/datasource-igdb/src/main/proto/igdbapi.proto:469:1"),
         documentation = "Test documentation",
         name = "Game",
@@ -34,7 +35,7 @@ internal object FieldsTestFixtures {
     )
     val DEFAULT_FIELD = Field(
         namespaces = listOf(
-            "ru.pixnews.igdbclient.model",
+            "at.released.igdbclient.model",
             "Game",
         ),
         location = Location.get("/datasource-igdb/src/main/proto/igdbapi.proto:470:5"),
@@ -52,7 +53,7 @@ internal object FieldsTestFixtures {
     val IGDB_CLIENT_DSL_STUB = SourceFile.kotlin(
         "IgdbClientDsl.kt",
         """
-            package ru.pixnews.igdbclient.dsl
+            package at.released.igdbclient.dsl
 
             @DslMarker
             @Target(AnnotationTarget.CLASS, AnnotationTarget.TYPEALIAS, AnnotationTarget.TYPE, AnnotationTarget.FUNCTION)
@@ -62,10 +63,10 @@ internal object FieldsTestFixtures {
     val IGDB_REQUEST_FIELD_STUB = SourceFile.kotlin(
         "IgdbRequestField.kt",
         """
-            package ru.pixnews.igdbclient.dsl.field
+            package at.released.igdbclient.dsl.field
 
-            import ru.pixnews.igdbclient.dsl.IgdbClientDsl
-            import ru.pixnews.igdbclient.scheme.field.IgdbField
+            import at.released.igdbclient.dsl.IgdbClientDsl
+            import at.released.igdbclient.scheme.field.IgdbField
 
             @IgdbClientDsl
             public data class IgdbRequestField<out O : Any> internal constructor(
@@ -86,7 +87,7 @@ internal object FieldsTestFixtures {
     val IGDB_FIELD_STUB = SourceFile.kotlin(
         "IgdbField.kt",
         """
-        package ru.pixnews.igdbclient.scheme.field
+        package at.released.igdbclient.scheme.field
         public interface IgdbField<out O : Any> {
             public val igdbName: String
 
@@ -104,7 +105,7 @@ internal object FieldsTestFixtures {
     val IGDB_GAME_MODEL_STUB = SourceFile.kotlin(
         "Game.kt",
         """
-                package ru.pixnews.igdbclient.model
+                package at.released.igdbclient.model
                 public class Game {
                     public companion object
                 }
@@ -113,7 +114,7 @@ internal object FieldsTestFixtures {
     val IGDB_AGE_RATING_MODEL_STUB = SourceFile.kotlin(
         "AgeRating.kt",
         """
-                package ru.pixnews.igdbclient.model
+                package at.released.igdbclient.model
                 public class AgeRating {
                     public companion object
                 }
@@ -122,10 +123,10 @@ internal object FieldsTestFixtures {
     val IGDB_REQUEST_FIELD_DSL_STUB = SourceFile.kotlin(
         "IgdbRequestFieldDsl.kt",
         """
-            package ru.pixnews.igdbclient.dsl.field
+            package at.released.igdbclient.dsl.field
 
-            import ru.pixnews.igdbclient.dsl.IgdbClientDsl
-            import ru.pixnews.igdbclient.scheme.field.IgdbField
+            import at.released.igdbclient.dsl.IgdbClientDsl
+            import at.released.igdbclient.scheme.field.IgdbField
 
             @IgdbClientDsl
             public sealed class IgdbRequestFieldDsl<F : IgdbField<T>, out T : Any>(

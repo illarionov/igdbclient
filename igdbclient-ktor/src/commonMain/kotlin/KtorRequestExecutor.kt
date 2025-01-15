@@ -1,10 +1,21 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.ktor
+package at.released.igdbclient.ktor
 
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.apicalypse.ApicalypseQuery
+import at.released.igdbclient.apicalypse.apicalypseQuery
+import at.released.igdbclient.error.IgdbHttpErrorResponse
+import at.released.igdbclient.internal.IgdbRequest
+import at.released.igdbclient.internal.RequestExecutor
+import at.released.igdbclient.internal.model.IgdbAuthToken
+import at.released.igdbclient.internal.parser.IgdbParser
+import at.released.igdbclient.internal.parser.igdbErrorResponseParser
+import at.released.igdbclient.ktor.KtorIgdbConstants.Header
 import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.forms.FormDataContent
@@ -24,16 +35,6 @@ import io.ktor.http.parameters
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import okio.BufferedSource
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.apicalypse.ApicalypseQuery
-import ru.pixnews.igdbclient.apicalypse.apicalypseQuery
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse
-import ru.pixnews.igdbclient.internal.IgdbRequest
-import ru.pixnews.igdbclient.internal.RequestExecutor
-import ru.pixnews.igdbclient.internal.model.IgdbAuthToken
-import ru.pixnews.igdbclient.internal.parser.IgdbParser
-import ru.pixnews.igdbclient.internal.parser.igdbErrorResponseParser
-import ru.pixnews.igdbclient.ktor.KtorIgdbConstants.Header
 
 internal class KtorRequestExecutor(
     private val httpClient: HttpClient,

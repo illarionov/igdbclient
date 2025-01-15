@@ -1,17 +1,18 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.auth.twitch
+package at.released.igdbclient.auth.twitch
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isNull
+import at.released.igdbclient.auth.twitch.TwitchTokenPayload.Companion.getTwitchAccessToken
+import at.released.igdbclient.internal.model.TwitchToken
+import at.released.igdbclient.internal.model.TwitchToken.Companion.encode
 import com.squareup.wire.ofEpochSecond
-import ru.pixnews.igdbclient.auth.twitch.TwitchTokenPayload.Companion.getTwitchAccessToken
-import ru.pixnews.igdbclient.internal.model.TwitchToken
-import ru.pixnews.igdbclient.internal.model.TwitchToken.Companion.encode
 import kotlin.test.Test
 
 class TwitchTokenPayloadTest {

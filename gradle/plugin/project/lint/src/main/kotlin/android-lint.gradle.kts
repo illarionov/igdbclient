@@ -1,9 +1,10 @@
 /*
- * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2024-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.gradle.lint
+package at.released.igdbclient.gradle.lint
 
 import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.AppPlugin

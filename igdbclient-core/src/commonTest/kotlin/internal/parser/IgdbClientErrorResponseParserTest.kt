@@ -1,16 +1,17 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.internal.parser
+package at.released.igdbclient.internal.parser
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.tableOf
+import at.released.igdbclient.error.IgdbHttpErrorResponse.Message
+import at.released.igdbclient.library.test.IgnoreAndroid
 import okio.Buffer
-import ru.pixnews.igdbclient.error.IgdbHttpErrorResponse.Message
-import ru.pixnews.igdbclient.library.test.IgnoreAndroid
 import kotlin.test.Test
 import kotlin.test.assertFails
 

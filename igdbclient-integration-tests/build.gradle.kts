@@ -1,14 +1,15 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    id("ru.pixnews.igdbclient.gradle.multiplatform.kotlin")
+    id("at.released.igdbclient.gradle.multiplatform.kotlin")
 }
 
-group = "ru.pixnews.igdbclient"
+group = "at.released.igdbclient"
 version = "0.1"
 
 kotlin {

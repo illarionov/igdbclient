@@ -1,15 +1,16 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.dsl.field
+package at.released.igdbclient.dsl.field
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import ru.pixnews.igdbclient.scheme.field.AgeRatingField
-import ru.pixnews.igdbclient.scheme.field.GameField
-import ru.pixnews.igdbclient.scheme.field.IgdbField
+import at.released.igdbclient.scheme.field.AgeRatingField
+import at.released.igdbclient.scheme.field.GameField
+import at.released.igdbclient.scheme.field.IgdbField
 import kotlin.test.Test
 
 class IgdbRequestFieldTest {

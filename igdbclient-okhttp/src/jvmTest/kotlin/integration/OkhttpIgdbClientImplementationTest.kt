@@ -1,12 +1,22 @@
 /*
- * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2024-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
 
-package ru.pixnews.igdbclient.okhttp.integration
+package at.released.igdbclient.okhttp.integration
 
+import at.released.igdbclient.IgdbClient
+import at.released.igdbclient.getGames
+import at.released.igdbclient.integration.tests.BaseIgdbClientImplementationTest
+import at.released.igdbclient.library.test.Fixtures
+import at.released.igdbclient.library.test.IgdbClientConstants
+import at.released.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
+import at.released.igdbclient.library.test.okhttp.mockwebserver.start
+import at.released.igdbclient.okhttp.IgdbOkhttpEngine
+import at.released.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelAndJoin
@@ -19,15 +29,6 @@ import okhttp3.ExperimentalOkHttpApi
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import org.junit.jupiter.api.Test
-import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.getGames
-import ru.pixnews.igdbclient.integration.tests.BaseIgdbClientImplementationTest
-import ru.pixnews.igdbclient.library.test.Fixtures
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.MockWebServerFixtures.successMockResponseBuilder
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
-import ru.pixnews.igdbclient.okhttp.IgdbOkhttpEngine
-import ru.pixnews.igdbclient.okhttp.OkhttpExt.setupTestOkHttpClientBuilder
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 

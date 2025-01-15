@@ -1,20 +1,21 @@
 /*
- * Copyright (c) 2023, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2023-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
-package ru.pixnews.igdbclient.gradle.protobuf.igdb
+package at.released.igdbclient.gradle.protobuf.igdb
 
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.wire.schema.Type
 
 internal object IgdbFieldsDslGeneratorPaths {
     const val FEATURE_FLAG_WITH_BACKING_INSTANCE = true
-    const val REQUEST_FIELDS_DSL_PACKAGE_NAME = "ru.pixnews.igdbclient.dsl.field"
-    const val SCHEME_PACKAGE_NAME = "ru.pixnews.igdbclient.scheme.field"
-    const val IGDBCLIENT_MODEL_PACKAGE_NAME = "ru.pixnews.igdbclient.model"
+    const val REQUEST_FIELDS_DSL_PACKAGE_NAME = "at.released.igdbclient.dsl.field"
+    const val SCHEME_PACKAGE_NAME = "at.released.igdbclient.scheme.field"
+    const val IGDBCLIENT_MODEL_PACKAGE_NAME = "at.released.igdbclient.model"
     const val FIELD_WITH_ID_METHOD_NAME = "fieldWithId"
-    val IGDB_DSL_CLASS = ClassName("ru.pixnews.igdbclient.dsl", "IgdbClientDsl")
+    val IGDB_DSL_CLASS = ClassName("at.released.igdbclient.dsl", "IgdbClientDsl")
     val IGDB_REQUEST_FIELD_CLASS = ClassName(REQUEST_FIELDS_DSL_PACKAGE_NAME, "IgdbRequestField")
     val IGDB_FIELD_INTERFACE = ClassName(SCHEME_PACKAGE_NAME, "IgdbField")
     val IGDB_REQUEST_FIELDS_DSL_BASE_CLASS = ClassName(REQUEST_FIELDS_DSL_PACKAGE_NAME, "IgdbRequestFieldDsl")

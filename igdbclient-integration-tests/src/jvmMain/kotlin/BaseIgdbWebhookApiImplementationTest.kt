@@ -1,6 +1,7 @@
 /*
- * Copyright (c) 2024, the Igdbclient project authors and contributors. Please see the AUTHORS file for details.
- * Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * Copyright (c) 2024-2025, the Igdbclient project authors and contributors. Please see the AUTHORS file
+ * for details. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 @file:OptIn(ExperimentalOkHttpApi::class)
@@ -12,8 +13,18 @@
     "MagicNumber",
 )
 
-package ru.pixnews.igdbclient.integration.tests
+package at.released.igdbclient.integration.tests
 
+import at.released.igdbclient.IgdbClient
+import at.released.igdbclient.IgdbEndpoint
+import at.released.igdbclient.IgdbResult
+import at.released.igdbclient.IgdbWebhookApi
+import at.released.igdbclient.library.test.IgdbClientConstants.MediaType
+import at.released.igdbclient.library.test.jupiter.MainCoroutineExtension
+import at.released.igdbclient.library.test.okhttp.mockwebserver.start
+import at.released.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
+import at.released.igdbclient.model.IgdbWebhook
+import at.released.igdbclient.model.IgdbWebhookId
 import io.kotest.matchers.collections.shouldBeIn
 import io.kotest.matchers.collections.shouldContainExactlyInAnyOrder
 import io.kotest.matchers.collections.shouldContainOnly
@@ -28,16 +39,6 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
-import ru.pixnews.igdbclient.IgdbClient
-import ru.pixnews.igdbclient.IgdbEndpoint
-import ru.pixnews.igdbclient.IgdbResult
-import ru.pixnews.igdbclient.IgdbWebhookApi
-import ru.pixnews.igdbclient.library.test.IgdbClientConstants.MediaType
-import ru.pixnews.igdbclient.library.test.jupiter.MainCoroutineExtension
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.start
-import ru.pixnews.igdbclient.library.test.okhttp.mockwebserver.takeRequestWithTimeout
-import ru.pixnews.igdbclient.model.IgdbWebhook
-import ru.pixnews.igdbclient.model.IgdbWebhookId
 
 /**
  * Base class with common tests running on different implementations of the IgdbWebhookApi
