@@ -4692,6 +4692,7 @@ public final class at/released/igdbclient/model/WebsiteCategoryEnum : java/lang/
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/WebsiteCategoryEnum$Companion;
 	public static final field WEBSITE_ANDROID Lat/released/igdbclient/model/WebsiteCategoryEnum;
+	public static final field WEBSITE_BLUESKY Lat/released/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_CATEGORY_NULL Lat/released/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_DISCORD Lat/released/igdbclient/model/WebsiteCategoryEnum;
 	public static final field WEBSITE_EPICGAMES Lat/released/igdbclient/model/WebsiteCategoryEnum;

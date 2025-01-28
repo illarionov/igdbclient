@@ -449,6 +449,7 @@ enum WebsiteCategoryEnum {
     WEBSITE_EPICGAMES = 16;
     WEBSITE_GOG = 17;
     WEBSITE_DISCORD = 18;
+    WEBSITE_BLUESKY = 19;
 }
 
 message CoverResult {
