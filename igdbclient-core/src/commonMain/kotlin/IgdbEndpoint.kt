@@ -9,17 +9,27 @@ package at.released.igdbclient
 import at.released.igdbclient.apicalypse.ApicalypseQuery
 import at.released.igdbclient.internal.parser.MultiQueryArrayParser
 import at.released.igdbclient.model.AgeRating
+import at.released.igdbclient.model.AgeRatingCategory
+import at.released.igdbclient.model.AgeRatingCategoryResult
 import at.released.igdbclient.model.AgeRatingContentDescription
 import at.released.igdbclient.model.AgeRatingContentDescriptionResult
+import at.released.igdbclient.model.AgeRatingContentDescriptionV2
+import at.released.igdbclient.model.AgeRatingContentDescriptionV2Result
+import at.released.igdbclient.model.AgeRatingOrganization
+import at.released.igdbclient.model.AgeRatingOrganizationResult
 import at.released.igdbclient.model.AgeRatingResult
 import at.released.igdbclient.model.AlternativeName
 import at.released.igdbclient.model.AlternativeNameResult
 import at.released.igdbclient.model.Artwork
 import at.released.igdbclient.model.ArtworkResult
 import at.released.igdbclient.model.Character
+import at.released.igdbclient.model.CharacterGender
+import at.released.igdbclient.model.CharacterGenderResult
 import at.released.igdbclient.model.CharacterMugShot
 import at.released.igdbclient.model.CharacterMugShotResult
 import at.released.igdbclient.model.CharacterResult
+import at.released.igdbclient.model.CharacterSpecie
+import at.released.igdbclient.model.CharacterSpecieResult
 import at.released.igdbclient.model.Collection
 import at.released.igdbclient.model.CollectionMembership
 import at.released.igdbclient.model.CollectionMembershipResult
@@ -36,11 +46,15 @@ import at.released.igdbclient.model.Company
 import at.released.igdbclient.model.CompanyLogo
 import at.released.igdbclient.model.CompanyLogoResult
 import at.released.igdbclient.model.CompanyResult
+import at.released.igdbclient.model.CompanyStatus
+import at.released.igdbclient.model.CompanyStatusResult
 import at.released.igdbclient.model.CompanyWebsite
 import at.released.igdbclient.model.CompanyWebsiteResult
 import at.released.igdbclient.model.Count
 import at.released.igdbclient.model.Cover
 import at.released.igdbclient.model.CoverResult
+import at.released.igdbclient.model.DateFormat
+import at.released.igdbclient.model.DateFormatResult
 import at.released.igdbclient.model.Event
 import at.released.igdbclient.model.EventLogo
 import at.released.igdbclient.model.EventLogoResult
@@ -49,6 +63,8 @@ import at.released.igdbclient.model.EventNetworkResult
 import at.released.igdbclient.model.EventResult
 import at.released.igdbclient.model.ExternalGame
 import at.released.igdbclient.model.ExternalGameResult
+import at.released.igdbclient.model.ExternalGameSource
+import at.released.igdbclient.model.ExternalGameSourceResult
 import at.released.igdbclient.model.Franchise
 import at.released.igdbclient.model.FranchiseResult
 import at.released.igdbclient.model.Game
@@ -60,9 +76,15 @@ import at.released.igdbclient.model.GameLocalization
 import at.released.igdbclient.model.GameLocalizationResult
 import at.released.igdbclient.model.GameMode
 import at.released.igdbclient.model.GameModeResult
+import at.released.igdbclient.model.GameReleaseFormat
+import at.released.igdbclient.model.GameReleaseFormatResult
 import at.released.igdbclient.model.GameResult
+import at.released.igdbclient.model.GameStatus
+import at.released.igdbclient.model.GameStatusResult
 import at.released.igdbclient.model.GameTimeToBeat
 import at.released.igdbclient.model.GameTimeToBeatResult
+import at.released.igdbclient.model.GameType
+import at.released.igdbclient.model.GameTypeResult
 import at.released.igdbclient.model.GameVersion
 import at.released.igdbclient.model.GameVersionFeature
 import at.released.igdbclient.model.GameVersionFeatureResult
@@ -94,6 +116,8 @@ import at.released.igdbclient.model.PlatformFamilyResult
 import at.released.igdbclient.model.PlatformLogo
 import at.released.igdbclient.model.PlatformLogoResult
 import at.released.igdbclient.model.PlatformResult
+import at.released.igdbclient.model.PlatformType
+import at.released.igdbclient.model.PlatformTypeResult
 import at.released.igdbclient.model.PlatformVersion
 import at.released.igdbclient.model.PlatformVersionCompany
 import at.released.igdbclient.model.PlatformVersionCompanyResult
@@ -111,6 +135,8 @@ import at.released.igdbclient.model.PopularityTypeResult
 import at.released.igdbclient.model.Region
 import at.released.igdbclient.model.RegionResult
 import at.released.igdbclient.model.ReleaseDate
+import at.released.igdbclient.model.ReleaseDateRegion
+import at.released.igdbclient.model.ReleaseDateRegionResult
 import at.released.igdbclient.model.ReleaseDateResult
 import at.released.igdbclient.model.ReleaseDateStatus
 import at.released.igdbclient.model.ReleaseDateStatusResult
@@ -123,6 +149,8 @@ import at.released.igdbclient.model.ThemeResult
 import at.released.igdbclient.model.UnpackedMultiQueryResult
 import at.released.igdbclient.model.Website
 import at.released.igdbclient.model.WebsiteResult
+import at.released.igdbclient.model.WebsiteType
+import at.released.igdbclient.model.WebsiteTypeResult
 import okio.BufferedSource
 
 /**
@@ -157,13 +185,43 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Age Rating Descriptors
+         * The rating category from the organization
          */
+        public val AGE_RATING_CATEGORY: IgdbEndpoint<AgeRatingCategoryResult> = IgdbEndpoint(
+            "age_rating_categories",
+            AgeRatingCategoryResult.ADAPTER::decode,
+            AgeRatingCategory.ADAPTER::decode,
+        )
+
+        /**
+         * Age Rating Description
+         */
+        @Deprecated("Use AGE_RATING_CONTENT_DESCRIPTION_V2 instead")
         public val AGE_RATING_CONTENT_DESCRIPTION: IgdbEndpoint<AgeRatingContentDescriptionResult> =
             IgdbEndpoint(
                 "age_rating_content_descriptions",
                 AgeRatingContentDescriptionResult.ADAPTER::decode,
                 AgeRatingContentDescription.ADAPTER::decode,
+            )
+
+        /**
+         * Age Rating Description V2
+         */
+        public val AGE_RATING_CONTENT_DESCRIPTION_V2: IgdbEndpoint<AgeRatingContentDescriptionV2Result> =
+            IgdbEndpoint(
+                "age_rating_content_descriptions_v2",
+                AgeRatingContentDescriptionV2Result.ADAPTER::decode,
+                AgeRatingContentDescriptionV2.ADAPTER::decode,
+            )
+
+        /**
+         * Age Rating Organization
+         */
+        public val AGE_RATING_ORGANIZATION: IgdbEndpoint<AgeRatingOrganizationResult> =
+            IgdbEndpoint(
+                "age_rating_organizations",
+                AgeRatingOrganizationResult.ADAPTER::decode,
+                AgeRatingOrganization.ADAPTER::decode,
             )
 
         /**
@@ -194,12 +252,30 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Character gender
+         */
+        public val CHARACTER_GENDER: IgdbEndpoint<CharacterGenderResult> = IgdbEndpoint(
+            "character_genders",
+            CharacterGenderResult.ADAPTER::decode,
+            CharacterGender.ADAPTER::decode,
+        )
+
+        /**
          * Images depicting game characters
          */
         public val CHARACTER_MUG_SHOT: IgdbEndpoint<CharacterMugShotResult> = IgdbEndpoint(
             "character_mug_shots",
             CharacterMugShotResult.ADAPTER::decode,
             CharacterMugShot.ADAPTER::decode,
+        )
+
+        /**
+         * Character Species
+         */
+        public val CHARACTER_SPECIE: IgdbEndpoint<CharacterSpecieResult> = IgdbEndpoint(
+            "character_species",
+            CharacterSpecieResult.ADAPTER::decode,
+            CharacterSpecie.ADAPTER::decode,
         )
 
         /**
@@ -275,6 +351,15 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Company statuses
+         */
+        public val COMPANY_STATUS: IgdbEndpoint<CompanyStatusResult> = IgdbEndpoint(
+            "company_statuses",
+            CompanyStatusResult.ADAPTER::decode,
+            CompanyStatus.ADAPTER::decode,
+        )
+
+        /**
          * Company Website
          */
         public val COMPANY_WEBSITE: IgdbEndpoint<CompanyWebsiteResult> = IgdbEndpoint(
@@ -290,6 +375,15 @@ public open class IgdbEndpoint<out R : Any>(
             "covers",
             CoverResult.ADAPTER::decode,
             Cover.ADAPTER::decode,
+        )
+
+        /**
+         * Date formats
+         */
+        public val DATE_FORMAT: IgdbEndpoint<DateFormatResult> = IgdbEndpoint(
+            "date_formats",
+            DateFormatResult.ADAPTER::decode,
+            DateFormat.ADAPTER::decode,
         )
 
         /**
@@ -329,12 +423,30 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Sources for the external games
+         */
+        public val EXTERNAL_GAME_SOURCE: IgdbEndpoint<ExternalGameSourceResult> = IgdbEndpoint(
+            "external_game_sources",
+            ExternalGameSourceResult.ADAPTER::decode,
+            ExternalGameSource.ADAPTER::decode,
+        )
+
+        /**
          * A list of video game franchises such as Star Wars.
          */
         public val FRANCHISE: IgdbEndpoint<FranchiseResult> = IgdbEndpoint(
             "franchises",
             FranchiseResult.ADAPTER::decode,
             Franchise.ADAPTER::decode,
+        )
+
+        /**
+         * Video Games!
+         */
+        public val GAME: IgdbEndpoint<GameResult> = IgdbEndpoint(
+            "games",
+            GameResult.ADAPTER::decode,
+            Game.ADAPTER::decode,
         )
 
         /**
@@ -356,15 +468,6 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Video Games!
-         */
-        public val GAME: IgdbEndpoint<GameResult> = IgdbEndpoint(
-            "games",
-            GameResult.ADAPTER::decode,
-            Game.ADAPTER::decode,
-        )
-
-        /**
          * Game localization for a game
          */
         public val GAME_LOCALIZATION: IgdbEndpoint<GameLocalizationResult> = IgdbEndpoint(
@@ -383,12 +486,39 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * The format of the game release
+         */
+        public val GAME_RELEASE_FORMAT: IgdbEndpoint<GameReleaseFormatResult> = IgdbEndpoint(
+            "game_release_formats",
+            GameReleaseFormatResult.ADAPTER::decode,
+            GameReleaseFormat.ADAPTER::decode,
+        )
+
+        /**
+         * The release status of the game
+         */
+        public val GAME_STATUS: IgdbEndpoint<GameStatusResult> = IgdbEndpoint(
+            "game_statuses",
+            GameStatusResult.ADAPTER::decode,
+            GameStatus.ADAPTER::decode,
+        )
+
+        /**
          * Average time to beat times for a game
          */
         public val GAME_TIME_TO_BEAT: IgdbEndpoint<GameTimeToBeatResult> = IgdbEndpoint(
             "game_time_to_beats",
             GameTimeToBeatResult.ADAPTER::decode,
             GameTimeToBeat.ADAPTER::decode,
+        )
+
+        /**
+         * Game type
+         */
+        public val GAME_TYPE: IgdbEndpoint<GameTypeResult> = IgdbEndpoint(
+            "game_types",
+            GameTypeResult.ADAPTER::decode,
+            GameType.ADAPTER::decode,
         )
 
         /**
@@ -410,15 +540,6 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * A video associated with a game
-         */
-        public val GAME_VIDEO: IgdbEndpoint<GameVideoResult> = IgdbEndpoint(
-            "game_videos",
-            GameVideoResult.ADAPTER::decode,
-            GameVideo.ADAPTER::decode,
-        )
-
-        /**
          * The bool/text value of the feature
          */
         public val GAME_VERSION_FEATURE_VALUE: IgdbEndpoint<GameVersionFeatureValueResult> =
@@ -427,6 +548,15 @@ public open class IgdbEndpoint<out R : Any>(
                 GameVersionFeatureValueResult.ADAPTER::decode,
                 GameVersionFeatureValue.ADAPTER::decode,
             )
+
+        /**
+         * A video associated with a game
+         */
+        public val GAME_VIDEO: IgdbEndpoint<GameVideoResult> = IgdbEndpoint(
+            "game_videos",
+            GameVideoResult.ADAPTER::decode,
+            GameVideo.ADAPTER::decode,
+        )
 
         /**
          * Genres of video game
@@ -447,21 +577,21 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Languages that are used in the Language Support endpoint
-         */
-        public val LANGUAGE: IgdbEndpoint<LanguageResult> = IgdbEndpoint(
-            "languages",
-            LanguageResult.ADAPTER::decode,
-            Language.ADAPTER::decode,
-        )
-
-        /**
          * Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”
          */
         public val KEYWORD: IgdbEndpoint<KeywordResult> = IgdbEndpoint(
             "keywords",
             KeywordResult.ADAPTER::decode,
             Keyword.ADAPTER::decode,
+        )
+
+        /**
+         * Languages that are used in the Language Support endpoint
+         */
+        public val LANGUAGE: IgdbEndpoint<LanguageResult> = IgdbEndpoint(
+            "languages",
+            LanguageResult.ADAPTER::decode,
+            Language.ADAPTER::decode,
         )
 
         /**
@@ -510,15 +640,6 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * Platform Version
-         */
-        public val PLATFORM_VERSION: IgdbEndpoint<PlatformVersionResult> = IgdbEndpoint(
-            "platform_versions",
-            PlatformVersionResult.ADAPTER::decode,
-            PlatformVersion.ADAPTER::decode,
-        )
-
-        /**
          * A collection of closely related platforms
          */
         public val PLATFORM_FAMILY: IgdbEndpoint<PlatformFamilyResult> = IgdbEndpoint(
@@ -528,7 +649,34 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
-         * A platform developer
+         * Logo for a platform
+         */
+        public val PLATFORM_LOGO: IgdbEndpoint<PlatformLogoResult> = IgdbEndpoint(
+            "platform_logos",
+            PlatformLogoResult.ADAPTER::decode,
+            PlatformLogo.ADAPTER::decode,
+        )
+
+        /**
+         * Types of platform
+         */
+        public val PLATFORM_TYPE: IgdbEndpoint<PlatformTypeResult> = IgdbEndpoint(
+            "platform_types",
+            PlatformTypeResult.ADAPTER::decode,
+            PlatformType.ADAPTER::decode,
+        )
+
+        /**
+         * Platform Version
+         */
+        public val PLATFORM_VERSION: IgdbEndpoint<PlatformVersionResult> = IgdbEndpoint(
+            "platform_versions",
+            PlatformVersionResult.ADAPTER::decode,
+            PlatformVersion.ADAPTER::decode,
+        )
+
+        /**
+         * A platform version company
          */
         public val PLATFORM_VERSION_COMPANY: IgdbEndpoint<PlatformVersionCompanyResult> =
             IgdbEndpoint(
@@ -555,15 +703,6 @@ public open class IgdbEndpoint<out R : Any>(
             "platform_websites",
             PlatformWebsiteResult.ADAPTER::decode,
             PlatformWebsite.ADAPTER::decode,
-        )
-
-        /**
-         * Logo for a platform
-         */
-        public val PLATFORM_LOGO: IgdbEndpoint<PlatformLogoResult> = IgdbEndpoint(
-            "platform_logos",
-            PlatformLogoResult.ADAPTER::decode,
-            PlatformLogo.ADAPTER::decode,
         )
 
         /**
@@ -613,6 +752,15 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Regions for release dates
+         */
+        public val RELEASE_DATE_REGION: IgdbEndpoint<ReleaseDateRegionResult> = IgdbEndpoint(
+            "release_date_regions",
+            ReleaseDateRegionResult.ADAPTER::decode,
+            ReleaseDateRegion.ADAPTER::decode,
+        )
+
+        /**
          * An endpoint to provide definition of all of the current release date statuses
          */
         public val RELEASE_DATE_STATUS: IgdbEndpoint<ReleaseDateStatusResult> = IgdbEndpoint(
@@ -655,6 +803,15 @@ public open class IgdbEndpoint<out R : Any>(
             "websites",
             WebsiteResult.ADAPTER::decode,
             Website.ADAPTER::decode,
+        )
+
+        /**
+         * Website type
+         */
+        public val WEBSITE_TYPE: IgdbEndpoint<WebsiteTypeResult> = IgdbEndpoint(
+            "website_types",
+            WebsiteTypeResult.ADAPTER::decode,
+            WebsiteType.ADAPTER::decode,
         )
 
         /**

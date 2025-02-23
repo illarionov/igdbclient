@@ -27,12 +27,17 @@ import at.released.igdbclient.error.IgdbHttpErrorResponse
 import at.released.igdbclient.error.IgdbHttpException
 import at.released.igdbclient.internal.IgdbClientImplementation
 import at.released.igdbclient.internal.buildRequestExecutor
+import at.released.igdbclient.model.AgeRatingCategoryResult
 import at.released.igdbclient.model.AgeRatingContentDescriptionResult
+import at.released.igdbclient.model.AgeRatingContentDescriptionV2Result
+import at.released.igdbclient.model.AgeRatingOrganizationResult
 import at.released.igdbclient.model.AgeRatingResult
 import at.released.igdbclient.model.AlternativeNameResult
 import at.released.igdbclient.model.ArtworkResult
+import at.released.igdbclient.model.CharacterGenderResult
 import at.released.igdbclient.model.CharacterMugShotResult
 import at.released.igdbclient.model.CharacterResult
+import at.released.igdbclient.model.CharacterSpecieResult
 import at.released.igdbclient.model.CollectionMembershipResult
 import at.released.igdbclient.model.CollectionMembershipTypeResult
 import at.released.igdbclient.model.CollectionRelationResult
@@ -41,19 +46,25 @@ import at.released.igdbclient.model.CollectionResult
 import at.released.igdbclient.model.CollectionTypeResult
 import at.released.igdbclient.model.CompanyLogoResult
 import at.released.igdbclient.model.CompanyResult
+import at.released.igdbclient.model.CompanyStatusResult
 import at.released.igdbclient.model.CompanyWebsiteResult
 import at.released.igdbclient.model.CoverResult
+import at.released.igdbclient.model.DateFormatResult
 import at.released.igdbclient.model.EventLogoResult
 import at.released.igdbclient.model.EventNetworkResult
 import at.released.igdbclient.model.EventResult
 import at.released.igdbclient.model.ExternalGameResult
+import at.released.igdbclient.model.ExternalGameSourceResult
 import at.released.igdbclient.model.FranchiseResult
 import at.released.igdbclient.model.GameEngineLogoResult
 import at.released.igdbclient.model.GameEngineResult
 import at.released.igdbclient.model.GameLocalizationResult
 import at.released.igdbclient.model.GameModeResult
+import at.released.igdbclient.model.GameReleaseFormatResult
 import at.released.igdbclient.model.GameResult
+import at.released.igdbclient.model.GameStatusResult
 import at.released.igdbclient.model.GameTimeToBeatResult
+import at.released.igdbclient.model.GameTypeResult
 import at.released.igdbclient.model.GameVersionFeatureResult
 import at.released.igdbclient.model.GameVersionFeatureValueResult
 import at.released.igdbclient.model.GameVersionResult
@@ -69,6 +80,7 @@ import at.released.igdbclient.model.NetworkTypeResult
 import at.released.igdbclient.model.PlatformFamilyResult
 import at.released.igdbclient.model.PlatformLogoResult
 import at.released.igdbclient.model.PlatformResult
+import at.released.igdbclient.model.PlatformTypeResult
 import at.released.igdbclient.model.PlatformVersionCompanyResult
 import at.released.igdbclient.model.PlatformVersionReleaseDateResult
 import at.released.igdbclient.model.PlatformVersionResult
@@ -77,6 +89,7 @@ import at.released.igdbclient.model.PlayerPerspectiveResult
 import at.released.igdbclient.model.PopularityPrimitiveResult
 import at.released.igdbclient.model.PopularityTypeResult
 import at.released.igdbclient.model.RegionResult
+import at.released.igdbclient.model.ReleaseDateRegionResult
 import at.released.igdbclient.model.ReleaseDateResult
 import at.released.igdbclient.model.ReleaseDateStatusResult
 import at.released.igdbclient.model.ScreenshotResult
@@ -84,6 +97,7 @@ import at.released.igdbclient.model.SearchResult
 import at.released.igdbclient.model.ThemeResult
 import at.released.igdbclient.model.UnpackedMultiQueryResult
 import at.released.igdbclient.model.WebsiteResult
+import at.released.igdbclient.model.WebsiteTypeResult
 
 /**
  * Creates a [IgdbClient] with the specified [block] configuration.
@@ -140,12 +154,37 @@ public suspend fun IgdbClient.getAgeRatings(builder: ApicalypseQueryBuilder.() -
     executeOrThrow(IgdbEndpoint.AGE_RATING, apicalypseQuery(builder))
 
 /**
+ * Age Rating according to various rating organisations
+ */
+public suspend fun IgdbClient.getAgeRatingCategories(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): AgeRatingCategoryResult = executeOrThrow(IgdbEndpoint.AGE_RATING_CATEGORY, apicalypseQuery(builder))
+
+/**
  * Age Rating Descriptors
  */
+@Deprecated("Use getAgeRatingContentDescriptionsv2 instead")
 public suspend fun IgdbClient.getAgeRatingContentDescriptions(
     builder: ApicalypseQueryBuilder.() -> Unit,
-): AgeRatingContentDescriptionResult =
-    executeOrThrow(IgdbEndpoint.AGE_RATING_CONTENT_DESCRIPTION, apicalypseQuery(builder))
+): AgeRatingContentDescriptionResult {
+    @Suppress("DEPRECATION")
+    return executeOrThrow(IgdbEndpoint.AGE_RATING_CONTENT_DESCRIPTION, apicalypseQuery(builder))
+}
+
+/**
+ * Age Rating Descriptors
+ */
+public suspend fun IgdbClient.getAgeRatingContentDescriptionsV2(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): AgeRatingContentDescriptionV2Result =
+    executeOrThrow(IgdbEndpoint.AGE_RATING_CONTENT_DESCRIPTION_V2, apicalypseQuery(builder))
+
+/**
+ * Age Rating organizations
+ */
+public suspend fun IgdbClient.getAgeRatingOrganizations(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): AgeRatingOrganizationResult = executeOrThrow(IgdbEndpoint.AGE_RATING_ORGANIZATION, apicalypseQuery(builder))
 
 /**
  * Alternative and international game titles
@@ -166,10 +205,24 @@ public suspend fun IgdbClient.getCharacters(builder: ApicalypseQueryBuilder.() -
     executeOrThrow(IgdbEndpoint.CHARACTER, apicalypseQuery(builder))
 
 /**
+ * Character gender
+ */
+public suspend fun IgdbClient.getCharacterGender(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CharacterGenderResult = executeOrThrow(IgdbEndpoint.CHARACTER_GENDER, apicalypseQuery(builder))
+
+/**
  * Images depicting game characters
  */
 public suspend fun IgdbClient.getCharacterMugShots(builder: ApicalypseQueryBuilder.() -> Unit): CharacterMugShotResult =
     executeOrThrow(IgdbEndpoint.CHARACTER_MUG_SHOT, apicalypseQuery(builder))
+
+/**
+ * Character species
+ */
+public suspend fun IgdbClient.getCharacterSpecies(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CharacterSpecieResult = executeOrThrow(IgdbEndpoint.CHARACTER_SPECIE, apicalypseQuery(builder))
 
 /**
  * Collection, AKA Series
@@ -224,6 +277,13 @@ public suspend fun IgdbClient.getCompanyLogos(builder: ApicalypseQueryBuilder.()
     executeOrThrow(IgdbEndpoint.COMPANY_LOGO, apicalypseQuery(builder))
 
 /**
+ * Company statuses
+ */
+public suspend fun IgdbClient.getCompanyStatuses(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): CompanyStatusResult = executeOrThrow(IgdbEndpoint.COMPANY_STATUS, apicalypseQuery(builder))
+
+/**
  * Company Website
  */
 public suspend fun IgdbClient.getCompanyWebsites(builder: ApicalypseQueryBuilder.() -> Unit): CompanyWebsiteResult =
@@ -234,6 +294,12 @@ public suspend fun IgdbClient.getCompanyWebsites(builder: ApicalypseQueryBuilder
  */
 public suspend fun IgdbClient.getCovers(builder: ApicalypseQueryBuilder.() -> Unit): CoverResult =
     executeOrThrow(IgdbEndpoint.COVER, apicalypseQuery(builder))
+
+/**
+ * Date formats
+ */
+public suspend fun IgdbClient.getDateFormats(builder: ApicalypseQueryBuilder.() -> Unit): DateFormatResult =
+    executeOrThrow(IgdbEndpoint.DATE_FORMAT, apicalypseQuery(builder))
 
 /**
  * Gaming events
@@ -260,10 +326,23 @@ public suspend fun IgdbClient.getExternalGames(builder: ApicalypseQueryBuilder.(
     executeOrThrow(IgdbEndpoint.EXTERNAL_GAME, apicalypseQuery(builder))
 
 /**
+ * Sources for the external games
+ */
+public suspend fun IgdbClient.getExternalGameSources(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): ExternalGameSourceResult = executeOrThrow(IgdbEndpoint.EXTERNAL_GAME_SOURCE, apicalypseQuery(builder))
+
+/**
  * A list of video game franchises such as Star Wars.
  */
 public suspend fun IgdbClient.getFranchises(builder: ApicalypseQueryBuilder.() -> Unit): FranchiseResult =
     executeOrThrow(IgdbEndpoint.FRANCHISE, apicalypseQuery(builder))
+
+/**
+ * Video Games!
+ */
+public suspend fun IgdbClient.getGames(builder: ApicalypseQueryBuilder.() -> Unit): GameResult =
+    executeOrThrow(IgdbEndpoint.GAME, apicalypseQuery(builder))
 
 /**
  * Video game engines such as unreal engine.
@@ -278,12 +357,6 @@ public suspend fun IgdbClient.getGameEngineLogos(builder: ApicalypseQueryBuilder
     executeOrThrow(IgdbEndpoint.GAME_ENGINE_LOGO, apicalypseQuery(builder))
 
 /**
- * Video Games!
- */
-public suspend fun IgdbClient.getGames(builder: ApicalypseQueryBuilder.() -> Unit): GameResult =
-    executeOrThrow(IgdbEndpoint.GAME, apicalypseQuery(builder))
-
-/**
  * Game localization for a game
  */
 public suspend fun IgdbClient.getGameLocalizations(builder: ApicalypseQueryBuilder.() -> Unit): GameLocalizationResult =
@@ -296,10 +369,31 @@ public suspend fun IgdbClient.getGameModes(builder: ApicalypseQueryBuilder.() ->
     executeOrThrow(IgdbEndpoint.GAME_MODE, apicalypseQuery(builder))
 
 /**
+ * The format of the game release
+ */
+public suspend fun IgdbClient.getGameReleaseFormats(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): GameReleaseFormatResult = executeOrThrow(IgdbEndpoint.GAME_RELEASE_FORMAT, apicalypseQuery(builder))
+
+/**
+ * The format of the game release
+ */
+public suspend fun IgdbClient.getGameStatuses(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): GameStatusResult = executeOrThrow(IgdbEndpoint.GAME_STATUS, apicalypseQuery(builder))
+
+/**
  * Average time to beat times for a game
  */
 public suspend fun IgdbClient.getGameTimeToBeat(builder: ApicalypseQueryBuilder.() -> Unit): GameTimeToBeatResult =
     executeOrThrow(IgdbEndpoint.GAME_TIME_TO_BEAT, apicalypseQuery(builder))
+
+/**
+ * The format of the game release
+ */
+public suspend fun IgdbClient.getGameTypes(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): GameTypeResult = executeOrThrow(IgdbEndpoint.GAME_TYPE, apicalypseQuery(builder))
 
 /**
  * Details about game editions and versions
@@ -315,17 +409,17 @@ public suspend fun IgdbClient.getGameVersionFeatures(
 ): GameVersionFeatureResult = executeOrThrow(IgdbEndpoint.GAME_VERSION_FEATURE, apicalypseQuery(builder))
 
 /**
- * A video associated with a game
- */
-public suspend fun IgdbClient.getGameVideos(builder: ApicalypseQueryBuilder.() -> Unit): GameVideoResult =
-    executeOrThrow(IgdbEndpoint.GAME_VIDEO, apicalypseQuery(builder))
-
-/**
  * The bool/text value of the feature
  */
 public suspend fun IgdbClient.getGameVersionFeatureValues(
     builder: ApicalypseQueryBuilder.() -> Unit,
 ): GameVersionFeatureValueResult = executeOrThrow(IgdbEndpoint.GAME_VERSION_FEATURE_VALUE, apicalypseQuery(builder))
+
+/**
+ * A video associated with a game
+ */
+public suspend fun IgdbClient.getGameVideos(builder: ApicalypseQueryBuilder.() -> Unit): GameVideoResult =
+    executeOrThrow(IgdbEndpoint.GAME_VIDEO, apicalypseQuery(builder))
 
 /**
  * Genres of video game
@@ -340,16 +434,16 @@ public suspend fun IgdbClient.getInvolvedCompanies(builder: ApicalypseQueryBuild
     executeOrThrow(IgdbEndpoint.INVOLVED_COMPANY, apicalypseQuery(builder))
 
 /**
- * Languages that are used in the Language Support endpoint
- */
-public suspend fun IgdbClient.getLanguages(builder: ApicalypseQueryBuilder.() -> Unit): LanguageResult =
-    executeOrThrow(IgdbEndpoint.LANGUAGE, apicalypseQuery(builder))
-
-/**
  * Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”
  */
 public suspend fun IgdbClient.getKeywords(builder: ApicalypseQueryBuilder.() -> Unit): KeywordResult =
     executeOrThrow(IgdbEndpoint.KEYWORD, apicalypseQuery(builder))
+
+/**
+ * Languages that are used in the Language Support endpoint
+ */
+public suspend fun IgdbClient.getLanguages(builder: ApicalypseQueryBuilder.() -> Unit): LanguageResult =
+    executeOrThrow(IgdbEndpoint.LANGUAGE, apicalypseQuery(builder))
 
 /**
  * Games can be played with different languages for voice acting, subtitles, or the interface language.
@@ -392,16 +486,28 @@ public suspend fun IgdbClient.getPlatforms(builder: ApicalypseQueryBuilder.() ->
     executeOrThrow(IgdbEndpoint.PLATFORM, apicalypseQuery(builder))
 
 /**
- * Platform Version
- */
-public suspend fun IgdbClient.getPlatformVersions(builder: ApicalypseQueryBuilder.() -> Unit): PlatformVersionResult =
-    executeOrThrow(IgdbEndpoint.PLATFORM_VERSION, apicalypseQuery(builder))
-
-/**
  * A collection of closely related platforms
  */
 public suspend fun IgdbClient.getPlatformFamilies(builder: ApicalypseQueryBuilder.() -> Unit): PlatformFamilyResult =
     executeOrThrow(IgdbEndpoint.PLATFORM_FAMILY, apicalypseQuery(builder))
+
+/**
+ * Logo for a platform
+ */
+public suspend fun IgdbClient.getPlatformLogos(builder: ApicalypseQueryBuilder.() -> Unit): PlatformLogoResult =
+    executeOrThrow(IgdbEndpoint.PLATFORM_LOGO, apicalypseQuery(builder))
+
+/**
+ * Type of platform
+ */
+public suspend fun IgdbClient.getPlatformTypes(builder: ApicalypseQueryBuilder.() -> Unit): PlatformTypeResult =
+    executeOrThrow(IgdbEndpoint.PLATFORM_TYPE, apicalypseQuery(builder))
+
+/**
+ * Platform Version
+ */
+public suspend fun IgdbClient.getPlatformVersions(builder: ApicalypseQueryBuilder.() -> Unit): PlatformVersionResult =
+    executeOrThrow(IgdbEndpoint.PLATFORM_VERSION, apicalypseQuery(builder))
 
 /**
  * A platform developer
@@ -424,12 +530,6 @@ public suspend fun IgdbClient.getPlatformVersionReleaseDates(
  */
 public suspend fun IgdbClient.getPlatformWebsites(builder: ApicalypseQueryBuilder.() -> Unit): PlatformWebsiteResult =
     executeOrThrow(IgdbEndpoint.PLATFORM_WEBSITE, apicalypseQuery(builder))
-
-/**
- * Logo for a platform
- */
-public suspend fun IgdbClient.getPlatformLogos(builder: ApicalypseQueryBuilder.() -> Unit): PlatformLogoResult =
-    executeOrThrow(IgdbEndpoint.PLATFORM_LOGO, apicalypseQuery(builder))
 
 /**
  * Player perspectives describe the view/perspective of the player in a video game
@@ -465,6 +565,13 @@ public suspend fun IgdbClient.getReleaseDates(builder: ApicalypseQueryBuilder.()
     executeOrThrow(IgdbEndpoint.RELEASE_DATE, apicalypseQuery(builder))
 
 /**
+ * Regions for release dates
+ */
+public suspend fun IgdbClient.getReleaseDateRegions(
+    builder: ApicalypseQueryBuilder.() -> Unit,
+): ReleaseDateRegionResult = executeOrThrow(IgdbEndpoint.RELEASE_DATE_REGION, apicalypseQuery(builder))
+
+/**
  * An endpoint to provide definition of all the current release date statuses
  */
 public suspend fun IgdbClient.getReleaseDateStatuses(
@@ -494,6 +601,12 @@ public suspend fun IgdbClient.getThemes(builder: ApicalypseQueryBuilder.() -> Un
  */
 public suspend fun IgdbClient.getWebsites(builder: ApicalypseQueryBuilder.() -> Unit): WebsiteResult =
     executeOrThrow(IgdbEndpoint.WEBSITE, apicalypseQuery(builder))
+
+/**
+ * Website types
+ */
+public suspend fun IgdbClient.getWebsiteTypes(builder: ApicalypseQueryBuilder.() -> Unit): WebsiteTypeResult =
+    executeOrThrow(IgdbEndpoint.WEBSITE_TYPE, apicalypseQuery(builder))
 
 public suspend fun <T : Any> IgdbClient.executeOrThrow(
     endpoint: IgdbEndpoint<T>,
