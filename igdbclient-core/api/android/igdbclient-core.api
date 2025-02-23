@@ -7,11 +7,16 @@ public abstract interface class at/released/igdbclient/IgdbClient {
 public final class at/released/igdbclient/IgdbClientKt {
 	public static final fun IgdbClient (Lat/released/igdbclient/IgdbHttpEngine;Lkotlin/jvm/functions/Function1;)Lat/released/igdbclient/IgdbClient;
 	public static final fun executeOrThrow (Lat/released/igdbclient/IgdbClient;Lat/released/igdbclient/IgdbEndpoint;Lat/released/igdbclient/apicalypse/ApicalypseQuery;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getAgeRatingCategories (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getAgeRatingContentDescriptions (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getAgeRatingContentDescriptionsV2 (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getAgeRatingOrganizations (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getAgeRatings (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getAlternativeNames (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getArtworks (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCharacterGender (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCharacterMugShots (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCharacterSpecies (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCharacters (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCollectionMembershipTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCollectionMemberships (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -21,18 +26,24 @@ public final class at/released/igdbclient/IgdbClientKt {
 	public static final fun getCollections (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCompanies (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCompanyLogos (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getCompanyStatuses (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCompanyWebsites (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getCovers (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getDateFormats (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getEventLogos (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getEventNetworks (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getEvents (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getExternalGameSources (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getExternalGames (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getFranchises (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameEngineLogos (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameEngines (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameLocalizations (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameModes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getGameReleaseFormats (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getGameStatuses (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameTimeToBeat (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getGameTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersionFeatureValues (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersionFeatures (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getGameVersions (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -48,6 +59,7 @@ public final class at/released/igdbclient/IgdbClientKt {
 	public static final fun getNetworkTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatformFamilies (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatformLogos (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getPlatformTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatformVersionCompanies (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatformVersionReleaseDates (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPlatformVersions (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -57,10 +69,12 @@ public final class at/released/igdbclient/IgdbClientKt {
 	public static final fun getPopularityPrimitives (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getPopularityTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getRegions (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getReleaseDateRegions (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getReleaseDateStatuses (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getReleaseDates (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getScreenshots (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getThemes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static final fun getWebsiteTypes (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun getWebsites (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun multiquery (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun search (Lat/released/igdbclient/IgdbClient;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
@@ -91,11 +105,16 @@ public class at/released/igdbclient/IgdbEndpoint {
 public final class at/released/igdbclient/IgdbEndpoint$Companion {
 	public final fun countEndpoint (Lat/released/igdbclient/IgdbEndpoint;)Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getAGE_RATING ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getAGE_RATING_CATEGORY ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getAGE_RATING_CONTENT_DESCRIPTION ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getAGE_RATING_CONTENT_DESCRIPTION_V2 ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getAGE_RATING_ORGANIZATION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getALTERNATIVE_NAME ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getARTWORK ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCHARACTER ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getCHARACTER_GENDER ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCHARACTER_MUG_SHOT ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getCHARACTER_SPECIE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOLLECTION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOLLECTION_MEMBERSHIP ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOLLECTION_MEMBERSHIP_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
@@ -104,19 +123,25 @@ public final class at/released/igdbclient/IgdbEndpoint$Companion {
 	public final fun getCOLLECTION_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY_LOGO ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getCOMPANY_STATUS ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOMPANY_WEBSITE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getCOVER ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getDATE_FORMAT ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getEVENT ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getEVENT_LOGO ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getEVENT_NETWORK ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getEXTERNAL_GAME ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getEXTERNAL_GAME_SOURCE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getFRANCHISE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_ENGINE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_ENGINE_LOGO ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_LOCALIZATION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_MODE ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getGAME_RELEASE_FORMAT ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getGAME_STATUS ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_TIME_TO_BEAT ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getGAME_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION_FEATURE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getGAME_VERSION_FEATURE_VALUE ()Lat/released/igdbclient/IgdbEndpoint;
@@ -133,6 +158,7 @@ public final class at/released/igdbclient/IgdbEndpoint$Companion {
 	public final fun getPLATFORM ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_FAMILY ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_LOGO ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getPLATFORM_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_VERSION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_VERSION_COMPANY ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getPLATFORM_VERSION_RELEASE_DATE ()Lat/released/igdbclient/IgdbEndpoint;
@@ -142,11 +168,13 @@ public final class at/released/igdbclient/IgdbEndpoint$Companion {
 	public final fun getPOPULARITY_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getREGION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getRELEASE_DATE ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getRELEASE_DATE_REGION ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getRELEASE_DATE_STATUS ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getSCREENSHOT ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getSEARCH ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getTHEME ()Lat/released/igdbclient/IgdbEndpoint;
 	public final fun getWEBSITE ()Lat/released/igdbclient/IgdbEndpoint;
+	public final fun getWEBSITE_TYPE ()Lat/released/igdbclient/IgdbEndpoint;
 }
 
 public abstract interface class at/released/igdbclient/IgdbHttpEngine {
@@ -372,6 +400,20 @@ public final class at/released/igdbclient/dsl/TwitchAuthConfig {
 	public final fun setStorage (Lat/released/igdbclient/auth/twitch/TwitchTokenStorage;)V
 }
 
+public final class at/released/igdbclient/dsl/field/AgeRatingCategoryFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOrganization ()Lat/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl;
+	public final fun getRating ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/AgeRatingCategoryFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/AgeRatingCategory$Companion;)Lat/released/igdbclient/dsl/field/AgeRatingCategoryFieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -384,19 +426,49 @@ public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionF
 	public static final fun getField (Lat/released/igdbclient/model/AgeRatingContentDescription$Companion;)Lat/released/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl;
 }
 
+public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionV2FieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOrganization ()Lat/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionV2FieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/AgeRatingContentDescriptionV2$Companion;)Lat/released/igdbclient/dsl/field/AgeRatingContentDescriptionV2FieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/AgeRatingFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getContent_descriptions ()Lat/released/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getOrganization ()Lat/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl;
 	public final fun getRating ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRating_category ()Lat/released/igdbclient/dsl/field/AgeRatingCategoryFieldDsl;
+	public final fun getRating_content_descriptions ()Lat/released/igdbclient/dsl/field/AgeRatingContentDescriptionV2FieldDsl;
 	public final fun getRating_cover_url ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getSynopsis ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/AgeRating$Companion;)Lat/released/igdbclient/dsl/field/AgeRatingFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/AgeRatingOrganization$Companion;)Lat/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/AlternativeNameFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -432,6 +504,8 @@ public final class at/released/igdbclient/dsl/field/ArtworkFieldDslKt {
 public final class at/released/igdbclient/dsl/field/CharacterFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getAkas ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCharacter_gender ()Lat/released/igdbclient/dsl/field/CharacterGenderFieldDsl;
+	public final fun getCharacter_species ()Lat/released/igdbclient/dsl/field/CharacterSpecieFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCountry_name ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -451,6 +525,19 @@ public final class at/released/igdbclient/dsl/field/CharacterFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/Character$Companion;)Lat/released/igdbclient/dsl/field/CharacterFieldDsl;
 }
 
+public final class at/released/igdbclient/dsl/field/CharacterGenderFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/CharacterGenderFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/CharacterGender$Companion;)Lat/released/igdbclient/dsl/field/CharacterGenderFieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/CharacterMugShotFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -465,6 +552,19 @@ public final class at/released/igdbclient/dsl/field/CharacterMugShotFieldDsl : a
 
 public final class at/released/igdbclient/dsl/field/CharacterMugShotFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/CharacterMugShot$Companion;)Lat/released/igdbclient/dsl/field/CharacterMugShotFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/CharacterSpecieFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/CharacterSpecieFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/CharacterSpecie$Companion;)Lat/released/igdbclient/dsl/field/CharacterSpecieFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -565,6 +665,7 @@ public final class at/released/igdbclient/dsl/field/CompanyFieldDsl : at/release
 	public fun <init> ()V
 	public final fun getChange_date ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChange_date_category ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getChange_date_format ()Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
 	public final fun getChanged_company_id ()Lat/released/igdbclient/dsl/field/CompanyFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCountry ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -579,6 +680,8 @@ public final class at/released/igdbclient/dsl/field/CompanyFieldDsl : at/release
 	public final fun getSlug ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getStart_date ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getStart_date_category ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStart_date_format ()Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
+	public final fun getStatus ()Lat/released/igdbclient/dsl/field/CompanyStatusFieldDsl;
 	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getUrl ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getWebsites ()Lat/released/igdbclient/dsl/field/CompanyWebsiteFieldDsl;
@@ -604,12 +707,26 @@ public final class at/released/igdbclient/dsl/field/CompanyLogoFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/CompanyLogo$Companion;)Lat/released/igdbclient/dsl/field/CompanyLogoFieldDsl;
 }
 
+public final class at/released/igdbclient/dsl/field/CompanyStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/CompanyStatusFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/CompanyStatus$Companion;)Lat/released/igdbclient/dsl/field/CompanyStatusFieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/CompanyWebsiteFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getTrusted ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lat/released/igdbclient/dsl/field/WebsiteTypeFieldDsl;
 	public final fun getUrl ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 }
 
@@ -633,6 +750,19 @@ public final class at/released/igdbclient/dsl/field/CoverFieldDsl : at/released/
 
 public final class at/released/igdbclient/dsl/field/CoverFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/Cover$Companion;)Lat/released/igdbclient/dsl/field/CoverFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/DateFormatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getFormat ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/DateFormatFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/DateFormat$Companion;)Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/EventFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -698,7 +828,9 @@ public final class at/released/igdbclient/dsl/field/ExternalGameFieldDsl : at/re
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCountries ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getExternal_game_source ()Lat/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
+	public final fun getGame_release_format ()Lat/released/igdbclient/dsl/field/GameReleaseFormatFieldDsl;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getMedia ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -711,6 +843,19 @@ public final class at/released/igdbclient/dsl/field/ExternalGameFieldDsl : at/re
 
 public final class at/released/igdbclient/dsl/field/ExternalGameFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/ExternalGame$Companion;)Lat/released/igdbclient/dsl/field/ExternalGameFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/ExternalGameSourceFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/ExternalGameSource$Companion;)Lat/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/FranchiseFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -790,6 +935,8 @@ public final class at/released/igdbclient/dsl/field/GameFieldDsl : at/released/i
 	public final fun getGame_engines ()Lat/released/igdbclient/dsl/field/GameEngineFieldDsl;
 	public final fun getGame_localizations ()Lat/released/igdbclient/dsl/field/GameLocalizationFieldDsl;
 	public final fun getGame_modes ()Lat/released/igdbclient/dsl/field/GameModeFieldDsl;
+	public final fun getGame_status ()Lat/released/igdbclient/dsl/field/GameStatusFieldDsl;
+	public final fun getGame_type ()Lat/released/igdbclient/dsl/field/GameTypeFieldDsl;
 	public final fun getGenres ()Lat/released/igdbclient/dsl/field/GenreFieldDsl;
 	public final fun getHypes ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -861,6 +1008,32 @@ public final class at/released/igdbclient/dsl/field/GameModeFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/GameMode$Companion;)Lat/released/igdbclient/dsl/field/GameModeFieldDsl;
 }
 
+public final class at/released/igdbclient/dsl/field/GameReleaseFormatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getFormat ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/GameReleaseFormatFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/GameReleaseFormat$Companion;)Lat/released/igdbclient/dsl/field/GameReleaseFormatFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/GameStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getStatus ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/GameStatusFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/GameStatus$Companion;)Lat/released/igdbclient/dsl/field/GameStatusFieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/GameTimeToBeatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -876,6 +1049,19 @@ public final class at/released/igdbclient/dsl/field/GameTimeToBeatFieldDsl : at/
 
 public final class at/released/igdbclient/dsl/field/GameTimeToBeatFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/GameTimeToBeat$Companion;)Lat/released/igdbclient/dsl/field/GameTimeToBeatFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/GameTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/GameTypeFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/GameType$Companion;)Lat/released/igdbclient/dsl/field/GameTypeFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/GameVersionFeatureFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -1109,6 +1295,7 @@ public final class at/released/igdbclient/dsl/field/PlatformFieldDsl : at/releas
 	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPlatform_family ()Lat/released/igdbclient/dsl/field/PlatformFamilyFieldDsl;
 	public final fun getPlatform_logo ()Lat/released/igdbclient/dsl/field/PlatformLogoFieldDsl;
+	public final fun getPlatform_type ()Lat/released/igdbclient/dsl/field/PlatformTypeFieldDsl;
 	public final fun getSlug ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getSummary ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1137,6 +1324,19 @@ public final class at/released/igdbclient/dsl/field/PlatformLogoFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/PlatformLogo$Companion;)Lat/released/igdbclient/dsl/field/PlatformLogoFieldDsl;
 }
 
+public final class at/released/igdbclient/dsl/field/PlatformTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/PlatformTypeFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/PlatformType$Companion;)Lat/released/igdbclient/dsl/field/PlatformTypeFieldDsl;
+}
+
 public final class at/released/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
 	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1163,7 +1363,6 @@ public final class at/released/igdbclient/dsl/field/PlatformVersionFieldDsl : at
 	public final fun getMedia ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getMemory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
-	public final fun getOnline ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getOs ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getOutput ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPlatform_logo ()Lat/released/igdbclient/dsl/field/PlatformLogoFieldDsl;
@@ -1186,11 +1385,13 @@ public final class at/released/igdbclient/dsl/field/PlatformVersionReleaseDateFi
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDate ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDate_format ()Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
 	public final fun getHuman ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getM ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPlatform_version ()Lat/released/igdbclient/dsl/field/PlatformVersionFieldDsl;
 	public final fun getRegion ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRelease_region ()Lat/released/igdbclient/dsl/field/ReleaseDateRegionFieldDsl;
 	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getY ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 }
@@ -1232,6 +1433,7 @@ public final class at/released/igdbclient/dsl/field/PopularityPrimitiveFieldDsl 
 	public final fun getCalculated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getExternal_popularity_source ()Lat/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl;
 	public final fun getGame_id ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPopularity_source ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1248,6 +1450,7 @@ public final class at/released/igdbclient/dsl/field/PopularityTypeFieldDsl : at/
 	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getExternal_popularity_source ()Lat/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPopularity_source ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1279,12 +1482,14 @@ public final class at/released/igdbclient/dsl/field/ReleaseDateFieldDsl : at/rel
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDate ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getDate_format ()Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
 	public final fun getHuman ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getM ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getPlatform ()Lat/released/igdbclient/dsl/field/PlatformFieldDsl;
 	public final fun getRegion ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRelease_region ()Lat/released/igdbclient/dsl/field/ReleaseDateRegionFieldDsl;
 	public final fun getStatus ()Lat/released/igdbclient/dsl/field/ReleaseDateStatusFieldDsl;
 	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getY ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1292,6 +1497,19 @@ public final class at/released/igdbclient/dsl/field/ReleaseDateFieldDsl : at/rel
 
 public final class at/released/igdbclient/dsl/field/ReleaseDateFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/ReleaseDate$Companion;)Lat/released/igdbclient/dsl/field/ReleaseDateFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/ReleaseDateRegionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getRegion ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/ReleaseDateRegionFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/ReleaseDateRegion$Companion;)Lat/released/igdbclient/dsl/field/ReleaseDateRegionFieldDsl;
 }
 
 public final class at/released/igdbclient/dsl/field/ReleaseDateStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
@@ -1394,11 +1612,25 @@ public final class at/released/igdbclient/dsl/field/WebsiteFieldDsl : at/release
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getTrusted ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lat/released/igdbclient/dsl/field/WebsiteTypeFieldDsl;
 	public final fun getUrl ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 }
 
 public final class at/released/igdbclient/dsl/field/WebsiteFieldDslKt {
 	public static final fun getField (Lat/released/igdbclient/model/Website$Companion;)Lat/released/igdbclient/dsl/field/WebsiteFieldDsl;
+}
+
+public final class at/released/igdbclient/dsl/field/WebsiteTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
+	public fun <init> ()V
+	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getType ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+	public final fun getUpdated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
+}
+
+public final class at/released/igdbclient/dsl/field/WebsiteTypeFieldDslKt {
+	public static final fun getField (Lat/released/igdbclient/model/WebsiteType$Companion;)Lat/released/igdbclient/dsl/field/WebsiteTypeFieldDsl;
 }
 
 public class at/released/igdbclient/error/IgdbApiFailureException : at/released/igdbclient/error/IgdbException {
@@ -1469,16 +1701,19 @@ public final class at/released/igdbclient/model/AgeRating : com/squareup/wire/Me
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/AgeRating$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRating;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRating;JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRating;
+	public fun <init> (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Lat/released/igdbclient/model/AgeRatingCategory;Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Lat/released/igdbclient/model/AgeRatingCategory;Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Lat/released/igdbclient/model/AgeRatingCategory;Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRating;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRating;JLat/released/igdbclient/model/AgeRatingCategoryEnum;Ljava/util/List;Lat/released/igdbclient/model/AgeRatingRatingEnum;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Lat/released/igdbclient/model/AgeRatingCategory;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRating;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/AgeRatingCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getContent_descriptions ()Ljava/util/List;
 	public final fun getId ()J
+	public final fun getOrganization ()Lat/released/igdbclient/model/AgeRatingOrganization;
 	public final fun getRating ()Lat/released/igdbclient/model/AgeRatingRatingEnum;
+	public final fun getRating_category ()Lat/released/igdbclient/model/AgeRatingCategory;
+	public final fun getRating_content_descriptions ()Ljava/util/List;
 	public final fun getRating_cover_url ()Ljava/lang/String;
 	public final fun getSynopsis ()Ljava/lang/String;
 	public fun hashCode ()I
@@ -1488,6 +1723,30 @@ public final class at/released/igdbclient/model/AgeRating : com/squareup/wire/Me
 }
 
 public final class at/released/igdbclient/model/AgeRating$Companion {
+}
+
+public final class at/released/igdbclient/model/AgeRatingCategory : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingCategory$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingCategory;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingCategory;JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingCategory;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getOrganization ()Lat/released/igdbclient/model/AgeRatingOrganization;
+	public final fun getRating ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingCategory$Companion {
 }
 
 public final class at/released/igdbclient/model/AgeRatingCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
@@ -1510,6 +1769,25 @@ public final class at/released/igdbclient/model/AgeRatingCategoryEnum : java/lan
 
 public final class at/released/igdbclient/model/AgeRatingCategoryEnum$Companion {
 	public final fun fromValue (I)Lat/released/igdbclient/model/AgeRatingCategoryEnum;
+}
+
+public final class at/released/igdbclient/model/AgeRatingCategoryResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingCategoryResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingCategoryResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingCategoryResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingCategoryResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgeratingcategories ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingCategoryResult$Companion {
 }
 
 public final class at/released/igdbclient/model/AgeRatingContentDescription : com/squareup/wire/Message {
@@ -1651,6 +1929,91 @@ public final class at/released/igdbclient/model/AgeRatingContentDescriptionResul
 }
 
 public final class at/released/igdbclient/model/AgeRatingContentDescriptionResult$Companion {
+}
+
+public final class at/released/igdbclient/model/AgeRatingContentDescriptionV2 : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingContentDescriptionV2$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingContentDescriptionV2;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingContentDescriptionV2;JLjava/lang/String;Lat/released/igdbclient/model/AgeRatingOrganization;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingContentDescriptionV2;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getOrganization ()Lat/released/igdbclient/model/AgeRatingOrganization;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingContentDescriptionV2$Companion {
+}
+
+public final class at/released/igdbclient/model/AgeRatingContentDescriptionV2Result : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingContentDescriptionV2Result$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingContentDescriptionV2Result;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingContentDescriptionV2Result;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingContentDescriptionV2Result;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgeratingcontentdescriptionsv2 ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingContentDescriptionV2Result$Companion {
+}
+
+public final class at/released/igdbclient/model/AgeRatingOrganization : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingOrganization$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingOrganization;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingOrganization;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingOrganization;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingOrganization$Companion {
+}
+
+public final class at/released/igdbclient/model/AgeRatingOrganizationResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/AgeRatingOrganizationResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/AgeRatingOrganizationResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/AgeRatingOrganizationResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/AgeRatingOrganizationResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgeratingorganizations ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/AgeRatingOrganizationResult$Companion {
 }
 
 public final class at/released/igdbclient/model/AgeRatingRatingEnum : java/lang/Enum, com/squareup/wire/WireEnum {
@@ -1818,12 +2181,14 @@ public final class at/released/igdbclient/model/Character : com/squareup/wire/Me
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Character$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/Character;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/Character;JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Character;
+	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterGender;Lat/released/igdbclient/model/CharacterSpecie;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterGender;Lat/released/igdbclient/model/CharacterSpecie;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterGender;Lat/released/igdbclient/model/CharacterSpecie;Lokio/ByteString;)Lat/released/igdbclient/model/Character;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/Character;JLjava/util/List;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GenderGenderEnum;Lat/released/igdbclient/model/CharacterMugShot;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterSpeciesEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/CharacterGender;Lat/released/igdbclient/model/CharacterSpecie;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Character;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAkas ()Ljava/util/List;
+	public final fun getCharacter_gender ()Lat/released/igdbclient/model/CharacterGender;
+	public final fun getCharacter_species ()Lat/released/igdbclient/model/CharacterSpecie;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCountry_name ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
@@ -1844,6 +2209,48 @@ public final class at/released/igdbclient/model/Character : com/squareup/wire/Me
 }
 
 public final class at/released/igdbclient/model/Character$Companion {
+}
+
+public final class at/released/igdbclient/model/CharacterGender : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CharacterGender$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/CharacterGender;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CharacterGender;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CharacterGender;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CharacterGender$Companion {
+}
+
+public final class at/released/igdbclient/model/CharacterGenderResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CharacterGenderResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/CharacterGenderResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CharacterGenderResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CharacterGenderResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCharactergenders ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CharacterGenderResult$Companion {
 }
 
 public final class at/released/igdbclient/model/CharacterMugShot : com/squareup/wire/Message {
@@ -1908,6 +2315,48 @@ public final class at/released/igdbclient/model/CharacterResult : com/squareup/w
 }
 
 public final class at/released/igdbclient/model/CharacterResult$Companion {
+}
+
+public final class at/released/igdbclient/model/CharacterSpecie : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CharacterSpecie$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/CharacterSpecie;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CharacterSpecie;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CharacterSpecie;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CharacterSpecie$Companion {
+}
+
+public final class at/released/igdbclient/model/CharacterSpecieResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CharacterSpecieResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/CharacterSpecieResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CharacterSpecieResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CharacterSpecieResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCharacterspecies ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CharacterSpecieResult$Companion {
 }
 
 public final class at/released/igdbclient/model/CharacterSpeciesEnum : java/lang/Enum, com/squareup/wire/WireEnum {
@@ -2202,13 +2651,14 @@ public final class at/released/igdbclient/model/Company : com/squareup/wire/Mess
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Company$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/Company;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/Company;JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Company;
+	public fun <init> (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/CompanyStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/DateFormat;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/CompanyStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/DateFormat;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/CompanyStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/DateFormat;Lokio/ByteString;)Lat/released/igdbclient/model/Company;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/Company;JLjava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Lat/released/igdbclient/model/Company;ILjava/time/Instant;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/CompanyLogo;Ljava/lang/String;Lat/released/igdbclient/model/Company;Ljava/util/List;Ljava/lang/String;Ljava/time/Instant;Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/CompanyStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/DateFormat;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Company;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChange_date ()Ljava/time/Instant;
 	public final fun getChange_date_category ()Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;
+	public final fun getChange_date_format ()Lat/released/igdbclient/model/DateFormat;
 	public final fun getChanged_company_id ()Lat/released/igdbclient/model/Company;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCountry ()I
@@ -2223,6 +2673,8 @@ public final class at/released/igdbclient/model/Company : com/squareup/wire/Mess
 	public final fun getSlug ()Ljava/lang/String;
 	public final fun getStart_date ()Ljava/time/Instant;
 	public final fun getStart_date_category ()Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;
+	public final fun getStart_date_format ()Lat/released/igdbclient/model/DateFormat;
+	public final fun getStatus ()Lat/released/igdbclient/model/CompanyStatus;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public final fun getUrl ()Ljava/lang/String;
 	public final fun getWebsites ()Ljava/util/List;
@@ -2299,19 +2751,62 @@ public final class at/released/igdbclient/model/CompanyResult : com/squareup/wir
 public final class at/released/igdbclient/model/CompanyResult$Companion {
 }
 
+public final class at/released/igdbclient/model/CompanyStatus : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CompanyStatus$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/CompanyStatus;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CompanyStatus;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CompanyStatus;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CompanyStatus$Companion {
+}
+
+public final class at/released/igdbclient/model/CompanyStatusResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/CompanyStatusResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/CompanyStatusResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CompanyStatusResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CompanyStatusResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCompanystatuses ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/CompanyStatusResult$Companion {
+}
+
 public final class at/released/igdbclient/model/CompanyWebsite : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/CompanyWebsite$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/CompanyWebsite;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/CompanyWebsite;JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CompanyWebsite;
+	public fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;)Lat/released/igdbclient/model/CompanyWebsite;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/CompanyWebsite;JLat/released/igdbclient/model/WebsiteCategoryEnum;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/CompanyWebsite;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/WebsiteCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getId ()J
 	public final fun getTrusted ()Z
+	public final fun getType ()Lat/released/igdbclient/model/WebsiteType;
 	public final fun getUrl ()Ljava/lang/String;
 	public fun hashCode ()I
 	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
@@ -2407,6 +2902,29 @@ public final class at/released/igdbclient/model/CoverResult : com/squareup/wire/
 public final class at/released/igdbclient/model/CoverResult$Companion {
 }
 
+public final class at/released/igdbclient/model/DateFormat : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/DateFormat$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/DateFormat;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/DateFormat;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/DateFormat;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getFormat ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/DateFormat$Companion {
+}
+
 public final class at/released/igdbclient/model/DateFormatChangeDateCategoryEnum : java/lang/Enum, com/squareup/wire/WireEnum {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum$Companion;
@@ -2427,6 +2945,25 @@ public final class at/released/igdbclient/model/DateFormatChangeDateCategoryEnum
 
 public final class at/released/igdbclient/model/DateFormatChangeDateCategoryEnum$Companion {
 	public final fun fromValue (I)Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;
+}
+
+public final class at/released/igdbclient/model/DateFormatResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/DateFormatResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/DateFormatResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/DateFormatResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/DateFormatResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDateformats ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/DateFormatResult$Companion {
 }
 
 public final class at/released/igdbclient/model/Event : com/squareup/wire/Message {
@@ -2577,16 +3114,18 @@ public final class at/released/igdbclient/model/ExternalGame : com/squareup/wire
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/ExternalGame$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/ExternalGame;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/ExternalGame;JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ExternalGame;
+	public fun <init> (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lat/released/igdbclient/model/GameReleaseFormat;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lat/released/igdbclient/model/GameReleaseFormat;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lat/released/igdbclient/model/GameReleaseFormat;Lokio/ByteString;)Lat/released/igdbclient/model/ExternalGame;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ExternalGame;JLat/released/igdbclient/model/ExternalGameCategoryEnum;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/ExternalGameMediaEnum;Lat/released/igdbclient/model/Platform;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lat/released/igdbclient/model/GameReleaseFormat;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ExternalGame;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/ExternalGameCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCountries ()Ljava/util/List;
 	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getExternal_game_source ()Lat/released/igdbclient/model/ExternalGameSource;
 	public final fun getGame ()Lat/released/igdbclient/model/Game;
+	public final fun getGame_release_format ()Lat/released/igdbclient/model/GameReleaseFormat;
 	public final fun getId ()J
 	public final fun getMedia ()Lat/released/igdbclient/model/ExternalGameMediaEnum;
 	public final fun getName ()Ljava/lang/String;
@@ -2675,6 +3214,48 @@ public final class at/released/igdbclient/model/ExternalGameResult : com/squareu
 public final class at/released/igdbclient/model/ExternalGameResult$Companion {
 }
 
+public final class at/released/igdbclient/model/ExternalGameSource : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/ExternalGameSource$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/ExternalGameSource;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ExternalGameSource;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ExternalGameSource;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/ExternalGameSource$Companion {
+}
+
+public final class at/released/igdbclient/model/ExternalGameSourceResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/ExternalGameSourceResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/ExternalGameSourceResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ExternalGameSourceResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ExternalGameSourceResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExternalgamesources ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/ExternalGameSourceResult$Companion {
+}
+
 public final class at/released/igdbclient/model/Franchise : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Franchise$Companion;
@@ -2724,10 +3305,10 @@ public final class at/released/igdbclient/model/Game : com/squareup/wire/Message
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Game$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/Game;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/Game;JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lokio/ByteString;IILjava/lang/Object;)Lat/released/igdbclient/model/Game;
+	public fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameStatus;Lat/released/igdbclient/model/GameType;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameStatus;Lat/released/igdbclient/model/GameType;Lokio/ByteString;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameStatus;Lat/released/igdbclient/model/GameType;Lokio/ByteString;)Lat/released/igdbclient/model/Game;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/Game;JLjava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameCategoryEnum;Lat/released/igdbclient/model/Collection;Lat/released/igdbclient/model/Cover;Ljava/time/Instant;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/time/Instant;ILat/released/igdbclient/model/Franchise;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;ILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/util/List;Ljava/util/List;DILjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lat/released/igdbclient/model/GameStatusEnum;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;DILjava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/Game;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lat/released/igdbclient/model/GameStatus;Lat/released/igdbclient/model/GameType;Lokio/ByteString;IILjava/lang/Object;)Lat/released/igdbclient/model/Game;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAge_ratings ()Ljava/util/List;
 	public final fun getAggregated_rating ()D
@@ -2753,6 +3334,8 @@ public final class at/released/igdbclient/model/Game : com/squareup/wire/Message
 	public final fun getGame_engines ()Ljava/util/List;
 	public final fun getGame_localizations ()Ljava/util/List;
 	public final fun getGame_modes ()Ljava/util/List;
+	public final fun getGame_status ()Lat/released/igdbclient/model/GameStatus;
+	public final fun getGame_type ()Lat/released/igdbclient/model/GameType;
 	public final fun getGenres ()Ljava/util/List;
 	public final fun getHypes ()I
 	public final fun getId ()J
@@ -3007,6 +3590,48 @@ public final class at/released/igdbclient/model/GameModeResult : com/squareup/wi
 public final class at/released/igdbclient/model/GameModeResult$Companion {
 }
 
+public final class at/released/igdbclient/model/GameReleaseFormat : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameReleaseFormat$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/GameReleaseFormat;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameReleaseFormat;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameReleaseFormat;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getFormat ()Ljava/lang/String;
+	public final fun getId ()J
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameReleaseFormat$Companion {
+}
+
+public final class at/released/igdbclient/model/GameReleaseFormatResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameReleaseFormatResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/GameReleaseFormatResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameReleaseFormatResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameReleaseFormatResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGamereleaseformats ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameReleaseFormatResult$Companion {
+}
+
 public final class at/released/igdbclient/model/GameResult : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/GameResult$Companion;
@@ -3024,6 +3649,29 @@ public final class at/released/igdbclient/model/GameResult : com/squareup/wire/M
 }
 
 public final class at/released/igdbclient/model/GameResult$Companion {
+}
+
+public final class at/released/igdbclient/model/GameStatus : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameStatus$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/GameStatus;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameStatus;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameStatus;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getStatus ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameStatus$Companion {
 }
 
 public final class at/released/igdbclient/model/GameStatusEnum : java/lang/Enum, com/squareup/wire/WireEnum {
@@ -3046,6 +3694,25 @@ public final class at/released/igdbclient/model/GameStatusEnum : java/lang/Enum,
 
 public final class at/released/igdbclient/model/GameStatusEnum$Companion {
 	public final fun fromValue (I)Lat/released/igdbclient/model/GameStatusEnum;
+}
+
+public final class at/released/igdbclient/model/GameStatusResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameStatusResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/GameStatusResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameStatusResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameStatusResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGamestatuses ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameStatusResult$Companion {
 }
 
 public final class at/released/igdbclient/model/GameTimeToBeat : com/squareup/wire/Message {
@@ -3092,6 +3759,48 @@ public final class at/released/igdbclient/model/GameTimeToBeatResult : com/squar
 }
 
 public final class at/released/igdbclient/model/GameTimeToBeatResult$Companion {
+}
+
+public final class at/released/igdbclient/model/GameType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/GameType;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameType;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getType ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameType$Companion {
+}
+
+public final class at/released/igdbclient/model/GameTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/GameTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/GameTypeResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/GameTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/GameTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getGametypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/GameTypeResult$Companion {
 }
 
 public final class at/released/igdbclient/model/GameVersion : com/squareup/wire/Message {
@@ -3782,10 +4491,10 @@ public final class at/released/igdbclient/model/Platform : com/squareup/wire/Mes
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Platform$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/Platform;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/Platform;JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Platform;
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/PlatformType;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/PlatformType;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/PlatformType;Lokio/ByteString;)Lat/released/igdbclient/model/Platform;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/Platform;JLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformCategoryEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Lat/released/igdbclient/model/PlatformFamily;Ljava/lang/String;Ljava/lang/String;Ljava/time/Instant;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lat/released/igdbclient/model/PlatformType;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Platform;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAbbreviation ()Ljava/lang/String;
 	public final fun getAlternative_name ()Ljava/lang/String;
@@ -3797,6 +4506,7 @@ public final class at/released/igdbclient/model/Platform : com/squareup/wire/Mes
 	public final fun getName ()Ljava/lang/String;
 	public final fun getPlatform_family ()Lat/released/igdbclient/model/PlatformFamily;
 	public final fun getPlatform_logo ()Lat/released/igdbclient/model/PlatformLogo;
+	public final fun getPlatform_type ()Lat/released/igdbclient/model/PlatformType;
 	public final fun getSlug ()Ljava/lang/String;
 	public final fun getSummary ()Ljava/lang/String;
 	public final fun getUpdated_at ()Ljava/time/Instant;
@@ -3938,14 +4648,56 @@ public final class at/released/igdbclient/model/PlatformResult : com/squareup/wi
 public final class at/released/igdbclient/model/PlatformResult$Companion {
 }
 
+public final class at/released/igdbclient/model/PlatformType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/PlatformType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformType;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformType;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getName ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/PlatformType$Companion {
+}
+
+public final class at/released/igdbclient/model/PlatformTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/PlatformTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformTypeResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPlatformtypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/PlatformTypeResult$Companion {
+}
+
 public final class at/released/igdbclient/model/PlatformVersion : com/squareup/wire/Message {
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/PlatformVersion$Companion;
 	public fun <init> ()V
-	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformVersion;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformVersion;JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformVersion;
+	public fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformVersion;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformVersion;JLjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformVersionCompany;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/PlatformLogo;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformVersion;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCompanies ()Ljava/util/List;
@@ -3957,7 +4709,6 @@ public final class at/released/igdbclient/model/PlatformVersion : com/squareup/w
 	public final fun getMedia ()Ljava/lang/String;
 	public final fun getMemory ()Ljava/lang/String;
 	public final fun getName ()Ljava/lang/String;
-	public final fun getOnline ()Ljava/lang/String;
 	public final fun getOs ()Ljava/lang/String;
 	public final fun getOutput ()Ljava/lang/String;
 	public final fun getPlatform_logo ()Lat/released/igdbclient/model/PlatformLogo;
@@ -4024,20 +4775,22 @@ public final class at/released/igdbclient/model/PlatformVersionReleaseDate : com
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/PlatformVersionReleaseDate$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformVersionReleaseDate;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformVersionReleaseDate;JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformVersionReleaseDate;
+	public fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;)Lat/released/igdbclient/model/PlatformVersionReleaseDate;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PlatformVersionReleaseDate;JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;ILat/released/igdbclient/model/PlatformVersion;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PlatformVersionReleaseDate;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getDate ()Ljava/time/Instant;
+	public final fun getDate_format ()Lat/released/igdbclient/model/DateFormat;
 	public final fun getHuman ()Ljava/lang/String;
 	public final fun getId ()J
 	public final fun getM ()I
 	public final fun getPlatform_version ()Lat/released/igdbclient/model/PlatformVersion;
 	public final fun getRegion ()Lat/released/igdbclient/model/RegionRegionEnum;
+	public final fun getRelease_region ()Lat/released/igdbclient/model/ReleaseDateRegion;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public final fun getY ()I
 	public fun hashCode ()I
@@ -4177,14 +4930,15 @@ public final class at/released/igdbclient/model/PopularityPrimitive : com/square
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/PopularityPrimitive$Companion;
 	public fun <init> ()V
-	public fun <init> (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PopularityPrimitive;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/PopularityPrimitive;JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PopularityPrimitive;
+	public fun <init> (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;)V
+	public synthetic fun <init> (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;)Lat/released/igdbclient/model/PopularityPrimitive;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PopularityPrimitive;JILat/released/igdbclient/model/PopularityType;Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;DLjava/time/Instant;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PopularityPrimitive;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCalculated_at ()Ljava/time/Instant;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getExternal_popularity_source ()Lat/released/igdbclient/model/ExternalGameSource;
 	public final fun getGame_id ()I
 	public final fun getId ()J
 	public final fun getPopularity_source ()Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;
@@ -4239,13 +4993,14 @@ public final class at/released/igdbclient/model/PopularityType : com/squareup/wi
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/PopularityType$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/PopularityType;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/PopularityType;JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PopularityType;
+	public fun <init> (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;)Lat/released/igdbclient/model/PopularityType;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/PopularityType;JLat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;Ljava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lat/released/igdbclient/model/ExternalGameSource;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/PopularityType;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getExternal_popularity_source ()Lat/released/igdbclient/model/ExternalGameSource;
 	public final fun getId ()J
 	public final fun getName ()Ljava/lang/String;
 	public final fun getPopularity_source ()Lat/released/igdbclient/model/PopularitySourcePopularitySourceEnum;
@@ -4351,21 +5106,23 @@ public final class at/released/igdbclient/model/ReleaseDate : com/squareup/wire/
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/ReleaseDate$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lokio/ByteString;)Lat/released/igdbclient/model/ReleaseDate;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/ReleaseDate;JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ReleaseDate;
+	public fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;)Lat/released/igdbclient/model/ReleaseDate;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ReleaseDate;JLat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;Ljava/time/Instant;Ljava/time/Instant;Lat/released/igdbclient/model/Game;Ljava/lang/String;ILat/released/igdbclient/model/Platform;Lat/released/igdbclient/model/RegionRegionEnum;Ljava/time/Instant;ILjava/lang/String;Lat/released/igdbclient/model/ReleaseDateStatus;Lat/released/igdbclient/model/DateFormat;Lat/released/igdbclient/model/ReleaseDateRegion;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ReleaseDate;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/DateFormatChangeDateCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getCreated_at ()Ljava/time/Instant;
 	public final fun getDate ()Ljava/time/Instant;
+	public final fun getDate_format ()Lat/released/igdbclient/model/DateFormat;
 	public final fun getGame ()Lat/released/igdbclient/model/Game;
 	public final fun getHuman ()Ljava/lang/String;
 	public final fun getId ()J
 	public final fun getM ()I
 	public final fun getPlatform ()Lat/released/igdbclient/model/Platform;
 	public final fun getRegion ()Lat/released/igdbclient/model/RegionRegionEnum;
+	public final fun getRelease_region ()Lat/released/igdbclient/model/ReleaseDateRegion;
 	public final fun getStatus ()Lat/released/igdbclient/model/ReleaseDateStatus;
 	public final fun getUpdated_at ()Ljava/time/Instant;
 	public final fun getY ()I
@@ -4376,6 +5133,48 @@ public final class at/released/igdbclient/model/ReleaseDate : com/squareup/wire/
 }
 
 public final class at/released/igdbclient/model/ReleaseDate$Companion {
+}
+
+public final class at/released/igdbclient/model/ReleaseDateRegion : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/ReleaseDateRegion$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/ReleaseDateRegion;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ReleaseDateRegion;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ReleaseDateRegion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getRegion ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/ReleaseDateRegion$Companion {
+}
+
+public final class at/released/igdbclient/model/ReleaseDateRegionResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/ReleaseDateRegionResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/ReleaseDateRegionResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/ReleaseDateRegionResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/ReleaseDateRegionResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReleasedateregions ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/ReleaseDateRegionResult$Companion {
 }
 
 public final class at/released/igdbclient/model/ReleaseDateResult : com/squareup/wire/Message {
@@ -4668,16 +5467,17 @@ public final class at/released/igdbclient/model/Website : com/squareup/wire/Mess
 	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
 	public static final field Companion Lat/released/igdbclient/model/Website$Companion;
 	public fun <init> ()V
-	public fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)V
-	public synthetic fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun copy (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/Website;
-	public static synthetic fun copy$default (Lat/released/igdbclient/model/Website;JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Website;
+	public fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;)V
+	public synthetic fun <init> (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;)Lat/released/igdbclient/model/Website;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/Website;JLat/released/igdbclient/model/WebsiteCategoryEnum;Lat/released/igdbclient/model/Game;ZLjava/lang/String;Ljava/lang/String;Lat/released/igdbclient/model/WebsiteType;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/Website;
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCategory ()Lat/released/igdbclient/model/WebsiteCategoryEnum;
 	public final fun getChecksum ()Ljava/lang/String;
 	public final fun getGame ()Lat/released/igdbclient/model/Game;
 	public final fun getId ()J
 	public final fun getTrusted ()Z
+	public final fun getType ()Lat/released/igdbclient/model/WebsiteType;
 	public final fun getUrl ()Ljava/lang/String;
 	public fun hashCode ()I
 	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
@@ -4740,6 +5540,48 @@ public final class at/released/igdbclient/model/WebsiteResult : com/squareup/wir
 public final class at/released/igdbclient/model/WebsiteResult$Companion {
 }
 
+public final class at/released/igdbclient/model/WebsiteType : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/WebsiteType$Companion;
+	public fun <init> ()V
+	public fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;)Lat/released/igdbclient/model/WebsiteType;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/WebsiteType;JLjava/lang/String;Ljava/time/Instant;Ljava/time/Instant;Ljava/lang/String;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/WebsiteType;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChecksum ()Ljava/lang/String;
+	public final fun getCreated_at ()Ljava/time/Instant;
+	public final fun getId ()J
+	public final fun getType ()Ljava/lang/String;
+	public final fun getUpdated_at ()Ljava/time/Instant;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/WebsiteType$Companion {
+}
+
+public final class at/released/igdbclient/model/WebsiteTypeResult : com/squareup/wire/Message {
+	public static final field ADAPTER Lcom/squareup/wire/ProtoAdapter;
+	public static final field Companion Lat/released/igdbclient/model/WebsiteTypeResult$Companion;
+	public fun <init> ()V
+	public fun <init> (Ljava/util/List;Lokio/ByteString;)V
+	public synthetic fun <init> (Ljava/util/List;Lokio/ByteString;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun copy (Ljava/util/List;Lokio/ByteString;)Lat/released/igdbclient/model/WebsiteTypeResult;
+	public static synthetic fun copy$default (Lat/released/igdbclient/model/WebsiteTypeResult;Ljava/util/List;Lokio/ByteString;ILjava/lang/Object;)Lat/released/igdbclient/model/WebsiteTypeResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getWebsitetypes ()Ljava/util/List;
+	public fun hashCode ()I
+	public synthetic fun newBuilder ()Lcom/squareup/wire/Message$Builder;
+	public synthetic fun newBuilder ()Ljava/lang/Void;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class at/released/igdbclient/model/WebsiteTypeResult$Companion {
+}
+
 public final class at/released/igdbclient/model/dump/IgdbDump {
 	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/time/Instant;Ljava/lang/String;Ljava/util/Map;)V
 	public fun equals (Ljava/lang/Object;)Z
@@ -4764,6 +5606,20 @@ public final class at/released/igdbclient/model/dump/IgdbDumpSummary {
 	public fun toString ()Ljava/lang/String;
 }
 
+public final class at/released/igdbclient/scheme/field/AgeRatingCategoryField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static final field ID Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static final field ORGANIZATION Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static final field RATING Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/AgeRatingCategoryField;
+}
+
 public final class at/released/igdbclient/scheme/field/AgeRatingContentDescriptionField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CATEGORY Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionField;
@@ -4776,12 +5632,29 @@ public final class at/released/igdbclient/scheme/field/AgeRatingContentDescripti
 	public static fun values ()[Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionField;
 }
 
+public final class at/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static final field DESCRIPTION Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static final field ID Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static final field ORGANIZATION Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/AgeRatingContentDescriptionV2Field;
+}
+
 public final class at/released/igdbclient/scheme/field/AgeRatingField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CATEGORY Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field CONTENT_DESCRIPTIONS Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field ID Lat/released/igdbclient/scheme/field/AgeRatingField;
+	public static final field ORGANIZATION Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field RATING Lat/released/igdbclient/scheme/field/AgeRatingField;
+	public static final field RATING_CATEGORY Lat/released/igdbclient/scheme/field/AgeRatingField;
+	public static final field RATING_CONTENT_DESCRIPTIONS Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field RATING_COVER_URL Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static final field SYNOPSIS Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
@@ -4789,6 +5662,19 @@ public final class at/released/igdbclient/scheme/field/AgeRatingField : java/lan
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/AgeRatingField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/AgeRatingField;
+}
+
+public final class at/released/igdbclient/scheme/field/AgeRatingOrganizationField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static final field ID Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/AgeRatingOrganizationField;
 }
 
 public final class at/released/igdbclient/scheme/field/AlternativeNameField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -4823,6 +5709,8 @@ public final class at/released/igdbclient/scheme/field/ArtworkField : java/lang/
 
 public final class at/released/igdbclient/scheme/field/CharacterField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field AKAS Lat/released/igdbclient/scheme/field/CharacterField;
+	public static final field CHARACTER_GENDER Lat/released/igdbclient/scheme/field/CharacterField;
+	public static final field CHARACTER_SPECIES Lat/released/igdbclient/scheme/field/CharacterField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CharacterField;
 	public static final field COUNTRY_NAME Lat/released/igdbclient/scheme/field/CharacterField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/CharacterField;
@@ -4843,6 +5731,19 @@ public final class at/released/igdbclient/scheme/field/CharacterField : java/lan
 	public static fun values ()[Lat/released/igdbclient/scheme/field/CharacterField;
 }
 
+public final class at/released/igdbclient/scheme/field/CharacterGenderField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static final field ID Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/CharacterGenderField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/CharacterGenderField;
+}
+
 public final class at/released/igdbclient/scheme/field/CharacterMugShotField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field ALPHA_CHANNEL Lat/released/igdbclient/scheme/field/CharacterMugShotField;
 	public static final field ANIMATED Lat/released/igdbclient/scheme/field/CharacterMugShotField;
@@ -4857,6 +5758,19 @@ public final class at/released/igdbclient/scheme/field/CharacterMugShotField : j
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/CharacterMugShotField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/CharacterMugShotField;
+}
+
+public final class at/released/igdbclient/scheme/field/CharacterSpecieField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static final field ID Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/CharacterSpecieField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/CharacterSpecieField;
 }
 
 public final class at/released/igdbclient/scheme/field/CollectionField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -4957,6 +5871,7 @@ public final class at/released/igdbclient/scheme/field/CompanyField : java/lang/
 	public static final field CHANGED_COMPANY_ID Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field CHANGE_DATE Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field CHANGE_DATE_CATEGORY Lat/released/igdbclient/scheme/field/CompanyField;
+	public static final field CHANGE_DATE_FORMAT Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field COUNTRY Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/CompanyField;
@@ -4970,6 +5885,8 @@ public final class at/released/igdbclient/scheme/field/CompanyField : java/lang/
 	public static final field SLUG Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field START_DATE Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field START_DATE_CATEGORY Lat/released/igdbclient/scheme/field/CompanyField;
+	public static final field START_DATE_FORMAT Lat/released/igdbclient/scheme/field/CompanyField;
+	public static final field STATUS Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field URL Lat/released/igdbclient/scheme/field/CompanyField;
 	public static final field WEBSITES Lat/released/igdbclient/scheme/field/CompanyField;
@@ -4996,11 +5913,25 @@ public final class at/released/igdbclient/scheme/field/CompanyLogoField : java/l
 	public static fun values ()[Lat/released/igdbclient/scheme/field/CompanyLogoField;
 }
 
+public final class at/released/igdbclient/scheme/field/CompanyStatusField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static final field ID Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/CompanyStatusField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/CompanyStatusField;
+}
+
 public final class at/released/igdbclient/scheme/field/CompanyWebsiteField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CATEGORY Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field ID Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field TRUSTED Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
+	public static final field TYPE Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
 	public static final field URL Lat/released/igdbclient/scheme/field/CompanyWebsiteField;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
@@ -5025,6 +5956,19 @@ public final class at/released/igdbclient/scheme/field/CoverField : java/lang/En
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/CoverField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/CoverField;
+}
+
+public final class at/released/igdbclient/scheme/field/DateFormatField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static final field FORMAT Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static final field ID Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/DateFormatField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/DateFormatField;
 }
 
 public final class at/released/igdbclient/scheme/field/EventField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -5089,7 +6033,9 @@ public final class at/released/igdbclient/scheme/field/ExternalGameField : java/
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field COUNTRIES Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/ExternalGameField;
+	public static final field EXTERNAL_GAME_SOURCE Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field GAME Lat/released/igdbclient/scheme/field/ExternalGameField;
+	public static final field GAME_RELEASE_FORMAT Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field ID Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field MEDIA Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static final field NAME Lat/released/igdbclient/scheme/field/ExternalGameField;
@@ -5103,6 +6049,19 @@ public final class at/released/igdbclient/scheme/field/ExternalGameField : java/
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/ExternalGameField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/ExternalGameField;
+}
+
+public final class at/released/igdbclient/scheme/field/ExternalGameSourceField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static final field ID Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/ExternalGameSourceField;
 }
 
 public final class at/released/igdbclient/scheme/field/FranchiseField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -5181,6 +6140,8 @@ public final class at/released/igdbclient/scheme/field/GameField : java/lang/Enu
 	public static final field GAME_ENGINES Lat/released/igdbclient/scheme/field/GameField;
 	public static final field GAME_LOCALIZATIONS Lat/released/igdbclient/scheme/field/GameField;
 	public static final field GAME_MODES Lat/released/igdbclient/scheme/field/GameField;
+	public static final field GAME_STATUS Lat/released/igdbclient/scheme/field/GameField;
+	public static final field GAME_TYPE Lat/released/igdbclient/scheme/field/GameField;
 	public static final field GENRES Lat/released/igdbclient/scheme/field/GameField;
 	public static final field HYPES Lat/released/igdbclient/scheme/field/GameField;
 	public static final field ID Lat/released/igdbclient/scheme/field/GameField;
@@ -5253,6 +6214,32 @@ public final class at/released/igdbclient/scheme/field/GameModeField : java/lang
 	public static fun values ()[Lat/released/igdbclient/scheme/field/GameModeField;
 }
 
+public final class at/released/igdbclient/scheme/field/GameReleaseFormatField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static final field FORMAT Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static final field ID Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/GameReleaseFormatField;
+}
+
+public final class at/released/igdbclient/scheme/field/GameStatusField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static final field ID Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static final field STATUS Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/GameStatusField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/GameStatusField;
+}
+
 public final class at/released/igdbclient/scheme/field/GameTimeToBeatField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/GameTimeToBeatField;
 	public static final field COMPLETELY Lat/released/igdbclient/scheme/field/GameTimeToBeatField;
@@ -5268,6 +6255,19 @@ public final class at/released/igdbclient/scheme/field/GameTimeToBeatField : jav
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/GameTimeToBeatField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/GameTimeToBeatField;
+}
+
+public final class at/released/igdbclient/scheme/field/GameTypeField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static final field ID Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static final field TYPE Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/GameTypeField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/GameTypeField;
 }
 
 public final class at/released/igdbclient/scheme/field/GameVersionFeatureField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -5488,6 +6488,7 @@ public final class at/released/igdbclient/scheme/field/PlatformField : java/lang
 	public static final field NAME Lat/released/igdbclient/scheme/field/PlatformField;
 	public static final field PLATFORM_FAMILY Lat/released/igdbclient/scheme/field/PlatformField;
 	public static final field PLATFORM_LOGO Lat/released/igdbclient/scheme/field/PlatformField;
+	public static final field PLATFORM_TYPE Lat/released/igdbclient/scheme/field/PlatformField;
 	public static final field SLUG Lat/released/igdbclient/scheme/field/PlatformField;
 	public static final field SUMMARY Lat/released/igdbclient/scheme/field/PlatformField;
 	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/PlatformField;
@@ -5517,6 +6518,19 @@ public final class at/released/igdbclient/scheme/field/PlatformLogoField : java/
 	public static fun values ()[Lat/released/igdbclient/scheme/field/PlatformLogoField;
 }
 
+public final class at/released/igdbclient/scheme/field/PlatformTypeField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static final field ID Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static final field NAME Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/PlatformTypeField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/PlatformTypeField;
+}
+
 public final class at/released/igdbclient/scheme/field/PlatformVersionCompanyField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/PlatformVersionCompanyField;
 	public static final field COMMENT Lat/released/igdbclient/scheme/field/PlatformVersionCompanyField;
@@ -5542,7 +6556,6 @@ public final class at/released/igdbclient/scheme/field/PlatformVersionField : ja
 	public static final field MEDIA Lat/released/igdbclient/scheme/field/PlatformVersionField;
 	public static final field MEMORY Lat/released/igdbclient/scheme/field/PlatformVersionField;
 	public static final field NAME Lat/released/igdbclient/scheme/field/PlatformVersionField;
-	public static final field ONLINE Lat/released/igdbclient/scheme/field/PlatformVersionField;
 	public static final field OS Lat/released/igdbclient/scheme/field/PlatformVersionField;
 	public static final field OUTPUT Lat/released/igdbclient/scheme/field/PlatformVersionField;
 	public static final field PLATFORM_LOGO Lat/released/igdbclient/scheme/field/PlatformVersionField;
@@ -5565,11 +6578,13 @@ public final class at/released/igdbclient/scheme/field/PlatformVersionReleaseDat
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field DATE Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field DATE_FORMAT Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field HUMAN Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field ID Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field M Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field PLATFORM_VERSION Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field REGION Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
+	public static final field RELEASE_REGION Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static final field Y Lat/released/igdbclient/scheme/field/PlatformVersionReleaseDateField;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
@@ -5611,6 +6626,7 @@ public final class at/released/igdbclient/scheme/field/PopularityPrimitiveField 
 	public static final field CALCULATED_AT Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
+	public static final field EXTERNAL_POPULARITY_SOURCE Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
 	public static final field GAME_ID Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
 	public static final field ID Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
 	public static final field POPULARITY_SOURCE Lat/released/igdbclient/scheme/field/PopularityPrimitiveField;
@@ -5627,6 +6643,7 @@ public final class at/released/igdbclient/scheme/field/PopularityPrimitiveField 
 public final class at/released/igdbclient/scheme/field/PopularityTypeField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/PopularityTypeField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/PopularityTypeField;
+	public static final field EXTERNAL_POPULARITY_SOURCE Lat/released/igdbclient/scheme/field/PopularityTypeField;
 	public static final field ID Lat/released/igdbclient/scheme/field/PopularityTypeField;
 	public static final field NAME Lat/released/igdbclient/scheme/field/PopularityTypeField;
 	public static final field POPULARITY_SOURCE Lat/released/igdbclient/scheme/field/PopularityTypeField;
@@ -5658,12 +6675,14 @@ public final class at/released/igdbclient/scheme/field/ReleaseDateField : java/l
 	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field DATE Lat/released/igdbclient/scheme/field/ReleaseDateField;
+	public static final field DATE_FORMAT Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field GAME Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field HUMAN Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field ID Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field M Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field PLATFORM Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field REGION Lat/released/igdbclient/scheme/field/ReleaseDateField;
+	public static final field RELEASE_REGION Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field STATUS Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static final field Y Lat/released/igdbclient/scheme/field/ReleaseDateField;
@@ -5672,6 +6691,19 @@ public final class at/released/igdbclient/scheme/field/ReleaseDateField : java/l
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/ReleaseDateField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/ReleaseDateField;
+}
+
+public final class at/released/igdbclient/scheme/field/ReleaseDateRegionField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static final field ID Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static final field REGION Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/ReleaseDateRegionField;
 }
 
 public final class at/released/igdbclient/scheme/field/ReleaseDateStatusField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
@@ -5773,12 +6805,26 @@ public final class at/released/igdbclient/scheme/field/WebsiteField : java/lang/
 	public static final field GAME Lat/released/igdbclient/scheme/field/WebsiteField;
 	public static final field ID Lat/released/igdbclient/scheme/field/WebsiteField;
 	public static final field TRUSTED Lat/released/igdbclient/scheme/field/WebsiteField;
+	public static final field TYPE Lat/released/igdbclient/scheme/field/WebsiteField;
 	public static final field URL Lat/released/igdbclient/scheme/field/WebsiteField;
 	public static fun getEntries ()Lkotlin/enums/EnumEntries;
 	public fun getIgdbName ()Ljava/lang/String;
 	public fun toString ()Ljava/lang/String;
 	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/WebsiteField;
 	public static fun values ()[Lat/released/igdbclient/scheme/field/WebsiteField;
+}
+
+public final class at/released/igdbclient/scheme/field/WebsiteTypeField : java/lang/Enum, at/released/igdbclient/scheme/field/IgdbField {
+	public static final field CHECKSUM Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static final field CREATED_AT Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static final field ID Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static final field TYPE Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static final field UPDATED_AT Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun getIgdbName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lat/released/igdbclient/scheme/field/WebsiteTypeField;
+	public static fun values ()[Lat/released/igdbclient/scheme/field/WebsiteTypeField;
 }
 
 public final class at/released/igdbclient/util/IgdbImageUtilKt {

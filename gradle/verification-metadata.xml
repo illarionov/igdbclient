@@ -253,6 +253,11 @@
             <pgp value="8247F88933C2D56F830AF73436AB7ACFFF2027B1"/>
          </artifact>
       </component>
+      <component group="it.krzeminski" name="snakeyaml-engine-kmp-jvm" version="3.1.1">
+         <artifact name="snakeyaml-engine-kmp-jvm-3.1.1.jar">
+            <pgp value="8247F88933C2D56F830AF73436AB7ACFFF2027B1"/>
+         </artifact>
+      </component>
       <component group="it.unimi.dsi" name="fastutil-core" version="8.5.12">
          <artifact name="fastutil-core-8.5.12.jar">
             <pgp value="0CB5871FB7BF3B351614BBF6CA85FFE638D4407A"/>
