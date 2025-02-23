@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.8] — 2025-02-23
+
+#### 🚀 New Feature
+
+- Updated schema and added new endpoints:
+  * age_rating_category
+  * age_rating_content_descriptions_v2
+  * age_rating_organizations
+  * character_genders
+  * character_species
+  * company_statuses
+  * date_formats
+  * external_game_sources
+  * game_release_formats
+  * game_statuses
+  * game_types
+  * platform_types
+  * release_date_regions
+  * website_types
+
+  This change is binary incompatible.
+
+#### 🤖 Dependencies
+
+- Kotlin 2.1.10
+- Wire 5.3.0
+- Updated other internal dependencies
+
 ## [0.7] — 2025-01-15
 
 ### Added
