@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.ktor.integration
 
 import at.released.igdbclient.IgdbClient
@@ -14,8 +12,6 @@ import at.released.igdbclient.ktor.IgdbKtorEngine
 import at.released.igdbclient.library.test.Fixtures
 import at.released.igdbclient.library.test.IgdbClientConstants
 import io.ktor.client.HttpClient
-import mockwebserver3.SocketPolicy
-import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.MethodSource

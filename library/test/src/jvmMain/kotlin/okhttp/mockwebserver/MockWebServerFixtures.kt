@@ -4,13 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.library.test.okhttp.mockwebserver
 
 import at.released.igdbclient.library.test.Fixtures.MockIgdbResponseContent
 import mockwebserver3.MockResponse
-import okhttp3.ExperimentalOkHttpApi
 
 public object MockWebServerFixtures {
     public fun successMockResponseBuilder(): MockResponse.Builder = MockResponse.Builder()

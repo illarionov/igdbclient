@@ -9,5 +9,5 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-sdk
         android:minSdkVersion="14"
-        tools:overrideLibrary="co.touchlab.kermit, co.touchlab.kermit.core"/>
+        tools:overrideLibrary="androidx.startup, co.touchlab.kermit, co.touchlab.kermit.core, okhttp.okhttp3"/>
 </manifest>

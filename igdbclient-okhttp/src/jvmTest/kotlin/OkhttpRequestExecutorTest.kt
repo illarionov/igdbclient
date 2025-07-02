@@ -4,15 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.okhttp
 
 import at.released.igdbclient.integration.tests.BaseRequestExecutorTest
 import at.released.igdbclient.internal.RequestExecutor
 import at.released.igdbclient.internal.model.IgdbAuthToken
 import kotlinx.coroutines.CoroutineDispatcher
-import okhttp3.ExperimentalOkHttpApi
 
 class OkhttpRequestExecutorTest : BaseRequestExecutorTest() {
     override fun createRequestExecutor(

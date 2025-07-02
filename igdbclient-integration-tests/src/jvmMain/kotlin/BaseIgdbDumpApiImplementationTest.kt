@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress("FunctionNaming", "MagicNumber")
 
 package at.released.igdbclient.integration.tests
@@ -26,7 +25,6 @@ import io.kotest.matchers.shouldBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.DisplayName
@@ -47,7 +45,7 @@ abstract class BaseIgdbDumpApiImplementationTest {
 
     @AfterEach
     fun tearDown() {
-        server.shutdown()
+        server.close()
     }
 
     private fun startMockServerCreateClient(
@@ -121,7 +119,7 @@ abstract class BaseIgdbDumpApiImplementationTest {
     @DisplayName("getAllDumps()")
     inner class GetAllDumpsTests {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/dumps" && request.method == "GET") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/v4/dumps" && request.method == "GET") createSuccessMockResponse() else null
         }
 
         @Test
@@ -148,7 +146,7 @@ abstract class BaseIgdbDumpApiImplementationTest {
     @DisplayName("getDump()")
     inner class GetDumpTests {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/dumps/games" && request.method == "GET") {
+            if (request.url.encodedPath == "/v4/dumps/games" && request.method == "GET") {
                 createSuccessMockResponse(
                     response = DUMP_GAMES_RESPONSE,
                 )

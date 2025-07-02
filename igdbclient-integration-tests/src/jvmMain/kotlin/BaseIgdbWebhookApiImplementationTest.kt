@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress(
     "FunctionName",
     "KDOC_NO_EMPTY_TAGS",
@@ -32,7 +31,6 @@ import io.kotest.matchers.shouldBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import okhttp3.Headers.Companion.headersOf
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.DisplayName
@@ -53,7 +51,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
 
     @AfterEach
     fun tearDown() {
-        server.shutdown()
+        server.close()
     }
 
     private fun startMockServerCreateClient(
@@ -105,7 +103,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     @DisplayName("registerWebhook()")
     inner class RegisterWebhookTests {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games/webhooks") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/v4/games/webhooks") createSuccessMockResponse() else null
         }
 
         @Test
@@ -131,7 +129,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
 
             server.takeRequestWithTimeout().run {
                 method shouldBe "POST"
-                body.readByteString().utf8().split('&').shouldContainExactlyInAnyOrder(
+                checkNotNull(body).utf8().split('&').shouldContainExactlyInAnyOrder(
                     "url=https%3A%2F%2Fexample.com%2Fgame%2F1%2F",
                     "method=create",
                     "secret=my_secret",
@@ -149,7 +147,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     @DisplayName("getAllWebhooks()")
     inner class GetWebhooksTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/webhooks") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/v4/webhooks") createSuccessMockResponse() else null
         }
 
         @Test
@@ -174,7 +172,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     @DisplayName("getWebhook()")
     inner class GetWebhookTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/webhooks/7136") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/v4/webhooks/7136") createSuccessMockResponse() else null
         }
 
         @Test
@@ -200,7 +198,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     @DisplayName("deleteWebhook()")
     inner class DeleteWebhookTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/webhooks/7136") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/v4/webhooks/7136") createSuccessMockResponse() else null
         }
 
         @Test
@@ -226,7 +224,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
     @DisplayName("testWebhook()")
     inner class TestWebhookTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games/webhooks/test/7138?entityId=12") {
+            if (request.target == "/v4/games/webhooks/test/7138?entityId=12") {
                 MockResponse(
                     code = 200,
                     headers = headersOf("Content-Type", MediaType.APPLICATION_JSON),
@@ -257,7 +255,7 @@ abstract class BaseIgdbWebhookApiImplementationTest {
 
             server.takeRequestWithTimeout().run {
                 method shouldBe "POST"
-                body.size shouldBe 0
+                body?.size shouldBe 0
                 headers.values("Accept") shouldBe listOf("application/json")
             }
         }

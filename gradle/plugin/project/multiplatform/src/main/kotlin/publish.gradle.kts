@@ -9,7 +9,6 @@ package at.released.igdbclient.gradle.multiplatform
 import at.released.igdbclient.gradle.multiplatform.publish.createIgdbclientVersionsExtension
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.KotlinMultiplatform
-import com.vanniktech.maven.publish.SonatypeHost
 
 /*
  * Convention plugin with publishing defaults
@@ -28,12 +27,13 @@ tasks.withType<AbstractArchiveTask>().configureEach {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
     publishing {
         repositories {
             maven {
                 name = "test"
-                setUrl(project.rootProject.layout.buildDirectory.dir("localMaven"))
+                @Suppress("UnstableApiUsage")
+                setUrl(layout.settingsDirectory.dir("build/localMaven"))
             }
         }
     }

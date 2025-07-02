@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress("FunctionName", "MISSING_KDOC_CLASS_ELEMENTS", "KDOC_NO_EMPTY_TAGS", "MISSING_KDOC_ON_FUNCTION")
 
 package at.released.igdbclient.integration.tests
@@ -24,7 +23,6 @@ import kotlinx.coroutines.CoroutineDispatcher
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
@@ -48,7 +46,7 @@ abstract class BaseRequestExecutorTest {
 
     @AfterEach
     fun tearDown() {
-        server.shutdown()
+        server.close()
     }
 
     @Test
@@ -85,7 +83,7 @@ abstract class BaseRequestExecutorTest {
         )
 
         server.takeRequestWithTimeout().run {
-            path shouldBe "/v4/games/count"
+            url.encodedPath shouldBe "/v4/games/count"
         }
     }
 

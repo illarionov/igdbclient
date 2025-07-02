@@ -9,9 +9,7 @@ package at.released.igdbclient.internal.parser
 import org.json.JSONParserConfiguration
 import org.json.JSONTokener
 
-private val parserConfiguration = JSONParserConfiguration()
-    .withStrictMode()
-
-internal fun String.jsonTokener(): JSONTokener = JSONTokener(this).apply {
-    this.jsonParserConfiguration = parserConfiguration
-}
+internal fun String.jsonTokener(): JSONTokener = JSONTokener(
+    this,
+    JSONParserConfiguration().withStrictMode(),
+)

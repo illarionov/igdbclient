@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress(
     "FunctionName",
     "KDOC_NO_EMPTY_TAGS",
@@ -49,11 +48,8 @@ import io.kotest.matchers.shouldNotBe
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import mockwebserver3.SocketPolicy
-import mockwebserver3.SocketPolicy.DisconnectAfterRequest
-import mockwebserver3.SocketPolicy.DisconnectDuringResponseBody
-import mockwebserver3.SocketPolicy.NoResponse
-import okhttp3.ExperimentalOkHttpApi
+import mockwebserver3.SocketEffect
+import mockwebserver3.SocketEffect.CloseSocket
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.RegisterExtension
@@ -75,13 +71,13 @@ abstract class BaseIgdbClientImplementationTest {
 
     @AfterEach
     fun tearDown() {
-        server.shutdown()
+        server.close()
     }
 
     @Test
     fun `Implementation should correctly parse success HTTP 200 response`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games.pb") successMockResponseBuilder().build() else null
+            if (request.url.encodedPath == "/v4/games.pb") successMockResponseBuilder().build() else null
         }
 
         val response = api.getGames(createTestSuccessQuery())
@@ -201,7 +197,9 @@ abstract class BaseIgdbClientImplementationTest {
         policy: SocketPolicy,
     ) = coroutinesExt.runTest {
         val api = startMockServerCreateClient {
-            successMockResponseBuilder().socketPolicy(policy).build()
+            successMockResponseBuilder()
+                .run { policy.setupSocketPolicy(this) }
+                .build()
         }
 
         shouldThrowExactly<IgdbException> {
@@ -212,7 +210,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should correctly parse multiquery responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/multiquery.pb") {
+            if (request.url.encodedPath == "/v4/multiquery.pb") {
                 successMockResponseBuilder()
                     .body(Fixtures.MockIgdbResponseContent.multiQueryPlatformsCountPsGames)
                     .build()
@@ -261,7 +259,7 @@ abstract class BaseIgdbClientImplementationTest {
     @Test
     fun `Implementation should correctly parse count() responses`() = coroutinesExt.runTest {
         val api = startMockServerCreateClient { request ->
-            if (request.path == "/v4/games/count.pb") {
+            if (request.url.encodedPath == "/v4/games/count.pb") {
                 successMockResponseBuilder()
                     .body(Fixtures.MockIgdbResponseContent.countGames)
                     .build()
@@ -290,6 +288,23 @@ abstract class BaseIgdbClientImplementationTest {
         return createIgdbClient(url, authToken)
     }
 
+    enum class SocketPolicy {
+        DISCONNECT_AFTER_REQUEST {
+            override fun setupSocketPolicy(builder: MockResponse.Builder) = builder.onResponseStart(CloseSocket())
+        },
+        DISCONNECT_DURING_RESPONSE_BODY {
+            override fun setupSocketPolicy(builder: MockResponse.Builder) = builder.onResponseBody(CloseSocket())
+        },
+        NO_RESPONSE {
+            override fun setupSocketPolicy(builder: MockResponse.Builder): MockResponse.Builder {
+                return builder.onResponseStart(SocketEffect.Stall)
+            }
+        },
+        ;
+
+        abstract fun setupSocketPolicy(builder: MockResponse.Builder): MockResponse.Builder
+    }
+
     companion object {
         fun createTestSuccessQuery(): ApicalypseQueryBuilder.() -> Unit = {
             search("Diablo")
@@ -299,9 +314,9 @@ abstract class BaseIgdbClientImplementationTest {
 
         @JvmStatic
         fun networkErrorSocketPolicies(): List<SocketPolicy> = listOf(
-            DisconnectAfterRequest,
-            DisconnectDuringResponseBody,
-            NoResponse,
+            SocketPolicy.DISCONNECT_AFTER_REQUEST,
+            SocketPolicy.DISCONNECT_DURING_RESPONSE_BODY,
+            SocketPolicy.NO_RESPONSE,
         )
     }
 }
