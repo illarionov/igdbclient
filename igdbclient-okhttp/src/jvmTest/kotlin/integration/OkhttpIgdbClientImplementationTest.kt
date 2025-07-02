@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.okhttp.integration
 
 import at.released.igdbclient.IgdbClient
@@ -25,7 +23,6 @@ import mockwebserver3.MockResponse
 import mockwebserver3.RecordedRequest
 import okhttp3.Call
 import okhttp3.EventListener
-import okhttp3.ExperimentalOkHttpApi
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import org.junit.jupiter.api.Test

@@ -4,14 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.library.test.okhttp.mockwebserver
 
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import java.util.concurrent.TimeUnit
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds

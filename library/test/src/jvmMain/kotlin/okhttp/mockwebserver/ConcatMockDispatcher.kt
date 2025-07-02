@@ -4,14 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
-
 package at.released.igdbclient.library.test.okhttp.mockwebserver
 
 import mockwebserver3.Dispatcher
 import mockwebserver3.MockResponse
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import okhttp3.Headers.Companion.headersOf
 
 public open class ConcatMockDispatcher(

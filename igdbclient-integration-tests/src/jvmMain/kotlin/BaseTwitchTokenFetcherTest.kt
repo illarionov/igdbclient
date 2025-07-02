@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-@file:OptIn(ExperimentalOkHttpApi::class)
 @file:Suppress(
     "FunctionName",
     "KDOC_NO_EMPTY_TAGS",
@@ -29,7 +28,6 @@ import io.kotest.matchers.types.shouldBeInstanceOf
 import mockwebserver3.MockResponse
 import mockwebserver3.MockWebServer
 import mockwebserver3.RecordedRequest
-import okhttp3.ExperimentalOkHttpApi
 import okhttp3.Headers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
@@ -47,7 +45,7 @@ abstract class BaseTwitchTokenFetcherTest {
 
     @AfterEach
     fun tearDown() {
-        server.shutdown()
+        server.close()
     }
 
     abstract fun createTwitchTokenFetcher(
@@ -60,7 +58,7 @@ abstract class BaseTwitchTokenFetcherTest {
     @Test
     fun `Fetcher should correctly parse success 200 response`() = coroutinesExt.runTest {
         val fetcher = startMockServerCreateFetcher { request ->
-            if (request.path == "/") createSuccessMockResponse() else null
+            if (request.url.encodedPath == "/") createSuccessMockResponse() else null
         }
 
         val response = fetcher(TestCredentials()) as? IgdbResult.Success
@@ -82,7 +80,7 @@ abstract class BaseTwitchTokenFetcherTest {
         server.takeRequestWithTimeout().run {
             headers.values("Accept") shouldBe listOf("application/json")
             headers.values("User-Agent") shouldBe listOf("Test user agent")
-            body.readByteString().utf8().split("&")
+            checkNotNull(body).utf8().split("&")
                 .shouldContainExactlyInAnyOrder(
                     "client_id=test_client_id",
                     "client_secret=test_client_secret",

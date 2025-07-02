@@ -44,3 +44,7 @@ tasks.withType<KotlinJvmCompile>().configureEach {
         )
     }
 }
+
+java {
+    targetCompatibility = JavaVersion.VERSION_11
+}
