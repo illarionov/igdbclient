@@ -63,7 +63,7 @@ jobs:
           build --stacktrace
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: build-outputs
@@ -87,7 +87,7 @@ jobs:
           | xargs -0 tar -c --zstd --options zstd:compression-level=20 -f test-reports.tar.zst
 
       - name: Upload test reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-reports
@@ -157,7 +157,7 @@ jobs:
 
       - name: Upload lint outputs
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: lint-outputs
           path: lint-outputs.tar.zst
