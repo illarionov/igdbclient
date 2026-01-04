@@ -38,7 +38,7 @@ kotlin {
 
 tasks.withType<KotlinJvmCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
+        jvmTarget.set(JvmTarget.JVM_17)
         freeCompilerArgs.addAll(
             "-Xjvm-default=all",
         )
@@ -46,5 +46,5 @@ tasks.withType<KotlinJvmCompile>().configureEach {
 }
 
 java {
-    targetCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_17
 }
