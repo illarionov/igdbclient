@@ -8,11 +8,11 @@ atomicfu = '0.29.0'
 detekt = "1.23.8"
 diktat = "2.0.0"
 dokka = "2.0.0"
-junit5 = "5.13.4"
+junit5 = "6.0.0"
 junit-platform-launcher = "1.13.2"
 gradle-maven-publish-plugin = "0.34.0"
 kermit = "2.0.6"
-kotest = "5.9.1"
+kotest = "6.0.1"
 kotlin = "2.2.10"
 kotlin-compile-testing-fork = "0.7.1"
 kotlinpoet = "2.1.0"
@@ -27,7 +27,7 @@ orgjson = "20250517"
 slf4j = "2.0.17"
 spotless = "7.0.4"
 turbine = "1.2.0"
-wire = "5.3.3"
+wire = "5.3.11"
 
 [libraries]
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }

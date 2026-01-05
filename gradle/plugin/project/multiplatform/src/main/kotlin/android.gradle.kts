@@ -31,8 +31,8 @@ extensions.configure<LibraryExtension>("android") {
         minSdk = versionCatalogs.named("libs").findVersion("androidMinSdk").get().displayName.toInt()
     }
     compileOptions {
-        targetCompatibility = JavaVersion.VERSION_11
-        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
         isCoreLibraryDesugaringEnabled = false
     }
 }
