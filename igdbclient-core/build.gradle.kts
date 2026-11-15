@@ -5,6 +5,7 @@
  */
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -31,6 +32,11 @@ kotlin {
         browser()
         nodejs()
     }
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+        nodejs()
+    }
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -46,6 +52,7 @@ kotlin {
             group("json") {
                 group("native")
                 withJs()
+                withWasmJs()
             }
         }
     }

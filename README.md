@@ -13,7 +13,7 @@ Igdbclient is a Kotlin Multiplatform library for fetching information about game
 - Configurable automatic retry on HTTP `429 Too Many Requests` error
 - Helpers for building image URLs using a specified pixel density
 - Support for Webhook API
-- Android, iOS, Desktop and JavaScript targets
+- Android, iOS, Desktop, JavaScript and WebAssembly (wasmJs) targets
 
 ## Releases
 
