@@ -42,6 +42,7 @@
          <trusted-key id="1D217F8475EEE9F19AB8DD6B793FD5751A0F0780" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
          <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB" group="commons-codec"/>
+         <trusted-key id="3F05DDA9F317301E927136D417A27CE7A60FF5F0" group="io.opentelemetry"/>
          <trusted-key id="47504B76CF89C15C0512D9AFE16AB52D79FD224F" group="com.google.api.grpc" name="proto-google-common-protos"/>
          <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325">
             <trusting group="ch.qos.logback"/>
@@ -124,6 +125,11 @@
             <pgp value="28118C070CB22A0175A2E8D43D12CA2AC19F3181"/>
          </artifact>
       </component>
+      <component group="com.github.ben-manes.caffeine" name="caffeine" version="2.9.3">
+         <artifact name="caffeine-2.9.3.jar">
+            <pgp value="635EE627345F3C1DD422B2E207D3516820BCF6B1"/>
+         </artifact>
+      </component>
       <component group="com.google.android" name="annotations" version="4.1.1.4">
          <artifact name="annotations-4.1.1.4.jar">
             <pgp value="0F07D1201BDDAB67CFB84EB479752DB6C966F0B8"/>
@@ -197,6 +203,11 @@
       <component group="com.yarnpkg" name="yarn" version="1.22.17">
          <artifact name="yarn-1.22.17.tar.gz">
             <pgp value="6D98490C6F1ACDDD448E45954F77679369475BAA"/>
+         </artifact>
+      </component>
+      <component group="com.yarnpkg" name="yarn" version="1.22.22">
+         <artifact name="yarn-1.22.22.tar.gz">
+            <pgp value="72ECF46A56B4AD39C907BBB71646B01B86E50310"/>
          </artifact>
       </component>
       <component group="commons-io" name="commons-io" version="2.16.1">
@@ -442,7 +453,7 @@
             <sha256 value="298b4c7b3cb80765c8703e42b90324a4ece3b6634947b89e769c3c980ab55185" origin="https://nodejs.org/dist/v24.16.0/SHASUMS256.txt"/>
          </artifact>
          <artifact name="node-24.16.0-linux-x64.tar.gz">
-            <sha256 value="2faf6a387e9b62b888e21c54f01249fb27537ffecf1842f29f4c919d0a59a0ff" origin="https://nodejs.org/dist/v24.16.0/SHASUMS256.txt"/>
+            <sha256 value="2faf6a387e9b62b888e21c54f01249fb27537ffecf1842f29f4c919d0a59a0ff" origin="https://nodejs.org/dist/v24.16.0/SHASUMS256.txt" reason="Artifact is not signed"/>
          </artifact>
          <artifact name="node-24.16.0-win-x64.zip">
             <sha256 value="edaca9bd58ec8e92037dac4e877d52f6b8f430b81c18b57e264b4e2fb111cd56" origin="https://nodejs.org/dist/v24.16.0/SHASUMS256.txt"/>
