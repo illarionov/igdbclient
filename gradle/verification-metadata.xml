@@ -40,6 +40,7 @@
          <trusted-key id="1A55F091AD28C07F831FA44D7905DE25C78AD456" group="com.google.protobuf"/>
          <trusted-key id="1BD97A6A154E7810EE0BC832E2F38302C8075E3D" group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins"/>
          <trusted-key id="1D217F8475EEE9F19AB8DD6B793FD5751A0F0780" group="^com[.]squareup($|([.].*))" regex="true"/>
+         <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
          <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB" group="commons-codec"/>
          <trusted-key id="47504B76CF89C15C0512D9AFE16AB52D79FD224F" group="com.google.api.grpc" name="proto-google-common-protos"/>
          <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325">
@@ -57,8 +58,8 @@
          <trusted-key id="7B121B76A7ED6CE6E60AD51784E913A8E3A748C0" group="org.bouncycastle"/>
          <trusted-key id="7B72C18D9C362314BF8E981B0CAEBC0883C5BB65" group="com.vanniktech"/>
          <trusted-key id="7B79ADD11F8A779FE90FD3D0893A028475557671">
-             <trusting group="com.gradle"/>
-             <trusting group="org.gradle"/>
+            <trusting group="com.gradle"/>
+            <trusting group="org.gradle"/>
          </trusted-key>
          <trusted-key id="7C669810892CBD3148FA92995B05CCDE140C2876" group="org.eclipse.jgit" name="org.eclipse.jgit"/>
          <trusted-key id="7E22D50A7EBD9D2CD269B2D4056ACA74D46000BF" group="io.netty"/>
@@ -333,6 +334,11 @@
             <pgp value="6214760097DC5CFAD0175AC2C9FBAA83A8753994"/>
          </artifact>
       </component>
+      <component group="org.codehaus.woodstox" name="stax2-api" version="4.3.0">
+         <artifact name="stax2-api-4.3.0.jar">
+            <pgp value="28118C070CB22A0175A2E8D43D12CA2AC19F3181"/>
+         </artifact>
+      </component>
       <component group="org.ec4j.core" name="ec4j-core" version="0.3.0">
          <artifact name="ec4j-core-0.3.0.jar">
             <pgp value="2E92113263FC31C74CCBAAB20E91C2DE43B72BB1"/>
@@ -340,6 +346,11 @@
       </component>
       <component group="org.freemarker" name="freemarker" version="2.3.32">
          <artifact name="freemarker-2.3.32.jar">
+            <pgp value="13AC2213964ABE1D1C147C0E1939A2520BAB1D90"/>
+         </artifact>
+      </component>
+      <component group="org.freemarker" name="freemarker" version="2.3.35">
+         <artifact name="freemarker-2.3.35.jar">
             <pgp value="13AC2213964ABE1D1C147C0E1939A2520BAB1D90"/>
          </artifact>
       </component>
@@ -366,6 +377,11 @@
       <component group="org.jetbrains" name="annotations" version="23.0.0">
          <artifact name="annotations-23.0.0.jar">
             <pgp value="33FD4BFD33554634053D73C0C2148900BCD3C2AF"/>
+         </artifact>
+      </component>
+      <component group="org.jetbrains" name="markdown-jvm" version="0.7.10">
+         <artifact name="markdown-jvm-0.7.10.jar">
+            <pgp value="CFBE6E7934FB211224EE1C2B0C0A9468268C79AE"/>
          </artifact>
       </component>
       <component group="org.jetbrains" name="markdown-jvm" version="0.7.3">
@@ -395,6 +411,11 @@
       </component>
       <component group="org.jsoup" name="jsoup" version="1.16.1">
          <artifact name="jsoup-1.16.1.jar">
+            <pgp value="F3184BCD55F4D016E30D4C9BF42E87F9665015C9"/>
+         </artifact>
+      </component>
+      <component group="org.jsoup" name="jsoup" version="1.23.2">
+         <artifact name="jsoup-1.23.2.jar">
             <pgp value="F3184BCD55F4D016E30D4C9BF42E87F9665015C9"/>
          </artifact>
       </component>
