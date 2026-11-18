@@ -13,6 +13,8 @@ import at.released.igdbclient.model.AgeRatingCategory
 import at.released.igdbclient.model.AgeRatingCategoryResult
 import at.released.igdbclient.model.AgeRatingContentDescription
 import at.released.igdbclient.model.AgeRatingContentDescriptionResult
+import at.released.igdbclient.model.AgeRatingContentDescriptionType
+import at.released.igdbclient.model.AgeRatingContentDescriptionTypeResult
 import at.released.igdbclient.model.AgeRatingContentDescriptionV2
 import at.released.igdbclient.model.AgeRatingContentDescriptionV2Result
 import at.released.igdbclient.model.AgeRatingOrganization
@@ -22,6 +24,8 @@ import at.released.igdbclient.model.AlternativeName
 import at.released.igdbclient.model.AlternativeNameResult
 import at.released.igdbclient.model.Artwork
 import at.released.igdbclient.model.ArtworkResult
+import at.released.igdbclient.model.ArtworkType
+import at.released.igdbclient.model.ArtworkTypeResult
 import at.released.igdbclient.model.Character
 import at.released.igdbclient.model.CharacterGender
 import at.released.igdbclient.model.CharacterGenderResult
@@ -46,8 +50,14 @@ import at.released.igdbclient.model.Company
 import at.released.igdbclient.model.CompanyLogo
 import at.released.igdbclient.model.CompanyLogoResult
 import at.released.igdbclient.model.CompanyResult
+import at.released.igdbclient.model.CompanySize
+import at.released.igdbclient.model.CompanySizeResult
 import at.released.igdbclient.model.CompanyStatus
 import at.released.igdbclient.model.CompanyStatusResult
+import at.released.igdbclient.model.CompanyType
+import at.released.igdbclient.model.CompanyTypeHistory
+import at.released.igdbclient.model.CompanyTypeHistoryResult
+import at.released.igdbclient.model.CompanyTypeResult
 import at.released.igdbclient.model.CompanyWebsite
 import at.released.igdbclient.model.CompanyWebsiteResult
 import at.released.igdbclient.model.Count
@@ -55,12 +65,16 @@ import at.released.igdbclient.model.Cover
 import at.released.igdbclient.model.CoverResult
 import at.released.igdbclient.model.DateFormat
 import at.released.igdbclient.model.DateFormatResult
+import at.released.igdbclient.model.EntityType
+import at.released.igdbclient.model.EntityTypeResult
 import at.released.igdbclient.model.Event
 import at.released.igdbclient.model.EventLogo
 import at.released.igdbclient.model.EventLogoResult
 import at.released.igdbclient.model.EventNetwork
 import at.released.igdbclient.model.EventNetworkResult
 import at.released.igdbclient.model.EventResult
+import at.released.igdbclient.model.Executable
+import at.released.igdbclient.model.ExecutableResult
 import at.released.igdbclient.model.ExternalGame
 import at.released.igdbclient.model.ExternalGameResult
 import at.released.igdbclient.model.ExternalGameSource
@@ -96,6 +110,8 @@ import at.released.igdbclient.model.GameVideoResult
 import at.released.igdbclient.model.Genre
 import at.released.igdbclient.model.GenreResult
 import at.released.igdbclient.model.IgdbWebhookId
+import at.released.igdbclient.model.ImageType
+import at.released.igdbclient.model.ImageTypeResult
 import at.released.igdbclient.model.InvolvedCompany
 import at.released.igdbclient.model.InvolvedCompanyResult
 import at.released.igdbclient.model.Keyword
@@ -106,6 +122,8 @@ import at.released.igdbclient.model.LanguageSupport
 import at.released.igdbclient.model.LanguageSupportResult
 import at.released.igdbclient.model.LanguageSupportType
 import at.released.igdbclient.model.LanguageSupportTypeResult
+import at.released.igdbclient.model.Logo
+import at.released.igdbclient.model.LogoResult
 import at.released.igdbclient.model.MultiplayerMode
 import at.released.igdbclient.model.MultiplayerModeResult
 import at.released.igdbclient.model.NetworkType
@@ -140,6 +158,10 @@ import at.released.igdbclient.model.ReleaseDateRegionResult
 import at.released.igdbclient.model.ReleaseDateResult
 import at.released.igdbclient.model.ReleaseDateStatus
 import at.released.igdbclient.model.ReleaseDateStatusResult
+import at.released.igdbclient.model.Report
+import at.released.igdbclient.model.ReportResult
+import at.released.igdbclient.model.ReportType
+import at.released.igdbclient.model.ReportTypeResult
 import at.released.igdbclient.model.Screenshot
 import at.released.igdbclient.model.ScreenshotResult
 import at.released.igdbclient.model.Search
@@ -215,6 +237,16 @@ public open class IgdbEndpoint<out R : Any>(
             )
 
         /**
+         * Age Rating Content Description Type
+         */
+        public val AGE_RATING_CONTENT_DESCRIPTION_TYPE: IgdbEndpoint<AgeRatingContentDescriptionTypeResult> =
+            IgdbEndpoint(
+                "age_rating_content_description_types",
+                AgeRatingContentDescriptionTypeResult.ADAPTER::decode,
+                AgeRatingContentDescriptionType.ADAPTER::decode,
+            )
+
+        /**
          * Age Rating Organization
          */
         public val AGE_RATING_ORGANIZATION: IgdbEndpoint<AgeRatingOrganizationResult> =
@@ -240,6 +272,15 @@ public open class IgdbEndpoint<out R : Any>(
             "artworks",
             ArtworkResult.ADAPTER::decode,
             Artwork.ADAPTER::decode,
+        )
+
+        /**
+         * Artwork Type
+         */
+        public val ARTWORK_TYPE: IgdbEndpoint<ArtworkTypeResult> = IgdbEndpoint(
+            "artwork_types",
+            ArtworkTypeResult.ADAPTER::decode,
+            ArtworkType.ADAPTER::decode,
         )
 
         /**
@@ -351,12 +392,39 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Company Size
+         */
+        public val COMPANY_SIZE: IgdbEndpoint<CompanySizeResult> = IgdbEndpoint(
+            "company_sizes",
+            CompanySizeResult.ADAPTER::decode,
+            CompanySize.ADAPTER::decode,
+        )
+
+        /**
          * Company statuses
          */
         public val COMPANY_STATUS: IgdbEndpoint<CompanyStatusResult> = IgdbEndpoint(
             "company_statuses",
             CompanyStatusResult.ADAPTER::decode,
             CompanyStatus.ADAPTER::decode,
+        )
+
+        /**
+         * Company Type
+         */
+        public val COMPANY_TYPE: IgdbEndpoint<CompanyTypeResult> = IgdbEndpoint(
+            "company_types",
+            CompanyTypeResult.ADAPTER::decode,
+            CompanyType.ADAPTER::decode,
+        )
+
+        /**
+         * Company Type History
+         */
+        public val COMPANY_TYPE_HISTORY: IgdbEndpoint<CompanyTypeHistoryResult> = IgdbEndpoint(
+            "company_type_histories",
+            CompanyTypeHistoryResult.ADAPTER::decode,
+            CompanyTypeHistory.ADAPTER::decode,
         )
 
         /**
@@ -387,6 +455,15 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Entity Type
+         */
+        public val ENTITY_TYPE: IgdbEndpoint<EntityTypeResult> = IgdbEndpoint(
+            "entity_types",
+            EntityTypeResult.ADAPTER::decode,
+            EntityType.ADAPTER::decode,
+        )
+
+        /**
          * Gaming events
          */
         public val EVENT: IgdbEndpoint<EventResult> = IgdbEndpoint(
@@ -411,6 +488,15 @@ public open class IgdbEndpoint<out R : Any>(
             "event_networks",
             EventNetworkResult.ADAPTER::decode,
             EventNetwork.ADAPTER::decode,
+        )
+
+        /**
+         * Executable
+         */
+        public val EXECUTABLE: IgdbEndpoint<ExecutableResult> = IgdbEndpoint(
+            "executables",
+            ExecutableResult.ADAPTER::decode,
+            Executable.ADAPTER::decode,
         )
 
         /**
@@ -568,6 +654,15 @@ public open class IgdbEndpoint<out R : Any>(
         )
 
         /**
+         * Image Type
+         */
+        public val IMAGE_TYPE: IgdbEndpoint<ImageTypeResult> = IgdbEndpoint(
+            "image_types",
+            ImageTypeResult.ADAPTER::decode,
+            ImageType.ADAPTER::decode,
+        )
+
+        /**
          * Involved Company
          */
         public val INVOLVED_COMPANY: IgdbEndpoint<InvolvedCompanyResult> = IgdbEndpoint(
@@ -610,6 +705,15 @@ public open class IgdbEndpoint<out R : Any>(
             "language_support_types",
             LanguageSupportTypeResult.ADAPTER::decode,
             LanguageSupportType.ADAPTER::decode,
+        )
+
+        /**
+         * Logo
+         */
+        public val LOGO: IgdbEndpoint<LogoResult> = IgdbEndpoint(
+            "logos",
+            LogoResult.ADAPTER::decode,
+            Logo.ADAPTER::decode,
         )
 
         /**
@@ -767,6 +871,24 @@ public open class IgdbEndpoint<out R : Any>(
             "release_date_statuses",
             ReleaseDateStatusResult.ADAPTER::decode,
             ReleaseDateStatus.ADAPTER::decode,
+        )
+
+        /**
+         * Report
+         */
+        public val REPORT: IgdbEndpoint<ReportResult> = IgdbEndpoint(
+            "reports",
+            ReportResult.ADAPTER::decode,
+            Report.ADAPTER::decode,
+        )
+
+        /**
+         * Report Type
+         */
+        public val REPORT_TYPE: IgdbEndpoint<ReportTypeResult> = IgdbEndpoint(
+            "report_types",
+            ReportTypeResult.ADAPTER::decode,
+            ReportType.ADAPTER::decode,
         )
 
         /**
