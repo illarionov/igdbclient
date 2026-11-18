@@ -20,6 +20,8 @@ public class IgdbDump(
     public val schemaVersion: String,
     public val schema: Map<String, String>?,
 ) {
+    // Wire's Instant uses java.time on Android, with desugaring in apps targeting older devices.
+    @Suppress("NewApi")
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null || this::class != other::class) return false

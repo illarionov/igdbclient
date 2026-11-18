@@ -57,7 +57,8 @@ internal class OkhttpTwitchTokenFetcher(
             .executeAsyncWithResult()
             .toIgdbResult(
                 successResponseParser = { inputStream ->
-                    @Suppress("MagicNumber")
+                    // Wire's Instant uses java.time on Android, with desugaring in apps targeting older devices.
+                    @Suppress("MagicNumber", "NewApi")
                     twitchTokenParser(inputStream).copy(
                         receiveTimestamp = Instant.ofEpochSecond(
                             tokenReceivedTimestamp / 1000,

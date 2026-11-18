@@ -7,17 +7,28 @@
 package at.released.igdbclient.gradle.lint
 
 import com.android.build.api.dsl.CommonExtension
+import com.android.build.api.dsl.KotlinMultiplatformAndroidLibraryTarget
 import com.android.build.gradle.AppPlugin
 import com.android.build.gradle.DynamicFeaturePlugin
 import com.android.build.gradle.LibraryPlugin
 import com.android.build.gradle.TestPlugin
+import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 /*
  * Convention plugin that configures Android Lint in projects with the Android Gradle plugin
  */
-project.plugins.withType(AppPlugin::class.java) {
+plugins.withId("com.android.kotlin.multiplatform.library") {
+    apply(plugin = "com.android.lint")
+    extensions.configure<KotlinMultiplatformExtension> {
+        targets.withType<KotlinMultiplatformAndroidLibraryTarget>().configureEach {
+            lint.configureCommonAndroidLint()
+        }
+    }
+}
+
+plugins.withType(AppPlugin::class.java) {
     extensions.configure(CommonExtension::class.java) {
-        lint {
+        with(lint) {
             configureCommonAndroidLint()
             checkDependencies = true
         }
@@ -31,9 +42,7 @@ listOf(
 ).forEach { agpLibraryPlugin ->
     plugins.withType(agpLibraryPlugin) {
         extensions.configure(CommonExtension::class.java) {
-            lint {
-                configureCommonAndroidLint()
-            }
+            lint.configureCommonAndroidLint()
         }
     }
 }

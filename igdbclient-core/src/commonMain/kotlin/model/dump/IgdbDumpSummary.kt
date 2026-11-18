@@ -15,6 +15,8 @@ public class IgdbDumpSummary(
     public val fileName: String,
     public val updatedAt: Instant,
 ) {
+    // Wire's Instant uses java.time on Android, with desugaring in apps targeting older devices.
+    @Suppress("NewApi")
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other == null || this::class != other::class) return false
