@@ -1,5 +1,40 @@
 # Changelog
 
+## [0.9.0] — 2026-11-19
+
+#### New Feature
+
+- Added the `wasmJs` target.
+- Updated the IGDB schema with new fields and added the following endpoints.
+  * [`age_rating_content_description_types`](https://api-docs.igdb.com/#age-rating-content-description-type)
+  * [`artwork_types`](https://api-docs.igdb.com/#artwork-type)
+  * [`company_sizes`](https://api-docs.igdb.com/#company-size)
+  * [`company_types`](https://api-docs.igdb.com/#company-type)
+  * [`company_type_histories`](https://api-docs.igdb.com/#company-type-history)
+  * [`entity_types`](https://api-docs.igdb.com/#entity-type)
+  * [`executables`](https://api-docs.igdb.com/#executable)
+  * [`image_types`](https://api-docs.igdb.com/#image-type)
+  * [`logos`](https://api-docs.igdb.com/#logo)
+  * [`reports`](https://api-docs.igdb.com/#report)
+  * [`report_types`](https://api-docs.igdb.com/#report-type)
+
+  This schema update is binary incompatible on the JVM. The new fields change the signatures of
+  constructors and `copy` methods on models such as `Artwork` and `Game`. Recompile code that calls them.
+
+- Raised the minimum Kotlin language and API versions from 1.9 to 2.0.
+- Raised the JVM target from Java 11 to Java 17.
+
+Thanks to [Maicol Battistini (@maicol07)](https://github.com/maicol07) for adding `wasmJs` support and 11 new IGDB endpoints!
+
+#### Dependencies
+
+- Kotlin 2.4.21
+- Wire 7.2.2
+- Ktor 3.6.1
+- OkHttp 5.5.1
+- Okio 3.18.2
+- Updated other internal dependencies
+
 ## [0.8] — 2025-02-23
 
 #### 🚀 New Feature
