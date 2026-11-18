@@ -55,17 +55,17 @@ kotlin {
         getByName("androidMain") {
             dependencies {
                 api(libs.junit.jupiter.api)
-                implementation(libs.okhttp3)
-                implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp5.mockwebserver.junit5)
+                implementation(libs.okhttp)
+                implementation(libs.okhttp.logging.interceptor)
+                implementation(libs.okhttp.mockwebserver.junit5)
             }
         }
         getByName("jvmMain") {
             dependencies {
                 api(libs.junit.jupiter.api)
-                implementation(libs.okhttp3)
-                implementation(libs.okhttp5.mockwebserver.junit5)
-                implementation(libs.okhttp3.logging.interceptor)
+                implementation(libs.okhttp)
+                implementation(libs.okhttp.mockwebserver.junit5)
+                implementation(libs.okhttp.logging.interceptor)
             }
         }
     }

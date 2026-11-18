@@ -205,6 +205,11 @@
             <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
          </artifact>
       </component>
+      <component group="com.palantir.javapoet" name="javapoet" version="0.23.0">
+         <artifact name="javapoet-0.23.0.jar">
+            <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
+         </artifact>
+      </component>
       <component group="com.palantir.javapoet" name="javapoet" version="0.6.0">
          <artifact name="javapoet-0.6.0.jar">
             <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
