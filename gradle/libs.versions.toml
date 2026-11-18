@@ -17,7 +17,6 @@ kotest = "6.2.7"
 kotlin = "2.4.21"
 kotlin-compile-testing-fork = "0.14.0"
 kotlinpoet = "2.4.0"
-kotlinx-binary-compatibility-validator = "0.18.2"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.13.0"
 ktor = "3.6.1"
@@ -85,7 +84,6 @@ diktat-plugin = { group = "com.saveourtool.diktat", name = "diktat-gradle-plugin
 dokka-plugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
 gradle-maven-publish-plugin = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "gradle-maven-publish-plugin" }
 kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-kotlinx-binary-compatibility-validator = { module = "org.jetbrains.kotlinx.binary-compatibility-validator:org.jetbrains.kotlinx.binary-compatibility-validator.gradle.plugin", version.ref = "kotlinx-binary-compatibility-validator" }
 spotless-plugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
 wire-plugin = { group = "com.squareup.wire", name = "wire-gradle-plugin", version.ref = "wire" }
 

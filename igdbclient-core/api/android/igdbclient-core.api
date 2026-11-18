@@ -282,7 +282,6 @@ public final class at/released/igdbclient/apicalypse/ApicalypseMultiQuery$Subque
 }
 
 public final class at/released/igdbclient/apicalypse/ApicalypseMultiQueryBuilder {
-	public static final field MAX_SUB_QUERIES I
 	public fun <init> ()V
 	public final fun build ()Lat/released/igdbclient/apicalypse/ApicalypseMultiQuery;
 	public final fun query (Lat/released/igdbclient/IgdbEndpoint;Ljava/lang/String;Lkotlin/jvm/functions/Function1;)V
@@ -423,7 +422,6 @@ public final class at/released/igdbclient/dsl/TwitchAuthConfig {
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingCategoryFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -437,7 +435,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingCategoryFieldDslKt 
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -449,7 +446,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionF
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -463,7 +459,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionT
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionV2FieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -478,7 +473,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingContentDescriptionV
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getContent_descriptions ()Lat/released/igdbclient/dsl/field/AgeRatingContentDescriptionFieldDsl;
@@ -496,7 +490,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -509,7 +502,6 @@ public final class at/released/igdbclient/dsl/field/AgeRatingOrganizationFieldDs
 }
 
 public final class at/released/igdbclient/dsl/field/AlternativeNameFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getComment ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
@@ -522,7 +514,6 @@ public final class at/released/igdbclient/dsl/field/AlternativeNameFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ArtworkFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getArtwork_type ()Lat/released/igdbclient/dsl/field/ArtworkTypeFieldDsl;
@@ -541,7 +532,6 @@ public final class at/released/igdbclient/dsl/field/ArtworkFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ArtworkTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -555,7 +545,6 @@ public final class at/released/igdbclient/dsl/field/ArtworkTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CharacterFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAkas ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCharacter_gender ()Lat/released/igdbclient/dsl/field/CharacterGenderFieldDsl;
 	public final fun getCharacter_species ()Lat/released/igdbclient/dsl/field/CharacterSpecieFieldDsl;
@@ -579,7 +568,6 @@ public final class at/released/igdbclient/dsl/field/CharacterFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CharacterGenderFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -592,7 +580,6 @@ public final class at/released/igdbclient/dsl/field/CharacterGenderFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CharacterMugShotFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -608,7 +595,6 @@ public final class at/released/igdbclient/dsl/field/CharacterMugShotFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CharacterSpecieFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -621,7 +607,6 @@ public final class at/released/igdbclient/dsl/field/CharacterSpecieFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAs_child_relations ()Lat/released/igdbclient/dsl/field/CollectionRelationFieldDsl;
 	public final fun getAs_parent_relations ()Lat/released/igdbclient/dsl/field/CollectionRelationFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -640,7 +625,6 @@ public final class at/released/igdbclient/dsl/field/CollectionFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionMembershipFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCollection ()Lat/released/igdbclient/dsl/field/CollectionFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -655,7 +639,6 @@ public final class at/released/igdbclient/dsl/field/CollectionMembershipFieldDsl
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionMembershipTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAllowed_collection_type ()Lat/released/igdbclient/dsl/field/CollectionTypeFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -670,7 +653,6 @@ public final class at/released/igdbclient/dsl/field/CollectionMembershipTypeFiel
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionRelationFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChild_collection ()Lat/released/igdbclient/dsl/field/CollectionFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -685,7 +667,6 @@ public final class at/released/igdbclient/dsl/field/CollectionRelationFieldDslKt
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionRelationTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAllowed_child_type ()Lat/released/igdbclient/dsl/field/CollectionTypeFieldDsl;
 	public final fun getAllowed_parent_type ()Lat/released/igdbclient/dsl/field/CollectionTypeFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -701,7 +682,6 @@ public final class at/released/igdbclient/dsl/field/CollectionRelationTypeFieldD
 }
 
 public final class at/released/igdbclient/dsl/field/CollectionTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -715,7 +695,6 @@ public final class at/released/igdbclient/dsl/field/CollectionTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChange_date ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChange_date_category ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChange_date_format ()Lat/released/igdbclient/dsl/field/DateFormatFieldDsl;
@@ -747,7 +726,6 @@ public final class at/released/igdbclient/dsl/field/CompanyFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyLogoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -763,7 +741,6 @@ public final class at/released/igdbclient/dsl/field/CompanyLogoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanySizeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -776,7 +753,6 @@ public final class at/released/igdbclient/dsl/field/CompanySizeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -789,7 +765,6 @@ public final class at/released/igdbclient/dsl/field/CompanyStatusFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -802,7 +777,6 @@ public final class at/released/igdbclient/dsl/field/CompanyTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyTypeHistoryFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompany ()Lat/released/igdbclient/dsl/field/CompanyFieldDsl;
 	public final fun getCompany_type ()Lat/released/igdbclient/dsl/field/CompanyTypeFieldDsl;
@@ -817,7 +791,6 @@ public final class at/released/igdbclient/dsl/field/CompanyTypeHistoryFieldDslKt
 }
 
 public final class at/released/igdbclient/dsl/field/CompanyWebsiteFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -831,7 +804,6 @@ public final class at/released/igdbclient/dsl/field/CompanyWebsiteFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ContentSafetyRatingDimensionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getContent_safety_rating ()Lat/released/igdbclient/dsl/field/ContentSafetyRatingFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -846,7 +818,6 @@ public final class at/released/igdbclient/dsl/field/ContentSafetyRatingDimension
 }
 
 public final class at/released/igdbclient/dsl/field/ContentSafetyRatingFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -859,7 +830,6 @@ public final class at/released/igdbclient/dsl/field/ContentSafetyRatingFieldDslK
 }
 
 public final class at/released/igdbclient/dsl/field/CoverFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -878,7 +848,6 @@ public final class at/released/igdbclient/dsl/field/CoverFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/DateFormatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getFormat ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -891,7 +860,6 @@ public final class at/released/igdbclient/dsl/field/DateFormatFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/EntityTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -905,7 +873,6 @@ public final class at/released/igdbclient/dsl/field/EntityTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/EventFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -928,7 +895,6 @@ public final class at/released/igdbclient/dsl/field/EventFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/EventLogoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -947,7 +913,6 @@ public final class at/released/igdbclient/dsl/field/EventLogoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/EventNetworkFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getEvent ()Lat/released/igdbclient/dsl/field/EventFieldDsl;
@@ -962,7 +927,6 @@ public final class at/released/igdbclient/dsl/field/EventNetworkFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ExecutableFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getFile_path ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
@@ -977,7 +941,6 @@ public final class at/released/igdbclient/dsl/field/ExecutableFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ExternalGameFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCountries ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1000,7 +963,6 @@ public final class at/released/igdbclient/dsl/field/ExternalGameFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1013,7 +975,6 @@ public final class at/released/igdbclient/dsl/field/ExternalGameSourceFieldDslKt
 }
 
 public final class at/released/igdbclient/dsl/field/FranchiseFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGames ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
@@ -1029,7 +990,6 @@ public final class at/released/igdbclient/dsl/field/FranchiseFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameContentSafetyRatingFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getContent_safety_rating ()Lat/released/igdbclient/dsl/field/ContentSafetyRatingFieldDsl;
 	public final fun getContent_safety_rating_dimension ()Lat/released/igdbclient/dsl/field/ContentSafetyRatingDimensionFieldDsl;
@@ -1044,7 +1004,6 @@ public final class at/released/igdbclient/dsl/field/GameContentSafetyRatingField
 }
 
 public final class at/released/igdbclient/dsl/field/GameEngineFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompanies ()Lat/released/igdbclient/dsl/field/CompanyFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1063,7 +1022,6 @@ public final class at/released/igdbclient/dsl/field/GameEngineFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameEngineLogoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1079,7 +1037,6 @@ public final class at/released/igdbclient/dsl/field/GameEngineLogoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAge_ratings ()Lat/released/igdbclient/dsl/field/AgeRatingFieldDsl;
 	public final fun getAggregated_rating ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAggregated_rating_count ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1148,7 +1105,6 @@ public final class at/released/igdbclient/dsl/field/GameFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameLocalizationFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCover ()Lat/released/igdbclient/dsl/field/CoverFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1164,7 +1120,6 @@ public final class at/released/igdbclient/dsl/field/GameLocalizationFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameModeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1179,7 +1134,6 @@ public final class at/released/igdbclient/dsl/field/GameModeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameReleaseFormatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getFormat ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1192,7 +1146,6 @@ public final class at/released/igdbclient/dsl/field/GameReleaseFormatFieldDslKt 
 }
 
 public final class at/released/igdbclient/dsl/field/GameStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1205,7 +1158,6 @@ public final class at/released/igdbclient/dsl/field/GameStatusFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameTimeToBeatFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompletely ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCount ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1222,7 +1174,6 @@ public final class at/released/igdbclient/dsl/field/GameTimeToBeatFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1235,7 +1186,6 @@ public final class at/released/igdbclient/dsl/field/GameTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameVersionFeatureFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1250,7 +1200,6 @@ public final class at/released/igdbclient/dsl/field/GameVersionFeatureFieldDslKt
 }
 
 public final class at/released/igdbclient/dsl/field/GameVersionFeatureValueFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
 	public final fun getGame_feature ()Lat/released/igdbclient/dsl/field/GameVersionFeatureFieldDsl;
@@ -1264,7 +1213,6 @@ public final class at/released/igdbclient/dsl/field/GameVersionFeatureValueField
 }
 
 public final class at/released/igdbclient/dsl/field/GameVersionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getFeatures ()Lat/released/igdbclient/dsl/field/GameVersionFeatureFieldDsl;
@@ -1280,7 +1228,6 @@ public final class at/released/igdbclient/dsl/field/GameVersionFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GameVideoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1293,7 +1240,6 @@ public final class at/released/igdbclient/dsl/field/GameVideoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/GenreFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1321,15 +1267,12 @@ public final class at/released/igdbclient/dsl/field/IgdbRequestField {
 }
 
 public abstract class at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public synthetic fun <init> (Lat/released/igdbclient/dsl/field/IgdbRequestField;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public synthetic fun <init> (Lat/released/igdbclient/dsl/field/IgdbRequestField;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun fieldWithId (Lat/released/igdbclient/scheme/field/IgdbField;)Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAll ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
-	protected final fun getParentIgdbField ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 }
 
 public final class at/released/igdbclient/dsl/field/ImageTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1342,7 +1285,6 @@ public final class at/released/igdbclient/dsl/field/ImageTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/InvolvedCompanyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompany ()Lat/released/igdbclient/dsl/field/CompanyFieldDsl;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1360,7 +1302,6 @@ public final class at/released/igdbclient/dsl/field/InvolvedCompanyFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/KeywordFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1375,7 +1316,6 @@ public final class at/released/igdbclient/dsl/field/KeywordFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/LanguageFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1390,7 +1330,6 @@ public final class at/released/igdbclient/dsl/field/LanguageFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/LanguageSupportFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
@@ -1405,7 +1344,6 @@ public final class at/released/igdbclient/dsl/field/LanguageSupportFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/LanguageSupportTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1418,7 +1356,6 @@ public final class at/released/igdbclient/dsl/field/LanguageSupportTypeFieldDslK
 }
 
 public final class at/released/igdbclient/dsl/field/LogoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1436,7 +1373,6 @@ public final class at/released/igdbclient/dsl/field/LogoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/MultiplayerModeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCampaigncoop ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDropin ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1459,7 +1395,6 @@ public final class at/released/igdbclient/dsl/field/MultiplayerModeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/NetworkTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getEvent_networks ()Lat/released/igdbclient/dsl/field/EventNetworkFieldDsl;
@@ -1473,7 +1408,6 @@ public final class at/released/igdbclient/dsl/field/NetworkTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformFamilyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getName ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1485,7 +1419,6 @@ public final class at/released/igdbclient/dsl/field/PlatformFamilyFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAbbreviation ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAlternative_name ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1510,7 +1443,6 @@ public final class at/released/igdbclient/dsl/field/PlatformFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformLogoFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1526,7 +1458,6 @@ public final class at/released/igdbclient/dsl/field/PlatformLogoFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1539,7 +1470,6 @@ public final class at/released/igdbclient/dsl/field/PlatformTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getComment ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompany ()Lat/released/igdbclient/dsl/field/CompanyFieldDsl;
@@ -1553,7 +1483,6 @@ public final class at/released/igdbclient/dsl/field/PlatformVersionCompanyFieldD
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformVersionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCompanies ()Lat/released/igdbclient/dsl/field/PlatformVersionCompanyFieldDsl;
 	public final fun getConnectivity ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1581,7 +1510,6 @@ public final class at/released/igdbclient/dsl/field/PlatformVersionFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformVersionReleaseDateFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1602,7 +1530,6 @@ public final class at/released/igdbclient/dsl/field/PlatformVersionReleaseDateFi
 }
 
 public final class at/released/igdbclient/dsl/field/PlatformWebsiteFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1616,7 +1543,6 @@ public final class at/released/igdbclient/dsl/field/PlatformWebsiteFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/PlayerPerspectiveFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1631,7 +1557,6 @@ public final class at/released/igdbclient/dsl/field/PlayerPerspectiveFieldDslKt 
 }
 
 public final class at/released/igdbclient/dsl/field/PopularityPrimitiveFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCalculated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1649,7 +1574,6 @@ public final class at/released/igdbclient/dsl/field/PopularityPrimitiveFieldDslK
 }
 
 public final class at/released/igdbclient/dsl/field/PopularityTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getExternal_popularity_source ()Lat/released/igdbclient/dsl/field/ExternalGameSourceFieldDsl;
@@ -1664,7 +1588,6 @@ public final class at/released/igdbclient/dsl/field/PopularityTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/RegionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1679,7 +1602,6 @@ public final class at/released/igdbclient/dsl/field/RegionFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ReleaseDateFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1703,7 +1625,6 @@ public final class at/released/igdbclient/dsl/field/ReleaseDateFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ReleaseDateRegionFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1716,7 +1637,6 @@ public final class at/released/igdbclient/dsl/field/ReleaseDateRegionFieldDslKt 
 }
 
 public final class at/released/igdbclient/dsl/field/ReleaseDateStatusFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getDescription ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1730,7 +1650,6 @@ public final class at/released/igdbclient/dsl/field/ReleaseDateStatusFieldDslKt 
 }
 
 public final class at/released/igdbclient/dsl/field/ReportFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getEntity_type ()Lat/released/igdbclient/dsl/field/EntityTypeFieldDsl;
@@ -1746,7 +1665,6 @@ public final class at/released/igdbclient/dsl/field/ReportFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ReportTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1759,7 +1677,6 @@ public final class at/released/igdbclient/dsl/field/ReportTypeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ScreenshotFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlpha_channel ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getAnimated ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1776,7 +1693,6 @@ public final class at/released/igdbclient/dsl/field/ScreenshotFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/SearchFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getAlternative_name ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCharacter ()Lat/released/igdbclient/dsl/field/CharacterFieldDsl;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1797,7 +1713,6 @@ public final class at/released/igdbclient/dsl/field/SearchFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/TestDummyFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getBool_value ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1823,7 +1738,6 @@ public final class at/released/igdbclient/dsl/field/TestDummyFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/ThemeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
@@ -1838,7 +1752,6 @@ public final class at/released/igdbclient/dsl/field/ThemeFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/WebsiteFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getCategory ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getGame ()Lat/released/igdbclient/dsl/field/GameFieldDsl;
@@ -1853,7 +1766,6 @@ public final class at/released/igdbclient/dsl/field/WebsiteFieldDslKt {
 }
 
 public final class at/released/igdbclient/dsl/field/WebsiteTypeFieldDsl : at/released/igdbclient/dsl/field/IgdbRequestFieldDsl {
-	public fun <init> ()V
 	public final fun getChecksum ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getCreated_at ()Lat/released/igdbclient/dsl/field/IgdbRequestField;
 	public final fun getId ()Lat/released/igdbclient/dsl/field/IgdbRequestField;

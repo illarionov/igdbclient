@@ -6,13 +6,18 @@
 
 package at.released.igdbclient.gradle.lint
 
+import org.jetbrains.kotlin.gradle.dsl.abi.ExperimentalAbiValidation
+
 /*
- * Convention plugin that configures Kotlinx Binary Compatibility Validator
+ * Convention plugin that configures Kotlin's built-in ABI validation
  */
 plugins {
-    id("org.jetbrains.kotlinx.binary-compatibility-validator")
+    id("org.jetbrains.kotlin.multiplatform")
 }
 
-apiValidation {
-    nonPublicMarkers.add("at.released.igdbclient.InternalIgdbClientApi")
+@OptIn(ExperimentalAbiValidation::class)
+kotlin {
+    abiValidation {
+        filters.exclude.annotatedWith.add("at.released.igdbclient.InternalIgdbClientApi")
+    }
 }

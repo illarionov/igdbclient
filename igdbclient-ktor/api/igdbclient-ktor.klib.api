@@ -1,0 +1,22 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64, js, linuxX64, macosArm64, macosX64, mingwX64, wasmJs]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <at.released.igdbclient:igdbclient-ktor>
+final class at.released.igdbclient.ktor/IgdbKtorConfig : at.released.igdbclient.dsl/IgdbHttpEngineConfig { // at.released.igdbclient.ktor/IgdbKtorConfig|null[0]
+    constructor <init>() // at.released.igdbclient.ktor/IgdbKtorConfig.<init>|<init>(){}[0]
+
+    final var backgroundDispatcher // at.released.igdbclient.ktor/IgdbKtorConfig.backgroundDispatcher|{}backgroundDispatcher[0]
+        final fun <get-backgroundDispatcher>(): kotlinx.coroutines/CoroutineDispatcher // at.released.igdbclient.ktor/IgdbKtorConfig.backgroundDispatcher.<get-backgroundDispatcher>|<get-backgroundDispatcher>(){}[0]
+        final fun <set-backgroundDispatcher>(kotlinx.coroutines/CoroutineDispatcher) // at.released.igdbclient.ktor/IgdbKtorConfig.backgroundDispatcher.<set-backgroundDispatcher>|<set-backgroundDispatcher>(kotlinx.coroutines.CoroutineDispatcher){}[0]
+    final var httpClient // at.released.igdbclient.ktor/IgdbKtorConfig.httpClient|{}httpClient[0]
+        final fun <get-httpClient>(): io.ktor.client/HttpClient? // at.released.igdbclient.ktor/IgdbKtorConfig.httpClient.<get-httpClient>|<get-httpClient>(){}[0]
+        final fun <set-httpClient>(io.ktor.client/HttpClient?) // at.released.igdbclient.ktor/IgdbKtorConfig.httpClient.<set-httpClient>|<set-httpClient>(io.ktor.client.HttpClient?){}[0]
+}
+
+final object at.released.igdbclient.ktor/IgdbKtorEngine : at.released.igdbclient/IgdbHttpEngine<at.released.igdbclient.ktor/IgdbKtorConfig> { // at.released.igdbclient.ktor/IgdbKtorEngine|null[0]
+    final fun create(at.released.igdbclient.internal.model/IgdbClientConfig<at.released.igdbclient.ktor/IgdbKtorConfig>): at.released.igdbclient.internal/IgdbHttpClient // at.released.igdbclient.ktor/IgdbKtorEngine.create|create(at.released.igdbclient.internal.model.IgdbClientConfig<at.released.igdbclient.ktor.IgdbKtorConfig>){}[0]
+}
