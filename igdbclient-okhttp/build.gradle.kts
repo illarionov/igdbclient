@@ -32,7 +32,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(":igdbclient-core"))
-                api(libs.okhttp3)
+                api(libs.okhttp)
                 implementation(libs.kotlinx.coroutines.core)
                 implementation(libs.okio)
             }
@@ -52,8 +52,8 @@ kotlin {
                 implementation(libs.kermit)
                 implementation(libs.kotest.assertions.core)
                 implementation(libs.kotlinx.coroutines.test)
-                implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp5.mockwebserver.junit5)
+                implementation(libs.okhttp.logging.interceptor)
+                implementation(libs.okhttp.mockwebserver.junit5)
                 runtimeOnly(libs.junit.jupiter.engine)
                 runtimeOnly(libs.junit.platform.launcher)
             }

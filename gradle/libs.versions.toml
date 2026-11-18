@@ -1,6 +1,6 @@
 [versions]
 androidMinSdk = "14"
-androidCompileSdk = "36"
+androidCompileSdk = "37"
 
 agp = "9.5.1"
 assertk = "0.28.1"
@@ -20,14 +20,13 @@ kotlinpoet = "2.4.0"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.13.0"
 ktor = "3.6.1"
-okhttp3 = "5.4.0"
-okhttp5 = "5.4.0"
+okhttp = "5.5.1"
 okio = "3.18.2"
 orgjson = "20260814"
 slf4j = "2.0.20"
 spotless = "8.11.0"
 turbine = "1.2.1"
-wire = "7.2.1"
+wire = "7.2.2"
 
 [libraries]
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
@@ -62,11 +61,10 @@ ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref =
 ktor-client-jetty = { group = "io.ktor", name = "ktor-client-jetty", version.ref = "ktor" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
-okhttp3-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp3" }
-okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
-okhttp5-mockwebserver = { group = "com.squareup.okhttp3", name = "mockwebserver3", version.ref = "okhttp5" }
-okhttp5-mockwebserver-junit5 = { group = "com.squareup.okhttp3", name = "mockwebserver3-junit5", version.ref = "okhttp5" }
-okhttp3-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-mockwebserver-junit5 = { group = "com.squareup.okhttp3", name = "mockwebserver3-junit5", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
 okio = { group = "com.squareup.okio", name = "okio", version.ref = "okio" }
 org-json = { group = "org.json", name = "json", version.ref = "orgjson" }
 slf4j-simple = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j" }

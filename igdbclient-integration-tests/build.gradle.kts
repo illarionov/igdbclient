@@ -35,8 +35,8 @@ kotlin {
                 implementation(project(":library:test"))
                 implementation(kotlin("test"))
                 implementation(libs.junit.jupiter.params)
-                implementation(libs.okhttp3.logging.interceptor)
-                implementation(libs.okhttp5.mockwebserver.junit5)
+                implementation(libs.okhttp.logging.interceptor)
+                implementation(libs.okhttp.mockwebserver.junit5)
                 implementation(libs.slf4j.simple)
             }
         }
