@@ -15,56 +15,30 @@
          <trust file="gradle-[-0-9rc.]+-src.zip" regex="true"/>
          <trust file="groovy-[a-z]*-?[0-9.]+.pom" regex="true"/>
          <trust group="" name="^kotlin-native-prebuilt-.+" regex="true" reason="not signed"/>
-         <trust group="^androidx($|([.].*))" regex="true" reason="not signed yet"/>
-         <trust group="^com[.]android($|([.].*))" regex="true" reason="not signed yet"/>
-         <trust group="com.google.testing.platform" regex="true" reason="not signed"/>
       </trusted-artifacts>
       <trusted-keys>
-         <trusted-key id="015479E1055341431B4545AB72475FD306B9CAB7" group="com.googlecode.javaewah" name="JavaEWAH"/>
          <trusted-key id="04543577D6A9CC626239C50C7ECBD740FF06AEB5">
             <trusting group="org.glassfish.jaxb"/>
             <trusting group="^com[.]sun($|([.].*))" regex="true"/>
          </trusted-key>
-         <trusted-key id="0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5">
-            <trusting group="org.apache.httpcomponents"/>
-            <trusting group="^org[.]apache[.]httpcomponents($|([.].*))" regex="true"/>
-         </trusted-key>
-         <trusted-key id="08F0AAB4D0C1A4BDDE340765B341DDB020FCB6AB" group="org.bouncycastle"/>
-         <trusted-key id="0D35D3F60078655126908E8AF3D1600878E85A3D" group="io.netty"/>
+         <trusted-key id="0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5" group="^org[.]apache[.]httpcomponents($|([.].*))" regex="true"/>
          <trusted-key id="0E225917414670F4442C250DFD533C07C264648F">
             <trusting group="androidx.databinding"/>
             <trusting group="^com[.]android($|([.].*))" regex="true"/>
          </trusted-key>
-         <trusted-key id="0F06FF86BEEAF4E71866EE5232EE5355A6BC6E42">
-            <trusting group="androidx.databinding"/>
-            <trusting group="^com[.]android($|([.].*))" regex="true"/>
-         </trusted-key>
-         <trusted-key id="120D6F34E627ED3A772EBBFE55C7E5E701832382" group="org.snakeyaml" name="snakeyaml-engine"/>
          <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework" name="checker-qual"/>
          <trusted-key id="1A55F091AD28C07F831FA44D7905DE25C78AD456" group="com.google.protobuf"/>
-         <trusted-key id="1BD97A6A154E7810EE0BC832E2F38302C8075E3D" group="org.gradle.kotlin" name="gradle-kotlin-dsl-plugins"/>
          <trusted-key id="1D217F8475EEE9F19AB8DD6B793FD5751A0F0780" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
          <trusted-key id="2820DE9F95EC4043E616B735FA5C18CFB74EC7C6" group="com.diffplug.spotless"/>
-         <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB">
-            <trusting group="commons-codec"/>
-            <trusting group="org.apache.commons"/>
-         </trusted-key>
+         <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB" group="org.apache.commons"/>
          <trusted-key id="3F05DDA9F317301E927136D417A27CE7A60FF5F0" group="io.opentelemetry"/>
          <trusted-key id="41CD49B4EF5876F9E9F691DABAC30622339994C4" group="org.jspecify" name="jspecify"/>
-         <trusted-key id="47504B76CF89C15C0512D9AFE16AB52D79FD224F" group="com.google.api.grpc" name="proto-google-common-protos"/>
-         <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325">
-            <trusting group="ch.qos.logback"/>
-            <trusting group="org.slf4j"/>
-         </trusted-key>
-         <trusted-key id="4797B4F5DCC46CEA61059071A1AE06236CA2BA62" group="com.diffplug.spotless"/>
-         <trusted-key id="47EB6836245D2D40E89DFB4136D4E9618F3ADAB5" group="io.github.microutils" name="kotlin-logging-jvm"/>
+         <trusted-key id="475F3B8E59E6E63AA78067482C7B12F2A511E325" group="org.slf4j"/>
          <trusted-key id="5CBA19E56141E78D54BF716F08A4A4958D61FC3D" group="io.kotest"/>
          <trusted-key id="5DD80B0DDCCBE005F0A47FD66751E1A6E2001B8D" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="5F6C2148AD4911FE308110E5F0D0AE433308B042" group="io.gitlab.arturbosch.detekt"/>
          <trusted-key id="60200AC4AE761F1614D6C46766D68DAA073BE985" group="org.slf4j"/>
-         <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1" group="^com[.]google($|([.].*))" regex="true"/>
-         <trusted-key id="696B6199A2A9D8C29CE78CC0D041CAD2E452550F" group="com.google.protobuf"/>
          <trusted-key id="6F538074CCEBF35F28AF9B066A0975F8B1127B83" group="org.jetbrains.kotlin"/>
          <trusted-key id="7B121B76A7ED6CE6E60AD51784E913A8E3A748C0" group="org.bouncycastle"/>
          <trusted-key id="7B72C18D9C362314BF8E981B0CAEBC0883C5BB65" group="com.vanniktech"/>
@@ -72,62 +46,74 @@
             <trusting group="com.gradle"/>
             <trusting group="org.gradle"/>
          </trusted-key>
-         <trusted-key id="7C669810892CBD3148FA92995B05CCDE140C2876" group="org.eclipse.jgit" name="org.eclipse.jgit"/>
-         <trusted-key id="7E22D50A7EBD9D2CD269B2D4056ACA74D46000BF" group="io.netty"/>
          <trusted-key id="837B2CBB1D966C80643A2D6527F164F945828C4C" group="^com[.]willowtreeapps($|([.].*))" regex="true"/>
-         <trusted-key id="8569C95CADC508B09FE90F3002216ED811210DAA" group="io.github.detekt.sarif4k" name="sarif4k-jvm"/>
          <trusted-key id="8756C4F765C9AC3CB6B85D62379CE192D401AB61" group="com.diffplug.durian"/>
-         <trusted-key id="8A10792983023D5D14C93B488D7F1BEC1E2ECAE7" group="^com[.]fasterxml($|([.].*))" regex="true"/>
          <trusted-key id="8E3A02905A1AE67E7B0F9ACD3967D4EDA591B991">
             <trusting group="io.ktor"/>
-            <trusting group="org.jetbrains.kotlinx" name="kotlinx-html-jvm"/>
+            <trusting group="org.jetbrains.kotlinx"/>
          </trusted-key>
-         <trusted-key id="90EE19787A7BCF6FD37A1E9180C08B1C29100955" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="98465301A4939C0279F2E847D89D05374952262B" group="org.jetbrains.dokka"/>
-         <trusted-key id="9E3044071B758EBCB7E45673700E4F39BC05364B" group="org.eclipse.platform" name="org.eclipse.osgi"/>
-         <trusted-key id="A31DDE881C3E3C4C985BD0D02C7F998F4272C851" group="com.diffplug.spotless"/>
          <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm"/>
-         <trusted-key id="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2">
-            <trusting group="androidx.databinding"/>
-            <trusting group="^com[.]android($|([.].*))" regex="true"/>
-         </trusted-key>
-         <trusted-key id="A6D6C97108B8585F91B158748671A8DF71296252" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="ADBC987D1A7B91DB6B0AAA81995EFBF4A3D20BEB" group="com.pinterest.ktlint"/>
-         <trusted-key id="B02335AA54CCF21E52BBF9ABD9C565AA72BA2FDD" group="io.grpc"/>
          <trusted-key id="B2F967B67DADC1F07172DBDADE453E55DC86FC9B" group="co.touchlab"/>
-         <trusted-key id="B879179229681AD9E8D23A0812DC99973C2318FD" group="org.cqfn.diktat"/>
-         <trusted-key id="BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE" group="com.google.guava"/>
-         <trusted-key id="C6F7D1C804C821F49AF3BFC13AD93C3C677A106E" group="io.perfmark" name="perfmark-api"/>
+         <trusted-key id="BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE" group="^com[.]google($|([.].*))" regex="true"/>
          <trusted-key id="C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7" group="^com[.]google($|([.].*))" regex="true"/>
-         <trusted-key id="CE8075A251547BEE249BC151A2115AE15F6B8B72" group="org.apache.commons" name="commons-compress"/>
-         <trusted-key id="D477D51812E692011DB11E66A6EA2E2BF22E0543" group="io.github.java-diff-utils" name="java-diff-utils"/>
-         <trusted-key id="DBD744ACE7ADE6AA50DD591F66B50994442D2D40" group="^com[.]squareup($|([.].*))" regex="true"/>
-         <trusted-key id="E01ED293981AE484403B65D7DA70BCBA6D76AD03" group="com.charleskorn.kaml" name="kaml-jvm"/>
+         <trusted-key id="DBD744ACE7ADE6AA50DD591F66B50994442D2D40">
+            <trusting group="com.squareup.moshi"/>
+            <trusting group="^com[.]squareup($|([.].*))" regex="true"/>
+         </trusted-key>
          <trusted-key id="E2879931BCA1A42E55F2D64DD9B2DFBD9F3298BA">
             <trusting group="com.gradle"/>
             <trusting group="org.gradle"/>
          </trusted-key>
-         <trusted-key id="E62231331BCA7E1F292C9B88C1B12A5D99C0729D" group="org.jetbrains"/>
-         <trusted-key id="E77417AC194160A3FABD04969A259C7EE636C5ED" group="com.google.errorprone" name="error_prone_annotations"/>
          <trusted-key id="E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB" group="org.jetbrains.kotlinx"/>
          <trusted-key id="EE0CA873074092F806F59B65D364ABAA39A47320" group="com.google.errorprone" name="error_prone_annotations"/>
-         <trusted-key id="F1A51E051F527E0C8E24D54D4B1E11D5A4B91E89" group="com.google.protobuf"/>
-         <trusted-key id="F254B35617DC255D9344BCFA873A8E86B4372146" group="^org[.]eclipse[.]jetty($|([.].*))" regex="true"/>
          <trusted-key id="FA7929F83AD44C4590F6CC6815C71C0A4E0B8EDD" group="net.java.dev.jna"/>
-         <trusted-key id="FB35C8D02B4724DADA23DE0AFD116C1969FCCFF3" group="org.json" name="json"/>
          <trusted-key id="FF6E2C001948C5F2F38B0CC385911F425EC61B51">
-            <trusting group="junit"/>
-            <trusting group="org.apiguardian"/>
             <trusting group="org.junit.jupiter"/>
             <trusting group="org.junit.platform"/>
-            <trusting group="org.opentest4j" name="opentest4j"/>
          </trusted-key>
       </trusted-keys>
    </configuration>
    <components>
+      <component group="androidx.annotation" name="annotation-jvm" version="1.10.0">
+         <artifact name="annotation-jvm-1.10.0.jar">
+            <pgp value="0F06FF86BEEAF4E71866EE5232EE5355A6BC6E42"/>
+         </artifact>
+      </component>
+      <component group="androidx.startup" name="startup-runtime" version="1.2.0">
+         <artifact name="startup-runtime-1.2.0.aar">
+            <pgp value="A5F483CD733A4EBAEA378B2AE88979FB9B30ACF2"/>
+         </artifact>
+      </component>
+      <component group="androidx.tracing" name="tracing" version="1.0.0">
+         <artifact name="tracing-1.0.0.aar">
+            <sha256 value="07b8b6139665b884a162eccf97891ca50f7f56831233bf25168ae04f7b568612" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
       <component group="co.touchlab" name="kermit-core-linuxx64" version="2.2.0">
          <artifact name="kermit-core-linuxX64Main-2.2.0.klib">
             <sha256 value="b6cc6af087ddd623e7884d7f5b63d6c6ad11f92ca996482f1da7e7ddc3102eed" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.android.tools.build" name="bundletool" version="1.18.3">
+         <artifact name="bundletool-1.18.3.jar">
+            <sha256 value="ccad18514fd97db010856b2bbed40f481f8ba9349368c97ae54d72e3567d0171" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.android.tools.build.jetifier" name="jetifier-core" version="1.0.0-beta10">
+         <artifact name="jetifier-core-1.0.0-beta10.jar">
+            <sha256 value="26abb4a13927d9062169c504c9e94fe80e9ae3a4f7b5ab8875ab007536a91f5e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.android.tools.build.jetifier" name="jetifier-processor" version="1.0.0-beta10">
+         <artifact name="jetifier-processor-1.0.0-beta10.jar">
+            <sha256 value="c5067a7b928237a1271a5e9cb5710e9f80b4973293945bc51e3a4c864ea4bfed" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.charleskorn.kaml" name="kaml-jvm" version="0.104.0">
+         <artifact name="kaml-jvm-0.104.0.jar">
+            <pgp value="E01ED293981AE484403B65D7DA70BCBA6D76AD03"/>
          </artifact>
       </component>
       <component group="com.diffplug.durian" name="durian-swt.os" version="4.3.0">
@@ -135,19 +121,14 @@
             <pgp value="4797B4F5DCC46CEA61059071A1AE06236CA2BA62"/>
          </artifact>
       </component>
-      <component group="com.fasterxml.jackson.core" name="jackson-databind" version="2.12.7.1">
-         <artifact name="jackson-databind-2.12.7.1.jar">
-            <pgp value="28118C070CB22A0175A2E8D43D12CA2AC19F3181"/>
-         </artifact>
-      </component>
       <component group="com.github.ben-manes.caffeine" name="caffeine" version="2.9.3">
          <artifact name="caffeine-2.9.3.jar">
             <pgp value="635EE627345F3C1DD422B2E207D3516820BCF6B1"/>
          </artifact>
       </component>
-      <component group="com.google.android" name="annotations" version="4.1.1.4">
-         <artifact name="annotations-4.1.1.4.jar">
-            <pgp value="0F07D1201BDDAB67CFB84EB479752DB6C966F0B8"/>
+      <component group="com.google.auto.value" name="auto-value-annotations" version="1.6.2">
+         <artifact name="auto-value-annotations-1.6.2.jar">
+            <pgp value="C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7"/>
          </artifact>
       </component>
       <component group="com.google.code.findbugs" name="jsr305" version="3.0.2">
@@ -165,24 +146,9 @@
             <pgp value="4F8FEC6785F611D9A712EA2734918B7D3969D2F5"/>
          </artifact>
       </component>
-      <component group="com.google.dagger" name="dagger" version="2.48">
-         <artifact name="dagger-2.48.jar">
-            <pgp value="95115197C5227C0887299D000F9FE62F88E938D8"/>
-         </artifact>
-      </component>
       <component group="com.google.flatbuffers" name="flatbuffers-java" version="1.12.0">
          <artifact name="flatbuffers-java-1.12.0.jar">
             <pgp value="BCC135FC7ED8214F823D73E97FE9900F412D622E"/>
-         </artifact>
-      </component>
-      <component group="com.google.j2objc" name="j2objc-annotations" version="2.8">
-         <artifact name="j2objc-annotations-2.8.jar">
-            <pgp value="EB1B3DE71713C9EC2E87CC26EE92349AD86DE446"/>
-         </artifact>
-      </component>
-      <component group="com.google.j2objc" name="j2objc-annotations" version="3.0.0">
-         <artifact name="j2objc-annotations-3.0.0.jar">
-            <pgp value="BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE"/>
          </artifact>
       </component>
       <component group="com.google.j2objc" name="j2objc-annotations" version="3.1">
@@ -190,9 +156,19 @@
             <pgp value="C3259D20DAEC4ACE6D57CC83340B090F727518D8"/>
          </artifact>
       </component>
+      <component group="com.google.jimfs" name="jimfs" version="1.1">
+         <artifact name="jimfs-1.1.jar">
+            <pgp value="694621A7227D8D5289699830ABE9F3126BB741C1"/>
+         </artifact>
+      </component>
       <component group="com.googlecode.concurrent-trees" name="concurrent-trees" version="2.6.1">
          <artifact name="concurrent-trees-2.6.1.jar">
             <pgp value="A9789342F598AD5B1175EF357EB97D110DFADD60"/>
+         </artifact>
+      </component>
+      <component group="com.googlecode.javaewah" name="JavaEWAH" version="1.2.3">
+         <artifact name="JavaEWAH-1.2.3.jar">
+            <pgp value="015479E1055341431B4545AB72475FD306B9CAB7"/>
          </artifact>
       </component>
       <component group="com.googlecode.juniversalchardet" name="juniversalchardet" version="1.0.3">
@@ -200,23 +176,8 @@
             <pgp value="31BAE2E51D95E0F8AD9B7BCC40A3C4432BD7308C"/>
          </artifact>
       </component>
-      <component group="com.palantir.javapoet" name="javapoet" version="0.19.0">
-         <artifact name="javapoet-0.19.0.jar">
-            <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
-         </artifact>
-      </component>
       <component group="com.palantir.javapoet" name="javapoet" version="0.23.0">
          <artifact name="javapoet-0.23.0.jar">
-            <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
-         </artifact>
-      </component>
-      <component group="com.palantir.javapoet" name="javapoet" version="0.6.0">
-         <artifact name="javapoet-0.6.0.jar">
-            <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
-         </artifact>
-      </component>
-      <component group="com.palantir.javapoet" name="javapoet" version="0.7.0">
-         <artifact name="javapoet-0.7.0.jar">
             <pgp value="BF3A87D91B70BE32CAD64A2645D0CAA6D26B0F7D"/>
          </artifact>
       </component>
@@ -230,19 +191,19 @@
             <pgp value="1D0A8B5E77C678A7C724445ABF984B4145EA13F7"/>
          </artifact>
       </component>
-      <component group="com.sun.activation" name="javax.activation" version="1.2.0">
-         <artifact name="javax.activation-1.2.0.jar">
-            <pgp value="4F7E32D440EF90A83011A8FC6425559C47CC79C4"/>
-         </artifact>
-      </component>
-      <component group="com.yarnpkg" name="yarn" version="1.22.17">
-         <artifact name="yarn-1.22.17.tar.gz">
-            <pgp value="6D98490C6F1ACDDD448E45954F77679369475BAA"/>
+      <component group="com.squareup" name="javawriter" version="2.5.0">
+         <artifact name="javawriter-2.5.0.jar">
+            <pgp value="90EE19787A7BCF6FD37A1E9180C08B1C29100955"/>
          </artifact>
       </component>
       <component group="com.yarnpkg" name="yarn" version="1.22.22">
          <artifact name="yarn-1.22.22.tar.gz">
             <pgp value="72ECF46A56B4AD39C907BBB71646B01B86E50310"/>
+         </artifact>
+      </component>
+      <component group="commons-codec" name="commons-codec" version="1.17.1">
+         <artifact name="commons-codec-1.17.1.jar">
+            <pgp value="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB"/>
          </artifact>
       </component>
       <component group="commons-codec" name="commons-codec" version="1.22.1">
@@ -265,11 +226,6 @@
             <pgp value="09939C73246B4BA7444CAA453D002DBC5EA9615F"/>
          </artifact>
       </component>
-      <component group="dev.equo.ide" name="solstice" version="1.8.1">
-         <artifact name="solstice-1.8.1.jar">
-            <pgp value="1D2C7EF8ADA0F794B58C7C63436902AF59EDF60E"/>
-         </artifact>
-      </component>
       <component group="dev.equo.ide" name="solstice" version="1.8.2">
          <artifact name="solstice-1.8.2.jar">
             <pgp value="1D2C7EF8ADA0F794B58C7C63436902AF59EDF60E"/>
@@ -278,16 +234,6 @@
       <component group="dev.zacsweers.kctfork" name="core" version="0.14.0">
          <artifact name="core-0.14.0.jar">
             <pgp value="719F7C29985A8E95F58F47194D8159D6A1159B69"/>
-         </artifact>
-      </component>
-      <component group="dev.zacsweers.kctfork" name="core" version="0.7.1">
-         <artifact name="core-0.7.1.jar">
-            <pgp value="719F7C29985A8E95F58F47194D8159D6A1159B69"/>
-         </artifact>
-      </component>
-      <component group="io.github.classgraph" name="classgraph" version="4.8.179">
-         <artifact name="classgraph-4.8.179.jar">
-            <pgp value="1F47744C9B6E14F2049C2857F1F111AF65925306"/>
          </artifact>
       </component>
       <component group="io.github.classgraph" name="classgraph" version="4.8.195">
@@ -300,49 +246,24 @@
             <pgp value="C0612048F3393B80B22639B4F067A2FD751AE3E4"/>
          </artifact>
       </component>
-      <component group="io.github.java-diff-utils" name="java-diff-utils" version="4.12">
-         <artifact name="java-diff-utils-4.12.jar">
+      <component group="io.github.detekt.sarif4k" name="sarif4k-jvm" version="0.6.0">
+         <artifact name="sarif4k-jvm-0.6.0.jar">
+            <pgp value="8569C95CADC508B09FE90F3002216ED811210DAA"/>
+         </artifact>
+      </component>
+      <component group="io.github.java-diff-utils" name="java-diff-utils" version="4.16">
+         <artifact name="java-diff-utils-4.16.jar">
             <pgp value="D477D51812E692011DB11E66A6EA2E2BF22E0543"/>
          </artifact>
       </component>
-      <component group="io.ktor" name="ktor-http-cio-js" version="3.2.3">
-         <artifact name="ktor-http-cio-js-3.2.3.klib">
-            <sha256 value="1e8eafe48d2cfa1509546bd59e8b823ce713f46f5d0fc578e380b7b42c96a1d2" origin="Generated by Gradle" reason="Artifact is not signed"/>
-         </artifact>
-      </component>
-      <component group="io.ktor" name="ktor-http-cio-macosx64" version="3.2.3">
-         <artifact name="ktor-http-cio-macosx64-3.2.3-metadata.jar">
-            <sha256 value="a6e13d22656daaa74762db2df671d3d22829f98a0ba8d0af580d2083f5bf52a9" origin="Generated by Gradle" reason="Artifact is not signed"/>
-         </artifact>
-      </component>
-      <component group="io.ktor" name="ktor-websockets" version="3.2.3">
-         <artifact name="ktor-websockets-metadata-3.2.3.jar">
-            <sha256 value="82a95ddb9baf163e4036ee2d66e68a28315c5fd2eeeb97eaa21d80a45f024e88" origin="Generated by Gradle" reason="Artifact is not signed"/>
-         </artifact>
-      </component>
-      <component group="io.opencensus" name="opencensus-api" version="0.31.0">
-         <artifact name="opencensus-api-0.31.0.jar">
-            <pgp value="600EA202B1EC682F4A788E5AAC7A514BC9F9BB70"/>
-         </artifact>
-      </component>
-      <component group="io.opencensus" name="opencensus-proto" version="0.2.0">
-         <artifact name="opencensus-proto-0.2.0.jar">
-            <pgp value="54A26BFDC7ECDD39BA4C123AC3BAB45F4AF71FAB"/>
+      <component group="io.github.microutils" name="kotlin-logging-jvm" version="3.0.5">
+         <artifact name="kotlin-logging-jvm-3.0.5.jar">
+            <pgp value="47EB6836245D2D40E89DFB4136D4E9618F3ADAB5"/>
          </artifact>
       </component>
       <component group="io.outfoxx" name="swiftpoet" version="1.6.11">
          <artifact name="swiftpoet-1.6.11.jar">
             <pgp value="78AB011FA6E5907950EA3E2747DCFC2A59F59B5B"/>
-         </artifact>
-      </component>
-      <component group="io.outfoxx" name="swiftpoet" version="1.6.5">
-         <artifact name="swiftpoet-1.6.5.jar">
-            <pgp value="78AB011FA6E5907950EA3E2747DCFC2A59F59B5B"/>
-         </artifact>
-      </component>
-      <component group="it.krzeminski" name="snakeyaml-engine-kmp-jvm" version="3.1.1">
-         <artifact name="snakeyaml-engine-kmp-jvm-3.1.1.jar">
-            <pgp value="8247F88933C2D56F830AF73436AB7ACFFF2027B1"/>
          </artifact>
       </component>
       <component group="it.krzeminski" name="snakeyaml-engine-kmp-jvm" version="4.0.1">
@@ -360,14 +281,14 @@
             <pgp value="FC411CD3CB7DCB0ABC9801058118B3BCDB1A5000"/>
          </artifact>
       </component>
-      <component group="javax.annotation" name="javax.annotation-api" version="1.3.2">
-         <artifact name="javax.annotation-api-1.3.2.jar">
-            <pgp value="4F7E32D440EF90A83011A8FC6425559C47CC79C4"/>
-         </artifact>
-      </component>
       <component group="javax.inject" name="javax.inject" version="1">
          <artifact name="javax.inject-1.jar">
             <sha256 value="91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="junit" name="junit" version="4.13.2">
+         <artifact name="junit-4.13.2.jar">
+            <pgp value="FF6E2C001948C5F2F38B0CC385911F425EC61B51"/>
          </artifact>
       </component>
       <component group="net.sf.jopt-simple" name="jopt-simple" version="4.9">
@@ -390,29 +311,14 @@
             <pgp value="34441E504A937F43EB0DAEF96A65176A0FB1CD0B"/>
          </artifact>
       </component>
+      <component group="org.apiguardian" name="apiguardian-api" version="1.1.2">
+         <artifact name="apiguardian-api-1.1.2.jar">
+            <pgp value="FF6E2C001948C5F2F38B0CC385911F425EC61B51"/>
+         </artifact>
+      </component>
       <component group="org.bitbucket.b_c" name="jose4j" version="0.9.5">
          <artifact name="jose4j-0.9.5.jar">
             <pgp value="3051D45031E13516A6E8FAFF280D66A55F5316C5"/>
-         </artifact>
-      </component>
-      <component group="org.codehaus.groovy" name="groovy" version="3.0.22">
-         <artifact name="groovy-3.0.22.jar">
-            <pgp value="34441E504A937F43EB0DAEF96A65176A0FB1CD0B"/>
-         </artifact>
-      </component>
-      <component group="org.codehaus.mojo" name="animal-sniffer-annotations" version="1.23">
-         <artifact name="animal-sniffer-annotations-1.23.jar">
-            <pgp value="84789D24DF77A32433CE1F079EB80E92EB2135B1"/>
-         </artifact>
-      </component>
-      <component group="org.codehaus.mojo" name="animal-sniffer-annotations" version="1.24">
-         <artifact name="animal-sniffer-annotations-1.24.jar">
-            <pgp value="32118CF76C9EC5D918E54967CA80D1F0EB6CA4BA"/>
-         </artifact>
-      </component>
-      <component group="org.codehaus.woodstox" name="stax2-api" version="4.2.1">
-         <artifact name="stax2-api-4.2.1.jar">
-            <pgp value="6214760097DC5CFAD0175AC2C9FBAA83A8753994"/>
          </artifact>
       </component>
       <component group="org.codehaus.woodstox" name="stax2-api" version="4.3.0">
@@ -425,9 +331,14 @@
             <pgp value="2E92113263FC31C74CCBAAB20E91C2DE43B72BB1"/>
          </artifact>
       </component>
-      <component group="org.freemarker" name="freemarker" version="2.3.32">
-         <artifact name="freemarker-2.3.32.jar">
-            <pgp value="13AC2213964ABE1D1C147C0E1939A2520BAB1D90"/>
+      <component group="org.eclipse.jgit" name="org.eclipse.jgit" version="7.8.0.202609011348-r">
+         <artifact name="org.eclipse.jgit-7.8.0.202609011348-r.jar">
+            <pgp value="7C669810892CBD3148FA92995B05CCDE140C2876"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.platform" name="org.eclipse.osgi" version="3.24.300">
+         <artifact name="org.eclipse.osgi-3.24.300.jar">
+            <pgp value="9E3044071B758EBCB7E45673700E4F39BC05364B"/>
          </artifact>
       </component>
       <component group="org.freemarker" name="freemarker" version="2.3.35">
@@ -470,29 +381,9 @@
             <pgp value="CFBE6E7934FB211224EE1C2B0C0A9468268C79AE"/>
          </artifact>
       </component>
-      <component group="org.jetbrains" name="markdown-jvm" version="0.7.3">
-         <artifact name="markdown-jvm-0.7.3.jar">
-            <pgp value="CFBE6E7934FB211224EE1C2B0C0A9468268C79AE"/>
-         </artifact>
-      </component>
       <component group="org.jetbrains.intellij.deps" name="trove4j" version="1.0.20200330">
          <artifact name="trove4j-1.0.20200330.jar">
             <pgp value="8756C4F765C9AC3CB6B85D62379CE192D401AB61"/>
-         </artifact>
-      </component>
-      <component group="org.jetbrains.kotlin" name="kotlin-stdlib-common" version="1.8.21">
-         <artifact name="kotlin-stdlib-common-1.8.21.jar">
-            <sha256 value="6a44c9ecc9d7754d9e943fb1e3588c74d4a3f1785be51074f49d6c5723682a73" origin="Generated by Gradle" reason="Artifact is not signed"/>
-         </artifact>
-      </component>
-      <component group="org.jetbrains.kotlinx" name="kotlinx-coroutines-test-js" version="1.10.2">
-         <artifact name="kotlinx-coroutines-test-js-1.10.2.klib">
-            <sha256 value="162663d80ab061a8aae7ce6c574655f730bb4aa5ce7aba441ac0329bc100fb61" origin="Generated by Gradle" reason="Artifact is not signed"/>
-         </artifact>
-      </component>
-      <component group="org.jline" name="jline" version="3.24.1">
-         <artifact name="jline-3.24.1.jar">
-            <pgp value="073F7A9345756F3B40CDB99E6C70A3B7599C5736"/>
          </artifact>
       </component>
       <component group="org.jline" name="jline" version="3.30.16">
@@ -500,9 +391,9 @@
             <pgp value="0181A4828FA27B6BE6F1F5A68611CD28F472E006"/>
          </artifact>
       </component>
-      <component group="org.jsoup" name="jsoup" version="1.16.1">
-         <artifact name="jsoup-1.16.1.jar">
-            <pgp value="F3184BCD55F4D016E30D4C9BF42E87F9665015C9"/>
+      <component group="org.json" name="json" version="20260814">
+         <artifact name="json-20260814.jar">
+            <pgp value="FB35C8D02B4724DADA23DE0AFD116C1969FCCFF3"/>
          </artifact>
       </component>
       <component group="org.jsoup" name="jsoup" version="1.23.2">
@@ -510,19 +401,9 @@
             <pgp value="F3184BCD55F4D016E30D4C9BF42E87F9665015C9"/>
          </artifact>
       </component>
-      <component group="org.jspecify" name="jspecify" version="1.0.0">
-         <artifact name="jspecify-1.0.0.jar">
-            <pgp value="41CD49B4EF5876F9E9F691DABAC30622339994C4"/>
-         </artifact>
-      </component>
       <component group="org.jvnet.staxex" name="stax-ex" version="1.8.1">
          <artifact name="stax-ex-1.8.1.jar">
             <pgp value="04543577D6A9CC626239C50C7ECBD740FF06AEB5"/>
-         </artifact>
-      </component>
-      <component group="org.mozilla" name="rhino" version="1.7.10">
-         <artifact name="rhino-1.7.10.jar">
-            <pgp value="EA0B70B5050192C98CFA7E4F3F36885C24DF4B75"/>
          </artifact>
       </component>
       <component group="org.nodejs" name="node" version="24.16.0">
@@ -547,10 +428,20 @@
             <sha256 value="26a5480d0dd952be86beae83e6636dacd7a3ffd17ef51d0b26bc9b260f2b42e9" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
          </artifact>
          <artifact name="node-26.2.0-linux-x64.tar.gz">
-            <sha256 value="8e5b4b969bb2414aca2ff84d2b99608511aedca32bf8a8427e6187dbdd703bbe" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+            <sha256 value="8e5b4b969bb2414aca2ff84d2b99608511aedca32bf8a8427e6187dbdd703bbe" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt" reason="Artifact is not signed"/>
          </artifact>
          <artifact name="node-26.2.0-win-x64.zip">
             <sha256 value="371071a4f7e2c8a5dd280730049c685911feecc59f50ebc488d675dc1087c69c" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+         </artifact>
+      </component>
+      <component group="org.opentest4j" name="opentest4j" version="1.3.0">
+         <artifact name="opentest4j-1.3.0.jar">
+            <pgp value="FF6E2C001948C5F2F38B0CC385911F425EC61B51"/>
+         </artifact>
+      </component>
+      <component group="org.snakeyaml" name="snakeyaml-engine" version="2.7">
+         <artifact name="snakeyaml-engine-2.7.jar">
+            <pgp value="120D6F34E627ED3A772EBBFE55C7E5E701832382"/>
          </artifact>
       </component>
       <component group="org.tensorflow" name="tensorflow-lite-metadata" version="0.2.0">
