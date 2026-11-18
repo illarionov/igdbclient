@@ -517,6 +517,20 @@
             <sha256 value="edaca9bd58ec8e92037dac4e877d52f6b8f430b81c18b57e264b4e2fb111cd56" origin="https://nodejs.org/dist/v24.16.0/SHASUMS256.txt"/>
          </artifact>
       </component>
+      <component group="org.nodejs" name="node" version="26.2.0">
+         <artifact name="node-26.2.0-darwin-arm64.tar.gz">
+            <sha256 value="2d8575b6a749c0bc66cc6ecd22a952f7d9bbf3b0ea76fcb0ed3ce858018afff7" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+         </artifact>
+         <artifact name="node-26.2.0-darwin-x64.tar.gz">
+            <sha256 value="26a5480d0dd952be86beae83e6636dacd7a3ffd17ef51d0b26bc9b260f2b42e9" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+         </artifact>
+         <artifact name="node-26.2.0-linux-x64.tar.gz">
+            <sha256 value="8e5b4b969bb2414aca2ff84d2b99608511aedca32bf8a8427e6187dbdd703bbe" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+         </artifact>
+         <artifact name="node-26.2.0-win-x64.zip">
+            <sha256 value="371071a4f7e2c8a5dd280730049c685911feecc59f50ebc488d675dc1087c69c" origin="https://nodejs.org/dist/v26.2.0/SHASUMS256.txt"/>
+         </artifact>
+      </component>
       <component group="org.tensorflow" name="tensorflow-lite-metadata" version="0.2.0">
          <artifact name="tensorflow-lite-metadata-0.2.0.jar">
             <pgp value="7440F1F7D27BAC115F953D55EB095DA7D2F6AC0E"/>

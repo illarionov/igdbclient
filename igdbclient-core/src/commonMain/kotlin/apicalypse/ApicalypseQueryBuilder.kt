@@ -196,7 +196,8 @@ public class ApicalypseQueryBuilder {
     @JvmInline
     private value class ApiField(val name: String) {
         init {
-            require(name matches FIELD_REGEX && name.split(".").all(String::isNotEmpty)) {
+            // Lambda instead of `String::isNotEmpty`: the reference crashes Kotlin 2.2.10 Wasm incremental linking
+            require(name matches FIELD_REGEX && name.split(".").all { it.isNotEmpty() }) {
                 "Incorrect field name `$name`"
             }
         }

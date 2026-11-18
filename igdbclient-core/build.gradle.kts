@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.dokka)
@@ -29,6 +32,11 @@ kotlin {
         browser()
         nodejs()
     }
+    @OptIn(ExperimentalWasmDsl::class)
+    wasmJs {
+        browser()
+        nodejs()
+    }
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -37,7 +45,17 @@ kotlin {
     macosArm64()
     mingwX64()
 
-    applyDefaultHierarchyTemplate()
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    applyDefaultHierarchyTemplate {
+        common {
+            // Non-JVM targets parsing JSON with kotlinx-serialization
+            group("json") {
+                group("native")
+                withJs()
+                withWasmJs()
+            }
+        }
+    }
 
     sourceSets {
         /* Main source sets */
@@ -52,7 +70,7 @@ kotlin {
                 implementation(libs.org.json)
             }
         }
-        getByName("nativeMain") {
+        getByName("jsonMain") {
             dependencies {
                 implementation(libs.kotlinx.serialization.json)
             }
