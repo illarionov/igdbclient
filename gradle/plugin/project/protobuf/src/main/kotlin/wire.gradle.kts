@@ -6,14 +6,8 @@
 
 package at.released.igdbclient.gradle.protobuf.igdb
 
-import org.gradle.kotlin.dsl.dependencies
-
 plugins {
     id("com.squareup.wire")
-}
-
-dependencies {
-    add("implementation", versionCatalogs.named("libs").findLibrary("wire.runtime").orElseThrow())
 }
 
 wire {

@@ -21,7 +21,9 @@ version = igdbVersions.getSubmoduleVersionProvider(
 ).get()
 
 kotlin {
-    androidTarget()
+    android {
+        namespace = "at.released.igdbclient.okhttp"
+    }
     jvm()
 
     applyDefaultHierarchyTemplate()
@@ -57,8 +59,4 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    namespace = "at.released.igdbclient.okhttp"
 }

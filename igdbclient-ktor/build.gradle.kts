@@ -23,7 +23,9 @@ version = igdbVersions.getSubmoduleVersionProvider(
 ).get()
 
 kotlin {
-    androidTarget()
+    android {
+        namespace = "at.released.igdbclient.ktor"
+    }
     jvm()
     js(IR) {
         browser()
@@ -80,8 +82,4 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    namespace = "at.released.igdbclient.ktor"
 }

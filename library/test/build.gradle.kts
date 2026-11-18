@@ -15,6 +15,15 @@ plugins {
 group = "at.released.igdbclient.library.test"
 
 kotlin {
+    android {
+        namespace = "at.released.igdbclient.library.test"
+        packaging {
+            resources.excludes += listOf(
+                "META-INF/LICENSE-notice.md",
+                "META-INF/LICENSE.md",
+            )
+        }
+    }
     jvm()
     js(IR) {
         browser()
@@ -59,16 +68,6 @@ kotlin {
                 implementation(libs.okhttp3.logging.interceptor)
             }
         }
-    }
-}
-
-android {
-    namespace = "at.released.igdbclient.library.test"
-    packaging {
-        resources.excludes += listOf(
-            "META-INF/LICENSE-notice.md",
-            "META-INF/LICENSE.md",
-        )
     }
 }
 
